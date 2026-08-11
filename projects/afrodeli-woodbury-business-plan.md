@@ -212,6 +212,21 @@ Woodbury in Year 1 → Minnetonka in Years 3–5 → Edina express format in Yea
 | Soft opening | Week 22 | Phased hours, limited menu, staff training focus |
 | Grand opening | Week 24 | Full menu, marketing launch, catering pipeline live |
 
+### 3.5 Menu Overview
+
+| Item | Description | Role |
+|------|-------------|------|
+| Chicken Fantastic | Somali rice + creole sauce | Signature entrée |
+| Sambusas (beef / chicken / veggie) | Hand-folded pastry | Fan favorite / appetizer |
+| Lamb & Chicken Gyros | Spiced rotisserie | Lunch driver |
+| Spiced Bowls | Proteins over Somali rice | Bowl-category competitor |
+| Falafel / Hummus | Plant-based staples | Strong vegan/vegetarian option |
+
+- **Average ticket: $15.00** (actual $15.89 at existing locations — conservative)
+- **All-halal** + vegetarian/vegan options — widens the addressable base beyond the existing customer mix
+- **Catering menu:** family trays + institutional packages — the engine behind the 25.7% catering share at existing locations
+- Turn time: 17.8 min at existing locations — fits the fast-casual lunch window
+
 ---
 
 ## 4. Management & Staffing
