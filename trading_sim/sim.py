@@ -203,6 +203,84 @@ def resolve_call_flags(state, crumb):
     return resolved
 
 
+def fetch_put_mid(sym, strike, expiry_ts, crumb):
+    """Mid of one put (strike/expiry) via Yahoo v7 — the puts array, NOT calls.
+    (options_data.fetch_chain returns calls only; putting calls here = garbage.)"""
+    url = f"https://query1.finance.yahoo.com/v7/finance/options/{sym}?date={expiry_ts}&crumb={crumb}"
+    out = subprocess.run(["curl","-s","-m","15","-b",CJ,"-H",f"User-Agent: {UA}",url],
+                         capture_output=True, text=True)
+    try:
+        d = json.loads(out.stdout)
+        for p in d["optionChain"]["result"][0]["options"][0]["puts"]:
+            if abs(p["strike"] - strike) < 1e-6:
+                bid, ask = p.get("bid", 0), p.get("ask", 0)
+                if bid > 0 and ask > 0:
+                    return (bid + ask) / 2
+    except Exception:
+        pass
+    return None
+
+
+def fetch_put_spread_mid(sym, k_buy, k_sell, expiry_ts, crumb):
+    """Current mid of a bear put debit spread (buy k_buy put / sell k_sell put)."""
+    mb = fetch_put_mid(sym, k_buy, expiry_ts, crumb)
+    ms = fetch_put_mid(sym, k_sell, expiry_ts, crumb)
+    if mb is not None and ms is not None:
+        return mb - ms
+    return None
+
+
+def resolve_put_flags(state, crumb):
+    """Paper-trade fade-the-rip put debit spreads with the standard exit rules:
+    TP +100% / SL -50% / time stop 7 days before expiry / expired = intrinsic.
+    Returns newly resolved flags."""
+    flags = state.get("put_flags", [])
+    resolved = []
+    today = datetime.date.today()
+    for f in flags:
+        if f.get("outcome") is not None:
+            continue
+        sym, k_buy, k_sell, debit = f["ticker"], f["k_buy"], f["k_sell"], f["debit"]
+        expiry = datetime.date.fromisoformat(f["expiry"])
+        time_stop = datetime.date.fromisoformat(f["time_stop"])
+
+        if today > expiry:
+            px = fetch_close(sym)[0] or 0
+            val = max(k_buy - px, 0) - max(k_sell - px, 0)
+            f["outcome"] = "expired"
+            f["ret"] = round((val / debit - 1) * 100, 1) if debit else 0.0
+            f["resolved_date"] = str(today)
+            resolved.append(f)
+            continue
+
+        ts = None
+        for e in od.expirations(sym, crumb):
+            if datetime.date.fromtimestamp(e) == expiry:
+                ts = e
+                break
+        if ts is None:
+            continue
+        mid = fetch_put_spread_mid(sym, k_buy, k_sell, ts, crumb)
+        if mid is None:
+            continue
+        if today >= time_stop:
+            f["outcome"] = "time"
+            f["ret"] = round((mid / debit - 1) * 100, 1)
+            f["resolved_date"] = str(today)
+            resolved.append(f)
+        elif mid >= debit * 2.0:
+            f["outcome"] = "win"
+            f["ret"] = round((mid / debit - 1) * 100, 1)
+            f["resolved_date"] = str(today)
+            resolved.append(f)
+        elif mid <= debit * 0.5:
+            f["outcome"] = "loss"
+            f["ret"] = round((mid / debit - 1) * 100, 1)
+            f["resolved_date"] = str(today)
+            resolved.append(f)
+    return resolved
+
+
 def step():
     state = load()
     today = datetime.date.today()
@@ -278,6 +356,12 @@ def step():
     for f in resolved_flags:
         print(f"EVENT CALLFLAG {f['ticker']} {f['outcome'].upper()} ret {f['ret']:+.1f}% "
               f"(flag ${f['premium']:.2f} on {f['date']})")
+
+    # --- put fades (debit spreads): paper-trade fade-the-rip entries ---
+    resolved_pfs = resolve_put_flags(state, crumb)
+    for f in resolved_pfs:
+        print(f"EVENT PUTFLAG {f['ticker']} {f['outcome'].upper()} ret {f['ret']:+.1f}% "
+              f"(debit ${f['debit']:.2f} on {f['date']})")
 
     # --- weekly put sim: open when none open, resolve on expiry day ---
     for sym in UNIVERSE:
@@ -431,6 +515,42 @@ def report():
     # --- MES intraday OR-fade ---
     print()
     print(mes_intraday.report(state))
+
+    # --- put fades (debit spreads, paper-tracked) ---
+    pfs = state.get("put_flags", [])
+    rpfs = [f for f in pfs if f.get("outcome")]
+    if rpfs:
+        rets = [f.get("ret", 0) for f in rpfs]
+        wins = [r for r in rets if r > 0]
+        losses = [r for r in rets if r <= 0]
+        wr = len(wins) / len(rets) * 100
+        avg_ret = sum(rets) / len(rets)
+        net = sum((f.get("ret", 0) / 100) * f["debit"] * 100 for f in rpfs)
+        print(f"\nPUT FADES (debit spreads): {len(rpfs)} resolved | win rate {wr:.0f}% | "
+              f"avg ret {avg_ret:+.1f}% | net ${net:+.2f}")
+        for f in rpfs[-8:]:
+            print(f"  {f.get('resolved_date','?')} {f['ticker']} {f['k_buy']:.0f}/{f['k_sell']:.0f}P "
+                  f"{f['outcome']} ret {f.get('ret',0):+.1f}% (debit ${f['debit']:.2f}, {f['date']})")
+        if len(rpfs) >= 10:
+            avg_w = statistics.mean(wins) if wins else 0.0
+            avg_l = statistics.mean(losses) if losses else 0.0
+            rr = abs(avg_w / avg_l) if avg_l < 0 else 0.0
+            if wr >= 55.0 and rr >= 1.5:
+                print("  LEVER 3B: PUT-FADE GATE PASSED — fade-the-rip debit spreads have "
+                      "empirical backing (≥10, ≥55% WR, R:R ≥1.5).")
+            else:
+                print(f"  LEVER 3B: {len(rpfs)} resolved — gate NOT passed (need ≥55% WR + "
+                      f"R:R ≥1.5; now {wr:.0f}% / {rr:.1f}). Keep paper trading.")
+        else:
+            print(f"  LEVER 3B: {len(rpfs)}/10 put fades resolved — keep paper trading.")
+    else:
+        print("\nPUT FADES (debit spreads): none resolved yet")
+    open_pfs = [f for f in pfs if f.get("outcome") is None]
+    if open_pfs:
+        print(f"Open put fades: {len(open_pfs)}")
+        for f in open_pfs:
+            print(f"  {f['date']} {f['ticker']} {f['k_buy']:.0f}/{f['k_sell']:.0f}P exp {f['expiry']} "
+                  f"debit ${f['debit']:.2f} spot ${f['spot']:.2f} time-stop {f['time_stop']}")
 
     print("\nLEVER: put win rate above ~75% on a ticker => selling weeklies on it has empirical backing; below ~60% => skip or widen strike.")
     print("LEVER 2: if a ticker's opportunity flags bounce 70%+ of the time, its oversold flags are a green light to sell puts that week.")

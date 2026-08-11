@@ -322,7 +322,44 @@
   "iv": null,
   "label": "DEMO lottery ticket (paper)"
  },
- "call_flags": [],
+ "call_flags": [
+  {
+   "ticker": "TEAM",
+   "date": "2026-08-11",
+   "spot": 155.76,
+   "strike": 155.0,
+   "expiry": "2026-08-20",
+   "dte": 9,
+   "premium": 6.6,
+   "cost": 660.0,
+   "be": 161.6,
+   "be_pct": 4.26,
+   "confidence": 0.61,
+   "spread_pct": 18.2,
+   "adx": null,
+   "gap": null,
+   "earnings": "next ~Oct, none before expiry",
+   "time_stop": "2026-08-13",
+   "outcome": null,
+   "source": "manual-track (friend alert 8/11 -> live 155C 8/20; friend quoted 152.50C 8/28 @ $9.48, EOD)"
+  }
+ ],
  "mes": null,
- "mes_trades": []
+ "mes_trades": [],
+ "put_flags": [
+  {
+   "ticker": "ABNB",
+   "date": "2026-08-11",
+   "spot": 184.49,
+   "k_buy": 180.0,
+   "k_sell": 175.0,
+   "width": 5.0,
+   "debit": 1.11,
+   "expiry": "2026-08-20",
+   "dte": 9,
+   "time_stop": "2026-08-13",
+   "outcome": null,
+   "source": "manual fade (Kofi: fade the rip on friend ABNB call alert; live mid debit 1.11, exec ~1.24)"
+  }
+ ]
 }
