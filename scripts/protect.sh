@@ -8,6 +8,9 @@
 set -euo pipefail
 cd /home/kofi/clawd
 
+# 0) Encrypted OpenClaw config snapshot (daily local, Sunday "latest" goes off-site)
+bash scripts/protect_config.sh
+
 # 1) Rolling archive of the sim state
 mkdir -p backups
 cp trading_sim/state.json "backups/state-$(date +%Y%m%d).json"
