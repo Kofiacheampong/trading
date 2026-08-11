@@ -276,7 +276,7 @@ The brand's social-enterprise identity (Section 12) is a marketing asset: Woodbu
 
 ### 7.5 Technology & Systems
 
-- **POS:** modern cloud POS (Toast-class) with delivery-app integration, catering order management, and loyalty
+- **POS:** **Toast POS** (confirmed choice) — one platform covering point-of-sale, online ordering, delivery-app integration (DoorDash/Uber Eats — the 17.1% channel), a catering module (the 25.7% engine), kitchen display system, and built-in loyalty (the 2,000+ member program). Hardware (terminals, kitchen display, printers) + SaaS subscription; ongoing platform fees sit inside Other OpEx
 - **Delivery:** DoorDash/Uber Eats/Grubhub integration (17.1% of existing sales)
 - **Reporting:** daily sales/covers/catering dashboard; weekly P&L review vs. plan (Section 11 KPIs)
 - **Catering CRM:** pipeline tracking for the B2B engine (Section 6.3)
