@@ -22,3 +22,6 @@ node_modules/
 # Encrypted config blobs: daily stay local, weekly "latest" is committed
 backups/openclaw-config-*.tar.gpg
 !backups/openclaw-config-latest.tar.gpg
+
+# Secrets — never commit
+.env
