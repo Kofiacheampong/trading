@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAM Construction - Professional Estimating Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+        
+        .documents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .document-card {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .document-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature h3 {
+            color: #3498db;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #3498db, #2c3e50);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .contact-item {
+            text-align: center;
+            padding: 1rem;
+            min-width: 150px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid #eee;
+        }
+        
+        .download-note {
+            background: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .documents-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>JAM Construction</h1>
+            <p class="tagline">Professional Estimating Services with Commercial Construction Expertise</p>
+            <div class="hero-buttons">
+                <a href="#services" class="btn">Our Services</a>
+                <a href="#documents" class="btn">View Documents</a>
+                <a href="#contact" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>About JAM Construction</h2>
+            <p>JAM Construction LLC provides expert construction estimating services to contractors in the Minneapolis area. Leveraging commercial construction experience, we deliver accurate, reliable estimates that help contractors win more bids and improve profitability.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>Commercial Expertise</h3>
+                    <p>Deep knowledge from major construction company experience</p>
+                </div>
+                <div class="feature">
+                    <h3>Dual Market Capability</h3>
+                    <p>Serving both commercial and residential contractors</p>
+                </div>
+                <div class="feature">
+                    <h3>Fast Turnaround</h3>
+                    <p>Understanding the importance of timely bids</p>
+                </div>
+                <div class="feature">
+                    <h3>Accurate Results</h3>
+                    <p>Minimizing costly change orders and surprises</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Commercial Estimating</h3>
+                    <p>Complex project analysis, multi-trade coordination, regulatory compliance</p>
+                </div>
+                <div class="feature">
+                    <h3>Residential Estimating</h3>
+                    <p>Custom and standard projects, remodeling expertise, high-end finishes</p>
+                </div>
+                <div class="feature">
+                    <h3>Additional Services</h3>
+                    <p>Material takeoffs, feasibility studies, change order analysis, budget oversight, government project estimating, certified business services</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="documents" class="section">
+            <h2>Business Documents</h2>
+            <div class="download-note">
+                <strong>Note:</strong> To access the documents, you can copy the content from our conversation or navigate to the files in the jam_construction_projections folder on your system.
+            </div>
+            <p>Below are the comprehensive business documents we've created for JAM Construction:</p>
+            
+            <div class="documents-grid">
+                <div class="document-card">
+                    <h3>DEED Loan Application</h3>
+                    <p>Complete loan application draft for Minnesota DEED Small Business Finance Authority</p>
+                    <p><em>File: deed_loan_application_draft.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Business Plan</h3>
+                    <p>Full business plan for JAM Construction LLC with market analysis and projections</p>
+                    <p><em>File: jam_construction_business_plan.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Marketing Materials</h3>
+                    <p>Pitch deck and marketing materials for client acquisition</p>
+                    <p><em>File: marketing_materials_pitch_deck.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Client Outreach Strategy</h3>
+                    <p>Detailed strategy for reaching contractors and building your client base</p>
+                    <p><em>File: client_outreach_strategy.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Operational Procedures</h3>
+                    <p>Step-by-step processes for running your business efficiently</p>
+                    <p><em>File: operational_procedures_manual.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Service Expansion Strategy</h3>
+                    <p>Roadmap for growing your service offerings over time</p>
+                    <p><em>File: service_expansion_strategy.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Email List Strategy</h3>
+                    <p>Comprehensive approach for building and managing your email list</p>
+                    <p><em>File: email_list_building_strategy.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Email Templates</h3>
+                    <p>Effective email templates designed for your construction business</p>
+                    <p><em>File: email_templates_construction.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Government Contracting Research</h3>
+                    <p>Comprehensive research on government construction opportunities in Minnesota</p>
+                    <p><em>File: government_contracting_research.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Government Contractor Email Templates</h3>
+                    <p>Email templates specifically designed for government contractors</p>
+                    <p><em>File: government_contractor_email_templates.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Minneapolis SUBE Program</h3>
+                    <p>Information about the Small and Underutilized Business Enterprise program</p>
+                    <p><em>File: minneapolis_sube_program.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>MN Unified Certification Info</h3>
+                    <p>Information about the Minnesota Unified Certification Program (MNUCP)</p>
+                    <p><em>File: mn_unified_certification_info.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Financial Planning & Cash Flow</h3>
+                    <p>Detailed financial planning and cash flow projections</p>
+                    <p><em>File: financial_planning_cash_flow.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Marketing & Sales Strategies</h3>
+                    <p>Comprehensive marketing and sales approach for business growth</p>
+                    <p><em>File: marketing_sales_strategies.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Legal & Compliance Checklist</h3>
+                    <p>Essential legal requirements and compliance procedures</p>
+                    <p><em>File: legal_compliance_checklist.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Technology Integration Plan</h3>
+                    <p>Technology solutions and digital workflow optimization</p>
+                    <p><em>File: technology_integration_plan.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Expansion Planning Strategy</h3>
+                    <p>Growth phases and expansion opportunities for the business</p>
+                    <p><em>File: expansion_planning_strategy.md</em></p>
+                </div>
+                
+                <div class="document-card">
+                    <h3>Legal & Ethical Data Sources</h3>
+                    <p>Legitimate data sources for business development</p>
+                    <p><em>File: legal_ethical_data_sources.md</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>How to Access Your Documents</h2>
+            <ol>
+                <li>The documents are stored in the <code>jam_construction_projections</code> folder</li>
+                <li>You can access them by copying the content from our conversation</li>
+                <li>Alternatively, you can request each document individually using the file names shown above</li>
+                <li>All documents are in Markdown format (.md) and can be viewed in any text editor</li>
+            </ol>
+        </section>
+
+        <section class="section">
+            <h2>Why Choose JAM Construction?</h2>
+            <ul>
+                <li><strong>Proven Experience:</strong> Commercial construction background</li>
+                <li><strong>Dual Market Expertise:</strong> Both residential and commercial capabilities</li>
+                <li><strong>Government Contracting Knowledge:</strong> Understanding of public works requirements</li>
+                <li><strong>Prevailing Wage Expertise:</strong> Accurate calculations and compliance</li>
+                <li><strong>Local Knowledge:</strong> Understanding of Twin Cities market</li>
+                <li><strong>Quality Focus:</strong> Accuracy and reliability guaranteed</li>
+                <li><strong>Competitive Pricing:</strong> Professional service at reasonable rates</li>
+                <li><strong>Fast Service:</strong> Quick turnaround without sacrificing quality</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Government Contracting Expertise</h2>
+            <p>JAM Construction specializes in the unique requirements of government construction projects:</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>Prevailing Wage Calculations</h3>
+                    <p>Accurate determination of wage rates for public works projects</p>
+                </div>
+                <div class="feature">
+                    <h3>Public Procurement Knowledge</h3>
+                    <p>Understanding of government bidding and compliance requirements</p>
+                </div>
+                <div class="feature">
+                    <h3>Certified Payroll Support</h3>
+                    <p>Ensuring compliance with reporting requirements</p>
+                </div>
+                <div class="feature">
+                    <h3>Documentation Excellence</h3>
+                    <p>Detailed documentation required for government projects</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Small and Underutilized Business (SUBE) Services</h2>
+            <p>JAM Construction participates in the City of Minneapolis SUBE program to provide:</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>SUBE Certified Services</h3>
+                    <p>Government contracting opportunities for certified businesses</p>
+                </div>
+                <div class="feature">
+                    <h3>Prime Contractor Partnerships</h3>
+                    <p>Meeting city contract goals as a certified subcontractor</p>
+                </div>
+                <div class="feature">
+                    <h3>Set-Aside Contracting</h3>
+                    <p>Access to designated contracting opportunities</p>
+                </div>
+                <div class="feature">
+                    <h3>Joint Venture Opportunities</h3>
+                    <p>Collaborating on larger city projects</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Certification and Set-Aside Opportunities</h2>
+            <p>JAM Construction can leverage small and underutilized business certifications for government contract opportunities:</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>DBE Certification</h3>
+                    <p>Disadvantaged Business Enterprise opportunities</p>
+                </div>
+                <div class="feature">
+                    <h3>SBE/WBE Certification</h3>
+                    <p>Small Business Enterprise and Women Business Enterprise opportunities</p>
+                </div>
+                <div class="feature">
+                    <h3>City of Minneapolis Registry</h3>
+                    <p>Subcontractor registry for city projects</p>
+                </div>
+                <div class="feature">
+                    <h3>Set-Aside Contracts</h3>
+                    <p>Access to designated contracting opportunities</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta">
+            <h2>Ready to Work Together?</h2>
+            <p>Contact JAM Construction today to discuss how we can support your business with accurate, reliable estimating services.</p>
+            <a href="mailto:info@jamconst.com" class="btn" style="background: white; color: #3498db;">Get In Touch</a>
+        </section>
+
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p>info@jamconst.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>🌐 Website</h3>
+                <p>jamconst.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>📍 Location</h3>
+                <p>Minneapolis, MN</p>
+            </div>
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p>[Phone Number]</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 JAM Construction LLC. All rights reserved.</p>
+            <p>Professional Construction Estimating Services in the Twin Cities Area</p>
+        </div>
+    </footer>
+</body>
+</html>

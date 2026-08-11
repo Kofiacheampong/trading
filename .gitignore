@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Node
+node_modules/
+
+# OpenClaw runtime state (regenerable, may contain session data)
+.openclaw/
+
+# Editor / OS junk
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Temp files
+*.tmp
+*.bak

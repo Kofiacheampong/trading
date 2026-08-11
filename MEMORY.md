@@ -1,0 +1,46 @@
+# MEMORY.md — Long-Term Memory
+
+*Curated distillation of who Kofi is, what we're building, and what we've learned. Daily details live in `memory/YYYY-MM-DD.md`; this is the brain, not the journal.*
+
+---
+
+## Who I'm Helping
+- **Kofi** — building wealth across markets + business ventures. Wants direct, actionable, no-fluff advice. Timezone America/New_York.
+- Account types: small **IBKR options account (~$400)**, a **stock portfolio (~$1,500)**, and a **paper-trading sim ($1,500 virtual)** that tests strategies before real money.
+
+## Live Systems (don't break these)
+1. **Weekly $400 Options System** (`TRADING-SYSTEM.md`) — bull call spreads preferred; rules: $100-150 max risk, 1-2 trades/wk, defined risk only, 7-14 DTE, close at 50% profit/100% loss, no weekend holds. Cron: **Weeklies Scanner** every Sun 6 PM ET → Telegram report.
+2. **Trading sim** (`trading_sim/sim.py`) — dip-buys LULU/KMB/ZTS/PYPL/PAYC at thresholds + weekly put sim with real credits + **opportunity scanner** (`opportunity.py`) scoring setups (200-day MA distance, RSI, 52-wk low, volume, ROIC-weighted). Daily step 4:15 PM ET, weekly report Sat 10 AM ET. **Levers:** put win rate >75% = sell weeklies for real; opportunity flag bounce rate ≥70% = green light on that ticker's oversold flags. **END-OF-AUG DEAL (8/10/26):** Kofi's plan = keep stock portfolio; **new money goes to options**, deployment pace set by sim gates (put WR >75%, opp bounce ≥70%, momentum ≥10 flags + WR ≥55% + avg W/L ≥1.5). Review cron Mon Aug 31 6 PM ET delivers the verdict; gates fail → new money is dry powder at base pace ($100–150/trade, 1–2/wk), no conversion. His agreement.
+3. **Cron alerts** — budget watchlist dips (wkdays 9:40 AM, silent unless triggered), HIMS ≤$25 / MP ≤$55 / INTC ≤$100, DC-power watchlist (wkdays 9 AM), Weekly Market Pulse (Mon 8 AM), Weekly Portfolio Check-In (Sat 10 AM).
+5. **MES futures paper sim** (`trading_sim/mes_sim.py`, added 8/11/26) — long-only mean reversion on ES daily bars (ES ≥2% below 20-SMA + RSI(14)<40), 1 MES contract, TP +30pts (+$150)/SL −25pts (−$125)/10-day time stop/no weekend holds (no Friday entries, Friday exits). **EXTENDED PAPER PERIOD (Kofi's call 8/11):** Lever-4 gate evaluates only after BOTH Nov 9 2026 (3 months) AND ≥40 resolved trades — deliberately longer than momentum's 10-flag gate, since futures are pure leverage. Gate: WR ≥55% + avg W/L ≥1.5 + max DD ≤25%. Early-review trigger at 20 trades if WR <40% or DD >25%. Runs inside the daily 4:15 PM sim step + Saturday report; verdict cron Mon Nov 9 6 PM ET grades BOTH futures tracks. Toggles in file: NO_WEEKEND_HOLD, LONG_ONLY (trend/shorting = future v2).
+6. **MES intraday OR-fade sim** (`trading_sim/mes_intraday.py`, added 8/11/26) — intraday reps WITHOUT new crons/pipelines: the 4:15 PM step fetches today's 5-min ES bars (same Yahoo curl) and replays the day (no lookahead). Strategy: fade the 9:30-10:00 ET opening range — long on first close below range low, short on first close above range high, entry window 10:00-11:30, TP +30pts/SL −20pts/flat by 3:50 PM daily (zero overnight risk). Long/short tracked in SEPARATE buckets (Kofi's rule: never let one side hide the other). Same Lever-4 gate (≥40 trades + Nov 9, WR ≥55%, R:R ≥1.5, DD ≤25%).
+4. **Momentum Call Scanner** (`trading_sim/momentum_calls.py` + `options_data.py`) — built 8/6/26 from friend's alert system; RSI≥70, Z≥+2.5σ vs 20d, vol≥1.5× (time-corrected), SPY>200MA + VIX<20, 15-DTE ATM/ITM call, confidence≥0.60, exits TP+100%/SL−50%/time-stop 7 DTE. **Added 8/10/26 gates:** ADX(14)≥25 trend-strength, no entries gapped up >3% into sweep, no call straddling next earnings (Yahoo quoteSummary calendarEvents). Cron: 4 sweeps Mon–Fri 9:35/10:05/10:35/11:05 AM ET → Telegram; Thu cutoff 11 AM (no weekend holds); dedupe in state.json `call_flags`. Spec: `trading_sim/MOMENTUM_CALLS_SPEC.md`. KEY FINDING: friend's alerts were stale EOD data (quoted 8/5 close as spot on 8/6 — FSLY gapped −13%, his $26C crushed; stock later recovered to $25.98 on 8/10 Skyfire news — thesis right, timing wrong). We scan live only. Flags paper-trade in the daily sim step (4:15 PM) with TP +100%/SL −50%/time-stop 7 DTE; Saturday report shows CALL FLAGS win rate. Go-live gate (LEVER 3): ≥10 paper flags, win rate ≥55% + avg win/loss ≥1.5 → IBKR $100–150/trade.
+
+## Current Portfolio (last check Jul 31, 2026)
+- **DRAM $50.37** (-6.5%) · **INTC $90.20** (-9.8%) · **MP $41.37** (-15.9%) · **MDB $337.48** (+0.5%) · **AMPG $4.65** (-30.6%) — total ~$1,363 vs $1,463 cost (-6.8%).
+- Trim candidates if rotating: AMPG (-31%), MP (-16%). Keep MDB (only green).
+- Agreed: **weekly check-ins Saturday**, not day-to-day stress.
+
+## The 2026 Market Map (quality on discount)
+Two fear zones + one soft zone:
+1. **AI-disruption of software/consulting** — ADBE, INTU, ACN, IT, FDS, CRM, NOW (cheap, high ROIC, fear = gen-AI replacing them; ACN's -18% June 8 drop = contagion)
+2. **Chip/memory bust** — QCOM, ISRG, DRAM, MU (overcapacity + memory crunch fears)
+3. **Cyclical softness** — ZTS (pet spend cuts), DECK, PEP, MCD
+
+**Tier-1 quality names** (ROIC ≥15%, strong FCF, below 200-wk MA): ADBE, INTU, QCOM, ACN, DECK, ZTS, FDS. Budget buys (≤$170): LULU, KMB, ZTS, PYPL, PAYC. Failed screens (value traps): NKE (deteriorating business), CRM, NOW, ROP, UNH. Above line / paying perfection: NVDA, GOOGL, AVGO, TSM, MU, LLY, AMZN.
+
+## Key Lessons Learned
+- **VERIFY BEFORE ASSERT (standing rule, added Aug 4 after INTC earnings fiasco):** Tradeable facts — earnings dates, prices, filings — must be checked against a primary source (company IR, exchange, official filing) before stating them. Never assert an earnings date from web-search snippets without checking the article's date (stale articles from prior cycles look fresh). If unverified, say "unverified." Cite sources for anything trade-affecting. Kofi's trust was damaged by a confident wrong earnings date (claimed Aug 6 earnings; Intel already reported Jul 23; next is late Oct).
+- **Intraday ES 5-min backtest (8/11/26, 60 days):** opening-range BREAKOUT (ORB) loses hard in the 2026 regime (WR 10-27%, −$1.3K to −$4.1K across variants) — the market chops breakouts. Opening-range FADE (mean reversion, Kofi's style) wins: 45 trades, WR 71%, +$3,429, DD 8.1%. **The SHORT side carries it (85% WR vs 53% longs)** — proof that two-sided tracking beats long-only blinders. Caveats: 60 days = one regime; R:R is razor-thin (1.48 incl. time-exits, gate needs 1.5); close-based fills, no slippage modeled. Paper sim confirms or kills it going forward.
+- Real put credits work well via Yahoo options API (LULU $1.29, KMB $1.17, ZTS $1.30, PYPL $0.63, PAYC $1.77).
+- QCOM Aug 2026: RSI 29 = most washed-out name in the group; not on dip-buy list yet — candidate to add.
+- Earnings calendar (Aug 2026): KMB Aug 4, PAYC Aug 5, ZTS Aug 6, IT Aug 4, BR Aug 4 — budget basket holds dry powder (~$299) for these dips.
+- **Memory search embeddings run LOCALLY via Ollama** (`nomic-embed-text`) — switched Aug 5, 2026 after OpenAI API ran out of credits (429). Kofi doesn't use OpenAI. Config: `agents.defaults.memorySearch` → `{provider: "ollama", model: "nomic-embed-text"}` in openclaw.json. If search reports "index metadata is missing": run `openclaw memory index --force --agent main`, then `openclaw gateway restart` so the running process picks up the provider. First fix attempt (Aug 1) only reindexed — root cause was OpenAI credits, so it recurred.
+
+## Business Ventures (background context)
+- **Ghana**: poultry farm (2,000→4,000 birds, loan package GHS 350-450K), computer-literacy foundation (Mastercard GHS 750K + MTN GHS 250K grant pipeline), goat farm, Tapa-Abotoase farmstay — docs in workspace root.
+- **US**: Afro Deli Woodbury (business plan + 18-slide pitch deck), JAM Construction estimating startup (DEED/SBFA loan path, needs ~$6,700-8,200).
+- **Watchlist additions**: DC power infrastructure basket (TXN 35%, ADI 25%, VRT 20%, NVTS 10%, ON 10% — analog TAM $5.2B→$15.9B by 2030; INTC pullback $110-125), rare earths (USAR, MP), quantum watch (IONQ best-in-class). **HNST (The Honest Company) added Aug 6** as turnaround spec — popped +41% on Q2 2026 beat (GAAP-profitable $10.7M, GM 48.4% +800bps, raised guidance); do NOT chase, entry zone $4.50–5.00 best / $4.00–4.50 all-in, stop $3.50, targets $7.50/$10, 2–3% spec; daily 11 AM alert ≤$4.80 in `projects/watchlist.md`.
+
+## Standing
+- Created Aug 2, 2026 from daily notes (Jan 2025 → Aug 2026). Distill new lessons here every few days; keep daily files as raw logs.

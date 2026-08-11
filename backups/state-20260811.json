@@ -1,0 +1,328 @@
+{
+ "cash": 1380.0,
+ "positions": {
+  "ZTS": {
+   "shares": 1.6515,
+   "entry": 72.66000366210938,
+   "entry_date": "2026-08-07",
+   "notional": 120.0
+  }
+ },
+ "closed": [],
+ "puts": [
+  {
+   "ticker": "LULU",
+   "date": "2026-08-02",
+   "strike": 107.5,
+   "spot": 118.87,
+   "expiry": "2026-08-06",
+   "credit": 1.29,
+   "outcome": "win",
+   "expiry_close": 124.85
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-02",
+   "strike": 97.5,
+   "spot": 109.31,
+   "expiry": "2026-08-06",
+   "credit": 1.17,
+   "outcome": "win",
+   "expiry_close": 108.54
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-02",
+   "strike": 70.0,
+   "spot": 77.29,
+   "expiry": "2026-08-20",
+   "credit": 1.3,
+   "outcome": null
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-02",
+   "strike": 52.5,
+   "spot": 57.21,
+   "expiry": "2026-08-06",
+   "credit": 0.63,
+   "outcome": "win",
+   "expiry_close": 59.31
+  },
+  {
+   "ticker": "PAYC",
+   "date": "2026-08-02",
+   "strike": 147.5,
+   "spot": 163.96,
+   "expiry": "2026-08-20",
+   "credit": 1.77,
+   "outcome": null
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-07",
+   "strike": 115.0,
+   "spot": 128.58,
+   "expiry": "2026-08-13",
+   "credit": 0.1,
+   "outcome": null
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-07",
+   "strike": 97.5,
+   "spot": 109.68,
+   "expiry": "2026-08-13",
+   "credit": 1.17,
+   "outcome": null
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-07",
+   "strike": 52.5,
+   "spot": 59.07,
+   "expiry": "2026-08-13",
+   "credit": 0.06,
+   "outcome": null
+  }
+ ],
+ "events": [],
+ "opportunities": [
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-02",
+   "price": 77.29,
+   "score": 63.9,
+   "rsi": 51.9,
+   "relvol": 0.91,
+   "vs_200ma": -30.0,
+   "vs_52w_high": -50.7,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "QCOM",
+   "date": "2026-08-02",
+   "price": 147.61,
+   "score": 57.5,
+   "rsi": 28.9,
+   "relvol": 1.03,
+   "vs_200ma": -12.7,
+   "vs_52w_high": -41.2,
+   "flags": [
+    "oversold_quality(-13% vs 200ma)",
+    "rsi(29)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-02",
+   "price": 65.44,
+   "score": 47.0,
+   "rsi": 41.3,
+   "relvol": 1.34,
+   "vs_200ma": -28.2,
+   "vs_52w_high": -41.9,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "QCOM",
+   "date": "2026-08-03",
+   "price": 151.57,
+   "score": 67.5,
+   "rsi": 32.8,
+   "relvol": 1.0,
+   "vs_200ma": -10.3,
+   "vs_52w_high": -39.6,
+   "flags": [
+    "oversold_quality(-10% vs 200ma)",
+    "rsi(33)",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-03",
+   "price": 77.1,
+   "score": 53.9,
+   "rsi": 51.2,
+   "relvol": 0.79,
+   "vs_200ma": -30.0,
+   "vs_52w_high": -50.8,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-03",
+   "price": 123.67,
+   "score": 43.9,
+   "rsi": 59.8,
+   "relvol": 0.94,
+   "vs_200ma": -22.2,
+   "vs_52w_high": -42.7,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-04",
+   "price": 76.04,
+   "score": 63.9,
+   "rsi": 47.3,
+   "relvol": 1.2,
+   "vs_200ma": -30.7,
+   "vs_52w_high": -51.5,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-04",
+   "price": 123.03,
+   "score": 43.9,
+   "rsi": 58.5,
+   "relvol": 0.88,
+   "vs_200ma": -22.5,
+   "vs_52w_high": -43.0,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-05",
+   "price": 74.39,
+   "score": 63.9,
+   "rsi": 42.0,
+   "relvol": 1.51,
+   "vs_200ma": -32.0,
+   "vs_52w_high": -52.5,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-05",
+   "price": 123.51,
+   "score": 43.9,
+   "rsi": 59.3,
+   "relvol": 0.77,
+   "vs_200ma": -22.0,
+   "vs_52w_high": -42.8,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-06",
+   "price": 76.95,
+   "score": 53.9,
+   "rsi": 51.2,
+   "relvol": 1.95,
+   "vs_200ma": -29.5,
+   "vs_52w_high": -50.9,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-06",
+   "price": 124.85,
+   "score": 43.9,
+   "rsi": 61.3,
+   "relvol": 0.6,
+   "vs_200ma": -21.1,
+   "vs_52w_high": -42.2,
+   "flags": [
+    "oversold_quality(-21% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-07",
+   "price": 72.66,
+   "score": 63.9,
+   "rsi": 40.1,
+   "relvol": 1.73,
+   "vs_200ma": -33.2,
+   "vs_52w_high": -53.6,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-10",
+   "price": 74.83,
+   "score": 63.9,
+   "rsi": 46.4,
+   "relvol": 1.23,
+   "vs_200ma": -31.0,
+   "vs_52w_high": -52.3,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-11",
+   "price": 75.77,
+   "score": 53.9,
+   "rsi": 48.9,
+   "relvol": 0.08,
+   "vs_200ma": -29.9,
+   "vs_52w_high": -51.7,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-11",
+   "price": 124.76,
+   "score": 43.9,
+   "rsi": 57.6,
+   "relvol": 0.2,
+   "vs_200ma": -20.8,
+   "vs_52w_high": -42.2,
+   "flags": [
+    "oversold_quality(-21% vs 200ma)"
+   ]
+  }
+ ],
+ "lottery": {
+  "sym": "ZTS",
+  "strike": 85.0,
+  "expiry": "2026-08-20",
+  "cost": 1.1,
+  "bid": 0.95,
+  "ask": 1.1,
+  "spot": 74.21,
+  "date": "2026-08-05",
+  "delta": null,
+  "iv": null,
+  "label": "DEMO lottery ticket (paper)"
+ },
+ "call_flags": [],
+ "mes": null,
+ "mes_trades": []
+}

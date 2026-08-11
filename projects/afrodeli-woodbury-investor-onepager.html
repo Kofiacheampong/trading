@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afro Deli Woodbury — Investor One-Pager</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { 
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #f8f6f3;
+    color: #1a1a2e;
+    padding: 40px 20px;
+  }
+  .page {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 40px 48px 32px;
+  }
+  .header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+  .header .subtitle { font-size: 14px; color: #a0b4d6; margin-top: 6px; font-weight: 500; }
+  .header .tagline { 
+    display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;
+  }
+  .header .tagline span {
+    background: rgba(255,255,255,0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .stat-box {
+    text-align: center;
+    padding: 28px 16px;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .stat-box:last-child, .grid .stat-box:nth-child(3) { border-right: none; }
+  .stat-box .num { font-size: 32px; font-weight: 800; color: #0f3460; }
+  .stat-box .num.green { color: #1a7d3a; }
+  .stat-box .num.amber { color: #b8860b; }
+  .stat-box .label { font-size: 12px; color: #666; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+  .section { padding: 32px 48px; }
+  .section + .section { border-top: 1px solid #eee; }
+  .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
+  .section h2 span { color: #0f3460; }
+  .budget-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .budget-table th { 
+    text-align: left; padding: 10px 12px; font-weight: 600; 
+    border-bottom: 2px solid #1a1a2e; color: #1a1a2e;
+  }
+  .budget-table td { padding: 9px 12px; border-bottom: 1px solid #e8e8e8; }
+  .budget-table tr:nth-child(even) { background: #fafafa; }
+  .budget-table .total-row td { font-weight: 700; border-top: 2px solid #1a1a2e; border-bottom: none; font-size: 15px; }
+  .budget-table .total-row td:last-child { color: #0f3460; }
+  .budget-table td:last-child { text-align: right; }
+  .budget-table th:last-child { text-align: right; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .scenario { 
+    background: #f8f6f3; padding: 20px; border-radius: 12px;
+    border-left: 4px solid #0f3460;
+  }
+  .scenario.alt { border-left-color: #b8860b; }
+  .scenario h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .scenario .big { font-size: 28px; font-weight: 800; color: #0f3460; margin: 4px 0; }
+  .scenario.alt .big { color: #b8860b; }
+  .scenario .details { font-size: 13px; color: #555; line-height: 1.6; }
+  .risks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .risk-item { 
+    background: #f8f6f3; padding: 14px 16px; border-radius: 8px; font-size: 13px;
+    border-left: 3px solid #d4a017;
+  }
+  .risk-item strong { display: block; margin-bottom: 4px; font-size: 13px; }
+  .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .option-card {
+    background: #f8f6f3; padding: 20px; border-radius: 12px;
+    text-align: center;
+  }
+  .option-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+  .option-card p { font-size: 13px; color: #555; line-height: 1.5; }
+  .option-card .highlight { font-size: 20px; font-weight: 700; color: #0f3460; margin: 8px 0; }
+  .footer {
+    background: #1a1a2e; color: #8899bb; padding: 24px 48px;
+    font-size: 12px; text-align: center; line-height: 1.6;
+  }
+  @media (max-width: 700px) {
+    .header, .section, .footer { padding: 24px 20px; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col, .risks, .options { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <h1>AFRO DELI WOODBURY</h1>
+    <div class="subtitle">$300K All-Equity Plan | Franchise Business — Conservative Edition</div>
+    <div class="tagline">
+      <span>📍 Woodbury, MN</span>
+      <span>🍽 African-Mediterranean Fusion</span>
+      <span>🏪 Second-Gen Space</span>
+      <span>📊 Yr 1 EBITDA: $93K</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="stat-box">
+      <div class="num">$300K</div>
+      <div class="label">Total Investment</div>
+    </div>
+    <div class="stat-box">
+      <div class="num green">$93,478</div>
+      <div class="label">Year 1 EBITDA</div>
+    </div>
+    <div class="stat-box">
+      <div class="num green">31%</div>
+      <div class="label">Year 1 ROI</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">$637K</div>
+      <div class="label">Year 1 Revenue</div>
+    </div>
+    <div class="stat-box">
+      <div class="num">Month 2</div>
+      <div class="label">Break-Even</div>
+    </div>
+    <div class="stat-box">
+      <div class="num green">$140K+</div>
+      <div class="label">Year 2 EBITDA (Proj.)</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>💰 <span>Use of Funds</span></h2>
+    <table class="budget-table">
+      <tr><th>Category</th><th>Amount</th></tr>
+      <tr><td>Franchise Fee</td><td>$35,000</td></tr>
+      <tr><td>Build-Out (second-gen space)</td><td>$120,000</td></tr>
+      <tr><td>FF&E (used/leased)</td><td>$60,000</td></tr>
+      <tr><td>Permits, Licenses &amp; Legal</td><td>$12,000</td></tr>
+      <tr><td>Technology &amp; POS</td><td>$8,000</td></tr>
+      <tr><td>Initial Inventory</td><td>$15,000</td></tr>
+      <tr><td>Pre-Opening Marketing</td><td>$15,000</td></tr>
+      <tr><td>Professional Fees</td><td>$8,000</td></tr>
+      <tr><td>Insurance (Year 1)</td><td>$5,000</td></tr>
+      <tr class="total-row"><td>Working Capital Reserve</td><td>$22,000</td></tr>
+      <tr class="total-row"><td><strong>TOTAL</strong></td><td><strong>$300,000</strong></td></tr>
+    </table>
+    <p style="font-size:13px; color:#666; margin-top:10px;">* No debt service — 100% equity. All cash flow goes to operations and owners.</p>
+  </div>
+
+  <div class="section">
+    <h2>📈 <span>Return Scenarios</span></h2>
+    <div class="two-col">
+      <div class="scenario">
+        <h3>Conservative Base Case</h3>
+        <div class="big">+$93,478</div>
+        <div class="details">
+          Year 1 EBITDA<br>
+          <strong>31% return</strong> on $300K<br>
+          Year 2 projected: $140K-$155K (47-52%)
+        </div>
+      </div>
+      <div class="scenario alt">
+        <h3>Stress-Tested</h3>
+        <div class="big">+$36,090</div>
+        <div class="details">
+          -20% covers • 32% COGS<br>
+          <strong>12% return</strong> on $300K<br>
+          Still solidly positive in worst case
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>⚖️ <span>Capital Structure Options</span></h2>
+    <div class="options">
+      <div class="option-card">
+        <h3>50/50 Split</h3>
+        <div class="highlight">$150K each</div>
+        <p>Each side gets 50% equity<br>
+        <strong>Yr 1: $46,739 (31%)</strong><br>
+        Yr 2: $72K-$77K (48-51%)</p>
+      </div>
+      <div class="option-card">
+        <h3>Kofi $100K / Investors $200K</h3>
+        <div class="highlight">33% / 66%</div>
+        <p>Kofi: Yr 1 $31,159<br>
+        Investors: Yr 1 <strong>$62,319 (31%)</strong><br>
+        2x preference or straight equity</p>
+      </div>
+      <div class="option-card">
+        <h3>8% Preferred + Split</h3>
+        <div class="highlight">10% / 17.7%</div>
+        <p>Investors get 8% pref ($16K/yr)<br>
+        Remaining 50/50<br>
+        Investors Yr 1: <strong>17.7% return</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>⚠️ <span>Key Risks &amp; Mitigants</span></h2>
+    <div class="risks">
+      <div class="risk-item">
+        <strong>🚧 Build-out cost overrun</strong>
+        Second-gen space required; lease contingent on kitchen/plumbing/hood inspection before signing.
+      </div>
+      <div class="risk-item">
+        <strong>🐢 Slower than projected ramp</strong>
+        Conservative projections already 10-15% below existing location averages. Marketing budget reserved for launch push.
+      </div>
+      <div class="risk-item">
+        <strong>🔧 Used equipment failure</strong>
+        $5K repair reserve in working capital. Leasing options available for fryers, refrigeration.
+      </div>
+      <div class="risk-item">
+        <strong>🪄 Low brand awareness</strong>
+        No direct competitor in market. Catering + delivery pipeline from Day 1. Proven franchisor support.
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>🏆 <span>Why This Works</span></h2>
+    <table class="budget-table">
+      <tr><th>Advantage</th><th>Detail</th></tr>
+      <tr><td>Proven model</td><td>3 existing Twin Cities locations, 12+ years operating</td></tr>
+      <tr><td>No direct competition</td><td>Zero African-Mediterranean concepts in Woodbury</td></tr>
+      <tr><td>Built-in catering</td><td>25.7% of existing sales — Woodbury has more corporate/medical density</td></tr>
+      <tr><td>Strong demographics</td><td>$117K median income, 12% growth, 30-40% daytime population surge</td></tr>
+      <tr><td>Halal positioning</td><td>Growing demand, minimal competition in suburbs</td></tr>
+      <tr><td>No debt service</td><td>100% equity — all EBITDA flows to owners</td></tr>
+    </table>
+  </div>
+
+  <div class="footer">
+    Prepared July 2026 | Based on Afro Deli Woodbury Franchise Business Plan (Conservative Edition)<br>
+    All projections are estimates pending FDD review, site selection, and final lease terms.<br>
+    This is not a guarantee of financial performance.
+  </div>
+</div>
+</body>
+</html>

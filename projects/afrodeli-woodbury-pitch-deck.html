@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afro Deli — Woodbury | Pitch Deck + Financial Analysis</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    overflow-x: hidden;
+  }
+
+  .slides {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .slide {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    opacity: 0.06;
+    pointer-events: none;
+  }
+
+  .slide:nth-child(odd)::before {
+    background: radial-gradient(circle, #f59e0b, transparent);
+  }
+
+  .slide:nth-child(even)::before {
+    background: radial-gradient(circle, #10b981, transparent);
+  }
+
+  .slide-number {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.2);
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+
+  h1 .highlight {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 32px;
+    line-height: 1.2;
+  }
+
+  h2 .highlight {
+    background: linear-gradient(135deg, #f59e0b, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #f59e0b;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+    max-width: 600px;
+    margin-top: 8px;
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(245, 158, 11, 0.15);
+    color: #f59e0b;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+  .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
+  .grid-5 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 16px; }
+
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  }
+
+  .card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .card .stat {
+    font-size: 36px;
+    font-weight: 800;
+    color: #f59e0b;
+    margin-bottom: 6px;
+  }
+
+  .card .stat.green { color: #10b981; }
+  .card .stat.blue { color: #3b82f6; }
+  .card .stat.purple { color: #8b5cf6; }
+
+  .card p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  .check-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .check-list li {
+    padding: 10px 0;
+    padding-left: 32px;
+    position: relative;
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .check-list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #f59e0b;
+    font-size: 14px;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+
+  thead th {
+    background: rgba(245, 158, 11, 0.08);
+    color: #f59e0b;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  tbody td {
+    padding: 11px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.8);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.03); }
+  .num { text-align: right; font-family: 'Inter', monospace; }
+  .pos { color: #10b981; font-weight: 600; }
+  .neg { color: #ef4444; }
+  .warn { color: #f59e0b; }
+
+  .kpi-row {
+    display: flex;
+    gap: 24px;
+    margin: 24px 0;
+    flex-wrap: wrap;
+  }
+
+  .kpi {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 20px 28px;
+    flex: 1;
+    min-width: 160px;
+  }
+
+  .kpi .value { font-size: 28px; font-weight: 800; color: #f59e0b; }
+  .kpi .value.green { color: #10b981; }
+  .kpi .label { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+  .content-area { max-width: 900px; }
+
+  .prose {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.75);
+    max-width: 800px;
+  }
+  .prose strong { color: #fff; }
+
+  @media print {
+    .slides { scroll-snap-type: none !important; overflow: visible !important; height: auto !important; }
+    .slide { scroll-snap-align: none; min-height: 100vh; page-break-after: always; padding: 40px 60px; break-inside: avoid; }
+    .slide::before { display: none; }
+    body { background: #0a0a0a; }
+    .card { break-inside: avoid; }
+    .kpi-row { break-inside: avoid; }
+    .nav-dots { display: none !important; }
+    .slide-number { bottom: 15px; right: 20px; font-size: 10px; }
+    .bar-chart { break-inside: avoid; }
+    .table-wrap { break-inside: avoid; }
+    h2 { break-inside: avoid; }
+  }
+
+  @media (max-width: 768px) {
+    .slide { padding: 40px 24px; }
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+    .kpi-row { flex-direction: column; }
+  }
+
+  .nav-dots {
+    position: fixed;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+  }
+
+  .nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .nav-dot:hover, .nav-dot.active {
+    background: #f59e0b;
+    transform: scale(1.3);
+  }
+
+  .footer-note {
+    margin-top: 32px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.2);
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .compact-table td, .compact-table th { padding: 8px 12px; font-size: 12px; }
+
+  /* Bar chart visual */
+  .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 200px; margin: 16px 0; }
+  .bar-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .bar { width: 100%; border-radius: 4px 4px 0 0; min-height: 2px; transition: height 0.5s; position: relative; }
+  .bar-label { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 6px; text-align: center; }
+  .bar-value { font-size: 10px; color: rgba(255,255,255,0.6); margin-bottom: 2px; }
+
+  /* Line-style viz for break-even */
+  .chart-container { position: relative; margin: 20px 0; height: 220px; border-bottom: 1px solid rgba(255,255,255,0.1); border-left: 1px solid rgba(255,255,255,0.1); padding-left: 40px; }
+  .chart-row { display: flex; align-items: center; position: absolute; width: 100%; }
+  .chart-label { position: absolute; left: -38px; font-size: 11px; color: rgba(255,255,255,0.3); }
+  .chart-bar { height: 20px; border-radius: 0 4px 4px 0; margin: 2px 0; }
+  .chart-line { position: absolute; left: 0; right: 0; height: 1px; border-top: 1px dashed rgba(245,158,11,0.3); }
+
+  .highlight-box {
+    background: rgba(245,158,11,0.08);
+    border: 1px solid rgba(245,158,11,0.2);
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    margin: 12px 0;
+  }
+</style>
+</head>
+<body>
+
+<div class="nav-dots" id="navDots"></div>
+
+<div class="slides" id="slides">
+
+  <!-- 01: TITLE -->
+  <section class="slide" data-index="0">
+    <span class="slide-number">01 / 18</span>
+    <div class="content-area">
+      <div class="tag">Franchise Pitch Deck + Financial Analysis</div>
+      <h1>Afro Deli<br><span class="highlight">Woodbury, MN</span></h1>
+      <p class="subtitle" style="font-size:22px; font-weight:600; color:rgba(255,255,255,0.7);">
+        African-Mediterranean Fusion — East Metro Expansion
+      </p>
+      <p class="subtitle" style="margin-top:20px;">
+        A fast-casual franchise opportunity in an affluent, fast-growing suburb with zero direct competition.
+        Projections calibrated against actual operational data from 3 existing locations — conservative ramp-up,
+        detailed sensitivity analysis, and full 5-year outlook.
+      </p>
+      <div style="margin-top:40px;">
+        <div style="display:flex; gap:40px; flex-wrap:wrap;">
+          <div><span style="color:rgba(255,255,255,0.3); font-size:13px;">FRANCHISE</span><br><span style="font-weight:700;">Afro Deli</span></div>
+          <div><span style="color:rgba(255,255,255,0.3); font-size:13px;">OWNER-OPERATOR</span><br><span style="font-weight:700;">Koo Ok</span></div>
+          <div><span style="color:rgba(255,255,255,0.3); font-size:13px;">TOTAL INVESTMENT</span><br><span style="font-weight:700;">$600,000</span></div>
+          <div><span style="color:rgba(255,255,255,0.3); font-size:13px;">DATE</span><br><span style="font-weight:700;">June 2026</span></div>
+          <div><span style="color:rgba(255,255,255,0.3); font-size:13px;">BREAK-EVEN</span><br><span style="font-weight:700; color:#10b981;">Month 4</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02: CONCEPT -->
+  <section class="slide" data-index="1">
+    <span class="slide-number">02 / 18</span>
+    <h2>Concept <span class="highlight">Overview</span></h2>
+    <div class="grid-2">
+      <div>
+        <p class="prose">
+          <strong>Afro Deli</strong> is a fast-casual fusion restaurant weaving <strong>African, Mediterranean, and American</strong> cuisine in a fast, fun, family-friendly environment.
+          <br><br>
+          All dishes made fresh, prepared <strong>Halal</strong>, rooted in a social enterprise mission. <strong>3 locations</strong> operating 12+ years in the Twin Cities — average store doing <strong>$456K/year</strong>.
+        </p>
+        <div class="kpi-row" style="margin-top:24px;">
+          <div class="kpi">
+            <div class="value">3</div>
+            <div class="label">Existing Locations</div>
+          </div>
+          <div class="kpi">
+            <div class="value green">$1.37M</div>
+            <div class="label">Combined Annual Net Sales</div>
+          </div>
+          <div class="kpi">
+            <div class="value green">25.7%</div>
+            <div class="label">Catering Share (actual)</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.15);">
+          <h4>Menu Highlights</h4>
+          <ul class="check-list">
+            <li><strong>Chicken Fantastic</strong> — Somali rice, creole sauce</li>
+            <li><strong>Sambusas</strong> (beef, chicken, veggie) — fan favorite</li>
+            <li><strong>Lamb & Chicken Gyros</strong> — spiced rotisserie</li>
+            <li><strong>Spiced Bowls</strong> — proteins over Somali rice</li>
+            <li><strong>Falafel / Hummus</strong> — strong vegan options</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:12px; background:rgba(16,185,129,0.06); border-color:rgba(16,185,129,0.12);">
+          <p style="font-size:13px; color:rgba(255,255,255,0.7);">📊 <strong>Actual Avg Ticket:</strong> $15.89 | <strong>Turn Time:</strong> 17.8 min | <strong>Night Dinner:</strong> 16.1% (growth runway)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03: WHY WOODBURY -->
+  <section class="slide" data-index="2">
+    <span class="slide-number">03 / 18</span>
+    <h2>Why <span class="highlight">Woodbury?</span></h2>
+    <p class="subtitle" style="margin-bottom:24px;">The strongest launchpad for the first suburban Afro Deli franchise.</p>
+    <div class="grid-2">
+      <div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Factor</th><th>📍 Woodbury</th><th>Minnetonka</th><th>Edina</th></tr></thead>
+            <tbody>
+              <tr><td>Population</td><td><strong>~75,000</strong></td><td>~55,000</td><td>~54,000</td></tr>
+              <tr><td>Growth (2020–25)</td><td><strong class="pos">+12%</strong></td><td>+4%</td><td>+3%</td></tr>
+              <tr><td>Median Income</td><td><strong>$117K</strong></td><td>$105K</td><td>$120K</td></tr>
+              <tr><td>Restaurants per capita</td><td><strong class="pos">Lower</strong></td><td>Medium</td><td>Higher</td></tr>
+              <tr><td>Daytime Surge</td><td><strong>30–40%</strong></td><td>Moderate</td><td>Moderate</td></tr>
+              <tr><td>Afro-Med Competition</td><td><strong class="pos">None (gap)</strong></td><td>None</td><td>None</td></tr>
+              <tr><td>Lease ($/sq ft NNN)</td><td><strong>$20–$25</strong></td><td>$22–$28</td><td>$28–$35</td></tr>
+              <tr><td>Permitting</td><td><strong>4–6 wks</strong></td><td>6–10 wks</td><td>8–12 wks</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(16,185,129,0.06); border-color:rgba(16,185,129,0.12);">
+          <h4>7 Reasons Woodbury Wins</h4>
+          <ul class="check-list">
+            <li><strong>Largest & fastest-growing</strong> — 75K people, 3× the growth rate</li>
+            <li><strong>Affluent but under-restauranted</strong> — $117K income with fewer options per capita</li>
+            <li><strong>Daytime surge</strong> — 30–40% influx from medical + corporate base</li>
+            <li><strong>Catering infrastructure</strong> — Woodbury's institutional market is larger than any existing location serves</li>
+            <li><strong>Zero direct competition</strong> — no African-Med fusion anywhere in the market</li>
+            <li><strong>Cheapest lease, fastest permit</strong> — $20–25/sq ft, permits in 4–6 weeks</li>
+            <li><strong>Expansion logic</strong> — Woodbury → Minnetonka → Edina</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04: WOODBURY DEMOGRAPHICS -->
+  <section class="slide" data-index="3">
+    <span class="slide-number">04 / 18</span>
+    <h2>Woodbury <span class="highlight">Demographics</span></h2>
+    <p class="subtitle" style="margin-bottom:28px;">Affluent, fast-growing — the perfect launchpad.</p>
+    <div class="grid-4">
+      <div class="card"><div class="stat green">75K</div><h4>Population</h4><p>+12% since 2020 — fastest in cohort</p></div>
+      <div class="card"><div class="stat">$117K</div><h4>Median Income</h4><p>Well above metro — high dining spend</p></div>
+      <div class="card"><div class="stat blue">38%</div><h4>Families w/ Kids</h4><p>Primary target — dinner demand</p></div>
+      <div class="card"><div class="stat purple">30–40%</div><h4>Daytime Surge</h4><p>Medical + retail + office influx</p></div>
+    </div>
+    <div class="grid-2" style="margin-top:20px;">
+      <div class="card">
+        <h4>Target Segments</h4>
+        <ul class="check-list">
+          <li><strong>Primary (50%)</strong> — Families with kids 6–17</li>
+          <li><strong>Catering (25%)</strong> — Corporate, medical, schools (validated at 25.7% of existing sales)</li>
+          <li><strong>Professionals (15%)</strong> — Affluent couples, global flavor seekers</li>
+          <li><strong>Daytime + Delivery (10%)</strong> — Lunch workforce + 17.1% 3rd-party delivery</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Ideal Site Criteria</h4>
+        <ul class="check-list">
+          <li>1,500–1,800 sq ft endcap/inline</li>
+          <li>Power center near grocery anchor (Tamarack Village, Woodbury Lakes)</li>
+          <li>25,000+ VPD, street-facing signage</li>
+          <li>Lease: $18–$25/sq ft NNN (~$4,200/mo)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05: COMPETITOR MATRIX -->
+  <section class="slide" data-index="4">
+    <span class="slide-number">05 / 18</span>
+    <h2>Competitor <span class="highlight">Landscape</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">Woodbury has a clear gap — Afro Deli fills it.</p>
+    <div class="table-wrap">
+      <table class="compact-table">
+        <thead><tr><th>Competitor</th><th>Category</th><th>Location</th><th>Afro Deli Advantage</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Naf Naf Grill</strong></td><td>Mediterranean</td><td>Tamarack Village</td><td>African spicing, sambusas, richer brand story, halal</td></tr>
+          <tr><td><strong>Chipotle</strong></td><td>Mexican Grill</td><td>Woodbury Lakes</td><td>Unique flavor — Somali rice, spice blends</td></tr>
+          <tr><td><strong>Panera Bread</strong></td><td>Bakery-Café</td><td>Valley Creek</td><td>Dinner-centric, bolder flavors, community mission</td></tr>
+          <tr><td><strong>Noodles & Co.</strong></td><td>Global-Inspired</td><td>Woodbury Lakes</td><td>Authentic cuisine, halal commitment</td></tr>
+          <tr><td><strong>Crisp & Green</strong></td><td>Health FC</td><td>Woodbury Lakes</td><td>Warm bowls + gyros = comfort + nutrition</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="highlight-box" style="margin-top:16px;">
+      💡 <strong>Key Insight:</strong> No competitor offers <strong>African-Med fusion</strong>, <strong>halal-first</strong>, or <strong>cultural storytelling</strong>. And none does 25.7% of revenue from catering.
+    </div>
+  </section>
+
+  <!-- 06: SWOT -->
+  <section class="slide" data-index="5">
+    <span class="slide-number">06 / 18</span>
+    <h2>SWOT <span class="highlight">Analysis</span></h2>
+    <div class="grid-2">
+      <div>
+        <div class="card" style="border-left:3px solid #10b981;">
+          <h4 style="color:#10b981;">Strengths</h4>
+          <ul class="check-list">
+            <li>Proven model (3 locations, 12+ years)</li>
+            <li>25.7% catering revenue — proven institutional model</li>
+            <li>Unique cuisine = zero direct competition</li>
+            <li>All-halal = growing demand driver</li>
+            <li>17.1% 3rd-party delivery (DoorDash, Uber, Grubhub)</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:16px; border-left:3px solid #f59e0b;">
+          <h4 style="color:#f59e0b;">Opportunities</h4>
+          <ul class="check-list">
+            <li>Woodbury 12% growth = rising dining demand</li>
+            <li>No African-Med fusion competitor</li>
+            <li>Catering already proven at 25.7% — bigger market</li>
+            <li>Dinner only 16.1% of existing sales — huge runway</li>
+            <li>Second location or Minnetonka in Yr 3–5</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="border-left:3px solid #ef4444;">
+          <h4 style="color:#ef4444;">Weaknesses</h4>
+          <ul class="check-list">
+            <li>First suburban expansion — new territory</li>
+            <li>Limited Woodbury brand awareness vs nationals</li>
+            <li>Royalty + marketing (8%) compresses margins</li>
+            <li>No drive-thru (vs Panera, Chipotle)</li>
+            <li>Owner-operator learning curve</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:16px; border-left:3px solid #8b5cf6;">
+          <h4 style="color:#8b5cf6;">Threats</h4>
+          <ul class="check-list">
+            <li><strong>Economic downturn</strong> — rising rates could cut discretionary spend</li>
+            <li><strong>Halal protein inflation</strong> — chicken, beef prices volatile</li>
+            <li><strong>Labor market pressure</strong> — wage inflation in Twin Cities metro</li>
+            <li><strong>Potential Cava entry</strong> — national chain could enter Woodbury</li>
+            <li><strong>Lease escalation</strong> — 20–40% increase at 5–10 year renewal</li>
+            <li><strong>Supply chain</strong> — specialty African ingredient disruption</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07: FUNDING -->
+  <section class="slide" data-index="6">
+    <span class="slide-number">07 / 18</span>
+    <h2>Funding <span class="highlight">Structure</span></h2>
+    <div class="grid-2">
+      <div>
+        <div class="card" style="background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.15);">
+          <h4>Total Project Cost: <span style="font-size:32px; color:#f59e0b; font-weight:800;">$600,000</span></h4>
+        </div>
+        <div style="margin-top:16px;">
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Cost Category</th><th class="num">Amount</th></tr></thead>
+              <tbody>
+                <tr><td>Franchise Fee</td><td class="num">$35,000</td></tr>
+                <tr><td>Leasehold Improvements (1,600 sq ft)</td><td class="num">$250,000</td></tr>
+                <tr><td>FF&E (Kitchen, POS, Seating)</td><td class="num">$135,000</td></tr>
+                <tr><td>Permits, Licenses & Legal</td><td class="num">$15,000</td></tr>
+                <tr><td>Technology & POS</td><td class="num">$10,000</td></tr>
+                <tr><td>Initial Inventory & Smallwares</td><td class="num">$20,000</td></tr>
+                <tr><td>Pre-Opening Marketing</td><td class="num">$25,000</td></tr>
+                <tr><td>Professional Fees</td><td class="num">$15,000</td></tr>
+                <tr><td>Insurance (Yr 1)</td><td class="num">$8,000</td></tr>
+                <tr><td>Working Capital Reserve (6 mo)</td><td class="num">$87,000</td></tr>
+                <tr><td>Contingency (5%)</td><td class="num">$30,000</td></tr>
+                <tr style="border-top:2px solid rgba(245,158,11,0.3);"><td><strong>Total</strong></td><td class="num"><strong>$600,000</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.15); margin-bottom:16px;">
+          <h4>Capital Stack</h4>
+          <div style="display:flex; gap:16px; margin-top:16px; flex-wrap:wrap;">
+            <div style="flex:1; background:rgba(16,185,129,0.1); border-radius:12px; padding:20px; text-align:center;">
+              <div style="font-size:36px; font-weight:800; color:#10b981;">$200K</div>
+              <div style="font-size:13px; color:rgba(255,255,255,0.5);">Owner Equity</div>
+              <div style="font-size:12px; color:rgba(255,255,255,0.3);">33% of total</div>
+            </div>
+            <div style="flex:1; background:rgba(59,130,246,0.1); border-radius:12px; padding:20px; text-align:center;">
+              <div style="font-size:36px; font-weight:800; color:#3b82f6;">$400K</div>
+              <div style="font-size:13px; color:rgba(255,255,255,0.5);">SBA 7(a) Loan</div>
+              <div style="font-size:12px; color:rgba(255,255,255,0.3);">10 yr @ 9% | $5,075/mo</div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Key Assumptions</h4>
+          <ul class="check-list">
+            <li><strong>Avg Ticket:</strong> $15.00 (actual: $15.89 → conservative)</li>
+            <li><strong>COGS:</strong> 29% of revenue</li>
+            <li><strong>Labor:</strong> 30% inclusive of $60K owner salary</li>
+            <li><strong>Catering (Yr 1):</strong> 15–20% (actual: 25.7%)</li>
+            <li><strong>Royalty:</strong> 6% standard + 2% marketing</li>
+            <li><strong>Rent:</strong> ~$4,200/mo ($24/sq ft NNN)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08: CONSERVATIVE RAMP-UP -->
+  <section class="slide" data-index="7">
+    <span class="slide-number">08 / 18</span>
+    <h2>Conservative <span class="highlight">Ramp-Up</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">50 covers/day starting → 185 covers/day at year-end. 10–15% slower than original projections.</p>
+    <div class="grid-2">
+      <div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Month</th><th class="num">Covers/Day</th><th class="num">Revenue</th><th class="num">EBITDA</th><th class="num">Net CF</th></tr></thead>
+            <tbody>
+              <tr><td>Month 1</td><td class="num">50</td><td class="num">$19,500</td><td class="num neg">($1,965)</td><td class="num neg">($7,040)</td></tr>
+              <tr><td>Month 2</td><td class="num">70</td><td class="num">$27,300</td><td class="num pos">$297</td><td class="num neg">($4,778)</td></tr>
+              <tr><td>Month 3</td><td class="num">95</td><td class="num">$37,050</td><td class="num pos">$3,124</td><td class="num neg">($1,950)</td></tr>
+              <tr><td style="color:#10b981; font-weight:700;">Month 4</td><td class="num" style="color:#10b981; font-weight:700;">115</td><td class="num" style="color:#10b981; font-weight:700;">$44,850</td><td class="num pos">$5,386</td><td class="num pos" style="font-weight:700;">$312 ⬅</td></tr>
+              <tr><td>Month 5</td><td class="num">130</td><td class="num">$50,700</td><td class="num pos">$7,083</td><td class="num pos">$2,008</td></tr>
+              <tr><td>Month 6</td><td class="num">145</td><td class="num">$56,550</td><td class="num pos">$8,780</td><td class="num pos">$3,704</td></tr>
+              <tr><td>Month 7</td><td class="num">155</td><td class="num">$60,450</td><td class="num pos">$9,910</td><td class="num pos">$4,836</td></tr>
+              <tr><td>Month 8</td><td class="num">165</td><td class="num">$64,350</td><td class="num pos">$11,042</td><td class="num pos">$5,966</td></tr>
+              <tr><td>Month 9</td><td class="num">170</td><td class="num">$66,300</td><td class="num pos">$11,607</td><td class="num pos">$6,532</td></tr>
+              <tr><td>Month 10</td><td class="num">175</td><td class="num">$68,250</td><td class="num pos">$12,172</td><td class="num pos">$7,098</td></tr>
+              <tr><td>Month 11</td><td class="num">180</td><td class="num">$70,200</td><td class="num pos">$12,738</td><td class="num pos">$7,663</td></tr>
+              <tr><td>Month 12</td><td class="num">185</td><td class="num">$72,150</td><td class="num pos">$13,304</td><td class="num pos">$8,228</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <!-- Visual: Ramp-up chart as bars -->
+        <div class="card" style="background:rgba(16,185,129,0.04); border-color:rgba(16,185,129,0.1);">
+          <h4>Monthly Revenue Trajectory</h4>
+          <div class="bar-chart" style="height:180px;">
+            <div class="bar-col"><div class="bar-value">$19.5K</div><div class="bar" style="height:24px; background:rgba(239,68,68,0.6);"></div><div class="bar-label">M1</div></div>
+            <div class="bar-col"><div class="bar-value">$27.3K</div><div class="bar" style="height:34px; background:rgba(239,68,68,0.4);"></div><div class="bar-label">M2</div></div>
+            <div class="bar-col"><div class="bar-value">$37K</div><div class="bar" style="height:46px; background:rgba(245,158,11,0.5);"></div><div class="bar-label">M3</div></div>
+            <div class="bar-col"><div class="bar-value">$44.9K</div><div class="bar" style="height:56px; background:rgba(16,185,129,0.5);"></div><div class="bar-label">M4</div></div>
+            <div class="bar-col"><div class="bar-value">$50.7K</div><div class="bar" style="height:63px; background:rgba(16,185,129,0.6);"></div><div class="bar-label">M5</div></div>
+            <div class="bar-col"><div class="bar-value">$56.6K</div><div class="bar" style="height:70px; background:rgba(16,185,129,0.65);"></div><div class="bar-label">M6</div></div>
+            <div class="bar-col"><div class="bar-value">$60.5K</div><div class="bar" style="height:75px; background:rgba(16,185,129,0.7);"></div><div class="bar-label">M7</div></div>
+            <div class="bar-col"><div class="bar-value">$64.4K</div><div class="bar" style="height:80px; background:rgba(16,185,129,0.75);"></div><div class="bar-label">M8</div></div>
+            <div class="bar-col"><div class="bar-value">$66.3K</div><div class="bar" style="height:82px; background:rgba(16,185,129,0.8);"></div><div class="bar-label">M9</div></div>
+            <div class="bar-col"><div class="bar-value">$68.3K</div><div class="bar" style="height:85px; background:rgba(16,185,129,0.85);"></div><div class="bar-label">M10</div></div>
+            <div class="bar-col"><div class="bar-value">$70.2K</div><div class="bar" style="height:87px; background:rgba(16,185,129,0.9);"></div><div class="bar-label">M11</div></div>
+            <div class="bar-col"><div class="bar-value">$72.2K</div><div class="bar" style="height:90px; background:rgba(16,185,129,1);"></div><div class="bar-label">M12</div></div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:12px;">
+          📍 <strong>Cash flow positive (net of SBA):</strong> Month 4 ($312)<br>
+          📍 <strong>Cumulative cash flow positive:</strong> Month 8
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09: YEAR 1 HIGHLIGHTS -->
+  <section class="slide" data-index="8">
+    <span class="slide-number">09 / 18</span>
+    <h2>Year 1 <span class="highlight">Highlights</span></h2>
+    <div class="grid-2">
+      <div>
+        <div class="kpi-row" style="margin:0;">
+          <div class="kpi"><div class="value">$637.7K</div><div class="label">Total Revenue (Yr 1)</div></div>
+          <div class="kpi"><div class="value green">$93.5K</div><div class="label">EBITDA</div></div>
+        </div>
+        <div class="kpi-row" style="margin:12px 0 0;">
+          <div class="kpi"><div class="value green">$32.6K</div><div class="label">Net Cash Flow (post-loan)</div></div>
+          <div class="kpi"><div class="value">$60K</div><div class="label">Owner Salary (included)</div></div>
+        </div>
+        <div class="kpi-row" style="margin:12px 0 0;">
+          <div class="kpi"><div class="value green">14.7%</div><div class="label">EBITDA Margin</div></div>
+          <div class="kpi"><div class="value">6.9%</div><div class="label">Debt-to-Sales</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.15);">
+          <h4>Unit Economics vs Actual Data</h4>
+          <ul class="check-list">
+            <li><strong>Avg Ticket $15.00</strong> (actual: $15.89 — conservative)</li>
+            <li><strong>Catering 15–20% Yr 1</strong> (actual: 25.7% — building toward parity)</li>
+            <li><strong>Dinner ~25%</strong> (actual: 16.1% — growth thesis)</li>
+            <li><strong>Labor 30% incl owner</strong> (actual: 15–21% excl. owner)</li>
+            <li><strong>Daily break-even:</strong> ~65 covers (vs Yr-end 185 covers)</li>
+            <li><strong>Cumulative recover:</strong> All losses recovered by Month 8</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10: BREAK-EVEN ANALYSIS (DETAILED) -->
+  <section class="slide" data-index="9">
+    <span class="slide-number">10 / 18</span>
+    <h2>Break-Even <span class="highlight">Deep Dive</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">Detailed math showing exactly where and when the business crosses into profitability.</p>
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <h4>Break-Even Math</h4>
+          <div style="margin-top:16px;">
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Fixed Monthly Costs</span>
+              <span style="font-weight:700;">~$8,400</span>
+            </div>
+            <div style="padding:4px 0 10px 16px; font-size:12px; color:rgba(255,255,255,0.3);">
+              Occupancy $4,200 + Base Utilities/Supplies/Tech/Insurance $4,200
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Variable Cost Ratio</span>
+              <span style="font-weight:700;">~67%</span>
+            </div>
+            <div style="padding:4px 0 10px 16px; font-size:12px; color:rgba(255,255,255,0.3);">
+              COGS 29% + Labor 30% + Royalty 6% + Marketing 2% = 67%
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Contribution Margin</span>
+              <span style="font-weight:700; color:#10b981;">33%</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Break-Even Revenue</span>
+              <span style="font-weight:700; color:#10b981;">$25,455/mo</span>
+            </div>
+            <div style="font-size:11px; padding:2px 0 10px 16px; color:rgba(255,255,255,0.3);">
+              $8,400 ÷ 0.33 = $25,455
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Break-Even Daily Covers</span>
+              <span style="font-weight:700; color:#10b981;">~65/day</span>
+            </div>
+            <div style="font-size:11px; padding:2px 0 10px 16px; color:rgba(255,255,255,0.3);">
+              $25,455 ÷ ($15.00 × 26 days) = 65.3
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0;">
+              <span style="font-weight:700;">Cash Flow BE (w/ SBA)</span>
+              <span style="font-weight:700; color:#10b981;">$40,833/mo</span>
+            </div>
+            <div style="font-size:11px; padding:2px 0 10px 16px; color:rgba(255,255,255,0.3);">
+              ($8,400 + $5,075) ÷ 0.33 = $40,833 (≈ 105 covers/day)
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- When does each metric break even -->
+        <div class="card" style="height:100%;">
+          <h4>When Each Metric Crosses</h4>
+          <div style="margin-top:16px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:rgba(255,255,255,0.7);">Revenue above fixed costs</span>
+              <span style="color:#10b981; font-weight:700;">Month 1 ✓</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:rgba(255,255,255,0.7);">EBITDA positive</span>
+              <span style="color:#10b981; font-weight:700;">Month 2 ✓</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span style="color:rgba(255,255,255,0.7);">Net cash flow positive (post-SBA)</span>
+              <span style="color:#f59e0b; font-weight:700;">Month 4 ← Key</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0;">
+              <span style="color:rgba(255,255,255,0.7);">Cumulative cash flow positive</span>
+              <span style="color:#10b981; font-weight:700;">Month 8 ✓</span>
+            </div>
+          </div>
+          <div class="highlight-box" style="margin-top:16px;">
+            <strong>Context:</strong> Most new restaurants take 4–6 months to hit EBITDA break-even. This conservative projection achieves cash flow break-even (post-debt-service) by Month 4 — aggressive but supported by existing brand, proven catering model, and no direct competition.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11: CASH FLOW TRAJECTORY -->
+  <section class="slide" data-index="10">
+    <span class="slide-number">11 / 18</span>
+    <h2>Cash Flow <span class="highlight">Trajectory</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">Monthly net cash flow and cumulative position throughout Year 1.</p>
+    <div class="table-wrap" style="margin-bottom:20px;">
+      <table>
+        <thead><tr><th>Metric</th><th class="num">M1</th><th class="num">M2</th><th class="num">M3</th><th class="num">M4</th><th class="num">M5</th><th class="num">M6</th><th class="num">M7</th><th class="num">M8</th><th class="num">M9</th><th class="num">M10</th><th class="num">M11</th><th class="num">M12</th></tr></thead>
+        <tbody>
+          <tr><td>Monthly Net CF</td>
+            <td class="num neg">($7,040)</td><td class="num neg">($4,778)</td><td class="num neg">($1,950)</td>
+            <td class="num pos">$312</td><td class="num pos">$2,008</td><td class="num pos">$3,704</td>
+            <td class="num pos">$4,836</td><td class="num pos">$5,966</td><td class="num pos">$6,532</td>
+            <td class="num pos">$7,098</td><td class="num pos">$7,663</td><td class="num pos">$8,228</td>
+          </tr>
+          <tr><td>Cumulative CF</td>
+            <td class="num neg">($7,040)</td><td class="num neg">($11,818)</td><td class="num neg">($13,768)</td>
+            <td class="num neg">($13,456)</td><td class="num neg">($11,448)</td><td class="num neg">($7,744)</td>
+            <td class="num neg">($2,908)</td><td class="num pos">$3,058</td><td class="num pos">$9,590</td>
+            <td class="num pos">$16,688</td><td class="num pos">$24,351</td><td class="num pos">$32,579</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- Visual cumulative chart -->
+    <div class="grid-2">
+      <div class="card">
+        <h4>Monthly Net Cash Flow</h4>
+        <div class="bar-chart" style="height:140px;">
+          <div class="bar-col"><div class="bar" style="height:70px; background:#ef4444;"></div><div class="bar-label">M1</div></div>
+          <div class="bar-col"><div class="bar" style="height:48px; background:#ef4444;"></div><div class="bar-label">M2</div></div>
+          <div class="bar-col"><div class="bar" style="height:20px; background:#ef4444;"></div><div class="bar-label">M3</div></div>
+          <div class="bar-col"><div class="bar" style="height:3px; background:#10b981;"></div><div class="bar-label">M4</div></div>
+          <div class="bar-col"><div class="bar" style="height:20px; background:#10b981;"></div><div class="bar-label">M5</div></div>
+          <div class="bar-col"><div class="bar" style="height:37px; background:#10b981;"></div><div class="bar-label">M6</div></div>
+          <div class="bar-col"><div class="bar" style="height:48px; background:#10b981;"></div><div class="bar-label">M7</div></div>
+          <div class="bar-col"><div class="bar" style="height:60px; background:#10b981;"></div><div class="bar-label">M8</div></div>
+          <div class="bar-col"><div class="bar" style="height:65px; background:#10b981;"></div><div class="bar-label">M9</div></div>
+          <div class="bar-col"><div class="bar" style="height:71px; background:#10b981;"></div><div class="bar-label">M10</div></div>
+          <div class="bar-col"><div class="bar" style="height:77px; background:#10b981;"></div><div class="bar-label">M11</div></div>
+          <div class="bar-col"><div class="bar" style="height:82px; background:#10b981;"></div><div class="bar-label">M12</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h4>Maximum Drawdown</h4>
+        <div style="display:flex; flex-direction:column; gap:12px; margin-top:16px;">
+          <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span>Peak Negative Cash</span>
+            <span style="color:#ef4444; font-weight:700;">($13,768) — Month 3</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span>Months in the Red</span>
+            <span style="font-weight:700;">7 months (M1–M7)</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+            <span>Working Capital Needed</span>
+            <span style="color:#f59e0b; font-weight:700;">~$14,000</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; padding:10px 0;">
+            <span>Available Reserve ($600K plan)</span>
+            <span style="color:#10b981; font-weight:700;">$87,000 (6.3× cushion)</span>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:12px;">
+          Even in the worst month (M3, cumulative -$13,768), the working capital reserve covers <strong>6× the peak drawdown</strong>. This is a well-capitalized opening.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12: SENSITIVITY ANALYSIS -->
+  <section class="slide" data-index="11">
+    <span class="slide-number">12 / 18</span>
+    <h2>Sensitivity <span class="highlight">Analysis</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">Three scenarios: Base case, -10% revenue, and -20% revenue. The business holds up in all of them.</p>
+    <div class="table-wrap" style="margin-bottom:20px;">
+      <table>
+        <thead><tr><th>Metric</th><th class="num">Base Case</th><th class="num">–10% Revenue</th><th class="num">–20% Revenue</th></tr></thead>
+        <tbody>
+          <tr><td>Year 1 Revenue</td><td class="num">$637,650</td><td class="num" style="color:#ef4444;">$573,885</td><td class="num" style="color:#ef4444;">$510,120</td></tr>
+          <tr><td>Year 1 EBITDA</td><td class="num pos">$93,478</td><td class="num warn">$44,155</td><td class="num neg">($5,168)</td></tr>
+          <tr><td>Year 1 Net Cash Flow</td><td class="num pos">$32,578</td><td class="num neg">($16,745)</td><td class="num neg">($66,068)</td></tr>
+          <tr><td>Break-Even Month</td><td class="num pos">Month 4</td><td class="num warn">Month 8</td><td class="num neg">Not in Yr 1</td></tr>
+          <tr><td>Peak Drawdown</td><td class="num neg">($13,768)</td><td class="num neg">($25,685)</td><td class="num neg">($37,845)</td></tr>
+          <tr><td>Working Capital Burn Rate</td><td class="num pos">N/A (profitable)</td><td class="num">~$1,395/mo avg</td><td class="num">~$5,506/mo avg</td></tr>
+          <tr><td>Months of Reserve ($87K)</td><td class="num pos">N/A</td><td class="num pos">62 months</td><td class="num warn">16 months</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2">
+      <div class="card" style="border-left:3px solid #10b981;">
+        <h4 style="color:#10b981;">Base Case</h4>
+        <p style="font-size:14px; color:rgba(255,255,255,0.8);">
+          Conservative ramp (50→185 covers). Break-even Month 4. Year-end cumulative flow of $32.6K. 
+          The most likely scenario given existing brand recognition, catering model, and competitive gap.
+        </p>
+      </div>
+      <div class="card" style="border-left:3px solid #f59e0b;">
+        <h4 style="color:#f59e0b;">–10% Downside</h4>
+        <p style="font-size:14px; color:rgba(255,255,255,0.8);">
+          EBITDA still positive at $44K. Break-even pushed to Month 8. Peak drawdown of $25.7K — 
+          working capital reserve covers 62 months at this burn rate. 
+          Mitigation: cut labor to 27%, tighten COGS to 27%, accelerate catering.
+        </p>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px; background:rgba(239,68,68,0.04); border-color:rgba(239,68,68,0.1);">
+      <p style="font-size:14px; color:rgba(255,255,255,0.8);">
+        <strong>⚠ Worst Case (–20%):</strong> Revenue would need to underperform by <strong>20%+</strong> before the business requires additional capital. Even then, $87K reserve provides 16 months of runway. This scenario would require a capital injection of ~$30K by Month 10, or loan restructuring.
+      </p>
+    </div>
+  </section>
+
+  <!-- 13: FIVE-YEAR PROJECTION -->
+  <section class="slide" data-index="12">
+    <span class="slide-number">13 / 18</span>
+    <h2>5-Year <span class="highlight">Financial Outlook</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">From break-even to strong cash generation. Year 2–5 assumes steady 5–8% annual growth.</p>
+    <div class="table-wrap" style="margin-bottom:20px;">
+      <table>
+        <thead><tr><th>Metric</th><th class="num">Year 1</th><th class="num">Year 2</th><th class="num">Year 3</th><th class="num">Year 4</th><th class="num">Year 5</th></tr></thead>
+        <tbody>
+          <tr><td>Daily Covers (avg)</td><td class="num">~140</td><td class="num">195</td><td class="num">205</td><td class="num">210</td><td class="num">215</td></tr>
+          <tr><td>Revenue</td><td class="num">$637,650</td><td class="num">$780,000</td><td class="num">$842,000</td><td class="num">$885,000</td><td class="num">$925,000</td></tr>
+          <tr><td>COGS (29%)</td><td class="num">($184,919)</td><td class="num">($226,200)</td><td class="num">($244,180)</td><td class="num">($256,650)</td><td class="num">($268,250)</td></tr>
+          <tr><td>Gross Profit</td><td class="num pos">$452,732</td><td class="num pos">$553,800</td><td class="num pos">$597,820</td><td class="num pos">$628,350</td><td class="num pos">$656,750</td></tr>
+          <tr><td>Labor (30%)</td><td class="num">($191,295)</td><td class="num">($234,000)</td><td class="num">($252,600)</td><td class="num">($265,500)</td><td class="num">($277,500)</td></tr>
+          <tr><td>EBITDA</td><td class="num pos">$93,478</td><td class="num pos">$148,000</td><td class="num pos">$168,500</td><td class="num pos">$182,000</td><td class="num pos">$195,000</td></tr>
+          <tr><td>EBITDA Margin</td><td class="num pos">14.7%</td><td class="num pos">19.0%</td><td class="num pos">20.0%</td><td class="num pos">20.6%</td><td class="num pos">21.1%</td></tr>
+          <tr><td>Debt Service</td><td class="num">($60,900)</td><td class="num">($60,900)</td><td class="num">($60,900)</td><td class="num">($60,900)</td><td class="num">($60,900)</td></tr>
+          <tr><td>Owner Salary</td><td class="num">($60,000)</td><td class="num">($65,000)</td><td class="num">($72,000)</td><td class="num">($78,000)</td><td class="num">($85,000)</td></tr>
+          <tr><td>Net Cash Flow (post-all)</td><td class="num pos">$32,578</td><td class="num pos">$82,100</td><td class="num pos">$107,600</td><td class="num pos">$121,100</td><td class="num pos">$134,100</td></tr>
+          <tr style="border-top:2px solid rgba(245,158,11,0.3); font-weight:700; background:rgba(245,158,11,0.05);">
+            <td>Cumulative Cash (excl. equity)</td>
+            <td class="num pos">$32,578</td>
+            <td class="num pos">$114,678</td>
+            <td class="num pos">$222,278</td>
+            <td class="num pos">$343,378</td>
+            <td class="num pos">$477,478</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="stat">$477K</div>
+        <h4>5-Year Cumulative Cash</h4>
+        <p>After all debt service, owner salary, and expenses. Equivalent to <strong>80% ROI on equity</strong> over 5 years (not including owner salary of ~$360K).</p>
+      </div>
+      <div class="card">
+        <div class="stat green">21.1%</div>
+        <h4>Year 5 EBITDA Margin</h4>
+        <p>As operations mature and catering scales to 25% of revenue. Industry average for fast-casual is 15–20%.</p>
+      </div>
+      <div class="card">
+        <div class="stat">$195K</div>
+        <h4>Year 5 EBITDA</h4>
+        <p>Debt-free after Year 10, EBITDA jumps to ~$256K. The business becomes a strong cash machine after the loan is retired.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14: SBA LOAN AMORTIZATION -->
+  <section class="slide" data-index="13">
+    <span class="slide-number">14 / 18</span>
+    <h2>Debt <span class="highlight">Service</span> &amp; Loan Impact</h2>
+    <p class="subtitle" style="margin-bottom:20px;">The SBA 7(a) loan costs $5,075/month. Here's how it affects the business over the full term.</p>
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <h4>SBA 7(a) Loan Terms</h4>
+          <div style="margin-top:16px;">
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);"><span>Loan Amount</span><span style="font-weight:700;">$400,000</span></div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);"><span>Interest Rate</span><span style="font-weight:700;">9.0% APR</span></div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);"><span>Term</span><span style="font-weight:700;">10 years (120 months)</span></div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);"><span>Monthly Payment</span><span style="font-weight:700;">$5,075</span></div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);"><span>Total Interest (10 yr)</span><span style="font-weight:700; color:#f59e0b;">~$209,000</span></div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0;"><span>Total Cost of Loan</span><span style="font-weight:700; color:#f59e0b;">~$609,000</span></div>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top:12px;">
+          The loan consumes <strong>9.6% of Year 1 revenue</strong> ($60,900 ÷ $637,650). By Year 5, it drops to <strong>6.6%</strong> of revenue. Post-loan (Year 11+), EBITDA jumps ~65%.
+        </div>
+      </div>
+      <div>
+        <div class="card" style="height:100%;">
+          <h4>Cash Flow Impact Over Time</h4>
+          <div style="margin-top:16px;">
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Year 1: Net CF after debt</span>
+              <span style="font-weight:700; color:#10b981;">$32,578</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Year 3: Net CF after debt</span>
+              <span style="font-weight:700; color:#10b981;">$107,600</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Year 5: Net CF after debt</span>
+              <span style="font-weight:700; color:#10b981;">$134,100</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.05);">
+              <span>Year 10: Loan retired</span>
+              <span style="font-weight:700; color:#10b981;">$60,900/yr freed up</span>
+            </div>
+            <div style="display:flex; justify-content:space-between; padding:10px 0;">
+              <span>Year 11+: EBITDA post-loan</span>
+              <span style="font-weight:700; color:#10b981;">~$256K (est.)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 15: $600K VS $400K COMPARISON -->
+  <section class="slide" data-index="14">
+    <span class="slide-number">15 / 18</span>
+    <h2>Investment <span class="highlight">Options</span>: $600K vs $400K</h2>
+    <p class="subtitle" style="margin-bottom:20px;">Two capital structures compared. Recommendation: $600K for proper capitalization.</p>
+    <div class="grid-2">
+      <div>
+        <div class="card" style="background:rgba(16,185,129,0.06); border-color:rgba(16,185,129,0.15);">
+          <h4 style="color:#10b981;">✅ Recommended: $600,000</h4>
+          <ul class="check-list">
+            <li><strong>Equity:</strong> $200K (33%) | <strong>SBA Loan:</strong> $400K</li>
+            <li><strong>Working Capital:</strong> $87K (6 months)</li>
+            <li>Peak drawdown of $13.8K → 6.3× coverage</li>
+            <li>Full build-out, new equipment, generous contingency</li>
+            <li>6-month runway for any ramp delay or economic headwind</li>
+            <li><strong>63% debt-to-equity</strong> — conservative leverage</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.15);">
+          <h4 style="color:#f59e0b;">⚠ Lean Option: $400,000</h4>
+          <ul class="check-list">
+            <li><strong>Equity:</strong> $100K (25%) | <strong>SBA Loan:</strong> $300K</li>
+            <li><strong>Working Capital:</strong> $14K (3 months only)</li>
+            <li>Peak drawdown of $13.8K → only 1× coverage</li>
+            <li>Used/second-gen equipment, leaner build-out</li>
+            <li><strong>Risk:</strong> Underfunded by Month 5 without capital injection</li>
+            <li>Still viable with a second-gen space and experienced contractor</li>
+          </ul>
+        </div>
+        <div class="highlight-box" style="margin-top:12px;">
+          <strong>The $400K gap is all working capital.</strong> Cutting it from 6 months to 3 saves $73K but exposes the business to significant risk if the ramp takes 1 month longer than expected. The $600K plan is the safer path.
+        </div>
+      </div>
+    </div>
+    <div class="table-wrap" style="margin-top:16px;">
+      <table>
+        <thead><tr><th>Category</th><th class="num">$600K Plan</th><th class="num">$400K Plan</th><th>Difference</th></tr></thead>
+        <tbody>
+          <tr><td>Franchise Fee</td><td class="num">$35,000</td><td class="num">$35,000</td><td>—</td></tr>
+          <tr><td>Leasehold Improvements</td><td class="num">$250,000</td><td class="num">$180,000</td><td>Leaner build-out / second-gen space</td></tr>
+          <tr><td>FF&E</td><td class="num">$135,000</td><td class="num">$100,000</td><td>Mix new & quality used</td></tr>
+          <tr><td>Working Capital Reserve</td><td class="num">$87,000</td><td class="num">$14,000</td><td>6 mo vs 3 mo cushion</td></tr>
+          <tr><td style="font-weight:700;">Total</td><td class="num" style="font-weight:700;">$600,000</td><td class="num" style="font-weight:700;">$400,000</td><td>–$200K</td></tr>
+          <tr><td style="font-weight:700;">Equity Required</td><td class="num" style="font-weight:700;">$200,000</td><td class="num" style="font-weight:700;">$100,000</td><td>50% less equity</td></tr>
+          <tr><td style="font-weight:700;">SBA Loan</td><td class="num" style="font-weight:700;">$400,000</td><td class="num" style="font-weight:700;">$300,000</td><td>$100K less debt</td></tr>
+          <tr><td>Monthly SBA Payment</td><td class="num">$5,075</td><td class="num">$3,806</td><td>$1,269 less/mo</td></tr>
+          <tr><td>Peak Drawdown Coverage</td><td class="num pos">6.3×</td><td class="num neg">~1×</td><td>Significant risk gap</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- 16: REAL-WORLD VALIDATION -->
+  <section class="slide" data-index="15">
+    <span class="slide-number">16 / 18</span>
+    <h2>Real-World <span class="highlight">Validation</span></h2>
+    <p class="subtitle" style="margin-bottom:20px;">Actual POS data from 3 existing Afro Deli locations (June 2025 – June 2026) was used to calibrate and validate every projection.</p>
+    <div class="table-wrap">
+      <table class="compact-table">
+        <thead><tr><th>Metric</th><th class="num">Actual (3-Location Avg)</th><th class="num">Woodbury (Conservative)</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Annual Revenue</strong></td><td class="num">~$456K/location</td><td class="num pos">~$638K</td><td>+40% — higher income, no competition, growth</td></tr>
+          <tr><td><strong>Average Ticket</strong></td><td class="num">$15.89</td><td class="num warn">$15.00</td><td>Conservative — Woodbury can support $16+</td></tr>
+          <tr><td><strong>Catering %</strong></td><td class="num">25.7%</td><td class="num">15–20% (Yr 1)</td><td>Conservative ramp; targeting 25% by Yr 3</td></tr>
+          <tr><td><strong>3rd-Party Delivery</strong></td><td class="num">17.1%</td><td class="num">Included in covers</td><td>DoorDash 12.7%, Uber Eats 3.1%, Grubhub 1.3%</td></tr>
+          <tr><td><strong>Lunch / Dinner Split</strong></td><td class="num">55.7% / 16.1%</td><td class="num">~50% / ~25%</td><td>Key thesis: dinner is underpenetrated</td></tr>
+          <tr><td><strong>Labor % (excl. owner)</strong></td><td class="num">15–21%</td><td class="num">25–27%</td><td>Higher in new market + training + owner salary</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2" style="margin-top:20px;">
+      <div class="card" style="border-left:3px solid #10b981;">
+        <h4 style="color:#10b981;">Why Woodbury Can Exceed Existing Location Revenue</h4>
+        <ul class="check-list">
+          <li><strong>Income:</strong> Woodbury ($117K) vs existing location neighborhoods (~$55–75K)</li>
+          <li><strong>Competition:</strong> Zero direct competitors vs 2+ near existing locations</li>
+          <li><strong>Catering:</strong> Larger institutional market than any existing location serves</li>
+          <li><strong>Growth:</strong> 12% population growth vs stable/declining urban neighborhoods</li>
+          <li><strong>Dinner runway:</strong> 16.1% today → 25% target = 55% upside in dinner alone</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:3px solid #f59e0b;">
+        <h4 style="color:#f59e0b;">Risk Mitigants Already in the Numbers</h4>
+        <ul class="check-list">
+          <li>Avg ticket projection ($15) is below actual ($15.89) — built-in cushion</li>
+          <li>Catering projection (15–20% Yr 1) is below actual (25.7%) — conservative by default</li>
+          <li>Labor projection (30% incl. owner) is well above actual (15–21% excl.)</li>
+          <li>Woodbury projection is already 40% above existing average — captures market upside</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17: NEXT STEPS -->
+  <section class="slide" data-index="16">
+    <span class="slide-number">17 / 18</span>
+    <h2>Next <span class="highlight">Actions</span></h2>
+    <div class="grid-2">
+      <div>
+        <div class="card" style="background:rgba(245,158,11,0.06); border-color:rgba(245,158,11,0.12); margin-bottom:16px;">
+          <h4>Immediate (Week 1–4)</h4>
+          <ul class="check-list">
+            <li>📄 <strong>Request FDD</strong> from Afro Deli franchisor</li>
+            <li>⚖️ Engage <strong>franchise attorney</strong> for FDD &amp; agreement review</li>
+            <li>🔍 Validate Item 19 financial performance reps against actual data</li>
+            <li>🏗️ <strong>Site scouting</strong> — Tamarack Village, Woodbury Lakes, Valley Creek</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4>Short-Term (Month 1–3)</h4>
+          <ul class="check-list">
+            <li>💰 Begin <strong>SBA 7(a) loan application</strong> ($400K loan + $200K equity)</li>
+            <li>🤝 Schedule <strong>Discovery Day</strong> with franchisor</li>
+            <li>📋 Finalize entity structure (LLC)</li>
+            <li>🔑 Negotiate lease letter of intent</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div class="card" style="background:rgba(16,185,129,0.06); border-color:rgba(16,185,129,0.12);">
+          <h4>Key Contacts Needed</h4>
+          <ul class="check-list">
+            <li><strong>Franchisor:</strong> Afro Deli corporate</li>
+            <li><strong>Lender:</strong> SBA-preferred bank</li>
+            <li><strong>Attorney:</strong> Franchise + lease specialist</li>
+            <li><strong>Broker:</strong> Woodbury commercial RE</li>
+            <li><strong>Contractor:</strong> Restaurant build-out</li>
+          </ul>
+        </div>
+        <div class="card" style="margin-top:16px; background:rgba(139,92,246,0.06); border-color:rgba(139,92,246,0.12);">
+          <h4>Timeline to Opening</h4>
+          <ul class="check-list">
+            <li><strong>Month 0–2:</strong> FDD, lease LOI, loan approval</li>
+            <li><strong>Month 2–5:</strong> Build-out, equipment install, training</li>
+            <li><strong>Month 5–6:</strong> Soft opening → grand opening</li>
+            <li><strong>Month 6–10:</strong> Ramp to 115+ covers, cash flow positive</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18: CLOSE -->
+  <section class="slide" data-index="17">
+    <span class="slide-number">18 / 18</span>
+    <div style="text-align:center; max-width:700px; margin:0 auto;">
+      <div class="tag" style="margin-bottom:24px;">Afro Deli — Woodbury</div>
+      <h1 style="font-size:56px; text-align:center;">Let's <span class="highlight">Build</span> This.</h1>
+      <p style="font-size:20px; color:rgba(255,255,255,0.5); margin:24px 0;">
+        A proven franchise concept<br>
+        validated by real operational data<br>
+        in a growing, affluent market with no direct competition.
+      </p>
+      <div class="grid-3" style="margin-top:48px;">
+        <div><div style="font-size:48px; font-weight:800; color:#f59e0b;">$600K</div><div style="color:rgba(255,255,255,0.4); font-size:14px;">Total Investment</div></div>
+        <div><div style="font-size:48px; font-weight:800; color:#10b981;">Month 4</div><div style="color:rgba(255,255,255,0.4); font-size:14px;">Cash Flow Positive</div></div>
+        <div><div style="font-size:48px; font-weight:800; color:#3b82f6;">$93.5K</div><div style="color:rgba(255,255,255,0.4); font-size:14px;">Year 1 EBITDA</div></div>
+      </div>
+      <div class="grid-2" style="margin-top:24px; text-align:left;">
+        <div style="font-size:13px; color:rgba(255,255,255,0.2); line-height:1.6; padding:16px;">
+          <strong style="color:rgba(255,255,255,0.4);">Conservative Financial Summary:</strong><br>
+          Ramp: 50 → 185 daily covers<br>
+          Revenue Yr 1: $637,650 | EBITDA: $93,478<br>
+          Net Cash Flow Yr 1: $32,578 (all debt + salary paid)<br>
+          5-Year Cumulative Cash: $477,478<br>
+          Break-even: Month 4 (post-SBA)<br>
+          Working Capital: $87K reserve (6× peak drawdown)
+        </div>
+        <div style="font-size:13px; color:rgba(255,255,255,0.2); line-height:1.6; padding:16px;">
+          <strong style="color:rgba(255,255,255,0.4);">Data Backing:</strong><br>
+          Projections calibrated against actual POS data from<br>
+          3 existing Afro Deli locations (June 2025–June 2026):<br>
+          Combined net sales $1.37M | Avg ticket $15.89<br>
+          86,170 annual guests | Catering 25.7%<br>
+          17.1% 3rd-party delivery | Labor 15–21%<br><br>
+          <em>All Woodbury projections are estimates pending FDD review, site selection, and lease negotiation.</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const navDots = document.getElementById('navDots');
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => { slides[i].scrollIntoView({ behavior: 'smooth' }); });
+    navDots.appendChild(dot);
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const index = entry.target.dataset.index;
+        document.querySelectorAll('.nav-dot').forEach((d, i) => { d.classList.toggle('active', i === parseInt(index)); });
+      }
+    });
+  }, { threshold: 0.6 });
+
+  slides.forEach(s => observer.observe(s));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowRight') { e.preventDefault(); const n = document.querySelector('.nav-dot.active'); if (n.nextElementSibling) n.nextElementSibling.click(); }
+    if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') { e.preventDefault(); const n = document.querySelector('.nav-dot.active'); if (n.previousElementSibling) n.previousElementSibling.click(); }
+  });
+</script>
+</body>
+</html>
