@@ -1,0 +1,27 @@
+{
+  "season": "2025-26 final (seed)",
+  "league_avg_goals_per_team": 1.375,
+  "home_share": 0.54,
+  "teams": {
+    "Arsenal":          {"w": 26, "d": 7,  "l": 5,  "gf": 71, "ga": 27},
+    "Manchester City":  {"w": 23, "d": 9,  "l": 6,  "gf": 77, "ga": 35},
+    "Manchester United":{"w": 20, "d": 11, "l": 7,  "gf": 69, "ga": 50},
+    "Aston Villa":      {"w": 19, "d": 8,  "l": 11, "gf": 56, "ga": 49},
+    "Liverpool":        {"w": 17, "d": 9,  "l": 12, "gf": 63, "ga": 53},
+    "Bournemouth":      {"w": 13, "d": 18, "l": 7,  "gf": 58, "ga": 54},
+    "Sunderland":       {"w": 14, "d": 12, "l": 12, "gf": 42, "ga": 48},
+    "Brighton & Hove Albion": {"w": 14, "d": 11, "l": 13, "gf": 52, "ga": 46},
+    "Brentford":        {"w": 14, "d": 11, "l": 13, "gf": 55, "ga": 52},
+    "Chelsea":          {"w": 14, "d": 10, "l": 14, "gf": 58, "ga": 52},
+    "Fulham":           {"w": 15, "d": 7,  "l": 16, "gf": 47, "ga": 51},
+    "Newcastle United": {"w": 14, "d": 7,  "l": 17, "gf": 53, "ga": 55},
+    "Everton":          {"w": 13, "d": 10, "l": 15, "gf": 47, "ga": 50},
+    "Leeds United":     {"w": 11, "d": 14, "l": 13, "gf": 49, "ga": 56},
+    "Crystal Palace":   {"w": 11, "d": 12, "l": 15, "gf": 41, "ga": 51},
+    "Nottingham Forest":{"w": 11, "d": 11, "l": 16, "gf": 48, "ga": 51},
+    "Tottenham Hotspur":{"w": 10, "d": 11, "l": 17, "gf": 48, "ga": 57},
+    "Coventry City":    {"w": 0, "d": 0,  "l": 0,  "gf": 0,  "ga": 0, "promoted": true},
+    "Ipswich Town":     {"w": 0, "d": 0,  "l": 0,  "gf": 0,  "ga": 0, "promoted": true},
+    "Hull City":        {"w": 0, "d": 0,  "l": 0,  "gf": 0,  "ga": 0, "promoted": true}
+  }
+}
