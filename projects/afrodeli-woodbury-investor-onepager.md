@@ -105,8 +105,9 @@
 ### Option 3: Preferred Return + Equity Split
 - Investors get 8% preferred return ($16K/yr on $200K)
 - Remaining profit split 50/50
-- Yr 1: Investors get **$16K + $19,348** = $35,348 (17.7%)
-- Yr 1: Kofi gets **$19,348 (19.3% on $100K)**
+- Yr 1: Investors get **$16K + $38,739** = $54,739 (27.4%)
+- Yr 1: Kofi gets **$38,739 (38.7% on $100K)**
+- Math: $93,478 − $16,000 pref = $77,478 remaining ÷ 2 = $38,739 each ✓
 
 ---
 
