@@ -2,11 +2,40 @@
 
 Goal: OpenClaw gateway + trading sims + memory embeddings run 24/7, so Jambot never dies when the Windows PC is off.
 
-**ROUTE CHOSEN (Aug 11, 2026): Hetzner Cloud VPS** — the Pi route below remains as a home-fallback option.
+**ROUTE CHOSEN (Aug 11, 2026): Hetzner Cloud VPS** — BUT: Kofi already has an Oracle Cloud account; **try Oracle Always Free first** ($0/mo, 4 ARM cores, 24GB RAM) — fall back to Hetzner if the free shape is unavailable in his region. The Pi route below remains as a home-fallback option.
 
 ---
 
-## Chosen route: Hetzner Cloud
+## Option 0: Oracle Cloud Always Free ($0/mo — try first)
+
+### Create the instance (~30 min, the learning curve is the console)
+
+- Sign in to cloud.oracle.com → **Compute → Instances → Create instance**
+- **Image:** Ubuntu 24.04 LTS (ARM64) · **Shape: Ampere A1 Flex** — set 4 OCPU / 24 GB (the always-free max)
+- Availability: A1 capacity varies by region/AD — if you hit "out of capacity," try another availability domain or region, or retry later (it's the one real gate on the free tier)
+- Add your SSH public key (PC: `cat ~/.ssh/id_ed25519.pub`)
+- Network: default VCN + security list is fine (SSH/22 open); no extra public IP needed (free tier includes one)
+- **Default user is `ubuntu`** (sudo) — create `kofi` like this:
+
+```bash
+ssh ubuntu@<oracle-ip>
+sudo useradd -m -s /bin/bash kofi && sudo usermod -aG sudo kofi
+sudo mkdir /home/kofi/.ssh && sudo cp /home/ubuntu/.ssh/authorized_keys /home/kofi/.ssh/
+sudo chown -R kofi:kofi /home/kofi/.ssh && sudo chmod 700 /home/kofi/.ssh && sudo chmod 600 /home/kofi/.ssh/authorized_keys
+```
+
+### Then run the kit exactly as in the Hetzner route (setup.sh → migrate.sh → swap.sh)
+
+### Oracle-specific notes
+
+- Always Free is **no time limit**; accounts with sustained real usage are not reclaimed (idle free instances are the ones Oracle reaps — this box runs 24/7, so it's safe)
+- 200GB block volume + 10TB/mo egress included — plenty
+- Same secrets/security posture as any server: key-only SSH + firewall
+- If A1 capacity never frees up or you don't want to fight the console → **Hetzner fallback below**
+
+---
+
+## Option 1: Hetzner Cloud (~€6/mo — fallback)
 
 ### 1. Create the server (hetzner.com — ~15 min)
 
