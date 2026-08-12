@@ -1,7 +1,56 @@
 # Pi Migration Kit — move Jambot to an always-on Raspberry Pi
 
-Goal: OpenClaw gateway + trading sims + memory embeddings run 24/7 on a Pi 5,
-so Jambot never dies when the Windows PC is off.
+Goal: OpenClaw gateway + trading sims + memory embeddings run 24/7, so Jambot never dies when the Windows PC is off.
+
+**ROUTE CHOSEN (Aug 11, 2026): Hetzner Cloud VPS** — the Pi route below remains as a home-fallback option.
+
+---
+
+## Chosen route: Hetzner Cloud
+
+### 1. Create the server (hetzner.com — ~15 min)
+
+- Sign up (ID verification + payment method required by Hetzner)
+- Project → **Add Server** → **CAX11** (ARM, 2 vCPU, 4 GB, 40 GB NVMe) ≈ **€5.99/mo (~$6.50)**
+- Image: **Ubuntu 24.04 LTS (ARM64)** · Location: **Ashburn (US-East)** — lowest latency to NY
+- Add your SSH public key (from the PC: `cat ~/.ssh/id_ed25519.pub`)
+- Cloud Firewall: allow **SSH (port 22) only** — restrict to your home IP if it's static; otherwise key-only auth is the default (no passwords on Hetzner images)
+
+### 2. Create the `kofi` user (Hetzner Ubuntu images default to root)
+
+```bash
+ssh root@<vps-ip>
+useradd -m -s /bin/bash kofi && usermod -aG sudo kofi
+mkdir /home/kofi/.ssh && cp /root/.ssh/authorized_keys /home/kofi/.ssh/
+chown -R kofi:kofi /home/kofi/.ssh && chmod 700 /home/kofi/.ssh && chmod 600 /home/kofi/.ssh/authorized_keys
+```
+
+### 3. Run the kit (same as Pi route)
+
+```bash
+# on the VPS as kofi:
+# (scp the pi-migration/ folder up first: scp -r ~/clawd/pi-migration kofi@<vps-ip>:~)
+bash setup.sh
+
+# on the PC:
+cd ~/clawd/pi-migration
+./migrate.sh kofi@<vps-ip>
+./swap.sh kofi@<vps-ip>
+```
+
+`setup.sh` runs on Ubuntu (apt + NodeSource ARM64 + Ollama ARM64 all supported). If `python3-yfinance` isn't in Ubuntu's repos, fall back to `pip install --break-system-packages yfinance`.
+
+### 4. Cloud-specific notes
+
+- **No rescue card needed** — the VPS has no SD to die (the exact failure that pushed us here)
+- Costs: ~€6/mo · data hosted in Ashburn, US
+- Secrets (`betting/.env` etc.) live on the box — same as any server; key-only SSH + firewall is the baseline, optionally add fail2ban
+- Optional insurance: Hetzner **snapshots** (~€0.01/GB/mo) — the git backup already covers the workspace, a snapshot covers the OS
+- Upgrade path: snapshot → boot a bigger instance (CAX21 8GB) whenever the gateway outgrows 4GB
+
+---
+
+## Home-fallback route: Raspberry Pi (original plan)
 
 ## Shopping list (Aug 2026 prices)
 
