@@ -25,3 +25,6 @@ backups/openclaw-config-*.tar.gpg
 
 # Secrets — never commit
 .env
+
+# Runtime state
+openclaw-workspace-state.json
