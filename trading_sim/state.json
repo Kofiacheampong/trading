@@ -307,6 +307,47 @@
    "flags": [
     "oversold_quality(-21% vs 200ma)"
    ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-12",
+   "price": 73.54,
+   "score": 63.9,
+   "rsi": 43.5,
+   "relvol": 0.9,
+   "vs_200ma": -31.7,
+   "vs_52w_high": -53.1,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-12",
+   "price": 65.77,
+   "score": 47.0,
+   "rsi": 42.8,
+   "relvol": 0.51,
+   "vs_200ma": -26.5,
+   "vs_52w_high": -41.6,
+   "flags": [
+    "oversold_quality(-27% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-12",
+   "price": 120.87,
+   "score": 43.9,
+   "rsi": 50.2,
+   "relvol": 1.17,
+   "vs_200ma": -23.1,
+   "vs_52w_high": -44.0,
+   "flags": [
+    "oversold_quality(-23% vs 200ma)"
+   ]
   }
  ],
  "lottery": {
@@ -398,6 +439,14 @@
    "exit": 7749.75,
    "reason": "sl",
    "pnl": -100.0
+  },
+  {
+   "date": "2026-08-12",
+   "side": "long",
+   "entry": 7764.0,
+   "exit": 7794.0,
+   "reason": "tp",
+   "pnl": 150.0
   }
  ]
 }

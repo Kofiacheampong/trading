@@ -6,7 +6,7 @@
    "home": "Arsenal",
    "away": "Coventry City",
    "commence": "2026-08-21T19:00:00Z",
-   "market": "draw",
+   "market": "h2h_draw",
    "odds": 7.5,
    "model_prob": 0.169,
    "edge": 0.046,

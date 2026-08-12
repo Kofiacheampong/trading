@@ -44,7 +44,7 @@ def _add_bet(bk, f, side, price, p_model, edge, kind):
     stake = bookmod.stake_for(p_model, price, bk["bankroll"])
     bk["bets"].append({
         "event_id": f["id"], "home": f["home"], "away": f["away"],
-        "commence": f["commence"], "market": side, "odds": price,
+        "commence": f["commence"], "market": kind, "odds": price,
         "model_prob": p_model, "edge": edge, "stake": stake,
         "entered": str(datetime.date.today()),
         "closing_odds": price, "result": None, "pnl": None,

@@ -13,12 +13,12 @@
 
 | Ticker | Weight | Best Zone | All-In Zone | Current | Status |
 |--------|--------|-----------|-------------|---------|--------|
-| **TXN** | 35% | $280–300 | $260–275 | $280.44 | ✅ Best Zone — at bottom edge, start-building trigger (<$290) still active |
-| **ADI** | 25% | $380–400 | $360–380 | $383.93 | ✅ Best Zone — start-building trigger (<$400) hit |
-| **VRT** | 20% | $280–320 | $250–280 | $270.10 | 🔔 All-In Zone (full-position trigger < $280) |
-| **INTC** | — | $110–125 | $95–110 | $97.52 | 🔔 All-In Zone — go-heavy trigger (<$110) hit, off $90 stop |
-| **NVTS** | 10% | $16–20 | $12–16 | $13.17 | 🔔 All-In Zone — add trigger (<$14) hit, off $10 stop |
-| **ON** | 10% | $100–110 | $90–100 | $79.78 | 🚨 BELOW STOP ($80) — stop-loss breached |
+| **TXN** | 35% | $280–300 | $260–275 | $281.24 | ✅ Best Zone — bottom edge, start-building trigger (<$290) active |
+| **ADI** | 25% | $380–400 | $360–380 | $385.30 | ✅ Best Zone — start-building trigger (<$400) active |
+| **VRT** | 20% | $280–320 | $250–280 | $281.81 | ✅ Best Zone — bounced +4.3% off All-In; full-position trigger (<$280) off |
+| **INTC** | — | $110–125 | $95–110 | $97.71 | 🔔 All-In Zone — go-heavy trigger (<$110) active, above $90 stop |
+| **NVTS** | 10% | $16–20 | $12–16 | $13.60 | 🔔 All-In Zone — add trigger (<$14) active, above $10 stop |
+| **ON** | 10% | $100–110 | $90–100 | $81.11 | ⚠️ Recovered above $80 stop, still far below entry zones |
 
 ### 📈 Price Targets
 
@@ -90,3 +90,36 @@
 - HNST < $4.50: Add to 2%
 - HNST < $4.00: Full spec position (3%)
 - HNST < $3.50: Stop — thesis failed, exit
+
+---
+
+## 🚀 AI Neocloud / Infra Momentum — added Aug 12, 2026
+
+> Thesis: AI capacity demand growing "exponentially" (CEO); neoclouds convert demand into
+> contracted, prepaid growth. NBIS differs from CRWV: customers prepay 50–60% of capex,
+> so the build-out is customer-funded, not debt-funded. Momentum/spec bucket — NOT Tier-1 quality.
+
+### NBIS — Nebius Group (AI cloud, Nvidia-backed)
+
+- **The event:** Q2 2026 (reported Aug 12 pre-market): revenue **$582M (+454% YoY)** vs $574M est;
+  EPS -$0.68 vs -$0.70 est. 4 deals >$1B TCV each (Reflection, Cohere, US AI lab, US quant fund).
+  Avg yield >$20M/MW, prices heading to $40–50M/MW (first deal at that level already signed).
+  70% of deals prepaid 50–60% of capex. Contracted power raised to 5 GW by YE26 (was 4+ GW).
+  Stock +29% intraday on the print; +131% YTD. Backlog: Meta $27B/5yr; Nvidia $2B stake.
+- **Why it's a watch, not a buy at $250:** earnings spike +29% in a day — buying here is buying
+  the top of a spike. RSI blowing out. **Do NOT chase.** Wait for digestion (10–15% pullback).
+- **Entry zones:** Best Zone **$215–230** (first pullback toward the gap) · All-In **$190–205**
+  (gap fill toward pre-earnings close $193.23)
+- **Stop:** $175 (below the pre-earnings base = spike failed)
+- **Targets (1yr/3yr):** $300 (52w high retest) / $410 (Northland street-high) —
+  **2–3% spec position max** (momentum name, no earnings moat proven yet)
+- **Bear risks:** revenue recognition mostly 2027 — paying today for tomorrow's numbers;
+  hyperscaler competition (MSFT/GOOG/AMZN renting their own capacity);
+  capex arms race ($20–25B/yr guidance); stock still -17% off 52w high ($299.86).
+
+### 🚨 NBIS Triggers
+- NBIS ≤ $230: Start small (1% spec)
+- NBIS ≤ $205: Add to 2%
+- NBIS ≤ $190: Full spec position (3%)
+- NBIS < $175: Stop — thesis failed, exit
+- NBIS ≤ $230: daily 11 AM ET alert active (entry zone watch)
