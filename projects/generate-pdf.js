@@ -16,9 +16,15 @@ const path = require('path');
     await page.addStyleTag({ content: `
       html, body { overflow: visible !important; height: auto !important; background: #0a0a0a !important; }
       .slides { overflow: visible !important; height: auto !important; scroll-snap-type: none !important; }
-      .slide { min-height: 100vh !important; height: auto !important; width: 100vw !important;
+      .slide { min-height: 0 !important; height: auto !important; width: 100vw !important;
                page-break-after: always !important; break-inside: avoid !important;
-               overflow: hidden !important; padding: 48px 64px !important; }
+               overflow: hidden !important; padding: 24px 40px !important; }
+      .slide h1 { font-size: 42px !important; }
+      .slide h2 { font-size: 30px !important; }
+      .slide h3 { font-size: 20px !important; }
+      .slide p, .slide li { font-size: 13px !important; }
+      .slide table { font-size: 9.5px !important; }
+      .slide .subtitle { font-size: 14px !important; }
       .slide-number { display: none !important; }
     `});
   }
