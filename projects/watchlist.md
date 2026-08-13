@@ -123,3 +123,20 @@
 - NBIS ≤ $190: Full spec position (3%)
 - NBIS < $175: Stop — thesis failed, exit
 - NBIS ≤ $230: daily 11 AM ET alert active (entry zone watch)
+
+### IREN — Iren Limited (AI cloud + bitcoin, Microsoft/Nvidia-backed) — added Aug 13, 2026
+
+- **The event:** Aug 13, 2026: delivered **first 50MW Microsoft AI cloud deployment at Childress** (Horizon 1) + **NVIDIA "Exemplar Cloud" status for GB300 deployment at Microsoft's Houston** facility. Stock +11% to $48.46 on the print (intraday $45.38–$49.19).
+- **Context:** 52wk range $17.22–$76.87; 3mo range $29.31–$67.84. Jul 29 washout low $29.31 → now $48 (+65% in 3 weeks). SMA20 $38.87, SMA50 $45.39 — price extended above both after today's spike.
+- **Why it's a watch, not a buy at $48:** +11% single-session spike after a 3-week run = chasing risk. Real catalyst (Microsoft/NVIDIA validation) but momentum/spec bucket, NOT Tier-1 quality.
+- **Entry zones:** Best Zone **$40–42** (retest of breakout / SMA20 confluence) · All-In **$35–38** (July base)
+- **Stop:** $32 (below July consolidation — thesis failed)
+- **Targets (1yr/3yr):** $60 (near-term supply) / $77 (52w high retest) — **2–3% spec position max**
+- **Bear risks:** bitcoin-mining legacy drag; hyperscaler competition; stock still -37% off 52w high — paying up for momentum after a spike
+
+### 🚨 IREN Triggers
+- IREN ≤ $42: Start small (1% spec)
+- IREN ≤ $38: Add to 2%
+- IREN ≤ $35: Full spec position (3%)
+- IREN < $32: Stop — thesis failed, exit
+- IREN ≤ $42: daily 11 AM ET alert active (entry zone watch)
