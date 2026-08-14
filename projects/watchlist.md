@@ -13,12 +13,12 @@
 
 | Ticker | Weight | Best Zone | All-In Zone | Current | Status |
 |--------|--------|-----------|-------------|---------|--------|
-| **TXN** | 35% | $280–300 | $260–275 | $281.24 | ✅ Best Zone — bottom edge, start-building trigger (<$290) active |
-| **ADI** | 25% | $380–400 | $360–380 | $385.30 | ✅ Best Zone — start-building trigger (<$400) active |
-| **VRT** | 20% | $280–320 | $250–280 | $281.81 | ✅ Best Zone — bounced +4.3% off All-In; full-position trigger (<$280) off |
-| **INTC** | — | $110–125 | $95–110 | $97.71 | 🔔 All-In Zone — go-heavy trigger (<$110) active, above $90 stop |
-| **NVTS** | 10% | $16–20 | $12–16 | $13.60 | 🔔 All-In Zone — add trigger (<$14) active, above $10 stop |
-| **ON** | 10% | $100–110 | $90–100 | $81.11 | ⚠️ Recovered above $80 stop, still far below entry zones |
+| **TXN** | 35% | $280–300 | $260–275 | $273.43 | 🔔 All-In Zone (was Best) — start-building (<$290) active, full-position (<$270) 1.3% away |
+| **ADI** | 25% | $380–400 | $360–380 | $381.17 | ✅ Best Zone — bottom edge, start-building trigger (<$400) active |
+| **VRT** | 20% | $280–320 | $250–280 | $287.07 | ✅ Best Zone — lower third; full-position trigger (<$280) off |
+| **INTC** | — | $110–125 | $95–110 | $104.56 | 🔔 All-In Zone — go-heavy trigger (<$110) active, above $90 stop |
+| **NVTS** | 10% | $16–20 | $12–16 | $13.66 | 🔔 All-In Zone — add trigger (<$14) active, above $10 stop |
+| **ON** | 10% | $100–110 | $90–100 | $81.56 | ⚠️ Above $80 stop but only ~2% from it; still far below entry zones |
 
 ### 📈 Price Targets
 
