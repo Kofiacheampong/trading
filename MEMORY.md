@@ -21,6 +21,14 @@
 
 ## Current Portfolio (last check Jul 31, 2026)
 - **DRAM $50.37** (-6.5%) · **INTC $90.20** (-9.8%) · **MP $41.37** (-15.9%) · **MDB $337.48** (+0.5%) · **AMPG $4.65** (-30.6%) — total ~$1,363 vs $1,463 cost (-6.8%).
+
+## Current Portfolio — VERIFIED IBKR snapshot Aug 14, 2026 (Kofi screenshot)
+- **MP** 5.9683 sh @ **$67.35 avg** (cost $401.99) — last $58.93, **-$49.90 (-12.4%)**; breakeven $67.35 = +14.3% away; daily +$19.90. **CORRECTION: my 7/16 record of ~$49.18 avg was wrong — actual avg $67.35.**
+- **DRAM** 15.5176 sh @ $64.35 — last $57.37, **-$108.00** (biggest drag)
+- **INTC** 1.6867 sh @ $104.34 — last $103.05, -$2.18 (cleanup lot; Friday sell not shown executed)
+- **AMPG** 1 sh @ $8.72 — last $4.04 (**-32.55% day**; Q2 net loss widened to -$3.09M), -$4.71
+- **Cash $744.29** (ONDS proceeds) · Account total ≈ $2,165 · Unrealized -$164.79 + ONDS realized +$100.91
+- MDB not in IBKR (sold to fund ONDS, consistent w/ 8/3); Fidelity INTC 11 sh untouched.
 - Trim candidates if rotating: AMPG (-31%), MP (-16%). Keep MDB (only green).
 - Agreed: **weekly check-ins Saturday**, not day-to-day stress.
 - **ONDS (Ondas) — SOLD Aug 13, 2026 @ $9.10 → realized +$100.91 (+15.8%)**: 81.5526 sh @ $7.85 ($640 cost) fully sold 11:19 AM ET (81 sh NASDAQ + 0.5526 sh IBKR), net $741.10 after $1.03 fees. Q2'26 (Aug 13, 8:30 AM ET) = record rev $83.8M (13x YoY), FY26 guide RAISED $525–550M, $1.4B cash — but net loss $89.7M, EPS miss. He said "holding" at 14:25 UTC, flipped ~54 min later and sold into the fade; stock closed the day's fade at ~$9.03. Distribution played out as flagged Aug 10 — exit executed, +15.8% banked. Full numbers: memory/2026-08-13.md.
