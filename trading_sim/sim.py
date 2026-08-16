@@ -13,6 +13,8 @@ import opportunity
 import options_data as od
 import mes_sim
 import mes_intraday
+import covered_calls
+import fade_flags
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(BASE, "state.json")
@@ -363,6 +365,12 @@ def step():
         print(f"EVENT PUTFLAG {f['ticker']} {f['outcome'].upper()} ret {f['ret']:+.1f}% "
               f"(debit ${f['debit']:.2f} on {f['date']})")
 
+    # --- fade-the-flag (short call spreads vs momentum flags) ---
+    resolved_ff = fade_flags.step(state, crumb)
+    for f in resolved_ff:
+        print(f"EVENT FADEFLAG {f['ticker']} {f['outcome'].upper()} ret {f['ret']:+.1f}% "
+              f"(credit ${f['credit']:.2f}, flag {f['flag_date']})")
+
     # --- weekly put sim: open when none open, resolve on expiry day ---
     for sym in UNIVERSE:
         px = prices.get(sym)
@@ -392,6 +400,9 @@ def step():
                                   "spot": round(px, 2), "expiry": str(exp),
                                   "credit": round(credit, 2), "outcome": None})
             print(f"EVENT PUT {sym} opened strike ${strike:.0f} exp {exp} credit ${credit:.2f}")
+
+    # --- covered calls (buy-write, synthetic 100-sh lots) ---
+    covered_calls.step(state, crumb)
 
     # --- MES futures paper sim (extended paper period) ---
     for ev in mes_sim.step(state):
@@ -515,6 +526,12 @@ def report():
     # --- MES intraday OR-fade ---
     print()
     print(mes_intraday.report(state))
+
+    # --- covered calls (buy-write, synthetic 100-sh lots) ---
+    print(covered_calls.report(state))
+
+    # --- fade-the-flag (short call spreads vs momentum flags) ---
+    print(fade_flags.report(state))
 
     # --- put fades (debit spreads, paper-tracked) ---
     pfs = state.get("put_flags", [])

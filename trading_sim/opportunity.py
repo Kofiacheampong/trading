@@ -22,12 +22,15 @@ STATE = os.path.join(BASE, "state.json")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 
 # Core watchlist + quality extras with decent liquidity (from earlier screens).
-UNIVERSE = ["LULU", "KMB", "ZTS", "PYPL", "PAYC", "QCOM", "ADBE", "IT", "PNR"]
+UNIVERSE = ["LULU", "KMB", "ZTS", "PYPL", "PAYC", "QCOM", "ADBE", "IT", "PNR",
+            "AVAV", "KTOS", "RCAT", "ONDS"]
 
 # Quality score = ROIC % (from our fundamental screens). Used to weight setups:
 # a cheap price on a 27% ROIC business is an opportunity; on a 9% one it's a value trap.
+# Drone names (AVAV/KTOS/RCAT/ONDS) have no verified ROIC on file -> default 15 weight.
 QUALITY = {"LULU": 27.7, "KMB": 23.7, "ZTS": 27.8, "PYPL": 22.3, "PAYC": 30.0,
-           "QCOM": 25.0, "ADBE": 30.0, "IT": 30.0, "PNR": 14.0}
+           "QCOM": 25.0, "ADBE": 30.0, "IT": 30.0, "PNR": 14.0,
+           "AVAV": 15.0, "KTOS": 15.0, "RCAT": 15.0, "ONDS": 15.0}
 
 MIN_SCORE = 40.0
 BOUNCE_TARGET = 0.05     # +5% from flag price => "bounce" (good flag)
