@@ -140,3 +140,72 @@
 - IREN ≤ $35: Full spec position (3%)
 - IREN < $32: Stop — thesis failed, exit
 - IREN ≤ $42: daily 11 AM ET alert active (entry zone watch)
+
+---
+
+## ⚡ Post-Earnings Turnaround / AI-Power Spec — added Aug 17, 2026
+
+> Thesis: post-bankruptcy SiC chipmaker repricing from "EV bust" to "AI datacenter power".
+> Real narrative (TOLT packaging, LITEON 800V hyperscale partnership, Amperesand SST deal),
+> but fundamentals still negative (gross margin -27%, FQ4 guide $140-160M, June dilution overhang,
+> avg analyst PT ~$25). Momentum/spec bucket — NOT Tier-1 quality.
+
+### WOLF — Wolfspeed (silicon carbide power, NYSE)
+
+- **The event (Aug 17):** $33.44 (+5.2%), tagged $34.09 early then faded. AI-datacenter power
+  narrative: next-gen TOLT portfolio (Gen 4 MOSFET, 650V AI racks), LITEON partnership to
+  qualify SiC for 800V hyperscale power, Amperesand $13B SST-market deal. It's a 10%-a-day
+  yoyo: +14.8% Jun 17, +17.7% Jul 30, +14.1% Aug 6 — with -10%+ drops between. 52wk $8–$81.
+- **Technical snapshot (Aug 17):** RSI 71.6 (overbought by our scanner math), +17.7% above
+  200-day MA ($28.41), SMA50 $36.71 (resistance overhead), 1y range $14.80–$73.50.
+- **Why it's a watch, not a buy at $33:** RSI 72 + +5% day + earnings in 2 days = coin flip.
+  Your own rules exclude it: momentum scanner has a no-calls-straddling-earnings rule, and
+  fade logic says don't fight RSI 72 into a binary event. **Do NOT chase.**
+- **The catalyst to wait for: fiscal Q4 earnings Wed Aug 19.** If the print is OK and the
+  stock pulls back toward the 200-day MA, that's the real entry with the AI-power story intact.
+  If it gaps, we dodged a coin flip.
+- **Entry zones:** Best Zone **$28–30** (200-day MA confluence + early-Aug base) ·
+  All-In **$24–26** (July consolidation / gap zone)
+- **Stop:** $22 (below July base = rally failed)
+- **Targets (1yr/2yr):** $40 (recent supply / simplywall.st noted ~$40 trading) / $50 —
+  **1–2% spec position max** (post-bankruptcy, negative margins, dilution overhang)
+- **Bear risks:** earnings Aug 19 is binary (could gap down on weak guide); negative gross
+  margins; Chinese SiC competition + oversupply; dilution from June secondary; analysts
+  cautious (Susquehanna cut to $30, avg PT ~$25).
+
+### 🚨 WOLF Triggers
+- WOLF ≤ $30: Start small (1% spec) — **only after Aug 19 earnings print**
+- WOLF ≤ $26: Add to 2%
+- WOLF < $22: Stop — thesis failed, exit
+- WOLF ≤ $30: daily 11 AM ET alert active (entry zone watch; reminder: post-earnings only)
+
+---
+
+## 🧲 Rare Earths / Critical Minerals Spec — added Aug 17, 2026
+
+> Thesis: US critical-minerals supply chain buildout — CHIPS funding, possible government
+> price-floor policy (would lift USAR + MP + UAMY). Momentum/spec bucket — NOT Tier-1 quality.
+
+### USAR — USA Rare Earth (Nasdaq)
+
+- **The setup:** $19.05 (-4.75% Aug 17) after a +50% 3-week run ($13 → $20). Q2 (Aug 10)
+  missed on both lines (rev $5.8M vs $8.0M est, EPS -$0.15 vs -$0.13) — story stock + miss = fade.
+  52w range $11.45–$43.98.
+- **The catalyst:** **Serra Verde merger ($2.83B) closing by end of August** (offtake-agreement
+  condition). That's the real event — buy the post-close reaction, not the pre-close guess.
+  Also: CHIPS funding secured, Carester stake, price-floor policy talk.
+- **Why it's a watch, not a buy at $19:** +50% run + earnings miss + pending binary merger = wait.
+  Street positive (Cantor Overweight, avg PT ~$35.83) but that's story coverage.
+- **Entry zones:** Best Zone **$15–17** (SMA20 ~$16.70 confluence, ~15% below Aug 17 close) ·
+  All-In **$13–14** (July base / pre-run consolidation)
+- **Stop:** $11 (below 52w low $11.45 = thesis broken)
+- **Targets (1yr/2yr):** $28 / $40 (52w high retest) — **1–2% spec position max** (no revenue,
+  merger-dependent, dilution risk)
+- **Bear risks:** SVRE merger falls through (offtake condition); continued cash burn; rare earth
+  prices stay soft; another dilution; policy talk stays talk.
+
+### 🚨 USAR Triggers
+- USAR ≤ $17: Start small (1% spec) — toe-dip zone
+- USAR ≤ $14: Add to 2%
+- USAR < $11: Stop — thesis failed, exit
+- USAR ≤ $17: daily 11 AM ET alert active (entry zone watch)

@@ -12,7 +12,7 @@ A repeatable system for trading options with a small account.
 | 🟢 **1-2 trades per week max** | Quality over quantity |
 | 🟢 **Always defined risk** (credit/debit spreads only) | Never naked options |
 | 🟢 **7-14 DTE** (days to expiration) | Enough time to be right, not so much theta kills you |
-| 🟢 **Close at 50% max profit or 100% max loss** | Take profits, cut losses |
+| 🟢 **Close at 50% max profit; HARD stop at 50% max loss** | Take profits, cut theta decay before it eats the full debit |
 | 🟢 **No holding over the weekend** | Too much gap risk for small accounts |
 | 🟢 **Trade what you know** (HIMS, FCX, SPY, NVDA) | Stick to 3-5 tickers, learn them deep |
 
@@ -78,8 +78,9 @@ Look at your watchlist. Check these:
 |-----------|--------|
 | +50% of max profit | **Close the trade** — take the win |
 | +100% max profit | **Close immediately** — max achieved |
-| -50% of max loss | Consider closing, don't let it go to full loss |
-| -100% max loss | Accept it, **move on** — don't revenge trade |
+| -50% of max loss | **HARD STOP — close it.** Debit spreads decay fast; don't ride it to -100% |
+| -100% max loss | Should never happen if you honor the -50% stop. Accept it, move on |
+| Credit spread (Type C) | Stop = cost reaches **2x collected credit** (same as fade sim) |
 | 1 day left to expiry and not winning | Close for whatever you can get |
 
 ---
