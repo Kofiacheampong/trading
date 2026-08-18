@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 945" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1100" height="945" fill="#161a22"/>
+
+  <!-- Title -->
+  <text x="550" y="46" text-anchor="middle" font-size="27" font-weight="bold" fill="#e8eaf0">Options Payoff Cheat Sheet</text>
+  <text x="550" y="72" text-anchor="middle" font-size="14" fill="#8a93a6">Contract Refresher — Long = slopes up &#9650; &#183; Short = slopes down &#9660; &#183; Calls right of strike &#10132; &#183; Puts left of strike &#11013;</text>
+
+  <!-- Legend -->
+  <line x1="60" y1="102" x2="92" y2="102" stroke="#f87171" stroke-width="3.5"/>
+  <text x="100" y="106" font-size="12" fill="#aab4c8">Loss</text>
+  <line x1="150" y1="102" x2="182" y2="102" stroke="#4ade80" stroke-width="3.5"/>
+  <text x="190" y="106" font-size="12" fill="#aab4c8">Profit</text>
+  <circle cx="260" cy="102" r="5" fill="#f5a623"/>
+  <text x="272" y="106" font-size="12" fill="#aab4c8">Breakeven</text>
+
+  <!-- ============ PANEL 1: LONG CALL ============ -->
+  <g>
+    <rect x="20" y="125" width="525" height="375" rx="10" fill="#1e2430" stroke="#2c3545"/>
+    <text x="40" y="160" font-size="20" font-weight="bold" fill="#e8eaf0">LONG CALL</text>
+    <text x="40" y="184" font-size="13" fill="#aab4c8">Long &#183; Slopes up &#9650; &#183; Moves right of strike &#10132;</text>
+
+    <rect x="85" y="215" width="405" height="120" fill="#14532d" opacity="0.10"/>
+    <rect x="85" y="335" width="405" height="120" fill="#7f1d1d" opacity="0.10"/>
+    <line x1="85" y1="335" x2="490" y2="335" stroke="#5b6577" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="90" y="328" font-size="11" fill="#7d8798">$0</text>
+    <line x1="285" y1="215" x2="285" y2="455" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+    <text x="285" y="478" text-anchor="middle" font-size="12" fill="#93c5fd">$120 Strike</text>
+    <text x="85" y="478" font-size="11" fill="#7d8798">$90</text>
+    <text x="490" y="478" text-anchor="end" font-size="11" fill="#7d8798">$150</text>
+
+    <polyline points="85,395 285,395 405,335" fill="none" stroke="#f87171" stroke-width="3.5" stroke-linejoin="round"/>
+    <polyline points="405,335 490,292" fill="none" stroke="#4ade80" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="405" cy="335" r="5" fill="#f5a623"/>
+    <text x="405" y="316" text-anchor="middle" font-size="11" fill="#fbbf24">BE $125</text>
+    <text x="185" y="415" text-anchor="middle" font-size="12" fill="#f87171">Max Loss &#8722;$5</text>
+    <text x="460" y="300" text-anchor="end" font-size="12" fill="#4ade80">&#9650; Unlimited</text>
+  </g>
+
+  <!-- ============ PANEL 2: SHORT CALL ============ -->
+  <g>
+    <rect x="555" y="125" width="525" height="375" rx="10" fill="#1e2430" stroke="#2c3545"/>
+    <text x="575" y="160" font-size="20" font-weight="bold" fill="#e8eaf0">SHORT CALL</text>
+    <text x="575" y="184" font-size="13" fill="#aab4c8">Short &#183; Slopes down &#9660; &#183; Moves right of strike &#10132;</text>
+
+    <rect x="620" y="215" width="405" height="120" fill="#14532d" opacity="0.10"/>
+    <rect x="620" y="335" width="405" height="120" fill="#7f1d1d" opacity="0.10"/>
+    <line x1="620" y1="335" x2="1025" y2="335" stroke="#5b6577" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="625" y="328" font-size="11" fill="#7d8798">$0</text>
+    <line x1="820" y1="215" x2="820" y2="455" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+    <text x="820" y="478" text-anchor="middle" font-size="12" fill="#93c5fd">$120 Strike</text>
+    <text x="620" y="478" font-size="11" fill="#7d8798">$90</text>
+    <text x="1025" y="478" text-anchor="end" font-size="11" fill="#7d8798">$150</text>
+
+    <polyline points="620,275 820,275 940,335" fill="none" stroke="#4ade80" stroke-width="3.5" stroke-linejoin="round"/>
+    <polyline points="940,335 1025,378" fill="none" stroke="#f87171" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="940" cy="335" r="5" fill="#f5a623"/>
+    <text x="940" y="316" text-anchor="middle" font-size="11" fill="#fbbf24">BE $125</text>
+    <text x="720" y="258" text-anchor="middle" font-size="12" fill="#4ade80">Max Profit +$5</text>
+    <text x="995" y="362" text-anchor="end" font-size="12" fill="#f87171">&#9660; Unlimited</text>
+  </g>
+
+  <!-- ============ PANEL 3: SHORT PUT ============ -->
+  <g>
+    <rect x="20" y="520" width="525" height="375" rx="10" fill="#1e2430" stroke="#2c3545"/>
+    <text x="40" y="555" font-size="20" font-weight="bold" fill="#e8eaf0">SHORT PUT</text>
+    <text x="40" y="579" font-size="13" fill="#aab4c8">Short &#183; Slopes down &#9660; &#183; Moves left of strike &#11013;</text>
+
+    <rect x="85" y="600" width="405" height="120" fill="#14532d" opacity="0.10"/>
+    <rect x="85" y="720" width="405" height="120" fill="#7f1d1d" opacity="0.10"/>
+    <line x1="85" y1="720" x2="490" y2="720" stroke="#5b6577" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="90" y="713" font-size="11" fill="#7d8798">$0</text>
+    <line x1="285" y1="600" x2="285" y2="840" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+    <text x="285" y="863" text-anchor="middle" font-size="12" fill="#93c5fd">$120 Strike</text>
+    <text x="85" y="863" font-size="11" fill="#7d8798">$90</text>
+    <text x="490" y="863" text-anchor="end" font-size="11" fill="#7d8798">$150</text>
+
+    <polyline points="85,760 165,720" fill="none" stroke="#f87171" stroke-width="3.5" stroke-linejoin="round"/>
+    <polyline points="165,720 285,660 490,660" fill="none" stroke="#4ade80" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="165" cy="720" r="5" fill="#f5a623"/>
+    <text x="165" y="701" text-anchor="middle" font-size="11" fill="#fbbf24">BE $115</text>
+    <text x="390" y="643" text-anchor="middle" font-size="12" fill="#4ade80">Max Profit +$5</text>
+    <text x="115" y="778" text-anchor="middle" font-size="12" fill="#f87171">Max Loss &#8722;$115</text>
+  </g>
+
+  <!-- ============ PANEL 4: LONG PUT ============ -->
+  <g>
+    <rect x="555" y="520" width="525" height="375" rx="10" fill="#1e2430" stroke="#2c3545"/>
+    <text x="575" y="555" font-size="20" font-weight="bold" fill="#e8eaf0">LONG PUT</text>
+    <text x="575" y="579" font-size="13" fill="#aab4c8">Long &#183; Slopes up &#9650; &#183; Moves left of strike &#11013;</text>
+
+    <rect x="620" y="600" width="405" height="120" fill="#14532d" opacity="0.10"/>
+    <rect x="620" y="720" width="405" height="120" fill="#7f1d1d" opacity="0.10"/>
+    <line x1="620" y1="720" x2="1025" y2="720" stroke="#5b6577" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="625" y="713" font-size="11" fill="#7d8798">$0</text>
+    <line x1="820" y1="600" x2="820" y2="840" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 4" opacity="0.7"/>
+    <text x="820" y="863" text-anchor="middle" font-size="12" fill="#93c5fd">$120 Strike</text>
+    <text x="620" y="863" font-size="11" fill="#7d8798">$90</text>
+    <text x="1025" y="863" text-anchor="end" font-size="11" fill="#7d8798">$150</text>
+
+    <polyline points="620,680 700,720" fill="none" stroke="#4ade80" stroke-width="3.5" stroke-linejoin="round"/>
+    <polyline points="700,720 820,780 1025,780" fill="none" stroke="#f87171" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="700" cy="720" r="5" fill="#f5a623"/>
+    <text x="700" y="701" text-anchor="middle" font-size="11" fill="#fbbf24">BE $115</text>
+    <text x="925" y="800" text-anchor="middle" font-size="12" fill="#f87171">Max Loss &#8722;$5</text>
+    <text x="690" y="663" text-anchor="end" font-size="12" fill="#4ade80">&#9650; Up to $115</text>
+  </g>
+
+  <!-- Footer rules -->
+  <text x="550" y="922" text-anchor="middle" font-size="14" fill="#8a93a6">Call BE = Strike + Premium &#183; Put BE = Strike &#8722; Premium &#183; Long = limited loss &#183; Short = limited gain</text>
+</svg>
