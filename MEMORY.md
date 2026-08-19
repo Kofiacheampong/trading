@@ -6,7 +6,7 @@
 
 ## Who I'm Helping
 - **Kofi** — building wealth across markets + business ventures. Wants direct, actionable, no-fluff advice. Timezone America/New_York.
-- Account types: small **IBKR options account (~$400)**, a **stock portfolio (~$1,500)**, and a **paper-trading sim ($1,500 virtual)** that tests strategies before real money.
+- Account types: small **IBKR options account (~$400)**, a **stock portfolio (~$1,500)**, a **paper-trading sim ($1,500 virtual)** that tests strategies before real money, and a **Fidelity account** (holds 11 sh INTC; **options approval = TIER 1 — verified 8/19/26**: long calls/puts, covered calls, buy-writes, cash-covered puts, long straddles/strangles; **NO spreads** (needs Tier 2/3), **NO naked options**; confirmed live with accepted test order 1× ONDS Aug 28 $8.50C @ $0.55 placed then cancelled, no fill; acct ends *3010). Fidelity Tier 1 = venue for LONG options only (momentum-call style), NOT weekly spreads/put spreads — those stay at IBKR. Upgrade to Tier 2/3 if spreads ever need a second venue.
 
 ## Live Systems (don't break these)
 **Infrastructure (migrated Aug 11, 2026):** Jambot now runs on **Oracle Cloud Always Free** — instance `instance-20260811-2239` ("tradwarz"), Ubuntu 24.04 ARM64, A1 4 OCPU/24GB, public IP 147.224.168.134, private 10.0.0.185. PC gateway disabled; all crons/sims run from the cloud box. FOLLOW-UPS: (1) `scp ~/.ssh/id_ed25519*` from PC to box for GitHub backup push; (2) `~/clawd/.git` was excluded from the rsync — restore git on the box (clone from GitHub once key is in) or the daily protect.sh fails; (3) memory index shows `.migrated` — rebuild via `openclaw memory index --force` if search feels stale.

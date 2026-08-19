@@ -209,3 +209,31 @@
 - USAR ≤ $14: Add to 2%
 - USAR < $11: Stop — thesis failed, exit
 - USAR ≤ $17: daily 11 AM ET alert active (entry zone watch)
+
+---
+
+## 🪙 CRCL — Circle Internet Group (crypto/stablecoin tilt) — added Aug 19, 2026
+
+> Thesis: USDC issuer, biggest direct beneficiary of stablecoin legislation (GENIUS Act
+> signed Jul 2025; CLARITY Act advancing — would ban stablecoin yield, making USDC the
+> compliant option). OCC national trust charter approved Aug 19, 2026 → federal trust bank.
+> High-beta crypto proxy — binary-ish around CLARITY Act timing. Watch, not buy now (just
+> popped +9.6% on OCC news).
+
+- **The setup:** $78.59 (Aug 19, +9.6% on OCC charter). IPO Jun 2025 @ $31 → $164 high →
+  halved in Oct 2025 crypto meltdown → recovered ~150% off Feb lows. Still ~52% below 52w high.
+- **Fundamentals (Q2, Aug 6):** USDC circulation $73.3B (+19% YoY), $14.8T onchain volume.
+- **Street:** Bernstein $190 target (+129%); "Nvidia of crypto" chatter.
+- **Entry zones (pullback, no chase):** Best **$68–72** (pre-OCC base, alert set ≤$70) ·
+  All-In **$60–65** (deeper fill / CLARITY-act stumble)
+- **Stop:** $52 (below Feb-recovery trend = thesis broken)
+- **Targets (1yr/2yr):** $100 / $150 (KuCoin CLARITY thesis) — **1–2% position max** (crypto
+  beta, legislation binary risk, no dividend, high vol)
+- **Bear risks:** CLARITY Act stalls or weakens; stablecoin yield competition; crypto
+  deleverage again; OCC charter path hits friction.
+- **Alert cron active:** CRCL ≤ $70 weekdays 11 AM ET (silent unless triggered).
+
+### 🚨 CRCL Triggers
+- CRCL ≤ $70: Start small (1% spec) — best-zone top
+- CRCL ≤ $65: Add to 2% — all-in zone
+- CRCL < $52: Stop — thesis failed, exit
