@@ -13,12 +13,12 @@
 
 | Ticker | Weight | Best Zone | All-In Zone | Current | Status |
 |--------|--------|-----------|-------------|---------|--------|
-| **TXN** | 35% | $280–300 | $260–275 | $273.43 | 🔔 All-In Zone (was Best) — start-building (<$290) active, full-position (<$270) 1.3% away |
-| **ADI** | 25% | $380–400 | $360–380 | $381.17 | ✅ Best Zone — bottom edge, start-building trigger (<$400) active |
-| **VRT** | 20% | $280–320 | $250–280 | $287.07 | ✅ Best Zone — lower third; full-position trigger (<$280) off |
-| **INTC** | — | $110–125 | $95–110 | $104.56 | 🔔 All-In Zone — go-heavy trigger (<$110) active, above $90 stop |
-| **NVTS** | 10% | $16–20 | $12–16 | $13.66 | 🔔 All-In Zone — add trigger (<$14) active, above $10 stop |
-| **ON** | 10% | $100–110 | $90–100 | $81.56 | ⚠️ Above $80 stop but only ~2% from it; still far below entry zones |
+| **TXN** | 35% | $280–300 | $260–275 | $269.74 | 🔔 All-In Zone — full-position trigger (<$270) HIT (Aug 20); start-building (<$290) active |
+| **ADI** | 25% | $380–400 | $360–380 | $380.49 | 🔔 Best Zone — bottom edge, start-building trigger (<$400) active |
+| **VRT** | 20% | $280–320 | $250–280 | $256.77 | 🔔 All-In Zone — full-position trigger (<$280) active (was Best Zone) |
+| **INTC** | — | $110–125 | $95–110 | $91.85 | 🔔 BELOW All-In Zone — go-heavy (<$110) active but under zone floor; ~2% above $90 stop; $20B offering @$95 overhang |
+| **NVTS** | 10% | $16–20 | $12–16 | $12.93 | 🔔 All-In Zone — add trigger (<$14) active, above $10 stop |
+| **ON** | 10% | $100–110 | $90–100 | $76.26 | 🚨 STOP BREACHED — below $80 stop; plan = thesis failed, exit/review |
 
 ### 📈 Price Targets
 
@@ -237,3 +237,37 @@
 - CRCL ≤ $70: Start small (1% spec) — best-zone top
 - CRCL ≤ $65: Add to 2% — all-in zone
 - CRCL < $52: Stop — thesis failed, exit
+
+---
+
+## 🏗️ CLF — Cleveland-Cliffs (transformer-steel / GOES bottleneck) — added Aug 20, 2026
+
+> Thesis: SOLE US domestic producer of grain-oriented electrical steel (GOES) — the
+> specialty steel in transformer cores. AI data centers are bottlenecked on power
+> transformers (2-4yr lead times; ~half of 2026 US AI DCs delayed/canceled). CLF = toll
+> booth on the grid buildout. Watch, don't chase — financials still recovering.
+
+- **The setup:** $11.17 (-5.98% Aug 19, steel sold off with chips). Market cap $6.37B,
+  EV $14.03B. 52wk +5.6%. Beta 2.12, RSI 45.8 (neutral).
+- **Q2 2026 (Jul 23):** Rev $5.2B; returned to positive FCF; adj EBITDA tripled
+  sequentially; guidance stronger Q3/Q4 (contract resets, cost cuts, asset sales).
+- **The ugly TTM numbers:** net -$876M (EPS -$1.60), gross margin -1.1%, FCF -$857M,
+  total debt $7.72B vs cash $70M (net debt -$7.65B), Debt/EBITDA 10.3x, interest
+  coverage -0.9x, Altman Z 1.26 (distress zone), shares +12.35% YoY (dilution).
+- **Electrical steel segment:** only ~$1.86B of $19.2B TTM revenue (~10%) — the GOES
+  moat is real but small; transformer-steel upside is optionality, not current P&L.
+- **Analysts:** PT $11.80 (+5.6%), Hold, 13 covering. Short interest 14.1% of float.
+- **Entry zones (pullback, no chase):** Best **$9.50–10.50** (alert set ≤$10.50) ·
+  All-In **$8.00–9.00** (2026 lows / deep-cycle bottom)
+- **Stop:** $7.50 (below cycle support = thesis broken)
+- **Targets:** $15 / $20 (1yr/2yr) — **1–2% spec position max** (cyclical, levered,
+  losing money TTM; GOES premium not yet in earnings)
+- **Peers (quality comparison):** NUE $248.74 (PE 19.9, fwd 11.6, ROIC 12%, debt/EBITDA
+  1.2x, dividend) · STLD $231.01 (PE 21, fwd 11.4, ROIC 12.4%, dividend) — profitable,
+  clean balance sheets, but less pure AI/GOES exposure and pricier.
+- **Alert cron active:** CLF ≤ $10.50 weekdays 11 AM ET (silent unless triggered).
+
+### 🚨 CLF Triggers
+- CLF ≤ $10.50: Start small (1% spec) — best-zone top
+- CLF ≤ $9.00: Add to 2% — all-in zone
+- CLF < $7.50: Stop — thesis failed, exit
