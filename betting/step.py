@@ -82,6 +82,7 @@ def main():
             gh, ga = sm.get(home), sm.get(away)
             if gh is None or ga is None:
                 continue
+            gh, ga = int(gh), int(ga)   # Odds API returns scores as strings
             for b in bk["bets"]:
                 if b.get("result") is None and b["home"] == home and b["away"] == away:
                     pnl = bookmod.settle(b, gh, ga)

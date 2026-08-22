@@ -1,82 +1,82 @@
 {
  "Arsenal": {
-  "attack": 1.359,
-  "defense": 0.517
+  "attack": 1.335,
+  "defense": 0.495
  },
  "Manchester City": {
-  "attack": 1.474,
-  "defense": 0.67
+  "attack": 1.444,
+  "defense": 0.698
  },
  "Manchester United": {
-  "attack": 1.321,
-  "defense": 0.957
+  "attack": 1.191,
+  "defense": 1.0
  },
  "Aston Villa": {
-  "attack": 1.072,
-  "defense": 0.938
+  "attack": 1.05,
+  "defense": 0.977
  },
  "Liverpool": {
-  "attack": 1.206,
-  "defense": 1.014
+  "attack": 1.182,
+  "defense": 1.057
  },
  "Bournemouth": {
-  "attack": 1.11,
-  "defense": 1.033
+  "attack": 1.088,
+  "defense": 1.077
  },
  "Sunderland": {
-  "attack": 0.804,
-  "defense": 0.919
- },
- "Brighton & Hove Albion": {
-  "attack": 0.995,
-  "defense": 0.88
- },
- "Brentford": {
-  "attack": 1.053,
-  "defense": 0.995
- },
- "Chelsea": {
-  "attack": 1.11,
-  "defense": 0.995
- },
- "Fulham": {
-  "attack": 0.9,
-  "defense": 0.976
- },
- "Newcastle United": {
-  "attack": 1.014,
-  "defense": 1.053
- },
- "Everton": {
-  "attack": 0.9,
+  "attack": 0.788,
   "defense": 0.957
  },
+ "Brighton & Hove Albion": {
+  "attack": 0.975,
+  "defense": 0.917
+ },
+ "Brentford": {
+  "attack": 1.032,
+  "defense": 1.037
+ },
+ "Chelsea": {
+  "attack": 1.088,
+  "defense": 1.037
+ },
+ "Fulham": {
+  "attack": 0.882,
+  "defense": 1.017
+ },
+ "Newcastle United": {
+  "attack": 0.994,
+  "defense": 1.097
+ },
+ "Everton": {
+  "attack": 0.882,
+  "defense": 0.998
+ },
  "Leeds United": {
-  "attack": 0.938,
-  "defense": 1.072
+  "attack": 0.92,
+  "defense": 1.117
  },
  "Crystal Palace": {
-  "attack": 0.785,
-  "defense": 0.976
+  "attack": 0.769,
+  "defense": 1.017
  },
  "Nottingham Forest": {
-  "attack": 0.919,
-  "defense": 0.976
+  "attack": 0.901,
+  "defense": 1.017
  },
  "Tottenham Hotspur": {
-  "attack": 0.919,
-  "defense": 1.091
+  "attack": 0.901,
+  "defense": 1.137
  },
  "Coventry City": {
-  "attack": 0.9,
-  "defense": 1.1
+  "attack": 0.811,
+  "defense": 1.148
  },
  "Ipswich Town": {
-  "attack": 0.9,
-  "defense": 1.1
+  "attack": 0.882,
+  "defense": 1.146
  },
  "Hull City": {
-  "attack": 0.9,
-  "defense": 1.1
+  "attack": 0.885,
+  "defense": 1.054
  }
 }

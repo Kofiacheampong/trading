@@ -83,6 +83,8 @@ def settle(bet, home_score, away_score):
     bet["result"] = "win" if won else "loss"
     bet["pnl"] = pnl
     bet["settled"] = str(datetime.date.today())
+    bet["home_score"] = int(home_score)
+    bet["away_score"] = int(away_score)
     return pnl
 
 
