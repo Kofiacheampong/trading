@@ -142,33 +142,6 @@
    "expiry": "2026-09-18",
    "credit": 4.6,
    "outcome": null
-  },
-  {
-   "ticker": "LULU",
-   "date": "2026-08-24",
-   "strike": 110.0,
-   "spot": 122.78,
-   "expiry": "2026-08-28",
-   "credit": 0.07,
-   "outcome": null
-  },
-  {
-   "ticker": "KMB",
-   "date": "2026-08-24",
-   "strike": 100.0,
-   "spot": 111.37,
-   "expiry": "2026-08-28",
-   "credit": 1.2,
-   "outcome": null
-  },
-  {
-   "ticker": "PYPL",
-   "date": "2026-08-24",
-   "strike": 55.0,
-   "spot": 61.68,
-   "expiry": "2026-08-28",
-   "credit": 0.03,
-   "outcome": null
   }
  ],
  "events": [],
@@ -734,48 +707,6 @@
    "flags": [
     "oversold_quality(-38% vs 200ma)"
    ]
-  },
-  {
-   "ticker": "BWXT",
-   "date": "2026-08-24",
-   "price": 149.52,
-   "score": 72.5,
-   "rsi": 29.2,
-   "relvol": 1.54,
-   "vs_200ma": -23.1,
-   "vs_52w_high": -37.3,
-   "flags": [
-    "oversold_quality(-23% vs 200ma)",
-    "rsi(29)",
-    "near_52w_low"
-   ]
-  },
-  {
-   "ticker": "OKLO",
-   "date": "2026-08-24",
-   "price": 39.69,
-   "score": 57.5,
-   "rsi": 41.3,
-   "relvol": 0.8,
-   "vs_200ma": -41.5,
-   "vs_52w_high": -77.2,
-   "flags": [
-    "oversold_quality(-41% vs 200ma)",
-    "near_52w_low"
-   ]
-  },
-  {
-   "ticker": "AVAV",
-   "date": "2026-08-24",
-   "price": 148.2,
-   "score": 55.5,
-   "rsi": 38.4,
-   "relvol": 1.01,
-   "vs_200ma": -32.7,
-   "vs_52w_high": -63.8,
-   "flags": [
-    "oversold_quality(-33% vs 200ma)"
-   ]
   }
  ],
  "lottery": {
@@ -1143,34 +1074,6 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 197.19,
    "s50": 160.58
-  },
-  {
-   "date": "2026-08-24",
-   "ticker": "LULU",
-   "reason": "sma20>sma50 uptrend",
-   "s20": 121.42,
-   "s50": 117.65
-  },
-  {
-   "date": "2026-08-24",
-   "ticker": "KMB",
-   "reason": "sma20>sma50 uptrend",
-   "s20": 109.86,
-   "s50": 108.82
-  },
-  {
-   "date": "2026-08-24",
-   "ticker": "PYPL",
-   "reason": "sma20>sma50 uptrend",
-   "s20": 59.6,
-   "s50": 52.43
-  },
-  {
-   "date": "2026-08-24",
-   "ticker": "PAYC",
-   "reason": "sma20>sma50 uptrend",
-   "s20": 201.1,
-   "s50": 162.53
   }
  ],
  "value_cache": {
