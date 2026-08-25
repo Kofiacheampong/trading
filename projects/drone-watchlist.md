@@ -25,5 +25,18 @@ excluded — dilution ($150M offering) + heavy insider selling + retail FOMO.
   they'll flag if they pull into oversold setups. Quality weight default 15
   (no verified ROIC on file yet).
 
+## Tracking — PUSA (Aureus Greenway / Powerus) — added Aug 25, 2026
+- Powerus drone/energy business inside a golf-course shell company. ~$92M cap,
+  **negative earnings** (P/E ~-12). 52w range $1.80–$8.25.
+- Backstory: **UMAC put $30M into Powerus** (~2 mo ago); **$22.3M commercial contract**
+  PR'd Aug 24–25 (self-reported, "according to Powerus"). UMAC = the name we
+  already excluded here for dilution + insider selling + FOMO.
+- Aug 24: +10.2% to $3.78 on 2.79M shares (10× normal volume) — momentum pump.
+- **No entry zone set — track only.** Kofi considered 100 sh @ $3.65 (~1/3 of his
+  U25399736 acct) on Aug 25; advised no, agreed to paper-track instead.
+- Opportunity scanner (sim daily step): PUSA added to UNIVERSE — it'll flag if it
+  pulls into oversold setups. Quality weight 15 (no verified ROIC).
+
 ## Status Log
 - **2026-08-15:** Watchlist created. Screen: none actionable (all extended).
+- **2026-08-25:** PUSA added as track-only (drone momentum, no entry zone).

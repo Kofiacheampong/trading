@@ -25,7 +25,7 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 # AI-power tier (CEG/VST/GEV/CCJ/BWXT) + story tier (OKLO/SMR/FCEL) + solar corner (TE)
 # added 8/16/26 per AI-power watchlist (projects/ai-power-watchlist.md).
 UNIVERSE = ["LULU", "KMB", "ZTS", "PYPL", "PAYC", "QCOM", "ADBE", "IT", "PNR",
-            "AVAV", "KTOS", "RCAT", "ONDS",
+            "AVAV", "KTOS", "RCAT", "ONDS", "PUSA",
             "CEG", "VST", "GEV", "CCJ", "BWXT", "OKLO", "SMR", "FCEL", "TE"]
 
 # Quality score = ROIC % (from our fundamental screens). Used to weight setups:
@@ -33,7 +33,7 @@ UNIVERSE = ["LULU", "KMB", "ZTS", "PYPL", "PAYC", "QCOM", "ADBE", "IT", "PNR",
 # Drone + AI-power names have no verified ROIC on file -> default 15 weight.
 QUALITY = {"LULU": 27.7, "KMB": 23.7, "ZTS": 27.8, "PYPL": 22.3, "PAYC": 30.0,
            "QCOM": 25.0, "ADBE": 30.0, "IT": 30.0, "PNR": 14.0,
-           "AVAV": 15.0, "KTOS": 15.0, "RCAT": 15.0, "ONDS": 15.0,
+           "AVAV": 15.0, "KTOS": 15.0, "RCAT": 15.0, "ONDS": 15.0, "PUSA": 15.0,
            "CEG": 15.0, "VST": 15.0, "GEV": 15.0, "CCJ": 15.0, "BWXT": 15.0,
            "OKLO": 15.0, "SMR": 15.0, "FCEL": 15.0, "TE": 15.0}
 

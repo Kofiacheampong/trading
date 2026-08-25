@@ -27,6 +27,11 @@
 ## Current Portfolio (last check Jul 31, 2026)
 - **DRAM $50.37** (-6.5%) · **INTC $90.20** (-9.8%) · **MP $41.37** (-15.9%) · **MDB $337.48** (+0.5%) · **AMPG $4.65** (-30.6%) — total ~$1,363 vs $1,463 cost (-6.8%).
 
+## TWO IBKR ACCOUNTS (confirmed Aug 25, 2026 via Kofi screenshots)
+- **U25351412 — holdings account:** Equity $1,377.57, Settled Cash ~$229, Unrealized -$209.94, Realized $0. Holds DRAM/MP/INTC/AMPG positions. ⚠️ Buying Power showed ~$0.10 despite $229 cash → possible open order reserving it (unresolved).
+- **U25399736 — new/trading account:** Equity $1,092.00, 100% cash, no positions. This is where the 8/25 PUSA ticket sat. Presumed options-system account going forward (ROLE UNCONFIRMED — ask).
+- Combined ≈ $2,469.57 vs $2,153 (Aug 22) → ~+$316 net (fresh deposit?).
+
 ## Current Portfolio — VERIFIED IBKR snapshot Aug 14, 2026 (Kofi screenshot)
 - **MP** 5.9683 sh @ **$67.35 avg** (cost $401.99) — last $58.93, **-$49.90 (-12.4%)**; breakeven $67.35 = +14.3% away; daily +$19.90. **CORRECTION: my 7/16 record of ~$49.18 avg was wrong — actual avg $67.35.**
 - **DRAM** 15.5176 sh @ $64.35 — last $57.37, **-$108.00** (biggest drag)

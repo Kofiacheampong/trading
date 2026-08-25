@@ -13,12 +13,12 @@
 
 | Ticker | Weight | Best Zone | All-In Zone | Current | Status |
 |--------|--------|-----------|-------------|---------|--------|
-| **TXN** | 35% | $280–300 | $260–275 | $264.54 | 🔔 All-In Zone — full-position trigger (<$270) ACTIVE; -5.5% below Best Zone floor |
-| **ADI** | 25% | $380–400 | $360–380 | $375.35 | 🔔 All-In Zone — full-position trigger (<$380) HIT (Aug 21); -1.2% below Best Zone floor |
-| **VRT** | 20% | $280–320 | $250–280 | $263.84 | 🔔 All-In Zone — full-position trigger (<$280) ACTIVE; -5.8% below Best Zone floor |
-| **INTC** | — | $110–125 | $95–110 | $90.71 | 🔔 BELOW All-In Zone — go-heavy (<$110) active; under zone floor; ~0.8% above $90 stop; $20B offering @$95 overhang |
-| **NVTS** | 10% | $16–20 | $12–16 | $13.21 | 🔔 All-In Zone — add trigger (<$14) active, above $10 stop; -17% below Best Zone floor |
-| **ON** | 10% | $100–110 | $90–100 | $75.15 | 🚨 STOP BREACHED — below $80 stop; plan = thesis failed, exit/review |
+| **TXN** | 35% | $280–300 | $260–275 | $258.94 | 🔔 BELOW All-In Zone — full-position trigger (<$270) ACTIVE; -7.5% below Best Zone floor |
+| **ADI** | 25% | $380–400 | $360–380 | $371.17 | 🔔 All-In Zone — full-position trigger (<$380) HIT; -2.3% below Best Zone floor |
+| **VRT** | 20% | $280–320 | $250–280 | $254.97 | 🔔 All-In Zone — full-position trigger (<$280) HIT (Aug 24); -8.9% below Best Zone floor |
+| **INTC** | — | $110–125 | $95–110 | $87.26 | 🚨 STOP BREACHED ($90) — below All-In Zone; go-heavy (<$110) active; -20.7% below Best Zone floor |
+| **NVTS** | 10% | $16–20 | $12–16 | $12.23 | 🔔 All-In Zone — add trigger (<$14) HIT (Aug 24); above $10 stop; -23.6% below Best Zone floor |
+| **ON** | 10% | $100–110 | $90–100 | $71.93 | 🚨 STOP BREACHED — deeper below $80 stop; plan = thesis failed, exit/review |
 
 ### 📈 Price Targets
 
@@ -42,6 +42,7 @@
 ---
 
 ### 📝 Notes
+- **Aug 24 selloff:** broad semi bloodbath — TXN -8.5%, ADI -4.9%, VRT -12.8%, INTC -15.7%, NVTS -16.1%, ON -13.7% (Mon close). All 6 names now in/below entry zones; INTC broke $90 stop; ON deep below $80 stop.
 - **INTC:** Owned. Pelosi bought $50 strike calls May 29 — deep ITM at $135. CHIPS Act beneficiary, foundry turnaround play. LEAPS strategy > buying shares at current levels for additional exposure.
 - TXN 52wk high $334 hit Mon Jun 22 — momentum strong
 - ADI dropped 7.7% on Hynix panic sell-off — thesis unchanged
