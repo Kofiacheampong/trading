@@ -1,82 +1,82 @@
 {
  "Arsenal": {
-  "attack": 1.392,
+  "attack": 1.39,
   "defense": 0.437
  },
  "Manchester City": {
-  "attack": 1.495,
+  "attack": 1.493,
   "defense": 0.726
  },
  "Manchester United": {
-  "attack": 1.047,
-  "defense": 1.046
+  "attack": 1.046,
+  "defense": 1.045
  },
  "Aston Villa": {
-  "attack": 1.091,
-  "defense": 1.016
+  "attack": 1.09,
+  "defense": 1.015
  },
  "Liverpool": {
-  "attack": 1.228,
+  "attack": 1.227,
   "defense": 1.101
  },
  "Bournemouth": {
-  "attack": 1.129,
-  "defense": 1.117
+  "attack": 1.128,
+  "defense": 1.115
  },
  "Sunderland": {
   "attack": 0.816,
-  "defense": 1.001
+  "defense": 1.0
  },
  "Brighton & Hove Albion": {
-  "attack": 1.012,
-  "defense": 0.954
+  "attack": 1.011,
+  "defense": 0.953
  },
  "Brentford": {
-  "attack": 1.082,
+  "attack": 1.081,
   "defense": 0.841
  },
  "Chelsea": {
-  "attack": 1.134,
-  "defense": 1.081
+  "attack": 1.138,
+  "defense": 1.083
  },
  "Fulham": {
-  "attack": 0.918,
-  "defense": 1.062
+  "attack": 0.919,
+  "defense": 1.066
  },
  "Newcastle United": {
   "attack": 1.035,
-  "defense": 1.143
+  "defense": 1.142
  },
  "Everton": {
-  "attack": 0.921,
+  "attack": 0.92,
   "defense": 0.878
  },
  "Leeds United": {
-  "attack": 0.953,
-  "defense": 0.983
+  "attack": 0.952,
+  "defense": 0.982
  },
  "Crystal Palace": {
   "attack": 0.676,
-  "defense": 1.063
+  "defense": 1.062
  },
  "Nottingham Forest": {
   "attack": 0.791,
-  "defense": 1.055
+  "defense": 1.054
  },
  "Tottenham Hotspur": {
   "attack": 0.728,
-  "defense": 1.193
+  "defense": 1.191
  },
  "Coventry City": {
   "attack": 0.712,
-  "defense": 1.196
+  "defense": 1.194
  },
  "Ipswich Town": {
-  "attack": 0.921,
-  "defense": 1.187
+  "attack": 0.92,
+  "defense": 1.185
  },
  "Hull City": {
-  "attack": 0.925,
-  "defense": 0.927
+  "attack": 0.924,
+  "defense": 0.926
  }
 }
