@@ -13,12 +13,12 @@
 
 | Ticker | Weight | Best Zone | All-In Zone | Current | Status |
 |--------|--------|-----------|-------------|---------|--------|
-| **TXN** | 35% | $280–300 | $260–275 | $253.34 | 🔔 All-In Zone — full-position trigger (<$270) ACTIVE; broke below $260 floor; -9.5% below Best Zone floor |
-| **ADI** | 25% | $380–400 | $360–380 | $354.52 | 🔔 All-In Zone — full-position trigger (<$380) HIT; below $360 All-In floor; -6.7% below Best Zone floor |
-| **VRT** | 20% | $280–320 | $250–280 | $255.97 | 🔔 All-In Zone — full-position trigger (<$280) HIT; -8.6% below Best Zone floor |
-| **INTC** | — | $110–125 | $95–110 | $88.97 | 🚨 STOP RE-BREACHED — below $90 stop; below All-In floor ($95); -19.1% below Best Zone floor |
-| **NVTS** | 10% | $16–20 | $12–16 | $10.94 | 🔔 Below All-In floor ($12) — approaching $10 stop; -31.6% below Best Zone floor |
-| **ON** | 10% | $100–110 | $90–100 | $72.65 | 🚨 STOP BREACHED — still below $80 stop; plan = thesis failed, exit/review |
+| **TXN** | 35% | $280–300 | $260–275 | $254.80 | 🔔 All-In Zone — full-position trigger (<$270) ACTIVE; still below $260 floor; -9.0% below Best Zone floor |
+| **ADI** | 25% | $380–400 | $360–380 | $355.71 | 🔔 All-In Zone — full-position trigger (<$380) HIT; below $360 All-In floor; -6.4% below Best Zone floor |
+| **VRT** | 20% | $280–320 | $250–280 | $256.70 | 🔔 All-In Zone — full-position trigger (<$280) HIT; inside $250–280 zone; -8.3% below Best Zone floor |
+| **INTC** | — | $110–125 | $95–110 | $90.05 | 🚨 AT $90 STOP — recovered just above stop ($88.97→$90.05); still below All-In floor ($95); -18.1% below Best Zone floor |
+| **NVTS** | 10% | $16–20 | $12–16 | $11.21 | 🔔 Below All-In floor ($12) — approaching $10 stop; -29.9% below Best Zone floor |
+| **ON** | 10% | $100–110 | $90–100 | $72.34 | 🚨 STOP BREACHED — still below $80 stop; plan = thesis failed, exit/review |
 
 ### 📈 Price Targets
 
