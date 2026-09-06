@@ -87,6 +87,21 @@
    "closing_odds": 6.0,
    "result": null,
    "pnl": null
+  },
+  {
+   "event_id": "f65c4eaf0f94a569f06d768f737dad2e",
+   "home": "Newcastle United",
+   "away": "Hull City",
+   "commence": "2026-09-19T14:00:00Z",
+   "market": "h2h_draw",
+   "odds": 5.3,
+   "model_prob": 0.281,
+   "edge": 0.108,
+   "stake": 1.22,
+   "entered": "2026-09-06",
+   "closing_odds": 5.3,
+   "result": null,
+   "pnl": null
   }
  ],
  "started": "2026-08-11"
