@@ -34,6 +34,16 @@ NAME_MAP = {
     "Wolverhampton": "Wolverhampton Wanderers",
     "Wolves": "Wolverhampton Wanderers",
     "Sheffield United": "Sheffield United",
+    # CL lane name normalizations (Odds API feed -> seed keys)
+    "Atlético Madrid": "Atletico Madrid",
+    "Atletico": "Atletico Madrid",
+    "Paris Saint Germain": "Paris Saint-Germain",
+    "ŠK Slovan Bratislava": "Slovan Bratislava",
+    "Sporting Lisbon": "Sporting CP",
+    "Sporting": "Sporting CP",
+    "Inter": "Inter Milan",
+    "PSG": "Paris Saint-Germain",
+    "Barcelona": "Barcelona",
 }
 
 
@@ -58,11 +68,11 @@ def _curl(url):
     return out.stdout
 
 
-def fetch_odds(api_key):
-    """Upcoming EPL events with FanDuel h2h + totals. [] if no key / failure."""
+def fetch_odds(api_key, sport=SPORT):
+    """Upcoming events with FanDuel h2h + totals. [] if no key / failure."""
     if not api_key:
         return []
-    url = (f"https://api.the-odds-api.com/v4/sports/{SPORT}/odds/"
+    url = (f"https://api.the-odds-api.com/v4/sports/{sport}/odds/"
            f"?apiKey={api_key}&regions={REGIONS}&markets={MARKETS}"
            f"&bookmakers={BOOK}&oddsFormat=decimal")
     try:
@@ -71,11 +81,11 @@ def fetch_odds(api_key):
         return []
 
 
-def fetch_scores(api_key, days=3):
+def fetch_scores(api_key, days=3, sport=SPORT):
     """Completed/recent match results. [] if no key / failure."""
     if not api_key:
         return []
-    url = (f"https://api.the-odds-api.com/v4/sports/{SPORT}/scores/"
+    url = (f"https://api.the-odds-api.com/v4/sports/{sport}/scores/"
            f"?apiKey={api_key}&daysFrom={days}")
     try:
         return json.loads(_curl(url))
@@ -84,11 +94,20 @@ def fetch_scores(api_key, days=3):
 
 
 def parse_fixtures(events):
-    """Events -> [{id, commence, home, away, h2h:{home,draw,away}, totals:{over,under}}]"""
+    """Events -> [{id, commence, home, away, h2h:{home,draw,away}, totals:{over25,under25}}]
+
+    Outcome names from the bookmaker are mapped to canonical sides by comparing
+    against the event's home/away teams (anything else = draw), and O/U 2.5
+    totals are keyed over25/under25. This fixes the old bug where raw outcome
+    names ("chelsea", "over") were stored as keys and never matched the
+    home/draw/away or over25/under25 lookups in step.py — the bot could only
+    ever bet h2h draws before.
+    """
     out = []
     for e in events:
+        home, away = norm(e["home_team"]), norm(e["away_team"])
         rec = {"id": e["id"], "commence": e["commence_time"],
-               "home": norm(e["home_team"]), "away": norm(e["away_team"]),
+               "home": home, "away": away,
                "h2h": {}, "totals": {}}
         for bm in e.get("bookmakers", []):
             if bm.get("key") != BOOK:
@@ -96,12 +115,19 @@ def parse_fixtures(events):
             for m in bm.get("markets", []):
                 if m["key"] == "h2h":
                     for o in m["outcomes"]:
-                        rec["h2h"][o["name"].lower()] = o["price"]
+                        nm = norm(o["name"])
+                        if nm == home:
+                            rec["h2h"]["home"] = o["price"]
+                        elif nm == away:
+                            rec["h2h"]["away"] = o["price"]
+                        else:
+                            rec["h2h"]["draw"] = o["price"]
                 elif m["key"] == "totals":
                     for o in m["outcomes"]:
                         pt = o.get("point") or 2.5
                         if abs(pt - 2.5) < 0.01:
-                            rec["totals"][o["name"].lower()] = o["price"]
+                            key = "over25" if o["name"].lower().startswith("over") else "under25"
+                            rec["totals"][key] = o["price"]
         out.append(rec)
     return out
 

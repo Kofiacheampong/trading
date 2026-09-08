@@ -19,6 +19,10 @@ import model, odds, book as bookmod
 
 RATINGS_PATH = os.path.join(BASE, "ratings.json")
 
+# Never bet fixtures more than this many days out (early FanDuel lines are wide
+# and ruin the CLV gate metric). Also guards against betting phantom listings.
+HORIZON_DAYS = 7
+
 
 def load_ratings():
     if os.path.exists(RATINGS_PATH):
@@ -65,6 +69,34 @@ def update_closing(bk, fixtures):
             b["closing_odds"] = pool[side]
 
 
+def _iso(dtstr):
+    return datetime.datetime.fromisoformat(dtstr.replace("Z", "+00:00"))
+
+
+def _void_stale_open_bets(bk, events, horizon_days=5):
+    """Void open bets whose fixture produced no result well after kickoff.
+
+    The Odds API scores endpoint only goes back ~3 days, so a bet on a match
+    that never publishes a result (cancelled/phantom) would hang open forever
+    otherwise. Refund the stake (pnl 0) and mark it void.
+    """
+    now = datetime.datetime.now(datetime.timezone.utc)
+    for b in bk["bets"]:
+        if b.get("result") is not None:
+            continue
+        try:
+            kick = _iso(b["commence"])
+        except Exception:
+            continue
+        if (now - kick).days > horizon_days:
+            b["result"] = "void"
+            b["pnl"] = 0.0
+            b["settled"] = str(datetime.date.today())
+            b["note"] = "no result within %dd of kickoff — voided" % horizon_days
+            events.append(f"VOID {b['home']} vs {b['away']} [{b['market']}] "
+                          f"(no result — voided, stake refunded)")
+
+
 def main():
     api_key = odds.get_key()
     bk = bookmod.load()
@@ -92,12 +124,24 @@ def main():
                                   f"{b['result']} {pnl:+.1f}u")
             if home in rats and away in rats:
                 model.update_ratings(rats, home, away, gh, ga)
+        _void_stale_open_bets(bk, events)
 
     # --- value scan vs FanDuel ---
     if api_key:
         fixtures = odds.parse_fixtures(odds.fetch_odds(api_key))
+        now = datetime.datetime.now(datetime.timezone.utc)
         for f in fixtures:
             if f["home"] not in rats or f["away"] not in rats:
+                continue
+            # never bet a fixture already kicked off, or one >HORIZON_DAYS out
+            # (wide early lines wreck the CLV gate metric)
+            try:
+                kick = _iso(f["commence"])
+            except Exception:
+                continue
+            if kick <= now + datetime.timedelta(minutes=30):
+                continue
+            if kick > now + datetime.timedelta(days=HORIZON_DAYS):
                 continue
             lh, la = model.expected_goals(f["home"], f["away"], rats)
             mp = model.match_probs(lh, la)

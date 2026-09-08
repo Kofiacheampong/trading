@@ -1,0 +1,63 @@
+{
+  "season": "2025-26 domestic (CL lane seed)",
+  "leagues": {
+    "La Liga": {"avg_goals_per_team": 1.35},
+    "Serie A": {"avg_goals_per_team": 1.21},
+    "Ligue 1": {"avg_goals_per_team": 1.41},
+    "Bundesliga": {"avg_goals_per_team": 1.62},
+    "Eredivisie": {"avg_goals_per_team": 1.59},
+    "Primeira Liga": {"avg_goals_per_team": 1.34},
+    "Belgian Pro League": {"avg_goals_per_team": 1.31},
+    "Super League Greece": {"avg_goals_per_team": 1.28},
+    "Austrian Bundesliga": {"avg_goals_per_team": 1.35},
+    "Eliteserien": {"avg_goals_per_team": 1.59},
+    "Super Lig": {"avg_goals_per_team": 1.33},
+    "Fortuna Liga": {"avg_goals_per_team": 1.41}
+  },
+  "teams": {
+    "La Liga": {
+      "Real Madrid": {"w": 27, "d": 5, "l": 6, "gf": 77, "ga": 35},
+      "Atletico Madrid": {"w": 21, "d": 6, "l": 11, "gf": 62, "ga": 44},
+      "Barcelona": {"w": 31, "d": 1, "l": 6, "gf": 95, "ga": 36},
+      "Villarreal": {"w": 22, "d": 6, "l": 10, "gf": 72, "ga": 46},
+      "Real Betis": {"w": 15, "d": 15, "l": 8, "gf": 59, "ga": 48}
+    },
+    "Serie A": {
+      "Inter Milan": {"w": 27, "d": 6, "l": 5, "gf": 89, "ga": 35},
+      "Napoli": {"w": 23, "d": 7, "l": 8, "gf": 58, "ga": 36}
+    },
+    "Ligue 1": {
+      "Paris Saint-Germain": {"w": 24, "d": 4, "l": 6, "gf": 74, "ga": 29},
+      "Lille": {"w": 18, "d": 7, "l": 9, "gf": 52, "ga": 37}
+    },
+    "Bundesliga": {
+      "Borussia Dortmund": {"w": 22, "d": 7, "l": 5, "gf": 70, "ga": 34},
+      "VfB Stuttgart": {"w": 18, "d": 8, "l": 8, "gf": 71, "ga": 49}
+    },
+    "Eredivisie": {
+      "Feyenoord": {"w": 19, "d": 8, "l": 7, "gf": 70, "ga": 44}
+    },
+    "Primeira Liga": {
+      "Porto": {"w": 28, "d": 4, "l": 2, "gf": 66, "ga": 18},
+      "Sporting CP": {"w": 25, "d": 7, "l": 2, "gf": 89, "ga": 24}
+    },
+    "Belgian Pro League": {
+      "Club Brugge": {"w": 20, "d": 3, "l": 7, "gf": 59, "ga": 36}
+    },
+    "Super League Greece": {
+      "AEK Athens": {"w": 21, "d": 9, "l": 2, "gf": 57, "ga": 20}
+    },
+    "Austrian Bundesliga": {
+      "LASK": {"w": 17, "d": 7, "l": 8, "gf": 56, "ga": 42}
+    },
+    "Eliteserien": {
+      "Viking FK": {"w": 22, "d": 5, "l": 3, "gf": 77, "ga": 36}
+    },
+    "Super Lig": {
+      "Galatasaray": {"w": 24, "d": 5, "l": 5, "gf": 77, "ga": 30}
+    },
+    "Fortuna Liga": {
+      "Slovan Bratislava": {"w": 21, "d": 5, "l": 6, "gf": 62, "ga": 37}
+    }
+  }
+}

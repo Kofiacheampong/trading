@@ -20,18 +20,20 @@ GATE_CLV = 2.0           # %
 GATE_ROI = 5.0           # %
 
 
-def load():
-    if os.path.exists(STATE):
-        with open(STATE) as f:
+def load(path=None):
+    state = path or STATE
+    if os.path.exists(state):
+        with open(state) as f:
             return json.load(f)
     return {"bankroll": START_UNITS, "bets": [], "started": str(datetime.date.today())}
 
 
-def save(book):
-    tmp = STATE + ".tmp"
+def save(book, path=None):
+    state = path or STATE
+    tmp = state + ".tmp"
     with open(tmp, "w") as f:
         json.dump(book, f, indent=1)
-    os.replace(tmp, STATE)
+    os.replace(tmp, state)
 
 
 def fair_odds(probs):
