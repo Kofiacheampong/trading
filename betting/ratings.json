@@ -1,7 +1,7 @@
 {
  "Arsenal": {
-  "attack": 1.484,
-  "defense": 0.413
+  "attack": 1.481,
+  "defense": 0.414
  },
  "Manchester City": {
   "attack": 1.618,
@@ -36,8 +36,8 @@
   "defense": 0.924
  },
  "Chelsea": {
-  "attack": 1.246,
-  "defense": 1.182
+  "attack": 1.249,
+  "defense": 1.18
  },
  "Fulham": {
   "attack": 0.852,

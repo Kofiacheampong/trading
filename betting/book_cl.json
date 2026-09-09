@@ -1,5 +1,5 @@
 {
- "bankroll": 100.0,
+ "bankroll": 95.34,
  "bets": [
   {
    "event_id": "9c28ce0ac169f83e873ae8caa7f9a597",
@@ -13,8 +13,12 @@
    "stake": 0.5,
    "entered": "2026-09-08",
    "closing_odds": 1.69,
-   "result": null,
-   "pnl": null
+   "result": "win",
+   "pnl": 0.34,
+   "settled": "2026-09-09",
+   "home_score": 1,
+   "away_score": 0,
+   "clv": 0.0
   },
   {
    "event_id": "8f1221dd6bc88a3ebbfe573332840741",
@@ -28,8 +32,12 @@
    "stake": 0.5,
    "entered": "2026-09-08",
    "closing_odds": 2.6,
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-09-09",
+   "home_score": 2,
+   "away_score": 3,
+   "clv": 0.0
   },
   {
    "event_id": "259414448d0b88e42b454f4e7deca152",
@@ -43,8 +51,12 @@
    "stake": 2.0,
    "entered": "2026-09-08",
    "closing_odds": 5.4,
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -2.0,
+   "settled": "2026-09-09",
+   "home_score": 2,
+   "away_score": 1,
+   "clv": 0.0
   },
   {
    "event_id": "bfeab0a3d8931c7cdff0056c041ff97c",
@@ -58,8 +70,12 @@
    "stake": 2.0,
    "entered": "2026-09-08",
    "closing_odds": 5.2,
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -2.0,
+   "settled": "2026-09-09",
+   "home_score": 0,
+   "away_score": 2,
+   "clv": 0.0
   },
   {
    "event_id": "bfeab0a3d8931c7cdff0056c041ff97c",
@@ -73,8 +89,12 @@
    "stake": 0.5,
    "entered": "2026-09-08",
    "closing_odds": 4.2,
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-09-09",
+   "home_score": 0,
+   "away_score": 2,
+   "clv": 0.0
   },
   {
    "event_id": "c9bbedd626635eddff4934e689472fb8",
