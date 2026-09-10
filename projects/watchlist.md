@@ -42,6 +42,7 @@
 ---
 
 ### 📝 Notes
+- **Sep 10 check (pre-market, 9:00 AM ET; prices = Sep 9 close):** TXN $261.59 (+1.0%, inside All-In, <$270 full-position trigger ACTIVE), ADI $365.07 (+0.5%, inside All-In, <$380 trigger HIT), **VRT $262.89 (−9.6%❗, cracked from Best Zone down into All-In — <$280 full-position trigger now HIT)**, INTC $106.24 (+1.7%, inside All-In, <$110 heavy trigger HIT), NVTS $11.60 (−3.3%, slipped back under $12 All-In floor, $10 stop intact +16%), ON $70.98 (−0.1%, still below $80 stop — bleeding). All 5 weighted names at/below All-In — buy triggers ACTIVE. VRT day-drop = watch for continuation or bounce; ON exit/review stands.
 - **Sep 9 check (~9:05 AM ET open):** mixed tape at the bell — TXN $258.92 (+0.2%, slipped back under $260 All-In floor), ADI $363.20 (+0.3%, holds All-In), VRT $290.83 (+3.7%, extended up through Best Zone), INTC $104.47 (+9.1%❗, ripping toward $110 top of All-In zone), NVTS $12.00 (+1.7%, reclaimed $12 floor by a hair), ON $71.08 (-4.4%, deeper below $80 stop — bleeding). Buy triggers: TXN/ADI/VRT(1/3)/INTC/NVTS all in/below entry zones — ACTIVE. ON exit/review stands, stop breach widening.
 - **Sep 8 midday check (pre-market ~9:03 AM ET; * = pre-market quote):** broad pre-market green — TXN $261.00 (+1.0%), ADI $366.37 (+1.1%), VRT $286.32 (+2.1%, back inside Best Zone), INTC $100.31 (+4.7%, extended up All-In zone, $100 round number), NVTS $12.13 (+2.8%, reclaimed $12 All-In floor), ON $75.56 (+1.6%, stop breach continues). Buy triggers: TXN/ADI/VRT(1/3)/INTC/NVTS all in/below entry zones — ACTIVE. ON exit/review stands.
 - **Sep 8 check (Sep 4 close; Mon Sep 7 = Labor Day, market closed):** broad green session into the holiday — TXN $258.44 (+1.8%), ADI $362.25 (+1.6%), VRT $280.53 (+4.4%, reclaimed $280 Best-Zone floor, exited All-In), INTC $95.80 (+4.5%, back inside All-In zone, +6.4% off $90 stop), NVTS $11.80 (+6.3%, still below $12 All-In floor), ON $74.38 (+1.0%, stop breach continues). VRT announced $1.45B Utility Innovation acquisition (Sep 2). Buy triggers: TXN/ADI/VRT/INTC/NVTS all in/below entry zones — ACTIVE.
@@ -276,3 +277,47 @@
 - CLF ≤ $10.50: Start small (1% spec) — best-zone top
 - CLF ≤ $9.00: Add to 2% — all-in zone
 - CLF < $7.50: Stop — thesis failed, exit
+
+---
+
+## 📡 CIEN — Ciena (optical transport / AI interconnect) — added Sep 10, 2026
+
+> Thesis: Ciena is the optical-networking/interconnect layer between AI compute and the data
+> center (WaveLogic 6 Extreme coherent, 800ZR pluggables, Hyper-Rail, DCOM). Demand is not
+> the problem — capacity to convert it is. Watch, don't chase: priced for perfection
+> (~7.7x sales, ~50x FY26 adj EPS) and the chart is broken after a −46% drawdown from $627.
+
+- **The event (Sep 3, 2026 — fiscal Q3):** record quarter. Rev **$1.671B (+37% YoY, top of
+  guide)**, adj EPS **$2.11 (+215%)** vs ~$1.73 est (+21% beat), record adj op margin **22.5%**,
+  GM 46.4%, FCF **$116M**, cash **$2.8B**. Backlog **$8.5B** (+$800M QoQ), guided to exit FY26
+  **>$10B** — vast majority customer-requested for **2027**. Direct cloud revenue **+80%**;
+  in-and-around-DC revenue quadrupled YTD. FY26 guide raised to **$6.42B (+35%)**; FY27 baseline
+  **≥30% ($8.3–8.4B)** with "supply-driven upside."
+- **Why it fell anyway (−11% on the print):** management said component supply constraints keep
+  supply/demand out of balance **into 2028** — they can't convert backlog fast enough, so revenue
+  recognition is capped. Plus valuation. Street kept mostly Buys but cut targets (TD Cowen
+  $675→$575; Stifel Buy $615; Rosenblatt/Barclays/Evercore/B.Riley trims; street low $270).
+- **Technical snapshot (Sep 9 close):** $338.00, **−46% from the $627 high**, −22% in 30 days.
+  Below SMA20 $384.95 / SMA50 $399.16 / SMA200 $378.68 — broken chart, no base. RSI(14) 39.4
+  (cooling, not washed). 52wk range $123.65–$637.51.
+- **Why it's a watch, not a buy at $338:** best-in-class AI-infra business ≠ buy here. The
+  selloff driver (supply timing) is exactly what the market punishes until it shows in reported
+  numbers, and at ~50x with two customers >10% of revenue, any AI-capex wobble hits it hard.
+- **Entry zones:** Best Zone **$280–305** (deeper flush, RSI <30) · All-In **$240–265**
+  (AI-capex derating / broad semi washout)
+- **Reclaim path (alternative):** start 1% only if it holds/reclaims **>$385 (20-SMA)** and
+  builds a base — stop under **$317** (Sep 3 post-earnings low) on that path.
+- **Stop (zone entries):** $225 (below the wash zone = thesis broken). Do **not** anchor to the
+  $123 52wk low.
+- **Targets (1yr/2yr):** $450 (backlog conversion / PT cuts settle) / $600 (52wk high retest) —
+  **1–2% spec position max** (high-beta AI-capex proxy, customer concentration).
+- **Bear risks:** component supply stays tight into 2028 (revenue recognition capped); AI capex
+  slows and a ~50x multiple compresses hard; two customers >10% of revenue (concentration);
+  backlog ≠ booked revenue; direct cloud/DC revenue is lumpy quarter to quarter.
+- **Alert cron active:** CIEN ≤ $305 weekdays 11 AM ET (silent unless triggered).
+
+### 🚨 CIEN Triggers
+- CIEN ≤ $305: Start small (1% spec) — best-zone top
+- CIEN ≤ $265: Add to 2% — all-in zone
+- CIEN < $225: Stop — thesis failed, exit
+- CIEN > $385 (reclaim): optional 1% momentum starter, stop under $317
