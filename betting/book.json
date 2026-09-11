@@ -146,7 +146,7 @@
    "edge": 0.06,
    "stake": 0.5,
    "entered": "2026-09-08",
-   "closing_odds": 2.7,
+   "closing_odds": 2.65,
    "result": null,
    "pnl": null
   },
@@ -161,7 +161,7 @@
    "edge": 0.253,
    "stake": 2.0,
    "entered": "2026-09-08",
-   "closing_odds": 11.0,
+   "closing_odds": 13.0,
    "result": null,
    "pnl": null
   },
@@ -176,7 +176,7 @@
    "edge": 0.064,
    "stake": 0.5,
    "entered": "2026-09-08",
-   "closing_odds": 4.0,
+   "closing_odds": 4.1,
    "result": null,
    "pnl": null
   },
@@ -191,7 +191,7 @@
    "edge": 0.263,
    "stake": 2.0,
    "entered": "2026-09-08",
-   "closing_odds": 3.5,
+   "closing_odds": 3.6,
    "result": null,
    "pnl": null
   },
@@ -206,7 +206,7 @@
    "edge": 0.073,
    "stake": 0.5,
    "entered": "2026-09-08",
-   "closing_odds": 1.83,
+   "closing_odds": 1.87,
    "result": null,
    "pnl": null
   },
@@ -236,7 +236,7 @@
    "edge": 0.05,
    "stake": 0.5,
    "entered": "2026-09-08",
-   "closing_odds": 2.95,
+   "closing_odds": 2.9,
    "result": null,
    "pnl": null
   }
