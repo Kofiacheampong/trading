@@ -1,0 +1,3127 @@
+{
+ "cash": 1037.8571357919914,
+ "positions": {
+  "LULU": {
+   "shares": 1.1927,
+   "entry": 100.61000061035156,
+   "entry_date": "2026-09-04",
+   "notional": 120.0
+  },
+  "KMB": {
+   "shares": 1.1658,
+   "entry": 102.93000030517578,
+   "entry_date": "2026-09-08",
+   "notional": 120.0
+  },
+  "PYPL": {
+   "shares": 2.3002,
+   "entry": 52.16999816894531,
+   "entry_date": "2026-09-09",
+   "notional": 120.0
+  },
+  "ZTS": {
+   "shares": 1.6465,
+   "entry": 72.87999725341797,
+   "entry_date": "2026-09-10",
+   "notional": 120.0
+  }
+ },
+ "closed": [
+  {
+   "ticker": "ZTS",
+   "entry": 72.66,
+   "exit": 77.74,
+   "entry_date": "2026-08-07",
+   "exit_date": "2026-08-21",
+   "pnl_pct": 6.99,
+   "pnl_usd": 8.39,
+   "hold_days": 10,
+   "reason": "take-profit"
+  },
+  {
+   "ticker": "PYPL",
+   "entry": 52.67,
+   "exit": 56.82,
+   "entry_date": "2026-08-31",
+   "exit_date": "2026-09-03",
+   "pnl_pct": 7.89,
+   "pnl_usd": 9.47,
+   "hold_days": 3,
+   "reason": "take-profit"
+  }
+ ],
+ "puts": [
+  {
+   "ticker": "LULU",
+   "date": "2026-08-02",
+   "strike": 107.5,
+   "spot": 118.87,
+   "expiry": "2026-08-06",
+   "credit": 1.29,
+   "outcome": "win",
+   "expiry_close": 124.85
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-02",
+   "strike": 97.5,
+   "spot": 109.31,
+   "expiry": "2026-08-06",
+   "credit": 1.17,
+   "outcome": "win",
+   "expiry_close": 108.54
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-02",
+   "strike": 70.0,
+   "spot": 77.29,
+   "expiry": "2026-08-20",
+   "credit": 1.3,
+   "outcome": "win",
+   "expiry_close": 75.02
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-02",
+   "strike": 52.5,
+   "spot": 57.21,
+   "expiry": "2026-08-06",
+   "credit": 0.63,
+   "outcome": "win",
+   "expiry_close": 59.31
+  },
+  {
+   "ticker": "PAYC",
+   "date": "2026-08-02",
+   "strike": 147.5,
+   "spot": 163.96,
+   "expiry": "2026-08-20",
+   "credit": 1.77,
+   "outcome": "win",
+   "expiry_close": 226.7
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-07",
+   "strike": 115.0,
+   "spot": 128.58,
+   "expiry": "2026-08-13",
+   "credit": 0.1,
+   "outcome": "win",
+   "expiry_close": 119.56
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-07",
+   "strike": 97.5,
+   "spot": 109.68,
+   "expiry": "2026-08-13",
+   "credit": 1.17,
+   "outcome": "win",
+   "expiry_close": 110.7
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-07",
+   "strike": 52.5,
+   "spot": 59.07,
+   "expiry": "2026-08-13",
+   "credit": 0.06,
+   "outcome": "win",
+   "expiry_close": 60.59
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-14",
+   "strike": 107.5,
+   "spot": 119.55,
+   "expiry": "2026-08-21",
+   "credit": 1.29,
+   "outcome": "win",
+   "expiry_close": 121.07
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-14",
+   "strike": 100.0,
+   "spot": 110.39,
+   "expiry": "2026-08-21",
+   "credit": 1.2,
+   "outcome": "win",
+   "expiry_close": 109.31
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-14",
+   "strike": 55.0,
+   "spot": 61.66,
+   "expiry": "2026-08-21",
+   "credit": 0.66,
+   "outcome": "win",
+   "expiry_close": 61.55
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-21",
+   "strike": 70.0,
+   "spot": 77.74,
+   "expiry": "2026-09-18",
+   "credit": 0.55,
+   "outcome": null
+  },
+  {
+   "ticker": "PAYC",
+   "date": "2026-08-21",
+   "strike": 207.5,
+   "spot": 229.25,
+   "expiry": "2026-09-18",
+   "credit": 4.6,
+   "outcome": null
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-24",
+   "strike": 110.0,
+   "spot": 122.78,
+   "expiry": "2026-08-28",
+   "credit": 0.07,
+   "outcome": "win",
+   "expiry_close": 120.81
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-24",
+   "strike": 100.0,
+   "spot": 111.37,
+   "expiry": "2026-08-28",
+   "credit": 1.2,
+   "outcome": "win",
+   "expiry_close": 109.55
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-24",
+   "strike": 55.0,
+   "spot": 61.68,
+   "expiry": "2026-08-28",
+   "credit": 0.03,
+   "outcome": "loss",
+   "expiry_close": 53.66
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-31",
+   "strike": 107.5,
+   "spot": 120.26,
+   "expiry": "2026-09-04",
+   "credit": 1.26,
+   "outcome": "loss",
+   "expiry_close": 100.61
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-08-31",
+   "strike": 97.5,
+   "spot": 107.95,
+   "expiry": "2026-09-04",
+   "credit": 1.17,
+   "outcome": "win",
+   "expiry_close": 104.96
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-08-31",
+   "strike": 47.5,
+   "spot": 52.67,
+   "expiry": "2026-09-04",
+   "credit": 0.57,
+   "outcome": "win",
+   "expiry_close": 54.96
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-07",
+   "strike": 90.0,
+   "spot": 100.61,
+   "expiry": "2026-09-11",
+   "credit": 0.09,
+   "outcome": "win",
+   "expiry_close": 98.97
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-09-07",
+   "strike": 95.0,
+   "spot": 104.96,
+   "expiry": "2026-09-11",
+   "credit": 1.14,
+   "outcome": "win",
+   "expiry_close": 98.15
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-09-07",
+   "strike": 50.0,
+   "spot": 54.96,
+   "expiry": "2026-09-11",
+   "credit": 0.6,
+   "outcome": "win",
+   "expiry_close": 53.72
+  }
+ ],
+ "events": [],
+ "opportunities": [
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-02",
+   "price": 77.29,
+   "score": 63.9,
+   "rsi": 51.9,
+   "relvol": 0.91,
+   "vs_200ma": -30.0,
+   "vs_52w_high": -50.7,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "QCOM",
+   "date": "2026-08-02",
+   "price": 147.61,
+   "score": 57.5,
+   "rsi": 28.9,
+   "relvol": 1.03,
+   "vs_200ma": -12.7,
+   "vs_52w_high": -41.2,
+   "flags": [
+    "oversold_quality(-13% vs 200ma)",
+    "rsi(29)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-02",
+   "price": 65.44,
+   "score": 47.0,
+   "rsi": 41.3,
+   "relvol": 1.34,
+   "vs_200ma": -28.2,
+   "vs_52w_high": -41.9,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "QCOM",
+   "date": "2026-08-03",
+   "price": 151.57,
+   "score": 67.5,
+   "rsi": 32.8,
+   "relvol": 1.0,
+   "vs_200ma": -10.3,
+   "vs_52w_high": -39.6,
+   "flags": [
+    "oversold_quality(-10% vs 200ma)",
+    "rsi(33)",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-03",
+   "price": 77.1,
+   "score": 53.9,
+   "rsi": 51.2,
+   "relvol": 0.79,
+   "vs_200ma": -30.0,
+   "vs_52w_high": -50.8,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-03",
+   "price": 123.67,
+   "score": 43.9,
+   "rsi": 59.8,
+   "relvol": 0.94,
+   "vs_200ma": -22.2,
+   "vs_52w_high": -42.7,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -18.6,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-04",
+   "price": 76.04,
+   "score": 63.9,
+   "rsi": 47.3,
+   "relvol": 1.2,
+   "vs_200ma": -30.7,
+   "vs_52w_high": -51.5,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-04",
+   "price": 123.03,
+   "score": 43.9,
+   "rsi": 58.5,
+   "relvol": 0.88,
+   "vs_200ma": -22.5,
+   "vs_52w_high": -43.0,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -18.2,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-05",
+   "price": 74.39,
+   "score": 63.9,
+   "rsi": 42.0,
+   "relvol": 1.51,
+   "vs_200ma": -32.0,
+   "vs_52w_high": -52.5,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-05",
+   "price": 123.51,
+   "score": 43.9,
+   "rsi": 59.3,
+   "relvol": 0.77,
+   "vs_200ma": -22.0,
+   "vs_52w_high": -42.8,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -18.5,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-06",
+   "price": 76.95,
+   "score": 53.9,
+   "rsi": 51.2,
+   "relvol": 1.95,
+   "vs_200ma": -29.5,
+   "vs_52w_high": -50.9,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-06",
+   "price": 124.85,
+   "score": 43.9,
+   "rsi": 61.3,
+   "relvol": 0.6,
+   "vs_200ma": -21.1,
+   "vs_52w_high": -42.2,
+   "flags": [
+    "oversold_quality(-21% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -19.4,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-07",
+   "price": 72.66,
+   "score": 63.9,
+   "rsi": 40.1,
+   "relvol": 1.73,
+   "vs_200ma": -33.2,
+   "vs_52w_high": -53.6,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "near_52w_low"
+   ],
+   "outcome": "bounce",
+   "ret": 5.5,
+   "resolved_date": "2026-08-19"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-10",
+   "price": 74.83,
+   "score": 63.9,
+   "rsi": 46.4,
+   "relvol": 1.23,
+   "vs_200ma": -31.0,
+   "vs_52w_high": -52.3,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-11",
+   "price": 75.77,
+   "score": 53.9,
+   "rsi": 48.9,
+   "relvol": 0.08,
+   "vs_200ma": -29.9,
+   "vs_52w_high": -51.7,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-11",
+   "price": 124.76,
+   "score": 43.9,
+   "rsi": 57.6,
+   "relvol": 0.2,
+   "vs_200ma": -20.8,
+   "vs_52w_high": -42.2,
+   "flags": [
+    "oversold_quality(-21% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -19.4,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-12",
+   "price": 73.54,
+   "score": 63.9,
+   "rsi": 43.5,
+   "relvol": 0.9,
+   "vs_200ma": -31.7,
+   "vs_52w_high": -53.1,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ],
+   "outcome": "bounce",
+   "ret": 5.7,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-12",
+   "price": 65.77,
+   "score": 47.0,
+   "rsi": 42.8,
+   "relvol": 0.51,
+   "vs_200ma": -26.5,
+   "vs_52w_high": -41.6,
+   "flags": [
+    "oversold_quality(-27% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-12",
+   "price": 120.87,
+   "score": 43.9,
+   "rsi": 50.2,
+   "relvol": 1.17,
+   "vs_200ma": -23.1,
+   "vs_52w_high": -44.0,
+   "flags": [
+    "oversold_quality(-23% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -16.8,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-13",
+   "price": 75.84,
+   "score": 53.9,
+   "rsi": 49.6,
+   "relvol": 0.79,
+   "vs_200ma": -29.6,
+   "vs_52w_high": -51.6,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-13",
+   "price": 66.87,
+   "score": 47.0,
+   "rsi": 44.6,
+   "relvol": 0.46,
+   "vs_200ma": -25.7,
+   "vs_52w_high": -40.6,
+   "flags": [
+    "oversold_quality(-26% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-13",
+   "price": 119.56,
+   "score": 43.9,
+   "rsi": 48.0,
+   "relvol": 1.42,
+   "vs_200ma": -23.8,
+   "vs_52w_high": -44.6,
+   "flags": [
+    "oversold_quality(-24% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -15.8,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-14",
+   "price": 73.79,
+   "score": 63.9,
+   "rsi": 44.9,
+   "relvol": 0.49,
+   "vs_200ma": -31.2,
+   "vs_52w_high": -52.9,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low"
+   ],
+   "outcome": "bounce",
+   "ret": 5.4,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-14",
+   "price": 66.15,
+   "score": 47.0,
+   "rsi": 42.7,
+   "relvol": 0.34,
+   "vs_200ma": -26.3,
+   "vs_52w_high": -41.2,
+   "flags": [
+    "oversold_quality(-26% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-14",
+   "price": 119.55,
+   "score": 43.9,
+   "rsi": 47.9,
+   "relvol": 1.18,
+   "vs_200ma": -23.7,
+   "vs_52w_high": -44.6,
+   "flags": [
+    "oversold_quality(-24% vs 200ma)"
+   ],
+   "outcome": "dud",
+   "ret": -15.8,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-17",
+   "price": 72.95,
+   "score": 63.9,
+   "rsi": 43.1,
+   "relvol": 0.75,
+   "vs_200ma": -31.6,
+   "vs_52w_high": -53.5,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ],
+   "outcome": "bounce",
+   "ret": 6.6,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-17",
+   "price": 64.1,
+   "score": 55.0,
+   "rsi": 39.3,
+   "relvol": 0.68,
+   "vs_200ma": -27.9,
+   "vs_52w_high": -43.1,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-08-17",
+   "price": 43.88,
+   "score": 47.5,
+   "rsi": 47.4,
+   "relvol": 0.56,
+   "vs_200ma": -37.4,
+   "vs_52w_high": -74.8,
+   "flags": [
+    "oversold_quality(-37% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-18",
+   "price": 73.96,
+   "score": 63.9,
+   "rsi": 45.9,
+   "relvol": 0.48,
+   "vs_200ma": -30.6,
+   "vs_52w_high": -52.8,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low"
+   ],
+   "outcome": "bounce",
+   "ret": 5.1,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-18",
+   "price": 63.55,
+   "score": 55.0,
+   "rsi": 36.6,
+   "relvol": 0.68,
+   "vs_200ma": -28.8,
+   "vs_52w_high": -43.6,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-08-18",
+   "price": 41.36,
+   "score": 47.5,
+   "rsi": 43.4,
+   "relvol": 0.79,
+   "vs_200ma": -40.5,
+   "vs_52w_high": -76.2,
+   "flags": [
+    "oversold_quality(-41% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-19",
+   "price": 76.67,
+   "score": 53.9,
+   "rsi": 52.6,
+   "relvol": 0.61,
+   "vs_200ma": -27.8,
+   "vs_52w_high": -51.1,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-08-19",
+   "price": 43.0,
+   "score": 47.5,
+   "rsi": 46.6,
+   "relvol": 0.7,
+   "vs_200ma": -37.7,
+   "vs_52w_high": -75.3,
+   "flags": [
+    "oversold_quality(-38% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "SMR",
+   "date": "2026-08-19",
+   "price": 9.29,
+   "score": 47.5,
+   "rsi": 50.8,
+   "relvol": 1.11,
+   "vs_200ma": -35.0,
+   "vs_52w_high": -82.6,
+   "flags": [
+    "oversold_quality(-35% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "TE",
+   "date": "2026-08-20",
+   "price": 4.36,
+   "score": 55.5,
+   "rsi": 37.1,
+   "relvol": 0.49,
+   "vs_200ma": -32.6,
+   "vs_52w_high": -63.8,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-20",
+   "price": 63.78,
+   "score": 55.0,
+   "rsi": 39.5,
+   "relvol": 0.81,
+   "vs_200ma": -28.2,
+   "vs_52w_high": -43.4,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-20",
+   "price": 75.02,
+   "score": 53.9,
+   "rsi": 48.7,
+   "relvol": 0.46,
+   "vs_200ma": -29.2,
+   "vs_52w_high": -52.1,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "TE",
+   "date": "2026-08-21",
+   "price": 4.42,
+   "score": 55.5,
+   "rsi": 38.0,
+   "relvol": 0.44,
+   "vs_200ma": -31.7,
+   "vs_52w_high": -63.3,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "BWXT",
+   "date": "2026-08-21",
+   "price": 156.78,
+   "score": 52.5,
+   "rsi": 34.1,
+   "relvol": 0.87,
+   "vs_200ma": -19.4,
+   "vs_52w_high": -34.2,
+   "flags": [
+    "oversold_quality(-19% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-08-21",
+   "price": 42.08,
+   "score": 47.5,
+   "rsi": 45.3,
+   "relvol": 0.62,
+   "vs_200ma": -38.3,
+   "vs_52w_high": -75.8,
+   "flags": [
+    "oversold_quality(-38% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "BWXT",
+   "date": "2026-08-24",
+   "price": 149.52,
+   "score": 72.5,
+   "rsi": 29.2,
+   "relvol": 1.54,
+   "vs_200ma": -23.1,
+   "vs_52w_high": -37.3,
+   "flags": [
+    "oversold_quality(-23% vs 200ma)",
+    "rsi(29)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-08-24",
+   "price": 39.69,
+   "score": 57.5,
+   "rsi": 41.3,
+   "relvol": 0.8,
+   "vs_200ma": -41.5,
+   "vs_52w_high": -77.2,
+   "flags": [
+    "oversold_quality(-41% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-08-24",
+   "price": 148.2,
+   "score": 55.5,
+   "rsi": 38.4,
+   "relvol": 1.01,
+   "vs_200ma": -32.7,
+   "vs_52w_high": -63.8,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "BWXT",
+   "date": "2026-08-25",
+   "price": 149.73,
+   "score": 84.5,
+   "rsi": 29.5,
+   "relvol": 1.82,
+   "vs_200ma": -22.9,
+   "vs_52w_high": -37.2,
+   "flags": [
+    "oversold_quality(-23% vs 200ma)",
+    "rsi(30)",
+    "near_52w_low",
+    "accumulation(volx1.8)"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-08-25",
+   "price": 147.42,
+   "score": 65.5,
+   "rsi": 38.1,
+   "relvol": 0.91,
+   "vs_200ma": -32.7,
+   "vs_52w_high": -64.0,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-25",
+   "price": 62.46,
+   "score": 55.0,
+   "rsi": 38.1,
+   "relvol": 1.22,
+   "vs_200ma": -28.7,
+   "vs_52w_high": -44.5,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "BWXT",
+   "date": "2026-08-26",
+   "price": 153.16,
+   "score": 82.5,
+   "rsi": 34.6,
+   "relvol": 1.32,
+   "vs_200ma": -21.0,
+   "vs_52w_high": -35.8,
+   "flags": [
+    "oversold_quality(-21% vs 200ma)",
+    "rsi(35)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-08-26",
+   "price": 146.88,
+   "score": 65.5,
+   "rsi": 37.8,
+   "relvol": 0.82,
+   "vs_200ma": -32.7,
+   "vs_52w_high": -64.2,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-26",
+   "price": 62.85,
+   "score": 55.0,
+   "rsi": 39.6,
+   "relvol": 0.72,
+   "vs_200ma": -28.0,
+   "vs_52w_high": -44.2,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-27",
+   "price": 62.1,
+   "score": 55.0,
+   "rsi": 37.8,
+   "relvol": 1.16,
+   "vs_200ma": -28.7,
+   "vs_52w_high": -44.8,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-27",
+   "price": 75.01,
+   "score": 53.9,
+   "rsi": 47.5,
+   "relvol": 0.51,
+   "vs_200ma": -28.1,
+   "vs_52w_high": -52.0,
+   "flags": [
+    "oversold_quality(-28% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-08-27",
+   "price": 42.53,
+   "score": 47.5,
+   "rsi": 47.6,
+   "relvol": 0.96,
+   "vs_200ma": -36.3,
+   "vs_52w_high": -75.6,
+   "flags": [
+    "oversold_quality(-36% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-08-28",
+   "price": 147.94,
+   "score": 55.5,
+   "rsi": 39.7,
+   "relvol": 0.93,
+   "vs_200ma": -31.6,
+   "vs_52w_high": -63.9,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "BWXT",
+   "date": "2026-08-28",
+   "price": 152.85,
+   "score": 55.5,
+   "rsi": 35.9,
+   "relvol": 0.83,
+   "vs_200ma": -21.0,
+   "vs_52w_high": -35.9,
+   "flags": [
+    "oversold_quality(-21% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-28",
+   "price": 61.7,
+   "score": 55.0,
+   "rsi": 36.8,
+   "relvol": 1.07,
+   "vs_200ma": -29.0,
+   "vs_52w_high": -45.2,
+   "flags": [
+    "oversold_quality(-29% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-08-31",
+   "price": 60.46,
+   "score": 72.0,
+   "rsi": 34.0,
+   "relvol": 2.21,
+   "vs_200ma": -30.4,
+   "vs_52w_high": -46.3,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-08-31",
+   "price": 120.26,
+   "score": 55.9,
+   "rsi": 51.2,
+   "relvol": 3.99,
+   "vs_200ma": -22.0,
+   "vs_52w_high": -44.3,
+   "flags": [
+    "oversold_quality(-22% vs 200ma)",
+    "accumulation(volx4.0)"
+   ],
+   "outcome": "dud",
+   "ret": -16.3,
+   "resolved_date": "2026-09-04"
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-08-31",
+   "price": 148.35,
+   "score": 55.5,
+   "rsi": 39.9,
+   "relvol": 0.71,
+   "vs_200ma": -31.5,
+   "vs_52w_high": -63.8,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-01",
+   "price": 60.54,
+   "score": 72.0,
+   "rsi": 34.3,
+   "relvol": 1.28,
+   "vs_200ma": -30.1,
+   "vs_52w_high": -46.2,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-09-01",
+   "price": 144.17,
+   "score": 65.5,
+   "rsi": 37.7,
+   "relvol": 0.83,
+   "vs_200ma": -33.1,
+   "vs_52w_high": -64.8,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-09-01",
+   "price": 38.55,
+   "score": 57.5,
+   "rsi": 41.4,
+   "relvol": 0.7,
+   "vs_200ma": -41.3,
+   "vs_52w_high": -77.9,
+   "flags": [
+    "oversold_quality(-41% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-02",
+   "price": 59.85,
+   "score": 72.0,
+   "rsi": 32.6,
+   "relvol": 0.67,
+   "vs_200ma": -30.7,
+   "vs_52w_high": -46.8,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-09-02",
+   "price": 145.39,
+   "score": 65.5,
+   "rsi": 38.8,
+   "relvol": 1.19,
+   "vs_200ma": -32.0,
+   "vs_52w_high": -64.5,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-09-02",
+   "price": 39.52,
+   "score": 57.5,
+   "rsi": 43.5,
+   "relvol": 0.57,
+   "vs_200ma": -39.6,
+   "vs_52w_high": -77.3,
+   "flags": [
+    "oversold_quality(-40% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-03",
+   "price": 60.05,
+   "score": 72.0,
+   "rsi": 33.4,
+   "relvol": 0.47,
+   "vs_200ma": -30.1,
+   "vs_52w_high": -46.7,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-09-03",
+   "price": 147.21,
+   "score": 69.5,
+   "rsi": 40.5,
+   "relvol": 1.87,
+   "vs_200ma": -30.9,
+   "vs_52w_high": -64.1,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "near_52w_low",
+    "accumulation(volx1.9)"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-03",
+   "price": 121.77,
+   "score": 55.9,
+   "rsi": 53.4,
+   "relvol": 2.26,
+   "vs_200ma": -20.5,
+   "vs_52w_high": -43.6,
+   "flags": [
+    "oversold_quality(-20% vs 200ma)",
+    "accumulation(volx2.3)"
+   ],
+   "outcome": "dud",
+   "ret": -17.4,
+   "resolved_date": "2026-09-07"
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-04",
+   "price": 100.61,
+   "score": 78.8,
+   "rsi": 31.8,
+   "relvol": 6.16,
+   "vs_200ma": -34.1,
+   "vs_52w_high": -53.4,
+   "flags": [
+    "oversold_quality(-34% vs 200ma)",
+    "rsi(32)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-09-04",
+   "price": 144.65,
+   "score": 65.5,
+   "rsi": 38.9,
+   "relvol": 1.19,
+   "vs_200ma": -31.9,
+   "vs_52w_high": -64.7,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-04",
+   "price": 60.22,
+   "score": 62.0,
+   "rsi": 34.3,
+   "relvol": 0.48,
+   "vs_200ma": -29.7,
+   "vs_52w_high": -46.5,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-07",
+   "price": 100.61,
+   "score": 78.8,
+   "rsi": 31.8,
+   "relvol": 6.19,
+   "vs_200ma": -34.1,
+   "vs_52w_high": -53.4,
+   "flags": [
+    "oversold_quality(-34% vs 200ma)",
+    "rsi(32)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-09-07",
+   "price": 144.65,
+   "score": 65.5,
+   "rsi": 38.9,
+   "relvol": 1.23,
+   "vs_200ma": -31.9,
+   "vs_52w_high": -64.7,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-07",
+   "price": 60.21,
+   "score": 62.0,
+   "rsi": 34.3,
+   "relvol": 0.62,
+   "vs_200ma": -29.8,
+   "vs_52w_high": -46.5,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-08",
+   "price": 103.19,
+   "score": 83.8,
+   "rsi": 35.2,
+   "relvol": 1.71,
+   "vs_200ma": -32.3,
+   "vs_52w_high": -52.2,
+   "flags": [
+    "oversold_quality(-32% vs 200ma)",
+    "near_52w_low",
+    "accumulation(volx1.7)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-08",
+   "price": 58.63,
+   "score": 72.0,
+   "rsi": 30.1,
+   "relvol": 0.55,
+   "vs_200ma": -31.4,
+   "vs_52w_high": -47.9,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "rsi(30)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-09-08",
+   "price": 48.2,
+   "score": 55.5,
+   "rsi": 37.0,
+   "relvol": 0.86,
+   "vs_200ma": -32.6,
+   "vs_52w_high": -63.1,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-09",
+   "price": 57.53,
+   "score": 82.0,
+   "rsi": 27.6,
+   "relvol": 0.48,
+   "vs_200ma": -32.5,
+   "vs_52w_high": -48.9,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "rsi(28)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-09",
+   "price": 99.72,
+   "score": 78.8,
+   "rsi": 32.8,
+   "relvol": 1.33,
+   "vs_200ma": -34.5,
+   "vs_52w_high": -53.8,
+   "flags": [
+    "oversold_quality(-34% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-09-09",
+   "price": 46.74,
+   "score": 72.5,
+   "rsi": 34.2,
+   "relvol": 1.41,
+   "vs_200ma": -34.5,
+   "vs_52w_high": -64.2,
+   "flags": [
+    "oversold_quality(-35% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-10",
+   "price": 56.74,
+   "score": 82.0,
+   "rsi": 25.9,
+   "relvol": 0.55,
+   "vs_200ma": -33.3,
+   "vs_52w_high": -49.6,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-10",
+   "price": 96.88,
+   "score": 78.8,
+   "rsi": 31.0,
+   "relvol": 1.09,
+   "vs_200ma": -36.2,
+   "vs_52w_high": -55.1,
+   "flags": [
+    "oversold_quality(-36% vs 200ma)",
+    "rsi(31)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-09-10",
+   "price": 147.07,
+   "score": 69.5,
+   "rsi": 43.5,
+   "relvol": 4.66,
+   "vs_200ma": -30.1,
+   "vs_52w_high": -64.1,
+   "flags": [
+    "oversold_quality(-30% vs 200ma)",
+    "near_52w_low",
+    "accumulation(volx4.7)"
+   ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-11",
+   "price": 56.6,
+   "score": 82.0,
+   "rsi": 25.6,
+   "relvol": 0.41,
+   "vs_200ma": -33.3,
+   "vs_52w_high": -49.6,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-11",
+   "price": 98.97,
+   "score": 78.8,
+   "rsi": 33.9,
+   "relvol": 0.75,
+   "vs_200ma": -34.7,
+   "vs_52w_high": -54.2,
+   "flags": [
+    "oversold_quality(-35% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-09-11",
+   "price": 46.69,
+   "score": 72.5,
+   "rsi": 34.5,
+   "relvol": 1.23,
+   "vs_200ma": -34.4,
+   "vs_52w_high": -64.3,
+   "flags": [
+    "oversold_quality(-34% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  }
+ ],
+ "lottery": {
+  "sym": "ZTS",
+  "strike": 85.0,
+  "expiry": "2026-08-20",
+  "cost": 1.1,
+  "bid": 0.95,
+  "ask": 1.1,
+  "spot": 74.21,
+  "date": "2026-08-05",
+  "delta": null,
+  "iv": null,
+  "label": "DEMO lottery ticket (paper)"
+ },
+ "call_flags": [
+  {
+   "ticker": "TEAM",
+   "date": "2026-08-11",
+   "spot": 155.76,
+   "strike": 155.0,
+   "expiry": "2026-08-20",
+   "dte": 9,
+   "premium": 6.6,
+   "cost": 660.0,
+   "be": 161.6,
+   "be_pct": 4.26,
+   "confidence": 0.61,
+   "spread_pct": 18.2,
+   "adx": null,
+   "gap": null,
+   "earnings": "next ~Oct, none before expiry",
+   "time_stop": "2026-08-13",
+   "outcome": "expired",
+   "source": "manual-track (friend alert 8/11 -> live 155C 8/20; friend quoted 152.50C 8/28 @ $9.48, EOD)",
+   "ret": 154.7,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "DRAM",
+   "date": "2026-08-13",
+   "spot": 56.93,
+   "strike": 60.0,
+   "expiry": "2026-08-21",
+   "dte": 8,
+   "premium": 1.21,
+   "cost": 121.0,
+   "be": 61.21,
+   "be_pct": 7.52,
+   "confidence": null,
+   "spread_pct": null,
+   "adx": null,
+   "gap": null,
+   "earnings": "DRAM = Roundhill Memory ETF (no own earnings); MU next print ~late Sept unverified \u2014 none before expiry",
+   "time_stop": "2026-08-14",
+   "outcome": "time",
+   "source": "manual instinct-test (Kofi 8/14: \"dram 60C could pop off\" \u2014 no thesis, conviction only)",
+   "ret": -26.0,
+   "resolved_date": "2026-08-14"
+  }
+ ],
+ "mes": null,
+ "mes_trades": [],
+ "put_flags": [
+  {
+   "ticker": "ABNB",
+   "date": "2026-08-11",
+   "spot": 184.49,
+   "k_buy": 180.0,
+   "k_sell": 175.0,
+   "width": 5.0,
+   "debit": 1.11,
+   "expiry": "2026-08-20",
+   "dte": 9,
+   "time_stop": "2026-08-13",
+   "outcome": "expired",
+   "source": "manual fade (Kofi: fade the rip on friend ABNB call alert; live mid debit 1.11, exec ~1.24)",
+   "ret": -100.0,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "ABCL",
+   "date": "2026-08-11",
+   "spot": 9.76,
+   "k_buy": 10.0,
+   "k_sell": 8.0,
+   "width": 2.0,
+   "debit": 0.6,
+   "expiry": "2026-08-20",
+   "dte": 9,
+   "time_stop": "2026-08-13",
+   "outcome": "expired",
+   "source": "fade Phase-2 pop (Kofi, twitter find). mid debit 0.60, exec ~0.65, BE 9.40, R:R 2.3",
+   "ret": -100.0,
+   "resolved_date": "2026-08-21"
+  },
+  {
+   "ticker": "ABCL",
+   "date": "2026-08-11",
+   "spot": 9.76,
+   "k_buy": 9.0,
+   "k_sell": 8.0,
+   "width": 1.0,
+   "debit": 0.32,
+   "expiry": "2026-09-17",
+   "dte": 37,
+   "time_stop": "2026-09-10",
+   "outcome": null,
+   "source": "37-DTE clock experiment (EXCEPTION: breaks 7-14 DTE rule on purpose). mid debit 0.32, exec ~0.45, BE 8.68, R:R 2.1"
+  }
+ ],
+ "mes_intraday": [
+  {
+   "date": "2026-08-11",
+   "side": "long",
+   "entry": 7769.75,
+   "exit": 7749.75,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-08-12",
+   "side": "long",
+   "entry": 7764.0,
+   "exit": 7794.0,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-13",
+   "side": "short",
+   "entry": 7827.0,
+   "exit": 7797.0,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-14",
+   "side": "long",
+   "entry": 7817.75,
+   "exit": 7797.75,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-08-17",
+   "side": "long",
+   "entry": 7791.75,
+   "exit": 7821.75,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-18",
+   "side": "long",
+   "entry": 7718.0,
+   "exit": 7714.75,
+   "reason": "time",
+   "pnl": -16.25
+  },
+  {
+   "date": "2026-08-19",
+   "side": "short",
+   "entry": 7751.25,
+   "exit": 7721.25,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-20",
+   "side": "long",
+   "entry": 7692.5,
+   "exit": 7722.5,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-21",
+   "side": "short",
+   "entry": 7698.0,
+   "exit": 7668.0,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-25",
+   "side": "long",
+   "entry": 7687.75,
+   "exit": 7667.75,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-08-27",
+   "side": "short",
+   "entry": 7734.0,
+   "exit": 7704.0,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-28",
+   "side": "long",
+   "entry": 7738.75,
+   "exit": 7768.75,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-08-31",
+   "side": "long",
+   "entry": 7677.5,
+   "exit": 7707.5,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-09-01",
+   "side": "short",
+   "entry": 7656.25,
+   "exit": 7676.25,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-09-02",
+   "side": "short",
+   "entry": 7664.0,
+   "exit": 7634.0,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-09-03",
+   "side": "long",
+   "entry": 7703.5,
+   "exit": 7683.5,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-09-04",
+   "side": "long",
+   "entry": 7737.25,
+   "exit": 7717.25,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-09-08",
+   "side": "long",
+   "entry": 7684.5,
+   "exit": 7714.5,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-09-09",
+   "side": "long",
+   "entry": 7650.0,
+   "exit": 7680.0,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-09-10",
+   "side": "short",
+   "entry": 7613.0,
+   "exit": 7633.0,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-09-11",
+   "side": "long",
+   "entry": 7657.75,
+   "exit": 7637.75,
+   "reason": "sl",
+   "pnl": -100.0
+  }
+ ],
+ "fade_flags": [],
+ "cc": [
+  {
+   "ticker": "MP",
+   "date": "2026-08-17",
+   "spot": 58.51,
+   "strike": 65.0,
+   "expiry": "2026-09-18",
+   "dte": 32,
+   "premium": 2.43,
+   "yield_pct": 4.15,
+   "s20": 47.91,
+   "s50": 51.69,
+   "outcome": null
+  },
+  {
+   "ticker": "DRAM",
+   "date": "2026-08-17",
+   "spot": 60.39,
+   "strike": 66.0,
+   "expiry": "2026-09-18",
+   "dte": 32,
+   "premium": 2.83,
+   "yield_pct": 4.69,
+   "s20": 53.38,
+   "s50": 60.14,
+   "outcome": null
+  },
+  {
+   "ticker": "ZTS",
+   "date": "2026-08-17",
+   "spot": 72.97,
+   "strike": 80.0,
+   "expiry": "2026-09-18",
+   "dte": 32,
+   "premium": 0.82,
+   "yield_pct": 1.13,
+   "s20": 75.45,
+   "s50": 76.3,
+   "outcome": null
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-08",
+   "spot": 103.19,
+   "strike": 112.0,
+   "expiry": "2026-10-09",
+   "dte": 31,
+   "premium": 2.08,
+   "yield_pct": 2.02,
+   "s20": 117.69,
+   "s50": 118.11,
+   "outcome": null
+  }
+ ],
+ "cc_skips": [
+  {
+   "date": "2026-08-17",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.15,
+   "s50": 117.57
+  },
+  {
+   "date": "2026-08-17",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.78,
+   "s50": 107.89
+  },
+  {
+   "date": "2026-08-17",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.21,
+   "s50": 50.41
+  },
+  {
+   "date": "2026-08-17",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 177.75,
+   "s50": 152.13
+  },
+  {
+   "date": "2026-08-18",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.27,
+   "s50": 117.66
+  },
+  {
+   "date": "2026-08-18",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.72,
+   "s50": 107.87
+  },
+  {
+   "date": "2026-08-18",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.44,
+   "s50": 50.79
+  },
+  {
+   "date": "2026-08-18",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 184.17,
+   "s50": 154.49
+  },
+  {
+   "date": "2026-08-19",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.58,
+   "s50": 117.7
+  },
+  {
+   "date": "2026-08-19",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.81,
+   "s50": 108.09
+  },
+  {
+   "date": "2026-08-19",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.73,
+   "s50": 51.19
+  },
+  {
+   "date": "2026-08-19",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 187.88,
+   "s50": 156.18
+  },
+  {
+   "date": "2026-08-20",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.83,
+   "s50": 117.59
+  },
+  {
+   "date": "2026-08-20",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.88,
+   "s50": 108.3
+  },
+  {
+   "date": "2026-08-20",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.05,
+   "s50": 51.61
+  },
+  {
+   "date": "2026-08-20",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 191.74,
+   "s50": 157.97
+  },
+  {
+   "date": "2026-08-21",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 121.17,
+   "s50": 117.63
+  },
+  {
+   "date": "2026-08-21",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.86,
+   "s50": 108.63
+  },
+  {
+   "date": "2026-08-21",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.32,
+   "s50": 52.02
+  },
+  {
+   "date": "2026-08-21",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 197.19,
+   "s50": 160.58
+  },
+  {
+   "date": "2026-08-24",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 121.42,
+   "s50": 117.65
+  },
+  {
+   "date": "2026-08-24",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.86,
+   "s50": 108.82
+  },
+  {
+   "date": "2026-08-24",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.6,
+   "s50": 52.43
+  },
+  {
+   "date": "2026-08-24",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 201.1,
+   "s50": 162.53
+  },
+  {
+   "date": "2026-08-25",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 121.32,
+   "s50": 117.64
+  },
+  {
+   "date": "2026-08-25",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.75,
+   "s50": 109.0
+  },
+  {
+   "date": "2026-08-25",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.79,
+   "s50": 52.85
+  },
+  {
+   "date": "2026-08-25",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 204.6,
+   "s50": 164.47
+  },
+  {
+   "date": "2026-08-26",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 121.18,
+   "s50": 117.64
+  },
+  {
+   "date": "2026-08-26",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.61,
+   "s50": 109.14
+  },
+  {
+   "date": "2026-08-26",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.97,
+   "s50": 53.23
+  },
+  {
+   "date": "2026-08-26",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 207.77,
+   "s50": 166.43
+  },
+  {
+   "date": "2026-08-27",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.96,
+   "s50": 117.63
+  },
+  {
+   "date": "2026-08-27",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.6,
+   "s50": 109.26
+  },
+  {
+   "date": "2026-08-27",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 60.16,
+   "s50": 53.59
+  },
+  {
+   "date": "2026-08-27",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 211.54,
+   "s50": 168.58
+  },
+  {
+   "date": "2026-08-28",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 121.06,
+   "s50": 117.81
+  },
+  {
+   "date": "2026-08-28",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.61,
+   "s50": 109.42
+  },
+  {
+   "date": "2026-08-28",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.98,
+   "s50": 53.82
+  },
+  {
+   "date": "2026-08-28",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 215.27,
+   "s50": 170.88
+  },
+  {
+   "date": "2026-08-31",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 121.03,
+   "s50": 117.8
+  },
+  {
+   "date": "2026-08-31",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.53,
+   "s50": 109.39
+  },
+  {
+   "date": "2026-08-31",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.93,
+   "s50": 53.8
+  },
+  {
+   "date": "2026-08-31",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 215.3,
+   "s50": 170.89
+  },
+  {
+   "date": "2026-09-01",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.64,
+   "s50": 118.23
+  },
+  {
+   "date": "2026-09-01",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 109.51,
+   "s50": 109.48
+  },
+  {
+   "date": "2026-09-01",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.41,
+   "s50": 54.23
+  },
+  {
+   "date": "2026-09-01",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 218.77,
+   "s50": 173.15
+  },
+  {
+   "date": "2026-09-02",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.46,
+   "s50": 118.46
+  },
+  {
+   "date": "2026-09-02",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-02",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.25,
+   "s50": 54.49
+  },
+  {
+   "date": "2026-09-02",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 225.0,
+   "s50": 177.69
+  },
+  {
+   "date": "2026-09-03",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 120.32,
+   "s50": 118.63
+  },
+  {
+   "date": "2026-09-03",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-03",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.1,
+   "s50": 54.77
+  },
+  {
+   "date": "2026-09-03",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 226.23,
+   "s50": 179.96
+  },
+  {
+   "date": "2026-09-04",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 118.92,
+   "s50": 118.4
+  },
+  {
+   "date": "2026-09-04",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-04",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.9,
+   "s50": 55.02
+  },
+  {
+   "date": "2026-09-04",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.06,
+   "s50": 182.1
+  },
+  {
+   "date": "2026-09-07",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 118.92,
+   "s50": 118.4
+  },
+  {
+   "date": "2026-09-07",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-07",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.9,
+   "s50": 55.02
+  },
+  {
+   "date": "2026-09-07",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.06,
+   "s50": 182.1
+  },
+  {
+   "date": "2026-09-08",
+   "ticker": "KMB",
+   "reason": "low premium",
+   "yield": 0.22
+  },
+  {
+   "date": "2026-09-08",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.6,
+   "s50": 55.2
+  },
+  {
+   "date": "2026-09-08",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.35,
+   "s50": 183.9
+  },
+  {
+   "date": "2026-09-09",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-09",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.26,
+   "s50": 55.36
+  },
+  {
+   "date": "2026-09-09",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.52,
+   "s50": 185.67
+  },
+  {
+   "date": "2026-09-10",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-10",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 57.97,
+   "s50": 55.56
+  },
+  {
+   "date": "2026-09-10",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.75,
+   "s50": 187.47
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "KMB",
+   "reason": "no liquid strike"
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 57.62,
+   "s50": 55.75
+  },
+  {
+   "date": "2026-09-11",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.52,
+   "s50": 189.17
+  }
+ ],
+ "value_cache": {
+  "LULU": {
+   "market_cap": 10450644514.08,
+   "enterprise_value": 11708360704,
+   "trailing_pe": 8.14567901234568,
+   "forward_pe": 10.923251,
+   "ev_to_ebitda": 4.911,
+   "ev_to_revenue": 1.055,
+   "fcf": 1148515840,
+   "ocf": 1982033024,
+   "roe": 0.30898002,
+   "roa": 0.14401,
+   "gross_margin": 0.54895,
+   "oper_margin": 0.13212,
+   "net_margin": 0.12782,
+   "revenue_growth": -0.043,
+   "earnings_growth": -0.059,
+   "total_debt": 2141127040,
+   "total_cash": 1389736960,
+   "debt_to_equity": 44.689,
+   "book_value": 42.9,
+   "shares_out": 105594064,
+   "current_ratio": 2.19,
+   "target_price": 106.39259,
+   "recommendation": 3.2,
+   "date": "2026-09-12"
+  },
+  "KMB": {
+   "market_cap": 32642632579.7,
+   "enterprise_value": 38349631488,
+   "trailing_pe": 19.39723320158103,
+   "forward_pe": 13.105854,
+   "ev_to_ebitda": 11.017,
+   "ev_to_revenue": 2.313,
+   "fcf": 941124992,
+   "ocf": 3332999936,
+   "roe": 1.04913,
+   "roa": 0.10195,
+   "gross_margin": 0.37612998,
+   "oper_margin": 0.19002001,
+   "net_margin": 0.1179,
+   "revenue_growth": 0.006,
+   "earnings_growth": -0.323,
+   "total_debt": 6538999808,
+   "total_cash": 956000000,
+   "debt_to_equity": 348.933,
+   "book_value": 5.262,
+   "shares_out": 332579038,
+   "current_ratio": 0.909,
+   "target_price": 118.06667,
+   "recommendation": 2.4375,
+   "date": "2026-09-12"
+  },
+  "ZTS": {
+   "market_cap": 30152926237.94,
+   "enterprise_value": 37731926016,
+   "trailing_pe": 11.903752039151714,
+   "forward_pe": 11.172115,
+   "ev_to_ebitda": 9.28,
+   "ev_to_revenue": 3.961,
+   "fcf": 2016999936,
+   "ocf": 2840000000,
+   "roe": 0.64911,
+   "roa": 0.15352,
+   "gross_margin": 0.71738,
+   "oper_margin": 0.40721,
+   "net_margin": 0.27685,
+   "revenue_growth": -0.002,
+   "earnings_growth": 0.012,
+   "total_debt": 9255000064,
+   "total_cash": 1676000000,
+   "debt_to_equity": 293.996,
+   "book_value": null,
+   "shares_out": 413223602,
+   "current_ratio": 3.084,
+   "target_price": 96.0,
+   "recommendation": 2.22222,
+   "date": "2026-09-12"
+  },
+  "PYPL": {
+   "market_cap": 45955358151.28,
+   "enterprise_value": 48920358912,
+   "trailing_pe": 10.155009451795841,
+   "forward_pe": 9.285378,
+   "ev_to_ebitda": 7.578,
+   "ev_to_revenue": 1.433,
+   "fcf": 4423124992,
+   "ocf": 7474999808,
+   "roe": 0.24497,
+   "roa": 0.046230003,
+   "gross_margin": 0.40477002,
+   "oper_margin": 0.16966,
+   "net_margin": 0.14364,
+   "revenue_growth": 0.048,
+   "earnings_growth": -0.031,
+   "total_debt": 14220999680,
+   "total_cash": 11256000512,
+   "debt_to_equity": 71.751,
+   "book_value": 22.993,
+   "shares_out": 855460874,
+   "current_ratio": 1.288,
+   "target_price": 57.07344,
+   "recommendation": 2.88372,
+   "date": "2026-09-12"
+  },
+  "PAYC": {
+   "market_cap": 9866628115.289999,
+   "enterprise_value": 10479290368,
+   "trailing_pe": 23.14059196617336,
+   "forward_pe": 15.692361,
+   "ev_to_ebitda": 14.256,
+   "ev_to_revenue": 4.895,
+   "fcf": 423724992,
+   "ocf": 801500032,
+   "roe": 0.41089,
+   "roa": 0.087790005,
+   "gross_margin": 0.88055,
+   "oper_margin": 0.31721002,
+   "net_margin": 0.22778,
+   "revenue_growth": 0.098,
+   "earnings_growth": 0.481,
+   "total_debt": 982800000,
+   "total_cash": 198000000,
+   "debt_to_equity": 171.969,
+   "book_value": 13.138,
+   "shares_out": 45071619,
+   "current_ratio": 1.074,
+   "target_price": 216.5625,
+   "recommendation": 2.45,
+   "date": "2026-09-12"
+  },
+  "QCOM": {
+   "market_cap": 194354966819.38998,
+   "enterprise_value": 198077071360,
+   "trailing_pe": 20.79657142857143,
+   "forward_pe": 17.808647,
+   "ev_to_ebitda": 16.508,
+   "ev_to_revenue": 4.495,
+   "fcf": 10241000448,
+   "ocf": 12401000448,
+   "roe": 0.33754003,
+   "roa": 0.11612,
+   "gross_margin": 0.54226,
+   "oper_margin": 0.18528,
+   "net_margin": 0.21013,
+   "revenue_growth": -0.04,
+   "earnings_growth": -0.23,
+   "total_debt": 15269999616,
+   "total_cash": 8304000000,
+   "debt_to_equity": 55.21,
+   "book_value": 26.167,
+   "shares_out": 1068060487,
+   "current_ratio": 2.016,
+   "target_price": 193.89655,
+   "recommendation": 2.55556,
+   "date": "2026-09-12"
+  },
+  "ADBE": {
+   "market_cap": 100261425000.0,
+   "enterprise_value": 100360921088,
+   "trailing_pe": 14.083193746510329,
+   "forward_pe": 9.131281,
+   "ev_to_ebitda": 10.316,
+   "ev_to_revenue": 3.983,
+   "fcf": 9218374656,
+   "ocf": 10481000448,
+   "roe": 0.62953997,
+   "roa": 0.19926001,
+   "gross_margin": 0.89404,
+   "oper_margin": 0.35327998,
+   "net_margin": 0.28689,
+   "revenue_growth": 0.127,
+   "earnings_growth": 0.079,
+   "total_debt": 7077000192,
+   "total_cash": 5625999872,
+   "debt_to_equity": 61.443,
+   "book_value": 28.867,
+   "shares_out": 397500000,
+   "current_ratio": 0.751,
+   "target_price": 279.81177,
+   "recommendation": 2.725,
+   "date": "2026-09-12"
+  },
+  "IT": {
+   "market_cap": 11340924599.84,
+   "enterprise_value": 13181714432,
+   "trailing_pe": 16.15017985611511,
+   "forward_pe": 10.978263,
+   "ev_to_ebitda": 9.525,
+   "ev_to_revenue": 2.039,
+   "fcf": 1052553024,
+   "ocf": 1382615040,
+   "roe": 1.13581,
+   "roa": 0.1017,
+   "gross_margin": 0.69629997,
+   "oper_margin": 0.22623,
+   "net_margin": 0.11996,
+   "revenue_growth": -0.006,
+   "earnings_growth": 0.331,
+   "total_debt": 3329496064,
+   "total_cash": 1488706048,
+   "debt_to_equity": null,
+   "book_value": -2.598,
+   "shares_out": 63148976,
+   "current_ratio": 0.88,
+   "target_price": 185.15385,
+   "recommendation": 2.8,
+   "date": "2026-09-12"
+  },
+  "PNR": {
+   "market_cap": 9030168000.0,
+   "enterprise_value": 10705215488,
+   "trailing_pe": 14.582474226804123,
+   "forward_pe": 10.946766,
+   "ev_to_ebitda": 10.345,
+   "ev_to_revenue": 2.668,
+   "fcf": 558312512,
+   "ocf": 751500032,
+   "roe": 0.17126,
+   "roa": 0.08663,
+   "gross_margin": 0.41388,
+   "oper_margin": 0.2344,
+   "net_margin": 0.16237,
+   "revenue_growth": -0.17,
+   "earnings_growth": -0.111,
+   "total_debt": 1764700032,
+   "total_cash": 91800000,
+   "debt_to_equity": 47.067,
+   "book_value": 23.486,
+   "shares_out": 159600000,
+   "current_ratio": 1.451,
+   "target_price": 76.30769,
+   "recommendation": 2.375,
+   "date": "2026-09-12"
+  },
+  "AVAV": {
+   "market_cap": 7455905190.42,
+   "enterprise_value": 7698841088,
+   "trailing_pe": -36.13546798029557,
+   "forward_pe": 32.87958,
+   "ev_to_ebitda": 35.185,
+   "ev_to_revenue": 3.844,
+   "fcf": -25920876,
+   "ocf": 58818000,
+   "roe": -0.04597,
+   "roa": -0.00132,
+   "gross_margin": 0.26471,
+   "oper_margin": -0.02269,
+   "net_margin": -0.10127,
+   "revenue_growth": 0.057,
+   "earnings_growth": null,
+   "total_debt": 850822976,
+   "total_cash": 580227008,
+   "debt_to_equity": 19.354,
+   "book_value": 86.819,
+   "shares_out": 50820702,
+   "current_ratio": 4.26,
+   "target_price": 226.50368,
+   "recommendation": 1.6,
+   "date": "2026-09-12"
+  },
+  "KTOS": {
+   "market_cap": 8764708757.63,
+   "enterprise_value": 7520708608,
+   "trailing_pe": 274.6470588235294,
+   "forward_pe": 41.78487,
+   "ev_to_ebitda": 86.445,
+   "ev_to_revenue": 4.94,
+   "fcf": -118287504,
+   "ocf": -39600000,
+   "roe": 0.011469999,
+   "roa": 0.00434,
+   "gross_margin": 0.23002,
+   "oper_margin": -0.00174,
+   "net_margin": 0.020299999,
+   "revenue_growth": 0.305,
+   "earnings_growth": 0.074,
+   "total_debt": 193600000,
+   "total_cash": 1437600000,
+   "debt_to_equity": 5.65,
+   "book_value": 18.271,
+   "shares_out": 187721327,
+   "current_ratio": 5.541,
+   "target_price": 104.2,
+   "recommendation": 1.4,
+   "date": "2026-09-12"
+  },
+  "RCAT": {
+   "market_cap": 1215606321.52,
+   "enterprise_value": 904926336,
+   "trailing_pe": -9.95,
+   "forward_pe": -14.342342,
+   "ev_to_ebitda": -8.703,
+   "ev_to_revenue": 12.649,
+   "fcf": -117062464,
+   "ocf": -139078000,
+   "roe": -0.34402,
+   "roa": -0.20694,
+   "gross_margin": 0.0975,
+   "oper_margin": -1.91416,
+   "net_margin": -1.36265,
+   "revenue_growth": 5.272,
+   "earnings_growth": null,
+   "total_debt": 14873000,
+   "total_cash": 325552992,
+   "debt_to_equity": 3.157,
+   "book_value": 3.086,
+   "shares_out": 152714362,
+   "current_ratio": 14.857,
+   "target_price": 16.75,
+   "recommendation": 1.375,
+   "date": "2026-09-12"
+  },
+  "ONDS": {
+   "market_cap": 4131617162.88,
+   "enterprise_value": 2787281408,
+   "trailing_pe": -241.00000000000003,
+   "forward_pe": -361.5,
+   "ev_to_ebitda": -15.436,
+   "ev_to_revenue": 16.009,
+   "fcf": -69109168,
+   "ocf": -161062000,
+   "roe": 0.19317,
+   "roa": -0.083730005,
+   "gross_margin": 0.43724,
+   "oper_margin": -1.66299,
+   "net_margin": 0.96248,
+   "revenue_growth": 12.354,
+   "earnings_growth": null,
+   "total_debt": 41096000,
+   "total_cash": 1384493056,
+   "debt_to_equity": 2.608,
+   "book_value": 2.963,
+   "shares_out": 571454656,
+   "current_ratio": 9.845,
+   "target_price": 19.41667,
+   "recommendation": 1.22222,
+   "date": "2026-09-12"
+  },
+  "CEG": {
+   "market_cap": 100889026170.25,
+   "enterprise_value": 125237026816,
+   "trailing_pe": 27.86203522504892,
+   "forward_pe": 21.342937,
+   "ev_to_ebitda": 15.749,
+   "ev_to_revenue": 4.005,
+   "fcf": -6625124864,
+   "ocf": 4206000128,
+   "roe": 0.15055001,
+   "roa": 0.03888,
+   "gross_margin": 0.22107,
+   "oper_margin": 0.086619996,
+   "net_margin": 0.110810004,
+   "revenue_growth": 0.23,
+   "earnings_growth": -0.468,
+   "total_debt": 24700000256,
+   "total_cash": 697000000,
+   "debt_to_equity": 76.419,
+   "book_value": 89.999,
+   "shares_out": 354307379,
+   "current_ratio": 1.455,
+   "target_price": 348.304,
+   "recommendation": 1.54545,
+   "date": "2026-09-12"
+  },
+  "VST": {
+   "market_cap": 49801550234.1,
+   "enterprise_value": 72362549248,
+   "trailing_pe": 24.979797979797976,
+   "forward_pe": 14.314643,
+   "ev_to_ebitda": 10.888,
+   "ev_to_revenue": 3.767,
+   "fcf": 37125000,
+   "ocf": 5120999936,
+   "roe": 0.42962003,
+   "roa": 0.05886,
+   "gross_margin": 0.38309,
+   "oper_margin": 0.13766,
+   "net_margin": 0.1155,
+   "revenue_growth": -0.055,
+   "earnings_growth": -0.062,
+   "total_debt": 20508000256,
+   "total_cash": 435000000,
+   "debt_to_equity": 373.28,
+   "book_value": 8.947,
+   "shares_out": 335635195,
+   "current_ratio": 0.973,
+   "target_price": 217.42105,
+   "recommendation": 1.35,
+   "date": "2026-09-12"
+  },
+  "GEV": {
+   "market_cap": 254953147083.87,
+   "enterprise_value": 247111139328,
+   "trailing_pe": 27.476176808266356,
+   "forward_pe": 37.873405,
+   "ev_to_ebitda": 62.926,
+   "ev_to_revenue": 5.974,
+   "fcf": 15722125312,
+   "ocf": 14138999808,
+   "roe": 0.82577,
+   "roa": 0.02544,
+   "gross_margin": 0.2057,
+   "oper_margin": 0.07466,
+   "net_margin": 0.23035,
+   "revenue_growth": 0.219,
+   "earnings_growth": 0.328,
+   "total_debt": 3720000000,
+   "total_cash": 12720000000,
+   "debt_to_equity": 28.364,
+   "book_value": 44.895,
+   "shares_out": 266333581,
+   "current_ratio": 0.85,
+   "target_price": 1236.4318,
+   "recommendation": 1.54054,
+   "date": "2026-09-12"
+  },
+  "CCJ": {
+   "market_cap": 42107328313.04,
+   "enterprise_value": 42216775680,
+   "trailing_pe": 163.86440677966104,
+   "forward_pe": 36.923733,
+   "ev_to_ebitda": 52.873,
+   "ev_to_revenue": 12.15,
+   "fcf": 49994624,
+   "ocf": 941798016,
+   "roe": 0.051149998,
+   "roa": 0.02982,
+   "gross_margin": 0.35112998,
+   "oper_margin": 0.09111,
+   "net_margin": 0.102139995,
+   "revenue_growth": -0.072,
+   "earnings_growth": -0.921,
+   "total_debt": 1222128000,
+   "total_cash": 1112717952,
+   "debt_to_equity": 17.131,
+   "book_value": 11.837595,
+   "shares_out": 435532978,
+   "current_ratio": 3.061,
+   "target_price": 130.57198,
+   "recommendation": 1.54545,
+   "date": "2026-09-12"
+  },
+  "BWXT": {
+   "market_cap": 13754291637.6,
+   "enterprise_value": 15165684736,
+   "trailing_pe": 38.89119170984456,
+   "forward_pe": 28.505672,
+   "ev_to_ebitda": 31.828,
+   "ev_to_revenue": 4.316,
+   "fcf": 145624256,
+   "ocf": 519158016,
+   "roe": 0.28289,
+   "roa": 0.05534,
+   "gross_margin": 0.22082001,
+   "oper_margin": 0.10393,
+   "net_margin": 0.10108,
+   "revenue_growth": 0.18,
+   "earnings_growth": 0.141,
+   "total_debt": 2019896960,
+   "total_cash": 608203008,
+   "debt_to_equity": 151.4,
+   "book_value": 14.565,
+   "shares_out": 91621980,
+   "current_ratio": 2.397,
+   "target_price": 228.88467,
+   "recommendation": 1.64706,
+   "date": "2026-09-12"
+  },
+  "OKLO": {
+   "market_cap": 6737559283.0,
+   "enterprise_value": 4276547328,
+   "trailing_pe": -38.53191489361702,
+   "forward_pe": -35.815998,
+   "ev_to_ebitda": -19.726,
+   "ev_to_revenue": 3534.337,
+   "fcf": -239324880,
+   "ocf": -116919000,
+   "roe": -0.07696,
+   "roa": -0.06651,
+   "gross_margin": 0.40412998,
+   "oper_margin": -60.4876,
+   "net_margin": 0.0,
+   "revenue_growth": null,
+   "earnings_growth": null,
+   "total_debt": 4146000,
+   "total_cash": 2465157888,
+   "debt_to_equity": 0.127,
+   "book_value": 17.686,
+   "shares_out": 186017650,
+   "current_ratio": 48.463,
+   "target_price": 78.69048,
+   "recommendation": 2.03846,
+   "date": "2026-09-12"
+  },
+  "SMR": {
+   "market_cap": 3533453784.4199996,
+   "enterprise_value": 2420345856,
+   "trailing_pe": -3.913636363636363,
+   "forward_pe": -13.207952,
+   "ev_to_ebitda": -10.801,
+   "ev_to_revenue": 226.412,
+   "fcf": -204594000,
+   "ocf": -776363008,
+   "roe": -0.5518,
+   "roa": -0.10604999,
+   "gross_margin": 0.23545,
+   "oper_margin": -853.37335,
+   "net_margin": 0.0,
+   "revenue_growth": -0.991,
+   "earnings_growth": null,
+   "total_debt": 6692000,
+   "total_cash": 1072147968,
+   "debt_to_equity": 0.332,
+   "book_value": 5.023,
+   "shares_out": 410389522,
+   "current_ratio": 37.88,
+   "target_price": 12.63333,
+   "recommendation": 2.55556,
+   "date": "2026-09-12"
+  },
+  "FCEL": {
+   "market_cap": 1270472174.44,
+   "enterprise_value": 846261184,
+   "trailing_pe": -5.757246376811595,
+   "forward_pe": -16.165953,
+   "ev_to_ebitda": -8.908,
+   "ev_to_revenue": 5.49,
+   "fcf": -12161500,
+   "ocf": -96301000,
+   "roe": -0.21382,
+   "roa": -0.07912,
+   "gross_margin": -0.32387,
+   "oper_margin": -1.4139,
+   "net_margin": -1.13602,
+   "revenue_growth": -0.294,
+   "earnings_growth": null,
+   "total_debt": 166226000,
+   "total_cash": 658081984,
+   "debt_to_equity": 15.941,
+   "book_value": 11.321,
+   "shares_out": 79954196,
+   "current_ratio": 8.673,
+   "target_price": 20.5,
+   "recommendation": 2.22222,
+   "date": "2026-09-12"
+  },
+  "TE": {
+   "market_cap": 1357769774.26,
+   "enterprise_value": 2130656768,
+   "trailing_pe": -2.546961325966851,
+   "forward_pe": 48.526318,
+   "ev_to_ebitda": -22.654,
+   "ev_to_revenue": 2.137,
+   "fcf": -122719128,
+   "ocf": 3867000,
+   "roe": -1.2445099,
+   "roa": -0.0793,
+   "gross_margin": 0.05901,
+   "oper_margin": -0.18863001,
+   "net_margin": -0.38485,
+   "revenue_growth": 0.884,
+   "earnings_growth": null,
+   "total_debt": 778500992,
+   "total_cash": 79109000,
+   "debt_to_equity": 282.809,
+   "book_value": 0.719,
+   "shares_out": 294527066,
+   "current_ratio": 1.301,
+   "target_price": 9.85714,
+   "recommendation": null,
+   "date": "2026-09-12"
+  },
+  "ACN": {
+   "market_cap": 112536153845.1,
+   "enterprise_value": 112370507776,
+   "trailing_pe": 14.688498402555911,
+   "forward_pe": 12.535189,
+   "ev_to_ebitda": 8.681,
+   "ev_to_revenue": 1.537,
+   "fcf": 12089380864,
+   "ocf": 13182094336,
+   "roe": 0.24406,
+   "roa": 0.10903,
+   "gross_margin": 0.32013,
+   "oper_margin": 0.16964,
+   "net_margin": 0.10656,
+   "revenue_growth": 0.056,
+   "earnings_growth": 0.09,
+   "total_debt": 8388769792,
+   "total_cash": 10171567104,
+   "debt_to_equity": 25.035,
+   "book_value": 52.121,
+   "shares_out": 611942109,
+   "current_ratio": 1.339,
+   "target_price": 183.5884,
+   "recommendation": 2.07407,
+   "date": "2026-09-12"
+  },
+  "INTU": {
+   "market_cap": 85935080520.0,
+   "enterprise_value": 87156080640,
+   "trailing_pe": 19.536452004860266,
+   "forward_pe": 11.767789,
+   "ev_to_ebitda": 12.725,
+   "ev_to_revenue": 4.064,
+   "fcf": 6353625088,
+   "ocf": 8837999616,
+   "roe": 0.23596,
+   "roa": 0.1047,
+   "gross_margin": 0.80982,
+   "oper_margin": 0.17638999,
+   "net_margin": 0.21289,
+   "revenue_growth": 0.137,
+   "earnings_growth": -0.014,
+   "total_debt": 8421000192,
+   "total_cash": 7200000000,
+   "debt_to_equity": 44.34,
+   "book_value": 69.824,
+   "shares_out": 267236000,
+   "current_ratio": 1.507,
+   "target_price": 405.6,
+   "recommendation": 2.05882,
+   "date": "2026-09-12"
+  },
+  "DECK": {
+   "market_cap": 11067499518.39,
+   "enterprise_value": 9956128768,
+   "trailing_pe": 11.560455192034139,
+   "forward_pe": 9.7614355,
+   "ev_to_ebitda": 7.503,
+   "ev_to_revenue": 1.801,
+   "fcf": 871420352,
+   "ocf": 1193713024,
+   "roe": 0.42558,
+   "roa": 0.20319,
+   "gross_margin": 0.57804,
+   "oper_margin": 0.15233,
+   "net_margin": 0.18361,
+   "revenue_growth": 0.057,
+   "earnings_growth": 0.011,
+   "total_debt": 472334016,
+   "total_cash": 1602589056,
+   "debt_to_equity": 20.521,
+   "book_value": 16.834,
+   "shares_out": 136181857,
+   "current_ratio": 2.747,
+   "target_price": 120.40909,
+   "recommendation": 2.44444,
+   "date": "2026-09-12"
+  },
+  "FDS": {
+   "market_cap": 9236727172.529999,
+   "enterprise_value": 10503133184,
+   "trailing_pe": 17.119973632168755,
+   "forward_pe": 13.173385,
+   "ev_to_ebitda": 11.263,
+   "ev_to_revenue": 4.307,
+   "fcf": 621161344,
+   "ocf": 829592000,
+   "roe": 0.27032,
+   "roa": 0.11079001,
+   "gross_margin": 0.51382,
+   "oper_margin": 0.30542,
+   "net_margin": 0.2321,
+   "revenue_growth": 0.064,
+   "earnings_growth": -0.096,
+   "total_debt": 1570642048,
+   "total_cash": 304236000,
+   "debt_to_equity": 77.284,
+   "book_value": 56.804,
+   "shares_out": 35565543,
+   "current_ratio": 0.683,
+   "target_price": 265.5625,
+   "recommendation": 3.22222,
+   "date": "2026-09-12"
+  },
+  "MCD": {
+   "market_cap": 178700715823.43,
+   "enterprise_value": 232482717696,
+   "trailing_pe": 20.581092094539528,
+   "forward_pe": 18.065718,
+   "ev_to_ebitda": 15.572,
+   "ev_to_revenue": 8.392,
+   "fcf": 6262374912,
+   "ocf": 11347000320,
+   "roe": null,
+   "roa": 0.1325,
+   "gross_margin": 0.57382,
+   "oper_margin": 0.46485,
+   "net_margin": 0.3172,
+   "revenue_growth": 0.037,
+   "earnings_growth": 0.057,
+   "total_debt": 54604001280,
+   "total_cash": 822000000,
+   "debt_to_equity": null,
+   "book_value": -1.446,
+   "shares_out": 707641531,
+   "current_ratio": 1.081,
+   "target_price": 315.3871,
+   "recommendation": 2.05882,
+   "date": "2026-09-12"
+  },
+  "PEP": {
+   "market_cap": 186213120000.0,
+   "enterprise_value": 228732010496,
+   "trailing_pe": 17.86631716906946,
+   "forward_pe": 15.188198,
+   "ev_to_ebitda": 12.114,
+   "ev_to_revenue": 2.36,
+   "fcf": 7831875072,
+   "ocf": 13456000000,
+   "roe": 0.51508,
+   "roa": 0.08931,
+   "gross_margin": 0.54171,
+   "oper_margin": 0.16836001,
+   "net_margin": 0.10785,
+   "revenue_growth": 0.064,
+   "earnings_growth": 1.37,
+   "total_debt": 53213999104,
+   "total_cash": 10716000256,
+   "debt_to_equity": 238.949,
+   "book_value": 16.177,
+   "shares_out": 1366000000,
+   "current_ratio": 0.934,
+   "target_price": 155.0,
+   "recommendation": 2.66667,
+   "date": "2026-09-12"
+  },
+  "PUSA": {
+   "market_cap": 101175510.12,
+   "enterprise_value": 56678728,
+   "trailing_pe": -12.200000000000001,
+   "forward_pe": null,
+   "ev_to_ebitda": -8.983,
+   "ev_to_revenue": 17.648,
+   "fcf": -1538096,
+   "ocf": -1599180,
+   "roe": -0.17198,
+   "roa": -0.13487001,
+   "gross_margin": -0.91857004,
+   "oper_margin": -1.07765,
+   "net_margin": -1.5422599,
+   "revenue_growth": 0.176,
+   "earnings_growth": null,
+   "total_debt": 803421,
+   "total_cash": 42748204,
+   "debt_to_equity": 1.723,
+   "book_value": 1.731,
+   "shares_out": 27643582,
+   "current_ratio": 52.403,
+   "target_price": 7.5,
+   "recommendation": null,
+   "date": "2026-09-12"
+  }
+ }
+}
