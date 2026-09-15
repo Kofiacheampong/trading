@@ -268,6 +268,33 @@
    "credit": 0.6,
    "outcome": "win",
    "expiry_close": 53.72
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-15",
+   "strike": 87.5,
+   "spot": 98.37,
+   "expiry": "2026-09-18",
+   "credit": 1.05,
+   "outcome": null
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-09-15",
+   "strike": 90.0,
+   "spot": 98.68,
+   "expiry": "2026-09-18",
+   "credit": 1.08,
+   "outcome": null
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-09-15",
+   "strike": 47.5,
+   "spot": 53.81,
+   "expiry": "2026-09-18",
+   "credit": 0.57,
+   "outcome": null
   }
  ],
  "events": [],
@@ -1513,6 +1540,50 @@
     "rsi(34)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-09-15",
+   "price": 56.61,
+   "score": 82.0,
+   "rsi": 27.6,
+   "relvol": 0.66,
+   "vs_200ma": -32.9,
+   "vs_52w_high": -49.6,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "rsi(28)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-09-15",
+   "price": 98.37,
+   "score": 78.8,
+   "rsi": 34.3,
+   "relvol": 0.62,
+   "vs_200ma": -34.7,
+   "vs_52w_high": -54.4,
+   "flags": [
+    "oversold_quality(-35% vs 200ma)",
+    "rsi(34)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-09-15",
+   "price": 36.0,
+   "score": 65.5,
+   "rsi": 38.3,
+   "relvol": 0.65,
+   "vs_200ma": -43.1,
+   "vs_52w_high": -79.3,
+   "flags": [
+    "oversold_quality(-43% vs 200ma)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -1790,6 +1861,14 @@
    "side": "long",
    "entry": 7657.75,
    "exit": 7637.75,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-09-15",
+   "side": "long",
+   "entry": 7668.0,
+   "exit": 7648.0,
    "reason": "sl",
    "pnl": -100.0
   }
@@ -2366,6 +2445,26 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 227.52,
    "s50": 189.17
+  },
+  {
+   "date": "2026-09-15",
+   "ticker": "KMB",
+   "reason": "low premium",
+   "yield": 0.3
+  },
+  {
+   "date": "2026-09-15",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 56.91,
+   "s50": 56.1
+  },
+  {
+   "date": "2026-09-15",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 228.38,
+   "s50": 192.58
   }
  ],
  "value_cache": {
