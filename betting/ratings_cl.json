@@ -1,31 +1,31 @@
 {
- "Lille": {
-  "attack": 0.817,
-  "defense": 0.98
+ "AEK Athens": {
+  "attack": 0.883,
+  "defense": 0.605
  },
- "Napoli": {
-  "attack": 0.949,
-  "defense": 0.896
+ "Real Betis": {
+  "attack": 0.933,
+  "defense": 1.101
+ },
+ "VfB Stuttgart": {
+  "attack": 1.026,
+  "defense": 1.051
+ },
+ "Villarreal": {
+  "attack": 1.131,
+  "defense": 1.06
  },
  "Barcelona": {
   "attack": 1.486,
   "defense": 0.824
  },
- "Borussia Dortmund": {
-  "attack": 1.016,
-  "defense": 0.738
+ "Napoli": {
+  "attack": 0.949,
+  "defense": 0.896
  },
  "Viking FK": {
   "attack": 0.989,
   "defense": 1.157
- },
- "Slovan Bratislava": {
-  "attack": 0.696,
-  "defense": 1.517
- },
- "Atletico Madrid": {
-  "attack": 0.967,
-  "defense": 1.006
  },
  "Inter Milan": {
   "attack": 1.57,
@@ -35,48 +35,48 @@
   "attack": 1.14,
   "defense": 0.929
  },
- "AEK Athens": {
-  "attack": 0.883,
-  "defense": 0.605
- },
- "Villarreal": {
-  "attack": 1.131,
-  "defense": 1.06
- },
- "Paris Saint-Germain": {
-  "attack": 1.154,
-  "defense": 0.76
- },
- "VfB Stuttgart": {
-  "attack": 1.026,
-  "defense": 1.051
- },
- "Feyenoord": {
-  "attack": 0.884,
-  "defense": 1.122
- },
  "LASK": {
   "attack": 0.599,
   "defense": 1.653
  },
- "Sporting CP": {
-  "attack": 1.432,
-  "defense": 0.674
+ "Borussia Dortmund": {
+  "attack": 1.016,
+  "defense": 0.738
  },
- "Real Betis": {
-  "attack": 0.933,
-  "defense": 1.101
+ "Real Madrid": {
+  "attack": 1.202,
+  "defense": 0.796
  },
  "Club Brugge": {
   "attack": 1.074,
   "defense": 1.223
  },
+ "Atletico Madrid": {
+  "attack": 0.967,
+  "defense": 1.006
+ },
+ "Paris Saint-Germain": {
+  "attack": 1.154,
+  "defense": 0.76
+ },
+ "Lille": {
+  "attack": 0.817,
+  "defense": 0.98
+ },
+ "Sporting CP": {
+  "attack": 1.432,
+  "defense": 0.674
+ },
+ "Feyenoord": {
+  "attack": 0.884,
+  "defense": 1.122
+ },
  "Porto": {
   "attack": 0.9,
   "defense": 0.51
  },
- "Real Madrid": {
-  "attack": 1.202,
-  "defense": 0.796
+ "Slovan Bratislava": {
+  "attack": 0.696,
+  "defense": 1.517
  }
 }
