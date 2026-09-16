@@ -73,12 +73,43 @@ def _iso(dtstr):
     return datetime.datetime.fromisoformat(dtstr.replace("Z", "+00:00"))
 
 
-def _void_stale_open_bets(bk, events, horizon_days=5):
-    """Void open bets whose fixture produced no result well after kickoff.
+def _flag_unresolved(bk, events):
+    """Shout about open bets whose fixture kicked off but has no result yet.
 
-    The Odds API scores endpoint only goes back ~3 days, so a bet on a match
-    that never publishes a result (cancelled/phantom) would hang open forever
-    otherwise. Refund the stake (pnl 0) and mark it void.
+    Added 2026-09-16 after the void audit (see _void_stale_open_bets). The old
+    code stayed silent for 5 days and then refunded real losses; from now on a
+    missing result is visible on the FIRST run after kickoff, so it can be
+    verified against a primary source (UEFA.com / ESPN) while it still matters.
+    """
+    now = datetime.datetime.now(datetime.timezone.utc)
+    for b in bk["bets"]:
+        if b.get("result") is not None:
+            continue
+        try:
+            kick = _iso(b["commence"])
+        except Exception:
+            continue
+        if kick >= now:
+            continue
+        age = (now - kick).days
+        events.append(
+            f"UNRESOLVED {b['home']} vs {b['away']} [{b['market']}] — "
+            f"kickoff {b['commence']}, no result from the scores feed after "
+            f"{age}d. VERIFY vs UEFA/ESPN/BBC before accepting any void.")
+
+
+def _void_stale_open_bets(bk, events, horizon_days=5):
+    """LAST-RESORT void for open bets whose fixture never published a result.
+
+    The Odds API scores endpoint only looks back 3 days, so a bet on a match
+    whose result the feed silently dropped would hang open forever otherwise.
+    Refund the stake (pnl 0) and mark it void — but NEVER silently.
+
+    2026-09-16 audit: this refunded real matches the feed dropped (Liverpool
+    2-1 Atlético, Sporting 3-1 Galatasaray, PSG 6-1 Slovan Bratislava, Chelsea
+    4-3 Brighton) — laundering ~5.3u of real losses into 'refunds' and
+    inflating both books toward their gates. Every void is now flagged as
+    UNVERIFIED and must be checked against a primary source.
     """
     now = datetime.datetime.now(datetime.timezone.utc)
     for b in bk["bets"]:
@@ -92,9 +123,11 @@ def _void_stale_open_bets(bk, events, horizon_days=5):
             b["result"] = "void"
             b["pnl"] = 0.0
             b["settled"] = str(datetime.date.today())
-            b["note"] = "no result within %dd of kickoff — voided" % horizon_days
-            events.append(f"VOID {b['home']} vs {b['away']} [{b['market']}] "
-                          f"(no result — voided, stake refunded)")
+            b["note"] = ("no result within %dd of kickoff — voided UNVERIFIED "
+                         "(feed gap, match may have been played)" % horizon_days)
+            events.append(f"⚠️ VOID {b['home']} vs {b['away']} [{b['market']}] "
+                          f"(no result — stake refunded) — UNVERIFIED: confirm "
+                          f"the fixture was not played before trusting this.")
 
 
 def main():
@@ -113,17 +146,37 @@ def main():
             sm = {s["name"]: s["score"] for s in sc.get("scores", [])}
             gh, ga = sm.get(home), sm.get(away)
             if gh is None or ga is None:
+                # score entries may carry unnormalized names — retry via NAME_MAP
+                sm = {odds.norm(k): v for k, v in sm.items()}
+                gh, ga = sm.get(home), sm.get(away)
+            if gh is None or ga is None:
+                # Never skip silently: if we hold an open bet on this exact
+                # fixture, a score-parse failure is a bug, not a non-event.
+                stuck = [b for b in bk["bets"] if b.get("result") is None and
+                         (b.get("event_id") == sc.get("id") or
+                          (b["home"] == home and b["away"] == away))]
+                if stuck:
+                    events.append(
+                        f"WARN completed fixture {home} vs {away} has no readable "
+                        f"score (payload names: {list(sm)}; {len(stuck)} open bet(s)) "
+                        f"— result NOT settled, needs a look.")
                 continue
             gh, ga = int(gh), int(ga)   # Odds API returns scores as strings
             for b in bk["bets"]:
-                if b.get("result") is None and b["home"] == home and b["away"] == away:
-                    pnl = bookmod.settle(b, gh, ga)
-                    b["clv"] = bookmod.clv_pct(b["odds"], b.get("closing_odds"))
-                    bk["bankroll"] = round(bk["bankroll"] + pnl, 2)
-                    events.append(f"SETTLE {home} {gh}-{ga} {away} [{b['market']}] "
-                                  f"{b['result']} {pnl:+.1f}u")
+                if b.get("result") is not None:
+                    continue
+                # match by event id first (immune to feed name drift), name second
+                if not (b.get("event_id") == sc.get("id") or
+                        (b["home"] == home and b["away"] == away)):
+                    continue
+                pnl = bookmod.settle(b, gh, ga)
+                b["clv"] = bookmod.clv_pct(b["odds"], b.get("closing_odds"))
+                bk["bankroll"] = round(bk["bankroll"] + pnl, 2)
+                events.append(f"SETTLE {home} {gh}-{ga} {away} [{b['market']}] "
+                              f"{b['result']} {pnl:+.1f}u")
             if home in rats and away in rats:
                 model.update_ratings(rats, home, away, gh, ga)
+        _flag_unresolved(bk, events)
         _void_stale_open_bets(bk, events)
 
     # --- value scan vs FanDuel ---

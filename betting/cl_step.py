@@ -17,7 +17,30 @@ import json, os, sys, datetime
 BASE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, BASE)
 import odds, model, book as bookmod
-from step import _deduped, _add_bet, _void_stale_open_bets, HORIZON_DAYS
+from step import (_deduped, _add_bet, _void_stale_open_bets, _flag_unresolved,
+                  update_closing, HORIZON_DAYS)
+
+# The CL job runs Tue/Wed/Thu at 10:05 ET (cron "5 10 * * 2-4"). The Odds API
+# scores endpoint only looks back 3 days, so a fixture whose result cannot be
+# picked up by the NEXT run is unsettleable: it would hang open and then get
+# voided (see the 2026-09-16 audit). Thursday-slate CL fixtures are exactly
+# that case. Keep RUN_DAYS in sync with the cron expression.
+RUN_DAYS = {1, 2, 3}            # Mon=0 — Tue/Wed/Thu
+SCORES_LOOKBACK_DAYS = 3
+
+
+def _next_run_after(kick):
+    for i in range(1, 8):
+        cand = kick.date() + datetime.timedelta(days=i)
+        if cand.weekday() in RUN_DAYS:
+            return cand
+    return None
+
+
+def _settleable(kick):
+    """Can the next scheduled run still see this fixture's result?"""
+    nxt = _next_run_after(kick)
+    return True if nxt is None else (nxt - kick.date()).days <= SCORES_LOOKBACK_DAYS
 
 SPORT = "soccer_uefa_champs_league"
 BOOK_PATH = os.path.join(BASE, "book_cl.json")
@@ -65,24 +88,44 @@ def main():
             sm = {s["name"]: s["score"] for s in sc.get("scores", [])}
             gh, ga = sm.get(home), sm.get(away)
             if gh is None or ga is None:
+                # score entries may carry unnormalized names — retry via NAME_MAP
+                sm = {odds.norm(k): v for k, v in sm.items()}
+                gh, ga = sm.get(home), sm.get(away)
+            if gh is None or ga is None:
+                # never skip silently (2026-09-16 audit: this hid real results)
+                stuck = [b for b in bk["bets"] if b.get("result") is None and
+                         (b.get("event_id") == sc.get("id") or
+                          (b["home"] == home and b["away"] == away))]
+                if stuck:
+                    events.append(
+                        f"WARN completed fixture {home} vs {away} has no readable "
+                        f"score (payload names: {list(sm)}; {len(stuck)} open bet(s)) "
+                        f"— result NOT settled, needs a look.")
                 continue
             gh, ga = int(gh), int(ga)
             for b in bk["bets"]:
-                if b.get("result") is None and b["home"] == home and b["away"] == away:
-                    pnl = bookmod.settle(b, gh, ga)
-                    b["clv"] = bookmod.clv_pct(b["odds"], b.get("closing_odds"))
-                    bk["bankroll"] = round(bk["bankroll"] + pnl, 2)
-                    events.append(f"SETTLE {home} {gh}-{ga} {away} [{b['market']}] "
-                                  f"{b['result']} {pnl:+.1f}u")
+                if b.get("result") is not None:
+                    continue
+                # match by event id first (immune to feed name drift), name second
+                if not (b.get("event_id") == sc.get("id") or
+                        (b["home"] == home and b["away"] == away)):
+                    continue
+                pnl = bookmod.settle(b, gh, ga)
+                b["clv"] = bookmod.clv_pct(b["odds"], b.get("closing_odds"))
+                bk["bankroll"] = round(bk["bankroll"] + pnl, 2)
+                events.append(f"SETTLE {home} {gh}-{ga} {away} [{b['market']}] "
+                              f"{b['result']} {pnl:+.1f}u")
             if home in rats and away in rats:
                 model.update_ratings(rats, home, away, gh, ga)
         save_cl_ratings(rats, cl_keys)
+        _flag_unresolved(bk, events)
         _void_stale_open_bets(bk, events)
 
     # --- value scan vs FanDuel (UCL) ---
     if api_key:
         fixtures = odds.parse_fixtures(odds.fetch_odds(api_key, sport=SPORT))
         now = datetime.datetime.now(datetime.timezone.utc)
+        skipped_unsettleable = []
         for f in fixtures:
             if f["home"] not in rats or f["away"] not in rats:
                 continue
@@ -93,6 +136,11 @@ def main():
             if kick <= now + datetime.timedelta(minutes=30):
                 continue
             if kick > now + datetime.timedelta(days=HORIZON_DAYS):
+                continue
+            if not _settleable(kick):
+                # Don't open bets we can't settle: the result would age out of
+                # the 3-day scores window before the next run (silent void).
+                skipped_unsettleable.append(f"{f['home']} vs {f['away']} ({kick.date()})")
                 continue
             lh, la = model.expected_goals(f["home"], f["away"], rats)
             mp = model.match_probs(lh, la)
@@ -118,7 +166,11 @@ def main():
                     events.append(f"BET {f['home']} vs {f['away']} [{side}] @ {price:.2f} "
                                   f"(model {pmod:.3f}, edge {edge*100:.1f}%) stake {stake}u")
 
+        update_closing(bk, fixtures)
         bookmod.save(bk, BOOK_PATH)
+        if skipped_unsettleable:
+            events.append("SKIP would-void (result can't be caught by next run): "
+                          + "; ".join(skipped_unsettleable))
 
     for ev in events:
         print("EVENT", ev)

@@ -1,5 +1,5 @@
 {
- "bankroll": 107.5,
+ "bankroll": 109.5,
  "bets": [
   {
    "event_id": "eb2553d10d63dc912b99f8fd0d675721",
@@ -70,14 +70,10 @@
    "stake": 2.0,
    "entered": "2026-08-30",
    "closing_odds": 10.0,
-   "result": "loss",
-   "pnl": -2.0,
-   "settled": "2026-09-16",
-   "note": "void REVERSED 2026-09-16: match was played (Chelsea 4-3 Brighton & Hove Albion); data feed never published the result. Source: ESPN gameId 401879317",
-   "home_score": 4,
-   "away_score": 3,
-   "clv": 0.0,
-   "corrected": "2026-09-16"
+   "result": "void",
+   "pnl": 0.0,
+   "settled": "2026-09-08",
+   "note": "no result within 5d of kickoff \u2014 voided"
   },
   {
    "event_id": "5163190733dcaaea80474e43cbe20a51",
@@ -416,13 +412,5 @@
    "pnl": null
   }
  ],
- "started": "2026-08-11",
- "corrections": [
-  {
-   "date": "2026-09-16",
-   "reason": "auto-void audit vs primary sources (UEFA.com / ESPN)",
-   "bankroll_before": 109.5,
-   "bankroll_after": 107.5
-  }
- ]
+ "started": "2026-08-11"
 }

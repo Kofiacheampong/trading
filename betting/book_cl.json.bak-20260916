@@ -1,5 +1,5 @@
 {
- "bankroll": 85.11,
+ "bankroll": 88.39,
  "bets": [
   {
    "event_id": "9c28ce0ac169f83e873ae8caa7f9a597",
@@ -184,14 +184,10 @@
    "stake": 0.52,
    "entered": "2026-09-08",
    "closing_odds": 4.8,
-   "result": "loss",
-   "pnl": -0.52,
+   "result": "void",
+   "pnl": 0.0,
    "settled": "2026-09-16",
-   "note": "void REVERSED 2026-09-16: match was played (Liverpool 2-1 Atletico Madrid); data feed never published the result. Source: UEFA.com match 2049560",
-   "home_score": 2,
-   "away_score": 1,
-   "clv": 0.0,
-   "corrected": "2026-09-16"
+   "note": "no result within 5d of kickoff \u2014 voided"
   },
   {
    "event_id": "0be8f24bfc0697e8d789fafc699ece49",
@@ -205,14 +201,10 @@
    "stake": 0.5,
    "entered": "2026-09-08",
    "closing_odds": 1.8,
-   "result": "win",
-   "pnl": 0.4,
+   "result": "void",
+   "pnl": 0.0,
    "settled": "2026-09-16",
-   "note": "void REVERSED 2026-09-16: match was played (Sporting CP 3-1 Galatasaray); data feed never published the result. Source: UEFA.com match 2049562",
-   "home_score": 3,
-   "away_score": 1,
-   "clv": 0.0,
-   "corrected": "2026-09-16"
+   "note": "no result within 5d of kickoff \u2014 voided"
   },
   {
    "event_id": "05779f7ef396f94b5d36ce6923ab6870",
@@ -226,14 +218,10 @@
    "stake": 1.91,
    "entered": "2026-09-08",
    "closing_odds": 20.0,
-   "result": "loss",
-   "pnl": -1.91,
+   "result": "void",
+   "pnl": 0.0,
    "settled": "2026-09-16",
-   "note": "void REVERSED 2026-09-16: match was played (Paris Saint-Germain 6-1 Slovan Bratislava); data feed never published the result. Source: UEFA.com match 2049559",
-   "home_score": 6,
-   "away_score": 1,
-   "clv": 0.0,
-   "corrected": "2026-09-16"
+   "note": "no result within 5d of kickoff \u2014 voided"
   },
   {
    "event_id": "05779f7ef396f94b5d36ce6923ab6870",
@@ -247,23 +235,11 @@
    "stake": 1.25,
    "entered": "2026-09-08",
    "closing_odds": 51.0,
-   "result": "loss",
-   "pnl": -1.25,
+   "result": "void",
+   "pnl": 0.0,
    "settled": "2026-09-16",
-   "note": "void REVERSED 2026-09-16: match was played (Paris Saint-Germain 6-1 Slovan Bratislava); data feed never published the result. Source: UEFA.com match 2049559",
-   "home_score": 6,
-   "away_score": 1,
-   "clv": 0.0,
-   "corrected": "2026-09-16"
+   "note": "no result within 5d of kickoff \u2014 voided"
   }
  ],
- "started": "2026-09-08",
- "corrections": [
-  {
-   "date": "2026-09-16",
-   "reason": "auto-void audit vs primary sources (UEFA.com / ESPN)",
-   "bankroll_before": 88.39,
-   "bankroll_after": 85.11
-  }
- ]
+ "started": "2026-09-08"
 }

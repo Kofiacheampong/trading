@@ -1,4 +1,4 @@
-# 📊 Active Watchlist — June 24, 2026
+# 📊 Active Watchlist — updated Sep 16, 2026
 
 ## Thesis: Data Center Power Infrastructure / Analog Semi Supercycle
 
@@ -13,12 +13,12 @@
 
 | Ticker | Weight | Best Zone | All-In Zone | Current | Status |
 |--------|--------|-----------|-------------|---------|--------|
-| **TXN** | 35% | $280–300 | $260–275 | $263.42 | 🔔 All-In Zone — −2.0% inside $260–275 (+1.3% above floor); <$270 full-position trigger ACTIVE; −5.9% below Best Zone floor |
-| **ADI** | 25% | $380–400 | $360–380 | $361.02 | 🔔 All-In Zone — −4.7% back down to the $360 floor (+0.3% above); <$380 full-position trigger HIT; −5.0% below Best Zone floor |
-| **VRT** | 20% | $280–320 | $250–280 | $237.39 | 🚨 ALL-IN FLOOR BROKEN + STOP BREACH — −7.6%❗ through $250 floor (−5.0% below it) and under the $240 stop (−1.1%); −15.2% below Best Zone floor |
-| **INTC** | — | $110–125 | $95–110 | $97.19 | 🔔 All-In Zone — −5.6% inside $95–110 (+2.3% above floor); <$110 heavy trigger HIT; +8.0% off $90 stop; −11.6% below Best Zone floor |
-| **NVTS** | 10% | $16–20 | $12–16 | $10.89 | 🚨 Below All-In floor — −6.4%, under $12 floor (−9.3%); $10 stop thin (+8.9%); −31.9% below Best Zone floor |
-| **ON** | 10% | $100–110 | $90–100 | $71.65 | 🚨 STOP BREACHED — −5.9%, deeper below $80 stop (−10.4%); −28.4% below Best Zone floor; plan = thesis failed, exit/review |
+| **TXN** | 35% | $280–300 | $260–275 | $263.43 | 🔔 All-In Zone — inside $260–275 (+1.3% above floor); <$270 full-position trigger ACTIVE; −5.9% below Best Zone floor |
+| **ADI** | 25% | $380–400 | $360–380 | $361.35 | 🔔 All-In Zone — sitting on the $360 floor (+0.4% above); <$380 full-position trigger HIT; −4.9% below Best Zone floor |
+| **VRT** | 20% | $280–320 | $250–280 | $234.61 | 🚨 ALL-IN FLOOR BROKEN + STOP BREACH — −6.2% below $250 floor and −2.2% under the $240 stop; −16.2% below Best Zone floor |
+| **INTC** | — | $110–125 | $95–110 | $97.14 | 🔔 All-In Zone — inside $95–110 (+2.3% above floor); <$110 heavy trigger HIT; +7.9% off $90 stop; −11.7% below Best Zone floor |
+| **NVTS** | 10% | $16–20 | $12–16 | $10.81 | 🚨 Below All-In floor — −9.9% under $12 floor; $10 stop thin (+8.1%); −32.4% below Best Zone floor |
+| **ON** | 10% | $100–110 | $90–100 | $73.20 | 🚨 STOP BREACHED — −8.5% below $80 stop; −18.7% under $90 All-In floor; −26.8% below Best Zone floor; plan = thesis failed, exit/review |
 
 ### 📈 Price Targets
 
@@ -42,6 +42,7 @@
 ---
 
 ### 📝 Notes
+- **Sep 16 check (9:00 AM ET pre-market; prices = Tue Sep 15 close):** quiet tape, names holding near prior levels. TXN $263.43 (flat, inside $260–275 All-In, <$270 full-position trigger ACTIVE), ADI $361.35 (+0.1%, pinned to the $360 All-In floor, <$380 trigger HIT), **VRT $234.61 (−1.2%, still below the $250 All-In floor and under the $240 stop — breach stands)**, INTC $97.14 (flat, inside All-In, <$110 heavy trigger HIT, +7.9% off $90 stop), **NVTS $10.81 (−0.7%, still under $12 floor, $10 stop thin at +8.1%)**, ON $73.20 (+2.2%, ticking up but still below $80 stop — breach stands). Pre-market Sep 16: TXN $265.50, ADI ~flat, VRT $239.00, INTC ~flat. Buy triggers ACTIVE on all 5 weighted names; VRT stop breach + ON exit/review stand.
 - **Sep 15 check (9:00 AM ET pre-market; prices = Mon Sep 14 close):** broad risk-off day across the group — TXN $263.42 (−2.0%, still inside $260–275 All-In, <$270 full-position trigger ACTIVE), ADI $361.02 (−4.7%, dumped back to the $360 All-In floor, <$380 trigger HIT), **VRT $237.39 (−7.6%❗, broke DOWN through the $250 All-In floor AND the $240 stop — new breakdown, stop breach)**, INTC $97.19 (−5.6%, inside All-In, <$110 heavy trigger HIT, +8.0% off $90 stop), **NVTS $10.89 (−6.4%, slipped further under $12 floor, $10 stop thin at +8.9%)**, ON $71.65 (−5.9%, deeper below $80 stop — breach stands). Pre-market Sep 15: modest green bounce (TXN $265.10, ADI $364, VRT $240.59, INTC $98.75, NVTS $10.95, ON $72.27). Buy triggers ACTIVE on all 5 weighted names; VRT stop breach + ON exit/review stand.
 - **Sep 14 check (9:00 AM ET pre-market; prices = Fri Sep 11 close):** broad semi bounce off the wash-out lows — TXN $268.70 (+3.8%, back inside $260–275 All-In, <$270 full-position trigger ACTIVE), ADI $378.78 (+4.9%, surged to top of All-In, <$380 trigger HIT, just -0.3% under Best Zone floor), VRT $257.06 (+3.6%, recovered back above $250 floor, <$280 trigger HIT), INTC $102.94 (+2.6%, inside All-In, <$110 heavy trigger HIT, +14.4% off $90 stop), NVTS $11.63 (+4.3%, still under $12 floor, $10 stop intact +16.3%), ON $76.14 (+8.5%❗ snap-back bounce but still below $80 stop — stop breach stands). All 5 weighted names at/below All-In — buy triggers ACTIVE. Watch whether this bounce holds or fades; ON exit/review stands.
 - **Sep 11 check (9:00 AM ET pre-market; prices = Sep 10 close):** broad semi weakness — TXN $258.82 (−1.1%, slipped back under $260 All-In floor, <$270 full-position trigger ACTIVE), ADI $361.25 (−1.0%, holding $360 floor, <$380 trigger HIT), **VRT $248.13 (−5.6%❗, broke down through $250 All-In floor — now −11.4% below Best Zone, <$280 full-position trigger HIT)**, INTC $100.32 (−5.6%❗, retreating inside All-In toward $95 floor, <$110 heavy trigger HIT), NVTS $11.15 (−3.9%, below $12 floor, $10 stop intact +11.5%), ON $70.17 (−1.1%, deeper below $80 stop — bleeding). All 5 weighted names at/below All-In — buy triggers ACTIVE. VRT new breakdown = watch for continuation; ON exit/review stands.
