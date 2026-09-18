@@ -40,3 +40,11 @@ excluded — dilution ($150M offering) + heavy insider selling + retail FOMO.
 ## Status Log
 - **2026-08-15:** Watchlist created. Screen: none actionable (all extended).
 - **2026-08-25:** PUSA added as track-only (drone momentum, no entry zone).
+- **2026-09-17:** All four blew through their zones. Live: AVAV $164.00 (RSI 57, bouncing — not cooled),
+  KTOS $48.17 (RSI 40.5, 9% under zone, cleanest of the four), ONDS $7.42 (RSI 43.5, cool-off met),
+  RCAT $7.09 (**RSI 22.3**, 20-SMA $8.44 / 50-SMA $8.62, 1-yr low $6.14). RCAT Sep 16: −11% on 19.2M sh
+  (2.8× avg); Sep 17 opened +3.4% and faded to flat — distribution, no bid. Cause = broad drone risk-off,
+  dilution overhang (May $200M offering on top of $225M), Q2 rev+profit miss (Aug 6). Reported CEO
+  150k-share sale **unverified** (no filing check). Verdict: RCAT = falling knife, not a level. Needs a base
+  (2 closes >$7.50 w/ vol <6M, or reclaim $8.44) or a washout to $6.14. Lottery sizing 1–2% only; don't hold
+  through Q3 earnings (~early Nov, exact date unverified). Contrast holds: KTOS/ONDS better quality.
