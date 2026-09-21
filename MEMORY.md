@@ -70,4 +70,5 @@ Two fear zones + one soft zone:
 - **Watchlist additions**: DC power infrastructure basket (TXN 35%, ADI 25%, VRT 20%, NVTS 10%, ON 10% — analog TAM $5.2B→$15.9B by 2030; INTC pullback $110-125), rare earths (USAR, MP), quantum watch (IONQ best-in-class). **HNST (The Honest Company) added Aug 6** as turnaround spec — popped +41% on Q2 2026 beat (GAAP-profitable $10.7M, GM 48.4% +800bps, raised guidance); do NOT chase, entry zone $4.50–5.00 best / $4.00–4.50 all-in, stop $3.50, targets $7.50/$10, 2–3% spec; daily 11 AM alert ≤$4.80 in `projects/watchlist.md`.
 
 ## Standing
+- **Bug-fix autonomy (Kofi, 9/21/26):** fix bugs in my own scripts/crons/sims WITHOUT asking first — internal + non-destructive = just do it and report after. Pre-approval still required for external actions (messages, posts, emails), destructive/irreversible ops (deletes, live-data resets), money-moving actions, and behaviour changes Kofi would want to veto. I had asked permission for a one-line code fix; that was the wrong default.
 - Created Aug 2, 2026 from daily notes (Jan 2025 → Aug 2026). Distill new lessons here every few days; keep daily files as raw logs.

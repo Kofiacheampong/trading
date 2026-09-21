@@ -25,8 +25,16 @@ SL = 0.94                 # stop loss
 MAX_HOLD_DAYS = 15
 PUT_CREDIT_FALLBACK = 0.012  # 1.2% of strike if quote fetch fails
 
+# Legacy absolute thresholds (Jul 2026 vintage). They were permanently breached
+# by Sep 2026 (LULU 98 vs 112, KMB 97 vs 103, ZTS 71 vs 73, PYPL 52 vs 53), so the
+# 'dip' signal was firing on every single session -> meaningless. Kept only as a
+# reference/audit trail; the live trigger is now the relative DIP_MULT rule below.
 THRESHOLDS = {"LULU": 112.0, "KMB": 103.0, "ZTS": 73.0, "PYPL": 53.0, "PAYC": 152.0}
 UNIVERSE = list(THRESHOLDS)
+# Dip rule (fixed 2026-09-21): buy when price <= 95% of the 20-day SMA.
+# Self-normalising, so it can never get stuck permanently true.
+DIP_MULT = 0.95
+SMA_WINDOW = 20
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 CJ = "/tmp/sim_cookie.txt"
 
@@ -58,6 +66,21 @@ def fetch_close(sym):
         return closes[-1], datetime.date.fromtimestamp(ts[-1])
     except Exception:
         return None, None
+
+def fetch_sma(sym, window=SMA_WINDOW):
+    """20-day SMA of daily closes, or None on failure."""
+    url = f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=3mo&interval=1d"
+    out = subprocess.run(["curl","-s","-m","15","-H",f"User-Agent: {UA}",url],
+                         capture_output=True, text=True)
+    try:
+        d = json.loads(out.stdout)
+        closes = [c for c in d["chart"]["result"][0]["indicators"]["quote"][0]["close"]
+                  if c is not None]
+        if len(closes) < window:
+            return None
+        return sum(closes[-window:]) / window
+    except Exception:
+        return None
 
 def get_crumb():
     subprocess.run(["curl","-s","-m","15","-c",CJ,"-H",f"User-Agent: {UA}","https://fc.yahoo.com","-o","/dev/null"], check=False)
@@ -287,10 +310,14 @@ def step():
     state = load()
     today = datetime.date.today()
     prices = {}
+    smas = {}
     for sym in UNIVERSE:
         px, dt = fetch_close(sym)
         if px:
             prices[sym] = px
+        s = fetch_sma(sym)
+        if s:
+            smas[sym] = s
 
     if not prices:
         print("NO_EVENTS (no price data)")
@@ -328,12 +355,17 @@ def step():
         if sym in state["positions"] or sym not in prices:
             continue
         px = prices[sym]
-        if px <= THRESHOLDS[sym] and state["cash"] >= NOTIONAL:
+        sma = smas.get(sym)
+        if sma is None:
+            continue
+        if px <= sma * DIP_MULT and state["cash"] >= NOTIONAL:
             shares = NOTIONAL / px
             state["positions"][sym] = {"shares": round(shares, 4), "entry": px,
-                                       "entry_date": str(today), "notional": NOTIONAL}
+                                       "entry_date": str(today), "notional": NOTIONAL,
+                                       "sma20": round(sma, 2)}
             state["cash"] -= NOTIONAL
-            print(f"EVENT BUY {sym} @ ${px:.2f} (threshold {THRESHOLDS[sym]:.0f})")
+            print(f"EVENT BUY {sym} @ ${px:.2f} (dip: {px/sma-1:+.1%} vs 20d SMA "
+                  f"{sma:.2f}; legacy thr {THRESHOLDS[sym]:.0f})")
 
     # --- opportunity scan: spot setups + resolve old flags ---
     resolved = opportunity.resolve_open_opportunities(state, prices)
