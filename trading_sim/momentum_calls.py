@@ -44,6 +44,9 @@ UNIVERSE = (
     "SMCI", "ARM", "MRVL", "ANET", "OKLO", "SMR", "IONQ", "RGTI", "HOOD",
     "COIN", "MSTR", "TSLA", "NFLX", "META", "AMZN", "GOOGL", "MSFT", "LLY",
     "NOW", "CRM", "DECK", "SHOP", "UBER", "SOFI", "CVNA", "AFRM", "DKNG",
+    # watchlist adds — NVO 9/22/26 (watch name; only fires if GLP-1 sentiment
+    # actually turns: RSI>=70 + Z>=2.5 + ADX gate. Won't flag while washed out.)
+    "NVO",
 )
 
 # --- filters ---

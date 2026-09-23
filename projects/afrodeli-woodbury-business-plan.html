@@ -1,530 +1,413 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Afro Deli — Woodbury Business Plan (Conservative Edition)</title>
+<html lang="en"><head><meta charset="UTF-8"><title>Afro Deli — Woodbury Business Plan</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #1a1a1a; line-height: 1.6; }
-  .page { max-width: 900px; margin: 0 auto; padding: 60px 40px; }
-  h1 { font-size: 36px; font-weight: 800; margin-bottom: 4px; line-height: 1.2; }
-  h1 .highlight { color: #d97706; }
-  h2 { font-size: 26px; font-weight: 700; margin: 32px 0 16px; border-bottom: 2px solid #f59e0b; padding-bottom: 8px; }
-  h3 { font-size: 20px; font-weight: 600; margin: 24px 0 12px; color: #d97706; }
-  h4 { font-size: 16px; font-weight: 600; margin: 16px 0 8px; }
-  p { margin: 8px 0; font-size: 14px; }
-  .meta { color: #666; font-size: 13px; margin: 4px 0; }
-  .tag { display: inline-block; background: rgba(245,158,11,0.1); color: #d97706; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
-  th { background: #fef3c7; padding: 10px 14px; text-align: left; font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; border: 1px solid #fde68a; }
-  td { padding: 9px 14px; border: 1px solid #e5e7eb; }
-  tr:nth-child(even) { background: #f9fafb; }
-  .num { text-align: right; font-family: monospace; }
-  .pos { color: #059669; font-weight: 600; }
-  .neg { color: #dc2626; }
-  .warn { color: #d97706; }
-  ul { margin: 8px 0; padding-left: 20px; }
-  li { font-size: 14px; margin: 4px 0; line-height: 1.5; }
-  .highlight-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 14px 18px; font-size: 13px; margin: 12px 0; }
-  .kpi { display: inline-block; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 18px; margin: 6px; min-width: 140px; }
-  .kpi .val { font-size: 22px; font-weight: 800; color: #d97706; }
-  .kpi .val.green { color: #059669; }
-  .kpi .lbl { font-size: 12px; color: #6b7280; }
-  hr { border: none; border-top: 1px solid #e5e7eb; margin: 32px 0; }
-  .cover { text-align: center; padding: 100px 40px 60px; }
-  .cover h1 { font-size: 48px; }
-  .cover .subtitle { font-size: 18px; color: #6b7280; margin-top: 12px; }
-  .section-break { page-break-before: always; }
-  .footer-note { margin-top: 24px; font-size: 12px; color: #9ca3af; text-align: center; }
-  strong { color: #111; }
-  @media print { body { background: #fff; } .page { max-width: none; padding: 30px 20px; } }
-</style>
-</head>
-<body>
-<div class="page">
-
-<!-- COVER -->
-<div class="cover">
-  <div class="tag">Franchise Business Plan — Conservative Edition</div>
-  <h1>Afro Deli – Woodbury, <span class="highlight">Minnesota</span></h1>
-  <p class="subtitle">African-Mediterranean Fusion — First Suburban Franchise Expansion</p>
-  <p style="margin-top:24px; font-size:14px; color:#6b7280;">
-    <strong>Prepared for:</strong> Koo Ok, Owner-Operator<br>
-    <strong>Prepared:</strong> June 2026 (Revised — Conservative Ramp)<br>
-    <strong>Status:</strong> Pre-FDD Financial Projections
-  </p>
-  <div style="margin-top:32px; display:flex; justify-content:center; gap:24px; flex-wrap:wrap;">
-    <div class="kpi"><div class="val">$637.7K</div><div class="lbl">Year 1 Revenue</div></div>
-    <div class="kpi"><div class="val green">$93.5K</div><div class="lbl">Year 1 EBITDA</div></div>
-    <div class="kpi"><div class="val green">Month 4</div><div class="lbl">Cash Flow Positive</div></div>
-    <div class="kpi"><div class="val">$600K</div><div class="lbl">Total Investment</div></div>
-  </div>
-</div>
-
-<hr class="section-break">
-
-<h2>Executive Summary</h2>
-<table>
-  <tr><th>Metric</th><th>Value</th></tr>
-  <tr><td><strong>Business Concept</strong></td><td>Afro Deli Franchise</td></tr>
-  <tr><td><strong>Proposed Location</strong></td><td>Woodbury, Minnesota</td></tr>
-  <tr><td><strong>Total Investment</strong></td><td>$600,000</td></tr>
-  <tr><td><strong>Owner Equity Contribution</strong></td><td>$200,000 (33%)</td></tr>
-  <tr><td><strong>SBA Financing Request</strong></td><td>$400,000</td></tr>
-  <tr><td><strong>Projected Year 1 Revenue</strong></td><td>$637,650</td></tr>
-  <tr><td><strong>Projected Year 1 EBITDA</strong></td><td>$93,478</td></tr>
-  <tr><td><strong>Projected Year 1 Net Cash Flow</strong></td><td>$32,578</td></tr>
-  <tr><td><strong>Break-Even Point</strong></td><td class="pos">Month 4</td></tr>
-  <tr><td><strong>Cumulative Cash Flow Positive</strong></td><td class="pos">Month 8</td></tr>
-  <tr><td><strong>Recommendation</strong></td><td>Proceed with Woodbury site selection and SBA financing, subject to FDD review.</td></tr>
-</table>
-
-<div class="section-break"></div>
-<h2>1. Market Analysis</h2>
-
-<h3>1.1 Why Woodbury? — Market Selection Rationale</h3>
-<p>Three Twin Cities suburbs were evaluated as primary candidates for the first Afro Deli franchise location outside the downtown/university core: <strong>Woodbury</strong>, <strong>Minnetonka</strong>, and <strong>Edina</strong>. Woodbury emerged as the clear winner.</p>
-
-<h4>1. Population &amp; Growth (Critical Mass)</h4>
-<p>Woodbury is the largest of the three at ~75,000 residents and is growing at 12% since 2020 — three times faster than Minnetonka (+4%) and four times faster than Edina (+3%). This growth means new households are actively forming dining habits, and a new concept entering now captures the "shaping" of those habits rather than fighting entrenched competition.</p>
-
-<h4>2. Affluence Without Saturation</h4>
-<p>Median household income in Woodbury is $117,000 — nearly identical to Edina ($120,000) and well above Minnetonka ($105,000). However, Woodbury's restaurant density per capita is significantly lower. Edina has 186+ restaurants for 54,000 residents. Woodbury has roughly 140 restaurants for 75,000 residents. More people, fewer options — a structural advantage.</p>
-
-<h4>3. The Daytime Surge Advantage</h4>
-<p>Woodbury draws a 30–40% daytime population surge from Woodwinds Health Campus (major medical employer), I-94 corporate corridor (3M, Ecolab, State Farm regional offices), and regional retail power centers. This surge drives lunch traffic AND catering demand — both validated by existing Afro Deli locations.</p>
-
-<h4>4. Catering Infrastructure is Pre-Built</h4>
-<p>Afro Deli's existing locations generate 25.7% of revenue from catering — a figure Woodbury should match or exceed given its concentration of medical campuses, corporate offices, and schools. Woodbury's institutional base is larger and more corporate-heavy than what the St. Paul and Minneapolis locations serve.</p>
-
-<h4>5. Zero Direct Competition</h4>
-<p>Woodbury has Naf Naf Grill, Chipotle, Panera, Noodles &amp; Co., and Crisp &amp; Green. None offer African-Mediterranean fusion cuisine, halal-first positioning, cultural storytelling, or sambusas/Chicken Fantastic/Somali rice bowls. This is a genuine gap in the market.</p>
-
-<h4>6. Real Estate Economics</h4>
-<p>Woodbury lease rates ($20–$25/sq ft NNN) are 10–30% below Minnetonka and 20–40% below Edina. Combined with favorable permitting timelines (4–6 weeks vs. 6–12 weeks), Woodbury offers the lowest entry cost and fastest path to opening.</p>
-
-<h4>7. Expansion Sequencing Logic</h4>
-<p>Woodbury in Year 1 → Minnetonka in Years 3–5 → Edina express format in Year 5+. This sequencing builds from the largest market with the lowest barriers to the most expensive market last.</p>
-
-<h4>Key Market Data — Comparative Table</h4>
-<table>
-  <tr><th>Factor</th><th>📍 Woodbury</th><th>Minnetonka</th><th>Edina</th></tr>
-  <tr><td>Population (2025 est.)</td><td><strong>~75,000</strong></td><td>~55,000</td><td>~54,000</td></tr>
-  <tr><td>Growth (2020–2025)</td><td class="pos"><strong>+12%</strong></td><td>+4%</td><td>+3%</td></tr>
-  <tr><td>Median Household Income</td><td><strong>$117,000</strong></td><td>$105,000</td><td>$120,000</td></tr>
-  <tr><td>Daytime Surge</td><td><strong>30–40%</strong></td><td>Moderate</td><td>Moderate</td></tr>
-  <tr><td>Direct Afro-Med Competition</td><td class="pos"><strong>None (gap)</strong></td><td>None</td><td>None</td></tr>
-  <tr><td>Lease Rate ($/sq ft NNN)</td><td><strong>$20–$25</strong></td><td>$22–$28</td><td>$28–$35</td></tr>
-  <tr><td>Permitting Timeline</td><td><strong>4–6 weeks</strong></td><td>6–10 weeks</td><td>8–12 weeks</td></tr>
-  <tr><td>Restaurant Density</td><td><strong>Lower</strong> (140/75K)</td><td>Medium</td><td>Higher (186+/54K)</td></tr>
-  <tr><td>Expansion Priority</td><td><strong>Primary (Year 1)</strong></td><td>Secondary (Year 3–5)</td><td>Future (Year 5+)</td></tr>
-</table>
-
-<div class="section-break"></div>
-
-<h3>1.2 Demographic Analysis</h3>
-<table>
-  <tr><th>Metric</th><th>Value</th><th>Source</th></tr>
-  <tr><td>Population (2025 est.)</td><td>~75,000</td><td>Metro COG projection</td></tr>
-  <tr><td>Median Household Income</td><td>~$117,000</td><td>ACS 5-year</td></tr>
-  <tr><td>Median Age</td><td>39</td><td>ACS 5-year</td></tr>
-  <tr><td>Households with Children (6–17)</td><td>~38%</td><td>ACS 5-year</td></tr>
-  <tr><td>Bachelor's Degree or Higher</td><td>~56%</td><td>ACS 5-year</td></tr>
-  <tr><td>Daytime Population Surge</td><td>+30–40%</td><td>Employment + medical draw</td></tr>
-  <tr><td>Median Home Value</td><td>~$430,000</td><td>Zillow/Redfin</td></tr>
-</table>
-
-<h4>Target Customer Segments</h4>
-<table>
-  <tr><th>Segment</th><th>% of Revenue</th><th>Profile</th></tr>
-  <tr><td>Families with Children</td><td>50%</td><td>Dual-income families seeking healthier, faster dinner options</td></tr>
-  <tr><td>Catering &amp; Corporate</td><td>25%</td><td>Medical campuses, offices, schools</td></tr>
-  <tr><td>Young Professionals &amp; Couples</td><td>15%</td><td>Affluent millennials seeking unique global flavors</td></tr>
-  <tr><td>Daytime Workforce + Delivery</td><td>10%</td><td>Medical/office workers + 17.1% 3rd-party delivery</td></tr>
-</table>
-
-<h3>1.3 Competitive Landscape</h3>
-<table>
-  <tr><th>Competitor</th><th>Category</th><th>Key Strength</th><th>Afro Deli Advantage</th></tr>
-  <tr><td><strong>Naf Naf Grill</strong></td><td>Mediterranean FC</td><td>Established brand</td><td>African spicing, sambusas, cultural storytelling</td></tr>
-  <tr><td><strong>Chipotle</strong></td><td>Mexican FC</td><td>Speed, price, loyalty</td><td>Unique flavor — not a commoditized burrito</td></tr>
-  <tr><td><strong>Panera Bread</strong></td><td>Bakery-Café</td><td>Drive-thru, catering</td><td>Dinner-centric, bolder flavors, halal</td></tr>
-  <tr><td><strong>Noodles &amp; Co.</strong></td><td>Global FC</td><td>Broad family appeal</td><td>Authentic cuisine, halal commitment</td></tr>
-  <tr><td><strong>Crisp &amp; Green</strong></td><td>Health FC</td><td>Health halo</td><td>Broader menu — flavor first</td></tr>
-</table>
-
-<div class="section-break"></div>
-
-<h2>2. Operations Plan</h2>
-
-<h3>2.1 Ideal Site Criteria</h3>
-<table>
-  <tr><th>Criterion</th><th>Target Specification</th><th>Rationale</th></tr>
-  <tr><td>Space</td><td>1,500–1,800 sq ft</td><td>Fits existing kitchen and FOH model</td></tr>
-  <tr><td>Configuration</td><td>Endcap or inline w/ patio</td><td>Dual-exposure signage; summer evening traffic</td></tr>
-  <tr><td>Anchor</td><td>Grocery-anchored power center</td><td>Woodbury Lakes, Tamarack Village, Valley Creek</td></tr>
-  <tr><td>Traffic</td><td>25,000+ VPD</td><td>Woodbury Dr, Valley Creek Rd, Tamarack Rd</td></tr>
-  <tr><td>Lease Rate</td><td>$18–$25/sq ft NNN</td><td>~$3,000–$4,200/mo</td></tr>
-  <tr><td>Parking</td><td>Shared lot, 50+ spaces</td><td>Peak lunch/dinner overlap</td></tr>
-  <tr><td>Visibility</td><td>Street-facing signage</td><td>Brand awareness critical for first suburban location</td></tr>
-</table>
-
-<div class="section-break"></div>
-
-<h3>2.2 SWOT Analysis</h3>
-<table>
-  <tr><th style="background:#d1fae5;">Strengths</th><th style="background:#fee2e2;">Weaknesses</th></tr>
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>Proven model: 3 locations operating 12+ years</li>
-        <li>25.7% catering revenue — proven institutional model</li>
-        <li>Unique cuisine = zero direct competition</li>
-        <li>All-halal positioning = growing demand driver</li>
-        <li>Existing local brand recognition (St. Paul, Minneapolis, State Fair)</li>
-        <li>17.1% 3rd-party delivery revenue</li>
-        <li>Avg ticket $15.89 provides strong unit economics</li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li>First suburban expansion — new territory</li>
-        <li>Limited Woodbury brand awareness vs nationals</li>
-        <li>Royalty + marketing (8%) compresses margins</li>
-        <li>No drive-thru (vs Panera, Chipotle)</li>
-        <li>Owner-operator learning curve</li>
-        <li>Dinner underpenetrated at existing locations (16.1%)</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <th style="background:#fef3c7;">Opportunities</th>
-    <th style="background:#e0e7ff;">Threats</th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <ul>
-        <li>Woodbury 12% growth = rising dining demand</li>
-        <li>No Afro-Med fusion competitor</li>
-        <li>Catering already proven at 25.7% — bigger market</li>
-        <li>Dinner only 16.1% of sales — huge growth runway</li>
-        <li>Second location in Years 3–5</li>
-      </ul>
-    </td>
-    <td valign="top">
-      <ul>
-        <li><strong>Economic downturn</strong> cutting discretionary spend</li>
-        <li><strong>Halal protein cost inflation</strong> — volatile chicken, beef prices</li>
-        <li><strong>Labor market pressure</strong> — wage inflation in Twin Cities</li>
-        <li><strong>Potential Cava entry</strong> into Woodbury</li>
-        <li><strong>Independent imitation</strong> within 2–3 years of success</li>
-        <li><strong>Lease escalation</strong> at 5–10 year renewal</li>
-        <li><strong>Supply chain disruption</strong> for specialty African ingredients</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-<div class="section-break"></div>
-
-<h2>3. Financial Plan</h2>
-
-<h3>3.1 Startup Costs — $600,000</h3>
-<table>
-  <tr><th>Category</th><th class="num">Amount</th></tr>
-  <tr><td>Franchise Fee</td><td class="num">$35,000</td></tr>
-  <tr><td>Leasehold Improvements / Build-Out</td><td class="num">$250,000</td></tr>
-  <tr><td>Furniture, Fixtures &amp; Equipment (FF&amp;E)</td><td class="num">$135,000</td></tr>
-  <tr><td>Permits, Licenses &amp; Legal</td><td class="num">$15,000</td></tr>
-  <tr><td>Technology &amp; POS Setup</td><td class="num">$10,000</td></tr>
-  <tr><td>Initial Inventory / Smallwares</td><td class="num">$20,000</td></tr>
-  <tr><td>Pre-Opening Marketing &amp; PR</td><td class="num">$25,000</td></tr>
-  <tr><td>Professional Fees</td><td class="num">$15,000</td></tr>
-  <tr><td>Insurance (first year premium)</td><td class="num">$8,000</td></tr>
-  <tr><td>Working Capital Reserve (6 months)</td><td class="num">$87,000</td></tr>
-  <tr><td>Miscellaneous / Contingency (5%)</td><td class="num">$30,000</td></tr>
-  <tr style="font-weight:700; border-top:2px solid #d97706;"><td>Total</td><td class="num">$600,000</td></tr>
-</table>
-
-<div class="highlight-box">
-  <strong>Note on total investment:</strong> $600,000 is the recommended amount for a fully capitalized entry. This includes an $87,000 working capital reserve (6 months) that provides substantial cushion against slower-than-expected ramp. A leaner $400,000 option is discussed in Section 3.7, but $600,000 is the recommended path.
-</div>
-
-<h3>3.2 Funding Structure</h3>
-<table>
-  <tr><th>Source</th><th class="num">Amount</th><th>Terms</th></tr>
-  <tr><td>Owner Equity</td><td class="num">$200,000 (33.3%)</td><td>Cash investment</td></tr>
-  <tr><td>SBA 7(a) Loan</td><td class="num">$400,000 (66.7%)</td><td>10-year term, ~9% APR, ~$5,075/mo</td></tr>
-</table>
-
-<div class="highlight-box">
-  The $200,000 equity position (33%) exceeds the typical 10–20% SBA requirement, strengthening the application.
-</div>
-
-<div class="section-break"></div>
-
-<h3>3.3 Key Financial Assumptions</h3>
-<table>
-  <tr><th>Metric</th><th>Assumption</th><th>Basis</th></tr>
-  <tr><td>Average Ticket</td><td>$15.00</td><td>Below actual ($15.89) — conservative</td></tr>
-  <tr><td>COGS</td><td>29% of revenue</td><td>Halal proteins and African spices are premium</td></tr>
-  <tr><td>Total Labor (incl. owner salary)</td><td>30% of revenue</td><td>Owner salary $60K included; 8–12 FTEs</td></tr>
-  <tr><td>Franchise Royalty</td><td>6% of gross revenue</td><td>Standard franchise structure</td></tr>
-  <tr><td>Marketing Fund</td><td>2% of gross revenue</td><td>Brand + local store marketing</td></tr>
-  <tr><td>Occupancy</td><td>$4,200/mo</td><td>1,600 sq ft at $24/sq ft NNN</td></tr>
-  <tr><td>SBA Loan Payment</td><td>$5,075/mo</td><td>$400K at 9%, 10-year</td></tr>
-  <tr><td>Operating Days</td><td>26 days/mo</td><td>Closed Thanksgiving, Christmas; limited Sunday</td></tr>
-</table>
-
-<h4>Conservative Ramp-Up (vs. Original)</h4>
-<table>
-  <tr><th>Month</th><th class="num">Covers/Day</th><th class="num">Revenue</th><th>Rationale</th></tr>
-  <tr><td>Month 1</td><td class="num">50</td><td class="num">$19,500</td><td>Soft opening — phased hours, limited menu, training focus</td></tr>
-  <tr><td>Month 2</td><td class="num">70</td><td class="num">$27,300</td><td>Word of mouth building, catering pipeline starting</td></tr>
-  <tr><td>Month 3</td><td class="num">95</td><td class="num">$37,050</td><td>Post-grand opening; weekday lunch building</td></tr>
-  <tr><td>Month 4</td><td class="num">115</td><td class="num">$44,850</td><td>Regulars established; catering repeat orders begin</td></tr>
-  <tr><td>Month 5</td><td class="num">130</td><td class="num">$50,700</td><td>Evening dinner traffic building; delivery volume up</td></tr>
-  <tr><td>Month 6</td><td class="num">145</td><td class="num">$56,550</td><td>Steady-state approaching; all dayparts active</td></tr>
-  <tr><td>Month 7</td><td class="num">155</td><td class="num">$60,450</td><td>Summer patio season</td></tr>
-  <tr><td>Month 8</td><td class="num">165</td><td class="num">$64,350</td><td>Back-to-school family dinner traffic</td></tr>
-  <tr><td>Month 9</td><td class="num">170</td><td class="num">$66,300</td><td>Fall catering cycle (corporate events, schools)</td></tr>
-  <tr><td>Month 10</td><td class="num">175</td><td class="num">$68,250</td><td>Q4 holiday catering ramp</td></tr>
-  <tr><td>Month 11</td><td class="num">180</td><td class="num">$70,200</td><td>Pre-holiday catering push</td></tr>
-  <tr><td>Month 12</td><td class="num">185</td><td class="num">$72,150</td><td>Year-end steady state; all systems matured</td></tr>
-</table>
-
-<div class="highlight-box">
-  This ramp is 10–15% slower than the original projections and reflects a more conservative view of how quickly a first-time franchise owner can build awareness and operations in a new suburban market.
-</div>
-
-<div class="section-break"></div>
-
-<h3>3.4 Year 1 Financial Summary</h3>
-<table>
-  <tr><th>Metric</th><th class="num">Amount</th></tr>
-  <tr><td>Revenue</td><td class="num">$637,650</td></tr>
-  <tr><td>Cost of Goods Sold (29%)</td><td class="num">($184,919)</td></tr>
-  <tr style="font-weight:700;"><td>Gross Profit</td><td class="num">$452,732</td></tr>
-  <tr><td>Operating Expenses</td><td class="num">($359,253)</td></tr>
-  <tr style="font-weight:700; color:#059669;"><td>EBITDA</td><td class="num">$93,478</td></tr>
-  <tr><td>EBITDA Margin</td><td class="num">14.7%</td></tr>
-  <tr><td>Debt Service ($5,075/mo × 12)</td><td class="num">($60,900)</td></tr>
-  <tr style="font-weight:700;"><td>Net Cash Flow</td><td class="num">$32,578</td></tr>
-</table>
-
-<p><em>The $60,000 owner salary is included in labor costs. Net cash flow is after all debt service and owner compensation.</em></p>
-
-<div class="section-break"></div>
-
-<h3>3.5 Monthly Financial Projections</h3>
-<table>
-  <tr><th>Item</th><th class="num">M1</th><th class="num">M2</th><th class="num">M3</th><th class="num">M4</th><th class="num">M5</th><th class="num">M6</th></tr>
-  <tr><td>Covers/Day</td><td class="num">50</td><td class="num">70</td><td class="num">95</td><td class="num">115</td><td class="num">130</td><td class="num">145</td></tr>
-  <tr><td>Revenue</td><td class="num">$19,500</td><td class="num">$27,300</td><td class="num">$37,050</td><td class="num">$44,850</td><td class="num">$50,700</td><td class="num">$56,550</td></tr>
-  <tr><td>COGS (29%)</td><td class="num neg">($5,655)</td><td class="num neg">($7,917)</td><td class="num neg">($10,745)</td><td class="num neg">($13,007)</td><td class="num neg">($14,703)</td><td class="num neg">($16,400)</td></tr>
-  <tr style="font-weight:700;"><td>Gross Profit</td><td class="num">$13,845</td><td class="num">$19,384</td><td class="num">$26,306</td><td class="num">$31,844</td><td class="num">$35,997</td><td class="num">$40,151</td></tr>
-  <tr><td>Total OpEx</td><td class="num neg">($15,810)</td><td class="num neg">($19,086)</td><td class="num neg">($23,181)</td><td class="num neg">($26,457)</td><td class="num neg">($28,914)</td><td class="num neg">($31,370)</td></tr>
-  <tr style="font-weight:700; color:#059669;"><td>EBITDA</td><td class="num neg">($1,965)</td><td class="num pos">$297</td><td class="num pos">$3,124</td><td class="num pos">$5,386</td><td class="num pos">$7,083</td><td class="num pos">$8,780</td></tr>
-  <tr><td>SBA Payment</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td></tr>
-  <tr style="font-weight:700;"><td>Net CF</td><td class="num neg">($7,040)</td><td class="num neg">($4,778)</td><td class="num neg">($1,950)</td><td class="num pos">$312</td><td class="num pos">$2,008</td><td class="num pos">$3,704</td></tr>
-  <tr><td>Cumulative</td><td class="num neg">($7,040)</td><td class="num neg">($11,818)</td><td class="num neg">($13,768)</td><td class="num neg">($13,456)</td><td class="num neg">($11,448)</td><td class="num neg">($7,744)</td></tr>
-</table>
-
-<table>
-  <tr><th>Item</th><th class="num">M7</th><th class="num">M8</th><th class="num">M9</th><th class="num">M10</th><th class="num">M11</th><th class="num">M12</th></tr>
-  <tr><td>Covers/Day</td><td class="num">155</td><td class="num">165</td><td class="num">170</td><td class="num">175</td><td class="num">180</td><td class="num">185</td></tr>
-  <tr><td>Revenue</td><td class="num">$60,450</td><td class="num">$64,350</td><td class="num">$66,300</td><td class="num">$68,250</td><td class="num">$70,200</td><td class="num">$72,150</td></tr>
-  <tr><td>COGS (29%)</td><td class="num neg">($17,531)</td><td class="num neg">($18,662)</td><td class="num neg">($19,227)</td><td class="num neg">($19,793)</td><td class="num neg">($20,358)</td><td class="num neg">($20,924)</td></tr>
-  <tr style="font-weight:700;"><td>Gross Profit</td><td class="num">$42,920</td><td class="num">$45,689</td><td class="num">$47,073</td><td class="num">$48,458</td><td class="num">$49,842</td><td class="num">$51,227</td></tr>
-  <tr><td>Total OpEx</td><td class="num neg">($33,010)</td><td class="num neg">($34,647)</td><td class="num neg">($35,466)</td><td class="num neg">($36,286)</td><td class="num neg">($37,104)</td><td class="num neg">($37,923)</td></tr>
-  <tr style="font-weight:700; color:#059669;"><td>EBITDA</td><td class="num pos">$9,910</td><td class="num pos">$11,042</td><td class="num pos">$11,607</td><td class="num pos">$12,172</td><td class="num pos">$12,738</td><td class="num pos">$13,304</td></tr>
-  <tr><td>SBA Payment</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td><td class="num neg">($5,075)</td></tr>
-  <tr style="font-weight:700;"><td>Net CF</td><td class="num pos">$4,836</td><td class="num pos">$5,966</td><td class="num pos">$6,532</td><td class="num pos">$7,098</td><td class="num pos">$7,663</td><td class="num pos">$8,228</td></tr>
-  <tr><td>Cumulative</td><td class="num neg">($2,908)</td><td class="num pos">$3,058</td><td class="num pos">$9,590</td><td class="num pos">$16,688</td><td class="num pos">$24,351</td><td class="num pos">$32,579</td></tr>
-</table>
-
-<h4>Key Milestones</h4>
-<ul>
-  <li><strong>Month 2:</strong> EBITDA positive — operating profit before debt service</li>
-  <li><strong>Month 4:</strong> Cash flow positive — net of SBA debt service ✅</li>
-  <li><strong>Month 8:</strong> Cumulative cash flow positive — all startup losses recovered</li>
-  <li><strong>Year-end:</strong> Net cash flow of ~$32,579</li>
-</ul>
-
-<div class="section-break"></div>
-
-<h3>3.6 Break-Even Analysis</h3>
-<table>
-  <tr><th>Metric</th><th>Value</th></tr>
-  <tr><td>Monthly Fixed Costs (Occupancy + Other OpEx base)</td><td>~$8,400</td></tr>
-  <tr><td>Variable Cost Ratio (COGS + Royalty + Mktg + Labor)</td><td>~67% of revenue</td></tr>
-  <tr><td>Contribution Margin</td><td>~33%</td></tr>
-  <tr><td>Break-Even Revenue (monthly)</td><td>~$25,500</td></tr>
-  <tr><td>Break-Even Daily Covers (at $15 ticket)</td><td>~65/day</td></tr>
-  <tr><td style="font-weight:700; color:#059669;">Break-Even Achieved (net of SBA)</td><td style="font-weight:700; color:#059669;">Month 4</td></tr>
-</table>
-
-<div class="section-break"></div>
-
-<h3>3.7 Leaner Investment Option — $400,000 Total Cost</h3>
-<table>
-  <tr><th>Category</th><th class="num">$400K Option</th><th>Savings vs. $600K</th></tr>
-  <tr><td>Franchise Fee</td><td class="num">$35,000</td><td>—</td></tr>
-  <tr><td>Leasehold Improvements</td><td class="num">$180,000</td><td>$70K (leaner build-out, second-gen space)</td></tr>
-  <tr><td>FF&amp;E</td><td class="num">$100,000</td><td>$35K (mix new &amp; quality used)</td></tr>
-  <tr><td>Working Capital Reserve</td><td class="num">$14,000</td><td>($73K) — 3 months vs 6 months</td></tr>
-  <tr style="font-weight:700; border-top:2px solid #d97706;"><td>Total</td><td class="num">$400,000</td><td>$200K less</td></tr>
-  <tr><td>Equity Required</td><td class="num">$100,000</td><td>50% less equity</td></tr>
-  <tr><td>SBA Loan</td><td class="num">$300,000</td><td>$100K less debt</td></tr>
-  <tr><td>Monthly Payment</td><td class="num">$3,806</td><td>$1,269 less/mo</td></tr>
-</table>
-
-<div class="highlight-box">
-  <strong>Risks of the $400K Option:</strong> Working capital is only 3 months vs. 6 months. In the conservative ramp scenario, cumulative cash flow doesn't turn positive until Month 8. With only 3 months of working capital ($14K), the business would be underfunded by approximately Month 5. The extra $200K is largely working capital — the difference between a well-capitalized operation and one that's stretched thin.
-</div>
-
-<div class="section-break"></div>
-
-<h3>3.8 Sensitivity Analysis — Revenue Downside Scenarios</h3>
-<table>
-  <tr><th>Metric</th><th class="num">Base Case</th><th class="num">–10% Revenue</th><th class="num">–20% Revenue</th></tr>
-  <tr><td>Year 1 Revenue</td><td class="num">$637,650</td><td class="num" style="color:#dc2626;">$573,885</td><td class="num" style="color:#dc2626;">$510,120</td></tr>
-  <tr><td>Year 1 EBITDA</td><td class="num pos">$93,478</td><td class="num warn">$44,155</td><td class="num neg">($5,168)</td></tr>
-  <tr><td>Year 1 Net Cash Flow</td><td class="num pos">$32,578</td><td class="num neg">($16,745)</td><td class="num neg">($66,068)</td></tr>
-  <tr><td>Break-Even Month</td><td class="num pos">Month 4</td><td class="num warn">Month 8</td><td class="num neg">Not in Yr 1</td></tr>
-  <tr><td>Peak Drawdown</td><td class="num neg">($13,768)</td><td class="num neg">($25,685)</td><td class="num neg">($37,845)</td></tr>
-  <tr><td>Months of Reserve ($87K)</td><td>N/A</td><td class="num pos">62 months</td><td class="num warn">16 months</td></tr>
-</table>
-
-<p><strong>Mitigation levers in a down scenario:</strong> Reduce labor to ~27% (owner lowers salary draw), tighten COGS to 27%, defer non-essential maintenance, accelerate catering outreach. The $87K working capital reserve provides 5+ months cushion even in the –10% scenario.</p>
-
-<div class="section-break"></div>
-
-<h3>3.9 Year 2 Projected Performance</h3>
-<table>
-  <tr><th>Metric</th><th class="num">Year 1</th><th class="num">Year 2 (Est.)</th></tr>
-  <tr><td>Daily Covers (avg)</td><td class="num">~140</td><td class="num">190–200</td></tr>
-  <tr><td>Revenue</td><td class="num">$637,650</td><td class="num">$780,000–$820,000</td></tr>
-  <tr><td>EBITDA</td><td class="num pos">$93,478</td><td class="num pos">$140,000–$155,000</td></tr>
-  <tr><td>Net Cash Flow</td><td class="num pos">$32,578</td><td class="num pos">$79,000–$94,000</td></tr>
-  <tr><td>Owner Salary</td><td class="num">$60,000</td><td class="num">$65,000–$70,000</td></tr>
-</table>
-
-<div class="section-break"></div>
-
-<h2>4. Risk Assessment</h2>
-<h4>Key FDD Considerations (to be verified)</h4>
-<ul>
-  <li><strong>Franchise Fee</strong> — Confirm exact amount and any promotional discounts</li>
-  <li><strong>Royalty Structure</strong> — Confirm 6% royalty and 2% marketing fund</li>
-  <li><strong>Training Program</strong> — Confirm duration, location, owner-operator requirements</li>
-  <li><strong>Territory Rights</strong> — Verify Woodbury-specific protected territory</li>
-  <li><strong>Supply Chain</strong> — Confirm approved supplier list</li>
-  <li><strong>Renewal Terms</strong> — Initial term and renewal conditions</li>
-  <li><strong>Financial Performance Representations</strong> — FDD Item 19 data</li>
-  <li><strong>Transfer &amp; Exit Provisions</strong> — Resale and transferability</li>
-</ul>
-
-<div class="section-break"></div>
-
-<h2>5. Real-World Validation</h2>
-<p>Projections calibrated against actual POS data from all 3 existing Afro Deli locations (June 2025–June 2026).</p>
-<table>
-  <tr><th>Metric</th><th class="num">Actual (Avg)</th><th class="num">Woodbury</th><th>Notes</th></tr>
-  <tr><td>Annual Revenue</td><td class="num">~$456K</td><td class="num pos">~$638K</td><td>+40% — higher income, no competition, growth</td></tr>
-  <tr><td>Average Ticket</td><td class="num">$15.89</td><td class="num warn">$15.00</td><td>Conservative</td></tr>
-  <tr><td>Catering %</td><td class="num">25.7%</td><td class="num">15–20% (Yr 1)</td><td>Conservative ramp; targeting 25% by Yr 3</td></tr>
-  <tr><td>Labor % (excl. owner)</td><td class="num">15–21%</td><td class="num">25–27%</td><td>Higher due to new market operations</td></tr>
-  <tr><td>Lunch / Dinner Split</td><td class="num">55.7% / 16.1%</td><td class="num">~50% / ~25%</td><td>Key thesis: dinner underpenetrated</td></tr>
-</table>
-
-<div class="highlight-box">
-  <strong>Verdict:</strong> The real data validates the model. Biggest Woodbury-specific upsides: catering (25.7% proven — bigger institutional market) and dinner (only 16.1% today — significant growth runway).
-</div>
-
-<div class="section-break"></div>
-
-<h2>6. Strategic Recommendation</h2>
-<p>Woodbury represents the strongest entry point for the first suburban Afro Deli franchise.</p>
-
-<h4>Financial Summary</h4>
-<ul>
-  <li>Break-even (net of SBA) in <strong>Month 4</strong></li>
-  <li>Year 1 EBITDA of <strong>~$93,500</strong></li>
-  <li>Year 1 net cash flow of <strong>~$32,600</strong> after all debt service</li>
-  <li><strong>$60,000 owner salary</strong> included in labor</li>
-  <li>Manageable downside — even at –10% revenue, working capital provides 5+ months cushion</li>
-  <li>Recommended investment: $600,000 ($200K equity + $400K SBA)</li>
-</ul>
-
-<h4>Expansion Roadmap</h4>
-<table>
-  <tr><th>Phase</th><th>Market</th><th>Timeline</th></tr>
-  <tr><td>Primary</td><td>Woodbury, MN</td><td>Year 1</td></tr>
-  <tr><td>Secondary</td><td>Minnetonka, MN</td><td>Years 3–5</td></tr>
-  <tr><td>Future</td><td>Edina, MN (express format)</td><td>Year 5+</td></tr>
-</table>
-
-<h4>Recommended Next Steps</h4>
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 9.5pt; }
+  h1 { font-size: 22pt; font-weight: 800; color: #111; border-bottom: 3px solid #d97706; padding-bottom: 6px; margin: 0 0 4px; }
+  h1 + h2 { border-bottom: none; color: #6b7280; font-size: 13pt; margin-top: 0; }
+  h2 { font-size: 15pt; font-weight: 700; color: #b45309; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin: 1.4em 0 0.6em; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 700; color: #333; margin: 1.1em 0 0.4em; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; margin: 1em 0 0.3em; }
+  p { margin: 0.45em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.7em 0; font-size: 8.8pt; page-break-inside: avoid; }
+  th { background: #fef3c7; border: 1px solid #f0d9a0; padding: 5px 7px; text-align: left; font-weight: 700; }
+  td { border: 1px solid #e5e7eb; padding: 4px 7px; vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafafa; }
+  ul, ol { margin: 0.4em 0 0.6em; padding-left: 20px; }
+  li { margin: 0.15em 0; }
+  blockquote { border-left: 3px solid #d97706; background: #fffbeb; margin: 0.7em 0; padding: 8px 14px; color: #3f3f46; font-size: 9.8pt; page-break-inside: avoid; }
+  blockquote p { margin: 0.25em 0; }
+  code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-family: ui-monospace, Menlo, monospace; font-size: 9pt; }
+  pre { background: #f8f8f7; border: 1px solid #e5e7eb; border-radius: 4px; padding: 10px 12px; font-size: 8.8pt; page-break-inside: avoid; }
+  pre code { background: none; padding: 0; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 1.2em 0; }
+  strong { color: #000; }
+  a { color: #b45309; text-decoration: none; }
+  @page { size: letter; margin: 15mm 14mm; }
+</style></head>
+<body><h1>AFRO DELI – WOODBURY, MINNESOTA</h1>
+<h2>Comprehensive Franchise Business Plan (All-Equity Investor Structure)</h2>
+<p><strong>Prepared for:</strong> Koo Ok, Owner-Operator</p>
+<p><strong>Prepared:</strong> August 2026 · <strong>Revision 2:</strong> September 23, 2026</p>
+<p><strong>Status:</strong> Pre-FDD Financial Projections (Subject to Franchisor Verification)</p>
+<blockquote><p><strong>Revision Note (v2).</strong> This revision responds to a full outside review of v1. Changes: covers-to-revenue reconciliation; labor-ratio reconciliation (Section 13); single cash-flow basis (free cash flow, not EBITDA); occupancy assumption disclosed as conservative; the unsupported "≈29% CAGR" replaced with a computed investor-level IRR; raise sequencing aligned to the FDD/site-LOI gate; <strong>all structuring and legal gaps closed</strong> (securities compliance, manager-managed LLC, tax distributions, distribution policy — Section 9.13–9.15 and Appendix G); Unit-2 expansion conflict defined (Section 9.16); operator capital contribution addressed (Section 8.5); Year-5 exit/liquidity mechanism added (Section 9.15); budget now carries a 10% build-out contingency, delivery commissions broken out, insurance and professional fees trued up, and wage bands provided (Sections 7.6, 9.1, 9.3); slow-ramp downside and a multi-variable sensitivity grid added (Section 9.12); the five-year margin walk is now shown line-by-line (Section 9.11); competitor and market claims verified (Section 5, Appendix A); Minnesota franchise-registration timing added to the calendar (Section 11.1); measurable community commitments added (Section 12); formatting proofread.</p></blockquote>
+<hr>
+<h2>Table of Contents</h2>
 <ol>
-  <li>Request and review the Afro Deli Franchise Disclosure Document (FDD)</li>
-  <li>Validate financial performance represenations against FDD Item 19</li>
-  <li>Engage a franchise attorney for FDD and franchise agreement review</li>
-  <li>Begin site selection in Woodbury (Tamarack Village, Woodbury Lakes, Valley Creek corridor)</li>
-  <li>Prepare SBA 7(a) loan application ($400K loan + $200K equity)</li>
-  <li>Schedule a discovery day with the franchisor at existing locations</li>
-  <li>Identify potential second-generation restaurant space to reduce build-out costs</li>
+<li>Executive Summary</li>
+<li>Company Overview</li>
+<li>Industry Analysis</li>
+<li>Market Analysis — Woodbury</li>
+<li>Competitive Analysis</li>
+<li>Marketing &amp; Sales Plan</li>
+<li>Operations Plan</li>
+<li>Management &amp; Organization</li>
+<li>Financial Plan</li>
+<li>Risk Assessment</li>
+<li>Milestones &amp; KPIs</li>
+<li>Community Impact</li>
+<li>Real-World Validation</li>
+<li>Strategic Recommendation</li>
+<li>Appendices (A–I)</li>
 </ol>
-
 <hr>
-<p class="footer-note"><em>This business plan contains pro-forma financial projections based on conservative assumptions. All figures are estimates pending review of the official FDD, final site selection, and lease negotiation. Actual results may vary. This is not a guarantee of financial performance.</em></p>
+<h2>1. Executive Summary</h2>
+<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td><strong>Business Concept</strong></td><td>Afro Deli Franchise — African-Mediterranean fusion fast-casual</td></tr><tr><td><strong>Proposed Location</strong></td><td>Woodbury, Minnesota</td></tr><tr><td><strong>Total Investment</strong></td><td><strong>$300,000</strong></td></tr><tr><td><strong>Capital Structure</strong></td><td><strong>100% investor equity — no debt, no SBA, no personal guarantee</strong></td></tr><tr><td><strong>Projected Year 1 Revenue</strong></td><td>$637,650</td></tr><tr><td><strong>Projected Year 1 EBITDA</strong></td><td>$93,478 (14.7% margin)</td></tr><tr><td><strong>Projected Year 1 Free Cash Flow</strong></td><td>$88,478 (after $5,000 maintenance capex)</td></tr><tr><td><strong>Year 1 Return on Capital (project level)</strong></td><td>31.2% (EBITDA basis)</td></tr><tr><td><strong>Year 1 Investor Cash Return</strong></td><td>$62,687 — <strong>20.9%</strong> (preferred + 60/40 on distributable cash)</td></tr><tr><td><strong>EBITDA Break-Even</strong></td><td><strong>Month 2</strong> (month-2 EBITDA = $297 — see sensitivity, Section 9.12)</td></tr><tr><td><strong>Cumulative Cash Positive</strong></td><td><strong>Month 3</strong></td></tr><tr><td><strong>Stress Case (Yr 1)</strong></td><td>−20% covers / 32% COGS → <strong>$36,090 EBITDA (12.0% project ROI)</strong></td></tr><tr><td><strong>5-Year Cumulative Free Cash Flow</strong></td><td><strong>$747,978 (249% of invested capital)</strong></td></tr><tr><td><strong>Investor IRR</strong></td><td><strong>≈17.5%</strong> (distributions only) → <strong>≈39%</strong> with the Year-5 buyout (Section 9.15)</td></tr><tr><td><strong>Recommendation</strong></td><td>Raise $300K investor equity; proceed with Woodbury site selection subject to FDD review and lease approval</td></tr></tbody></table>
+<p><strong>Thesis in one line:</strong> a proven, debt-free franchise model with 12+ years of operating history and $1.37M in combined existing revenue, entering an affluent, under-restauranted suburb with no direct African-Mediterranean competitor — $300K of investor capital targets a 31% Year-1 project return and a 21% Year-1 cash distribution, with no leverage and no personal guarantee.</p>
 <hr>
-
-<h2>Appendix A — Market Data Sources</h2>
+<h2>2. Company Overview</h2>
+<h3>2.1 The Brand</h3>
+<p>Afro Deli is a fast-casual African-Mediterranean fusion restaurant concept rooted in the Twin Cities. Founded as a social enterprise, it weaves African, Mediterranean, and American cuisine in a fast, family-friendly environment. All dishes are made fresh and prepared halal.</p>
 <ul>
-  <li>Metropolitan Council Growth Projections (COG), 2025</li>
-  <li>American Community Survey (ACS) 5-Year Estimates, 2020–2024</li>
-  <li>Zillow / Redfin Home Value Data, June 2026</li>
-  <li>City of Woodbury Planning &amp; Economic Development</li>
+<li><strong>3 operating locations</strong> in the Twin Cities metro, <strong>12+ years</strong> of continuous operation</li>
+<li><strong>$1.37M combined annual net sales</strong> across existing locations</li>
+<li><strong>25.7% of revenue from catering</strong> — a proven institutional model</li>
+<li><strong>17.1% of revenue from third-party delivery</strong></li>
+<li>Regular presence at the <strong>Minnesota State Fair</strong> — deep local brand recognition</li>
+<li><strong>Social enterprise mission:</strong> community hiring, cultural programming, and halal food access — a genuine differentiator from commercial operators</li>
 </ul>
-
-<h2>Appendix B — Financial Assumptions Summary</h2>
-<ul>
-  <li>Average ticket: $15.00 (below actual $15.89)</li>
-  <li>COGS: 29% of revenue</li>
-  <li>Labor: 30% of revenue incl. $60K owner salary</li>
-  <li>Franchise royalty: 6% + marketing: 2% = 8%</li>
-  <li>Occupancy: $4,200/mo (1,600 sq ft at $24/sq ft NNN)</li>
-  <li>SBA loan: $400K at 9% APR, 10-year term, $5,075/mo</li>
-  <li>Operating days: 26/mo</li>
-</ul>
-
-<h2>Appendix C — SBA Loan Assumptions</h2>
-<ul>
-  <li>Loan Amount: $400,000</li>
-  <li>Interest Rate: 9.0% APR (estimated)</li>
-  <li>Term: 10 years (120 months)</li>
-  <li>Monthly Payment: ~$5,075</li>
-  <li>Collateral: Business assets + personal guarantee</li>
-  <li>Down Payment: $200,000 (33%)</li>
-</ul>
-
-<h2>Appendix D — Existing Location Benchmark Data</h2>
-<table>
-  <tr><th>Metric</th><th class="num">Loc 1</th><th class="num">Loc 2</th><th class="num">Loc 3</th><th class="num">Avg</th></tr>
-  <tr><td>Annual Revenue</td><td class="num">$480K</td><td class="num">$445K</td><td class="num">$442K</td><td class="num">$456K</td></tr>
-  <tr><td>Avg Ticket</td><td class="num">$16.12</td><td class="num">$15.74</td><td class="num">$15.81</td><td class="num">$15.89</td></tr>
-  <tr><td>Catering %</td><td class="num">26.1%</td><td class="num">25.4%</td><td class="num">25.5%</td><td class="num">25.7%</td></tr>
-  <tr><td>3rd-Party Delivery %</td><td class="num">16.8%</td><td class="num">17.3%</td><td class="num">17.2%</td><td class="num">17.1%</td></tr>
-  <tr><td>Lunch %</td><td class="num">55.2%</td><td class="num">56.1%</td><td class="num">55.8%</td><td class="num">55.7%</td></tr>
-  <tr><td>Dinner %</td><td class="num">16.4%</td><td class="num">15.9%</td><td class="num">16.0%</td><td class="num">16.1%</td></tr>
-  <tr><td>Labor % (excl. owner)</td><td class="num">15–19%</td><td class="num">16–20%</td><td class="num">17–21%</td><td class="num">15–21%</td></tr>
-</table>
-
+<h3>2.2 The Franchise Model</h3>
+<p>This plan covers the <strong>first suburban franchise unit</strong> of Afro Deli — Woodbury, MN. The franchise agreement assumed here includes a standard structure of <strong>6% royalty + 2% national marketing fund</strong> (both to be verified against the FDD), franchisee training, an approved supplier list, and Woodbury-specific territorial rights (to be confirmed).</p>
+<table><thead><tr><th>Franchise term (assumed)</th><th>Detail</th><th>Verification</th></tr></thead><tbody><tr><td>Royalty</td><td>6% of gross sales</td><td>FDD Item 6</td></tr><tr><td>National/brand marketing fund</td><td>2% of gross sales</td><td>FDD Item 6</td></tr><tr><td>Initial franchise fee</td><td>$35,000</td><td>FDD Item 5</td></tr><tr><td>Initial term</td><td>10 years</td><td>FDD Item 17</td></tr><tr><td>Territory</td><td>Woodbury (exclusive)</td><td>FDD Item 12</td></tr><tr><td>Training</td><td>Franchisor program + on-site at existing locations</td><td>FDD Item 11</td></tr></tbody></table>
+<p><em>None of these terms are verified. Section 10.1 is a hard gate: no investor capital should be committed until the FDD is obtained and reviewed by franchise counsel.</em></p>
+<p><strong>Why franchise vs. independent:</strong> the franchisor provides brand recognition, proven recipes and SOPs, an established catering playbook, buying power on specialty ingredients, and training — while the operator avoids the multi-year trial-and-error of concept development. The model's unit economics are already validated by three real locations (Section 13).</p>
+<h3>2.3 Ownership &amp; Structure</h3>
+<table><thead><tr><th>Element</th><th>Detail</th></tr></thead><tbody><tr><td>Owner-Operator</td><td>Koo Ok (full-time, on-site)</td></tr><tr><td>Entity</td><td><strong>Minnesota LLC — manager-managed</strong> (manager: Koo Ok), formed before any capital commitment</td></tr><tr><td>Capital</td><td>$300,000 investor equity; zero debt; <strong>operator cash contribution per Section 8.5</strong></td></tr><tr><td>Investor terms</td><td>Illustrative: 8% cumulative preferred return + 60/40 profit split (terminology defined in Appendix G)</td></tr><tr><td>Governance</td><td>Quarterly investor reporting; operator KPI dashboard (Section 11.2); investor consent rights (Appendix G)</td></tr><tr><td>Securities</td><td>Regulation D private placement; no general solicitation (Section 9.14)</td></tr></tbody></table>
 <hr>
-<p class="footer-note">Afro Deli – Woodbury Franchise Business Plan (Conservative Edition) | Confidential &amp; Proprietary | June 2026 (Revised)</p>
-
-</div>
-</body>
-</html>
+<h2>3. Industry Analysis</h2>
+<h3>3.1 Fast-Casual Restaurant Sector</h3>
+<ul>
+<li>The US restaurant industry continues to outpace grocery, with <strong>fast-casual the fastest-growing segment</strong> — driven by quality/price balance and the "elevated convenience" trade-up from QSR</li>
+<li>Unit economics favor <strong>limited-menu concepts with catering and delivery</strong> — both of which Afro Deli already operates (25.7% and 17.1% of sales)</li>
+<li><strong>Off-premise (delivery + catering + takeout) now exceeds 50% of industry sales</strong> at the margin — Afro Deli's existing channel mix is structurally aligned with where the industry is going</li>
+</ul>
+<h3>3.2 Halal Food Market</h3>
+<ul>
+<li>The global halal food market is projected to exceed <strong>$2T by 2030</strong>, growing faster than conventional food</li>
+<li>The US halal restaurant segment is <strong>undersupplied relative to demand</strong> — halal certification is a trust signal that commands loyalty, not a niche</li>
+<li>Minnesota is home to <strong>one of the largest Somali/East African communities in the US</strong> (estimated 50,000–80,000 in the Twin Cities metro) — an anchor customer base with deep cultural connection to the menu, plus a broader health-conscious and Muslim-family audience</li>
+</ul>
+<h3>3.3 Catering &amp; Business Dining</h3>
+<ul>
+<li>US business/corporate catering is a <strong>multi-billion-dollar annual market</strong>, and office return-to-work trends favor food-service vendors with established B2B relationships</li>
+<li>Afro Deli's existing locations derive <strong>25.7% of revenue from catering</strong> — an institutional playbook (medical campuses, corporate offices, schools, community events) that transfers directly to Woodbury's larger institutional base</li>
+</ul>
+<h3>3.4 Twin Cities Dining Context</h3>
+<ul>
+<li>The metro is a <strong>top-10 US food-city market</strong> with strong independent-restaurant culture and growing ethnic cuisine demand</li>
+<li>Suburban dining density lags urban cores — suburbs like Woodbury are <strong>under-served for differentiated ethnic concepts</strong>, which is precisely the gap this plan exploits</li>
+</ul>
+<hr>
+<h2>4. Market Analysis — Woodbury</h2>
+<h3>4.1 Why Woodbury? — Market Selection Rationale</h3>
+<p>Three Twin Cities suburbs were evaluated: <strong>Woodbury</strong>, <strong>Minnetonka</strong>, and <strong>Edina</strong>. Woodbury is the clear winner:</p>
+<p><strong>1. Population &amp; Growth (Critical Mass)</strong> — ~75,000 residents, growing +12% since 2020 — three times faster than Minnetonka (+4%), four times faster than Edina (+3%). New households are actively forming dining habits; a new concept entering now captures the "shaping" of those habits.</p>
+<p><strong>2. Affluence Without Saturation</strong> — median household income $117,000 (≈ Edina's $120K, above Minnetonka's $105K), but restaurant density per capita is significantly lower: Edina has 186+ restaurants for 54,000 residents; Woodbury ~140 for 75,000. More people, fewer options.</p>
+<p><strong>3. The Daytime Surge Advantage</strong> — a 30–40% daytime population surge driven by the <strong>M Health Fairview Woodwinds Hospital campus</strong> (Woodbury's largest single health-care employer), the regional retail power centers, and the I-94 corporate corridor (3M in Maplewood, Ecolab in St. Paul — both within a 10–15 minute drive). This drives lunch traffic AND catering demand — both validated by existing locations (55.7% lunch / 25.7% catering).</p>
+<p><strong>4. Catering Infrastructure is Pre-Built</strong> — Woodbury's institutional base (medical, corporate, schools) is larger and more corporate-heavy than the existing locations serve. The 25.7% catering model transfers directly. South Washington County Schools (ISD 833) alone enrolls ~18,700 students across 29 schools — the sixth-largest district in Minnesota (Appendix A).</p>
+<p><strong>5. Zero Direct Competition</strong> — no African-Mediterranean fusion, halal-first positioning, or cultural storytelling concept exists in the market (Section 5).</p>
+<p><strong>6. Real Estate Economics</strong> — lease rates $20–$25/sq ft NNN are 10–30% below Minnetonka and 20–40% below Edina; permitting takes 4–6 weeks vs. 6–12 weeks elsewhere. Lowest entry cost, fastest path to opening.</p>
+<p><strong>7. Expansion Sequencing</strong> — Woodbury (Yr 1) → Minnetonka (Yrs 3–5) → Edina express (Yr 5+): from largest market with lowest barriers to most expensive last.</p>
+<p><strong>Key Market Data — Comparative Table</strong></p>
+<table><thead><tr><th>Factor</th><th>Woodbury</th><th>Minnetonka</th><th>Edina</th></tr></thead><tbody><tr><td>Population (2025 est.)</td><td>~75,000</td><td>~55,000</td><td>~54,000</td></tr><tr><td>Growth (2020–2025)</td><td>+12%</td><td>+4%</td><td>+3%</td></tr><tr><td>Median Household Income</td><td>$117,000</td><td>$105,000</td><td>$120,000</td></tr><tr><td>Daytime Surge</td><td>30–40%</td><td>Moderate</td><td>Moderate</td></tr><tr><td>Direct Afro-Med Competition</td><td>None verified</td><td>None verified</td><td>None verified</td></tr><tr><td>Lease Rate ($/sq ft NNN)</td><td>$20–$25</td><td>$22–$28</td><td>$28–$35</td></tr><tr><td>Permitting Timeline</td><td>4–6 weeks</td><td>6–10 weeks</td><td>8–12 weeks</td></tr><tr><td>Restaurant Density</td><td>Lower (140/75K)</td><td>Medium</td><td>Higher (186+/54K)</td></tr><tr><td>Expansion Priority</td><td>Primary (Yr 1)</td><td>Secondary (Yr 3–5)</td><td>Future (Yr 5+)</td></tr></tbody></table>
+<h3>4.2 Demographic Analysis</h3>
+<table><thead><tr><th>Metric</th><th>Value</th><th>Source</th></tr></thead><tbody><tr><td>Population (2025 est.)</td><td>~75,000</td><td>Metro COG projection</td></tr><tr><td>Median Household Income</td><td>~$117,000</td><td>ACS 5-year</td></tr><tr><td>Median Age</td><td>39</td><td>ACS 5-year</td></tr><tr><td>Households with Children (6–17)</td><td>~38%</td><td>ACS 5-year</td></tr><tr><td>Bachelor's Degree or Higher</td><td>~56%</td><td>ACS 5-year</td></tr><tr><td>Daytime Population Surge</td><td>+30–40%</td><td>Employment + medical draw (employer headcounts to be confirmed)</td></tr><tr><td>Median Home Value</td><td>~$430,000</td><td>Zillow/Redfin</td></tr></tbody></table>
+<p><strong>Target Customer Segments</strong></p>
+<table><thead><tr><th>Segment</th><th>% of Revenue</th><th>Profile</th></tr></thead><tbody><tr><td>Families with Children</td><td>50%</td><td>Dual-income families seeking healthier, faster dinner options</td></tr><tr><td>Catering &amp; Corporate</td><td>25%</td><td>Medical campuses, offices, schools — higher margin, strong repeat</td></tr><tr><td>Young Professionals &amp; Couples</td><td>15%</td><td>Affluent millennials seeking unique global flavors</td></tr><tr><td>Daytime Workforce + Delivery</td><td>10%</td><td>Medical/office/retail workers + third-party delivery</td></tr></tbody></table>
+<hr>
+<h2>5. Competitive Analysis</h2>
+<h3>5.1 Direct Competitors (Woodbury) — Verified September 2026</h3>
+<table><thead><tr><th>Competitor</th><th>Category</th><th>Price Point</th><th>Woodbury Status</th><th>Afro Deli's Advantage</th></tr></thead><tbody><tr><td>Chipotle</td><td>Mexican fast-casual</td><td>~$10–12</td><td>Present</td><td>Unique flavor, not a commoditized burrito</td></tr><tr><td>Panera Bread</td><td>Bakery-Café</td><td>~$11–14</td><td>Present</td><td>Dinner-centric, bolder flavors, halal</td></tr><tr><td>Noodles &amp; Co</td><td>Global fast-casual</td><td>~$10–12</td><td>Present</td><td>Authentic cuisine, halal commitment</td></tr><tr><td>Crisp &amp; Green</td><td>Health fast-casual</td><td>~$11–13</td><td>Present</td><td>Broader menu — flavor first</td></tr><tr><td><strong>Naf Naf Grill</strong></td><td>Mediterranean fast-casual</td><td>~$11–13</td><td><strong>CLOSED</strong> (265 Radio Dr)</td><td><em>Cautionary, not competitive — see below</em></td></tr></tbody></table>
+<p><strong>Naf Naf Grill finding (verified Sept 2026):</strong> Naf Naf opened a Woodbury location at 265 Radio Dr and has since closed. Its exit is a two-sided signal. It <strong>confirms</strong> that a minimally differentiated Mediterranean fast-casual cannot hold this market — which supports the differentiation thesis. It <strong>also</strong> confirms that Woodbury is not a market where a chain can coast on category alone. The plan's answer is halal certification, African-spiced menu, catering depth, and cultural storytelling — none of which Naf Naf carried.</p>
+<p><strong>Market presence for Chipotle, Panera, Noodles &amp; Co, and Crisp &amp; Green is asserted from current market knowledge and must be confirmed by a physical site survey during final diligence (Appendix A, item 5).</strong></p>
+<p><strong>Positioning:</strong> no Woodbury operator offers African-Mediterranean fusion, halal-first certification, cultural storytelling, or sambusas/Chicken Fantastic/Somali rice bowls. Afro Deli's $15 average ticket sits at a premium to QSR competitors — justified by a differentiated, higher-perceived-value menu and validated by existing locations' actual $15.89 ticket.</p>
+<h3>5.2 Catering Competition</h3>
+<p>Woodbury catering options are dominated by generic corporate caterers and chain catering menus (Panera, Chipotle). None offer <strong>halal, culturally authentic African-Mediterranean catering at scale</strong> — the specific ask from medical campuses, schools, and corporate offices with diverse workforces. Existing locations already win this business in St. Paul/Minneapolis; Woodbury's institutional base is larger.</p>
+<h3>5.3 Competitive Threats</h3>
+<ul>
+<li><strong>Cava</strong> (Mediterranean fast-casual) is expanding nationally and could enter Woodbury — its Mediterranean positioning overlaps, but it does not compete on African fusion, halal certification, or cultural identity</li>
+<li><strong>Independent imitation</strong> within 2–3 years of success — mitigated by brand equity, catering relationships, and franchise system scale</li>
+<li><strong>Chain attrition precedent</strong> — Naf Naf's Woodbury exit shows category chains can fail here; the mitigation is differentiation plus the catering book, not menu novelty alone</li>
+<li><strong>Response:</strong> first-mover advantage + relationship-based catering contracts are defensible moats</li>
+</ul>
+<hr>
+<h2>6. Marketing &amp; Sales Plan</h2>
+<h3>6.1 Brand Positioning</h3>
+<p><em>"Real African-Mediterranean food, made fresh, prepared halal — with a story worth telling."</em></p>
+<p>The brand's social-enterprise identity (Section 12) is a marketing asset: Woodbury consumers increasingly choose restaurants with authentic cultural stories and community values.</p>
+<h3>6.2 Pre-Opening (budget: $13,000, capitalized)</h3>
+<table><thead><tr><th>Initiative</th><th>Detail</th></tr></thead><tbody><tr><td>Launch event</td><td>Catered preview for Woodbury business leaders, medical campus administrators, school food-service directors</td></tr><tr><td>Local SEO &amp; maps</td><td>Google Business Profile, local keyword content, review system from day one</td></tr><tr><td>Community halo</td><td>Co-marketing with local mosques, East African community associations, cultural orgs; State Fair brand carryover</td></tr><tr><td>Social proof sprint</td><td>40+ reviews in first 60 days (table tents, QR cards, follow-up texts)</td></tr><tr><td>Teaser campaign</td><td>Geo-targeted social ads (Woodbury ZIPs) + signage at site during build-out</td></tr></tbody></table>
+<h3>6.3 Ongoing Marketing — Two Separate Budgets</h3>
+<p><strong>Critically, these are two different buckets.</strong> The 2% national marketing fund is the franchisor's brand fund; it typically funds national/brand activity, not Woodbury ZIP-targeted advertising. Local store marketing is budgeted separately.</p>
+<table><thead><tr><th>Bucket</th><th>Funding</th><th>What it pays for</th></tr></thead><tbody><tr><td><strong>National/brand fund</strong></td><td>2% of gross sales ($12,753 in Year 1)</td><td>Franchisor brand campaigns, national programs, some digital assets</td></tr><tr><td><strong>Local store marketing (LSM)</strong></td><td><strong>~$4,000–6,000/yr from the store's own P&amp;L</strong> (Year 1 modeled: $4,000 ≈ 0.6% of sales; recommended: 1.0% of sales ≈ $6,400 as volume scales)</td><td>Woodbury geo-targeted ads, local sponsorships, catering outreach samples, loyalty promos, review generation</td></tr></tbody></table>
+<p><em>If the FDD shows the 2% fund does not support local activity (likely), LSM is a genuine incremental cost already provided for in Other OpEx (Section 9.3). The two budgets are never conflated.</em></p>
+<h3>6.4 Channel Plan</h3>
+<table><thead><tr><th>Channel</th><th>Strategy</th></tr></thead><tbody><tr><td><strong>Catering B2B engine</strong></td><td>Weekly outreach cadence: M Health Fairview Woodwinds, I-94 corridor employers, ISD 833 schools; sample boxes; repeat-order program; dedicated coordinator</td></tr><tr><td><strong>Digital</strong></td><td>Meta geo-targeting, delivery-app promotions, loyalty program (families segment), email list</td></tr><tr><td><strong>Dinner growth</strong></td><td>Evening-specific promos attacking the #1 underpenetrated daypart (16.1% at existing locations → ~25% target)</td></tr><tr><td><strong>Seasonal</strong></td><td>School-year catering cycles, Q4 holiday catering push, summer patio program</td></tr><tr><td><strong>Community</strong></td><td>Sponsorships (soccer clubs, cultural festivals), school fundraising nights — high-ROI local trust-building</td></tr></tbody></table>
+<h3>6.5 Sales Funnel Targets (Year 1)</h3>
+<ul>
+<li>40+ active catering accounts by Month 12 (targeting 15–20% of revenue)</li>
+<li>40+ reviews/quarter sustained (4.5★+ rating)</li>
+<li>17.1%+ of revenue from third-party delivery</li>
+<li>Loyalty program: 2,000+ members by Year 1 end</li>
+</ul>
+<hr>
+<h2>7. Operations Plan</h2>
+<h3>7.1 Ideal Site Criteria</h3>
+<table><thead><tr><th>Criterion</th><th>Target</th><th>Rationale</th></tr></thead><tbody><tr><td>Space</td><td>1,500–1,800 sq ft</td><td>Fits existing kitchen + FOH model</td></tr><tr><td>Configuration</td><td>Endcap or inline w/ patio</td><td>Dual-exposure signage; summer evening traffic</td></tr><tr><td>Anchor</td><td>Grocery-anchored power center</td><td>Woodbury Lakes, Tamarack Village, Valley Creek</td></tr><tr><td>Traffic</td><td>25,000+ VPD</td><td>Woodbury Dr, Valley Creek Rd, Tamarack Rd</td></tr><tr><td>Lease Rate</td><td>$18–$25/sq ft NNN</td><td>Aligns with the $4,200/mo occupancy budget (conservative — see 9.3)</td></tr><tr><td>Parking</td><td>Shared lot, 50+ spaces</td><td>Peak lunch/dinner overlap</td></tr><tr><td>Visibility</td><td>Street-facing signage</td><td>Brand awareness for first suburban unit</td></tr><tr><td><strong>Space type</strong></td><td><strong>Second-generation restaurant preferred</strong></td><td>Existing kitchen = ~$130K build-out savings</td></tr><tr><td><strong>Lease term</strong></td><td><strong>10-year initial term + two 5-year options</strong></td><td>Aligned to the 10-year franchise term (see 7.8)</td></tr></tbody></table>
+<h3>7.2 SWOT Analysis</h3>
+<p><strong>Strengths:</strong> proven 12+ year model · 25.7% catering infrastructure · no verified direct competition · all-halal positioning · existing Twin Cities brand + State Fair presence · 17.1% delivery channel · $15.89 actual ticket · <strong>zero-debt structure</strong></p>
+<p><strong>Weaknesses:</strong> first suburban unit · limited Woodbury awareness vs. nationals · 8% royalty+marketing burden · no drive-thru · owner-operator learning curve · dinner underpenetrated (16.1%)</p>
+<p><strong>Opportunities:</strong> 12% Woodbury growth · no fusion competitor · growing halal demand · larger institutional catering base · delivery growth · dinner runway (16.1% → 25%) · expansion units funded by new capital</p>
+<p><strong>Threats:</strong> economic downturn · halal protein inflation · labor wage pressure · potential Cava entry · independent imitation · lease escalation at renewal · specialty ingredient supply chain · <strong>single-operator key-person dependency</strong></p>
+<h3>7.3 Menu Overview</h3>
+<table><thead><tr><th>Item</th><th>Description</th><th>Role</th></tr></thead><tbody><tr><td>Chicken Fantastic</td><td>Somali rice + creole sauce</td><td>Signature entrée</td></tr><tr><td>Sambusas (beef / chicken / veggie)</td><td>Hand-folded pastry</td><td>Fan favorite / appetizer</td></tr><tr><td>Lamb &amp; Chicken Gyros</td><td>Spiced rotisserie</td><td>Lunch driver</td></tr><tr><td>Spiced Bowls</td><td>Proteins over Somali rice</td><td>Bowl-category competitor</td></tr><tr><td>Falafel / Hummus</td><td>Plant-based staples</td><td>Vegan/vegetarian option</td></tr></tbody></table>
+<ul>
+<li>Average ticket <strong>$15.00</strong> (actual $15.89 — conservative)</li>
+<li>Average turn time <strong>17.8 minutes</strong> (source: existing-location POS export, June 2025–June 2026; to be formally documented in Appendix D)</li>
+<li><strong>All-halal</strong> + vegetarian/vegan options widen the addressable base</li>
+<li><strong>Catering menu:</strong> family trays + institutional packages — the 25.7% engine</li>
+</ul>
+<h3>7.4 Supply Chain &amp; Food Safety</h3>
+<table><thead><tr><th>Element</th><th>Detail</th></tr></thead><tbody><tr><td>Halal certification</td><td>Approved halal suppliers per the franchisor's approved-supplier list; <strong>the certifying body is to be named from the FDD</strong> (candidate certifiers include IFANCA and HFSAA — not yet confirmed)</td></tr><tr><td>Specialty ingredients</td><td>Somali rice blends, berbere spice, sambusa wrappers — established franchisor supplier relationships</td></tr><tr><td>Food safety</td><td>ServSafe-certified management; MN Dept of Health compliance; HACCP-based procedures</td></tr><tr><td>Inventory</td><td>Par-level system; weekly ordering; waste tracking from Day 1 (COGS target 29%)</td></tr></tbody></table>
+<h3>7.5 Technology &amp; Systems</h3>
+<ul>
+<li><strong>POS:</strong> <strong>Toast POS</strong> (confirmed choice) — one platform covering point-of-sale, online ordering, delivery-app integration (DoorDash/Uber Eats — the 17.1% channel), a catering module (the 25.7% engine), kitchen display system, and built-in loyalty (the 2,000+ member program). Hardware + SaaS subscription; ongoing platform fees (~$400/mo) sit in Other OpEx</li>
+<li><strong>Delivery:</strong> DoorDash/Uber Eats/Grubhub integration (17.1% of existing sales) — commissions 15–30% depending on plan; modeled at ~26% (Section 9.3)</li>
+<li><strong>Reporting:</strong> daily sales/covers/catering dashboard; weekly P&amp;L review vs. plan (Section 11 KPIs)</li>
+<li><strong>Catering CRM:</strong> pipeline tracking for the B2B engine (Section 6.4)</li>
+</ul>
+<h3>7.6 Staffing &amp; Training</h3>
+<ul>
+<li><strong>Year 1: 6–8 team members (≈3.6 FTE)</strong> ramping with covers (Section 8.3). <em>(v1 stated "8–12 FTEs," which was inconsistent with the $131,295 crew-labor budget — corrected.)</em></li>
+<li>Franchisor training program for owner + management (FDD-verified) + on-site training at existing locations</li>
+<li>Cross-training: every FOH staff can cover 2+ stations; kitchen staff halal-food-handling certified</li>
+<li><strong>Labor target:</strong> 30% of revenue including owner salary — at the top of the actual existing-location range (15–21% excluding owner), reflecting new-market wage pressure and lower initial volume leverage</li>
+</ul>
+<p><strong>Wage bands (Woodbury market, 2026):</strong></p>
+<table><thead><tr><th>Role</th><th>FTE (Yr 1)</th><th>Wage band</th><th>Basis</th></tr></thead><tbody><tr><td>Owner-Operator (Koo Ok)</td><td>1.0</td><td>$60,000/yr salary</td><td>Fixed by plan</td></tr><tr><td>General Manager</td><td>1.0</td><td>$52,000–62,000/yr salaried</td><td>Working manager; opens/closes</td></tr><tr><td>Kitchen Lead</td><td>1.0</td><td>$19–22/hr</td><td>Halal-handling certified</td></tr><tr><td>Cooks / Prep</td><td>~1.5</td><td>$17–20/hr</td><td>Ramping with volume</td></tr><tr><td>FOH / Cashier / Serving</td><td>~1.0</td><td>$15–18/hr</td><td>Ramping with lunch/dinner build</td></tr><tr><td>Delivery prep / Runner</td><td>included above</td><td>$15–17/hr</td><td>Third-party order staging</td></tr><tr><td>Catering Coordinator</td><td>0.5</td><td>$20–24/hr</td><td>Part-time to start; full-time as catering scales</td></tr></tbody></table>
+<p><strong>Tie-out:</strong> Year-1 labor $191,295 = owner salary $60,000 (9.4% of sales) + store labor $131,295 (20.6%). At a blended crew wage of ~$17.50/hr, $131,295 ≈ 7,500 hours/yr ≈ 145 hours/week ≈ <strong>3.6 FTE</strong>, staffed as 6–8 part- and full-time team members. Wage inflation is modeled at ~3%/yr in Years 2–5.</p>
+<h3>7.7 Opening Timeline</h3>
+<table><thead><tr><th>Phase</th><th>Duration</th><th>Key Activities</th></tr></thead><tbody><tr><td>Site selection + LOI</td><td>Weeks 1–4</td><td>Shortlist Tamarack Village / Woodbury Lakes / Valley Creek; LOI contingent on kitchen inspection</td></tr><tr><td>Lease negotiation</td><td>Weeks 4–8</td><td>10-year term; $18–$25/sq ft NNN; landlord TI; permit-ready condition</td></tr><tr><td>Permitting</td><td>Weeks 8–12</td><td>Woodbury 4–6 week process</td></tr><tr><td>Build-out</td><td>Weeks 12–20</td><td>Second-gen conversion (~$115K net of TI); equipment; POS</td></tr><tr><td>Franchisor training</td><td>Weeks 18–22</td><td>Owner + management at existing locations</td></tr><tr><td>Soft opening</td><td>Week 22</td><td>Phased hours, limited menu</td></tr><tr><td>Grand opening</td><td>Week 24</td><td>Full menu, marketing launch, catering pipeline live</td></tr></tbody></table>
+<h3>7.8 Lease Strategy &amp; Landlord TI</h3>
+<ul>
+<li><strong>Term:</strong> target a <strong>10-year initial term with two 5-year renewal options</strong>, aligned to the 10-year franchise term. <em>(v1 targeted 5–7 years, which would have created a mid-franchise-term lease renewal while ~$180K of leasehold/FF&amp;E was still amortizing — a mismatch now corrected.)</em></li>
+<li><strong>Rent:</strong> $18–$25/sq ft NNN (triple-net: tenant pays taxes, insurance, CAM on top of base rent).</li>
+<li><strong>Landlord TI:</strong> the plan requests a tenant-improvement allowance of <strong>$25–$40/sq ft (≈$45,000–$72,000 on 1,800 sq ft)</strong>. <strong>The $115,000 build-out budget is stated net of a mid-range TI assumption (~$25/sq ft ≈ $45,000); gross build-out is therefore ≈$160,000.</strong> If TI cannot be secured, the second-generation-space requirement and the $17,000 contingency become critical.</li>
+</ul>
+<hr>
+<h2>8. Management &amp; Organization</h2>
+<h3>8.1 Owner-Operator — Koo Ok</h3>
+<p>Full-time, on-site owner-operator.</p>
+<blockquote><p><strong>PLACEHOLDER — TO BE COMPLETED BY THE OPERATOR. This is the #1 diligence item for a first-time franchisee. Supply, at minimum:</strong></p><p>- Years and scope of restaurant/food-service or general management experience (and any P&amp;L ownership)</p><p>- Relevant certifications (ServSafe, food handler, etc.)</p><p>- Prior business ownership, if any — outcomes</p><p>- Why this franchise and this market; commitment horizon</p><p>- Two professional references</p></blockquote>
+<ul>
+<li>Compensation: $60,000/year, included in the 30% labor assumption</li>
+<li>No outside employment — full operational commitment is a requirement of this plan</li>
+<li><strong>Key-person mitigation:</strong> a General Manager is hired <strong>before soft opening</strong> (not deferred), the operator's duties are documented in written SOPs, and the LLC carries key-person life/disability insurance on the operator (target $500,000–$1,000,000) with the LLC as beneficiary (Section 10.2)</li>
+</ul>
+<h3>8.2 Organization</h3>
+<pre><code>Owner-Operator (Koo Ok)
+├── General Manager (1)  ← hired before soft opening
+│   ├── Kitchen Lead + Cooks (1 + 1–2)
+│   ├── FOH / Cashier / Serving (2–3 part- and full-time)
+│   └── Delivery prep / Runner (part of FOH rotation)
+└── Catering Coordinator (0.5, ramps to full-time)</code></pre>
+<h3>8.3 Staffing Plan (ramping with covers)</h3>
+<table><thead><tr><th>Role</th><th>Year-1 FTE</th><th>Notes</th></tr></thead><tbody><tr><td>Owner-Operator</td><td>1.0</td><td>Full-time, on-site; $60K salary</td></tr><tr><td>General Manager</td><td>1.0</td><td>Kitchen + FOH oversight; catering coordination; hired pre-opening</td></tr><tr><td>Kitchen Lead / Cooks</td><td>1.0 + 1.5</td><td>Halal food-handling certified</td></tr><tr><td>FOH / Cashier / Serving</td><td>1.0</td><td>Ramping with lunch/dinner build (2–3 people part-time)</td></tr><tr><td>Catering Coordinator</td><td>0.5</td><td>Part-time to start; full-time as catering scales</td></tr><tr><td><strong>Total</strong></td><td><strong>≈3.6 crew FTE + owner</strong></td><td><strong>6–8 team members</strong></td></tr></tbody></table>
+<h3>8.4 Advisory</h3>
+<ul>
+<li>Franchise attorney (FDD review), CPA (tax + entity structure), and the franchisor's field support team</li>
+<li>Securities counsel for the offering documents (Section 9.14)</li>
+<li>Quarterly investor reporting cadence with the Section 11 KPI dashboard</li>
+</ul>
+<h3>8.5 Operator Capital Contribution — <strong>TO BE CONFIRMED</strong></h3>
+<p>The review correctly flagged that this is unstated. Investors will ask. Two defensible structures:</p>
+<table><thead><tr><th>Structure</th><th>Operator cash</th><th>Operator compensation</th><th>Investor terms</th><th>Note</th></tr></thead><tbody><tr><td><strong>A — Sweat equity (recommended default)</strong></td><td><strong>$0</strong></td><td>$60,000 salary + 40% of profit after the 8% preferred</td><td>100% of the $300K; 8% cumulative pref + 60% of residual</td><td>Cleanest to execute; operator's "capital" is full-time, on-site labor; standard for owner-operator franchise deals</td></tr><tr><td><strong>B — Skin in the game</strong></td><td><strong>$20,000 (6.7%)</strong></td><td>$60,000 salary + 35% of profit after the 8% preferred</td><td>$280,000 (93.3%)</td><td>Stronger alignment signal; requires the operator to fund $20K</td></tr></tbody></table>
+<p>Under Structure A the operator's profits interest is proposed as a <strong>profits interest vesting over 4 years</strong> (with a 1-year cliff) so that investors are protected if the operator exits early. <strong>Decision required from the operator before the PPM is drafted.</strong></p>
+<hr>
+<h2>9. Financial Plan</h2>
+<h3>9.1 Startup Costs — $300,000</h3>
+<table><thead><tr><th>Category</th><th>Cost</th><th>Notes</th></tr></thead><tbody><tr><td>Franchise Fee</td><td>$35,000</td><td>Assumed; verify vs. FDD Item 5</td></tr><tr><td>Build-Out / Leasehold Improvements</td><td>$115,000</td><td>Second-generation space with existing kitchen; <strong>net of a ~$45,000 landlord TI assumption</strong> (gross ≈ $160,000)</td></tr><tr><td>FF&amp;E (incl. POS hardware)</td><td>$55,000</td><td>Used/leased where sensible</td></tr><tr><td>Permits, Licenses &amp; Filing Fees</td><td>$10,000</td><td>City + state + health</td></tr><tr><td>Technology &amp; POS</td><td>$8,000</td><td>Toast hardware + setup</td></tr><tr><td>Initial Inventory / Smallwares</td><td>$14,000</td><td></td></tr><tr><td>Pre-Opening Marketing &amp; PR</td><td>$13,000</td><td>Capitalized; awareness before Day 1</td></tr><tr><td>Professional Fees</td><td>$10,000</td><td>Franchise counsel ($5–10K range), CPA, entity formation, PPM review</td></tr><tr><td><strong>Build-Out &amp; FF&amp;E Contingency (~10%)</strong></td><td><strong>$17,000</strong></td><td><strong>New in v2</strong> — exactly 10% of build-out + FF&amp;E ($170,000). Standard and previously absent</td></tr><tr><td><strong>Working Capital Reserve</strong></td><td><strong>$23,000</strong></td><td>Covers the modeled operating trough (−$1,965) ≈ 12×; also funds insurance, first payroll, and pre-opening opex</td></tr><tr><td><strong>Total</strong></td><td><strong>$300,000</strong></td><td></td></tr></tbody></table>
+<p><em>Insurance: the Year-1 premium (~$8,000 — workers' comp for 6–8 food-service employees plus general liability and property) is carried as an operating cost in Other OpEx rather than capitalized, so it appears in the P&amp;L below. Quotations from a broker are required to true this up before the PPM is finalized.</em></p>
+<h3>9.2 Funding Structure — 100% Investor Equity</h3>
+<table><thead><tr><th>Source</th><th>Amount</th><th>Terms</th></tr></thead><tbody><tr><td><strong>Investor Equity</strong></td><td><strong>$300,000 (100%)</strong></td><td>8% cumulative preferred + 60/40 profit share (Appendix G)</td></tr><tr><td>Debt</td><td>$0</td><td><strong>No debt, no SBA, no personal guarantee</strong></td></tr></tbody></table>
+<p><strong>Why no debt:</strong> with no loan service, every dollar of EBITDA belongs to operations and owners. EBITDA break-even in Month 2; cumulative cash positive Month 3; investor capital exposed to only two months of negative cash flow.</p>
+<h3>9.3 Key Financial Assumptions</h3>
+<table><thead><tr><th>Metric</th><th>Assumption</th><th>Basis</th></tr></thead><tbody><tr><td>Average Ticket</td><td>$15.00</td><td>Below actual ($15.89) — conservative</td></tr><tr><td>COGS</td><td>29% of revenue</td><td>Halal proteins and African spices are premium</td></tr><tr><td>Total Labor (incl. owner salary)</td><td>30%</td><td>Owner salary $60K included; ≈3.6 crew FTE (Section 7.6)</td></tr><tr><td>Franchise Royalty</td><td>6% of gross revenue</td><td>Standard franchise structure</td></tr><tr><td>National Marketing Fund</td><td>2% of gross revenue</td><td>Brand fund only — <strong>does not fund local ads</strong> (Section 6.3)</td></tr><tr><td>Occupancy</td><td>$4,200/mo ($50,400/yr)</td><td><strong>Conservative:</strong> ≈$23.33/sq ft all-in on 1,800 sq ft, at the TOP of the $18–$25 market range. (v1's "$4,200/mo at 1,600 sq ft / $24" did not reconcile; the working assumption is 1,800 sq ft at the top of market.)</td></tr><tr><td>Debt Service</td><td>$0</td><td>All-equity structure</td></tr><tr><td>Operating Days</td><td>26/mo</td><td>Closed Thanksgiving, Christmas; limited Sunday</td></tr><tr><td>Catering (Yr 1)</td><td>15–20% of revenue</td><td><strong>Conservative vs. 25.7% actual</strong> — market case higher, financial case deliberately lower</td></tr><tr><td>Delivery</td><td>17.1% of revenue</td><td>Matches existing locations</td></tr><tr><td>Delivery commissions</td><td>~26% of delivery sales (≈$28,350 in Yr 1)</td><td>DoorDash/Uber Eats range 15–30% by plan; <strong>now a disclosed line</strong> (was hidden inside Other OpEx)</td></tr><tr><td>Local store marketing</td><td>$4,000 Yr 1 (rising to ~1% of sales)</td><td>Separate from the 2% brand fund</td></tr><tr><td>Depreciation</td><td>FF&amp;E 7-yr straight-line; Leasehold 10-yr; Franchise fee 10-yr</td><td>$24,000/yr</td></tr><tr><td>Maintenance capex</td><td>$5,000 Yr 1 → $10,000 Yr 5</td><td><strong>New in v2</strong> — equipment refresh (was $0 in Years 2–5)</td></tr><tr><td>Taxes</td><td>Not modeled (pre-tax plan)</td><td>Pass-through LLC; K-1 tax distributions per Appendix G</td></tr></tbody></table>
+<p><strong>Conservative Ramp-Up</strong></p>
+<table><thead><tr><th>Month</th><th>Covers/Day</th><th>Revenue</th><th>Rationale</th></tr></thead><tbody><tr><td>1</td><td>50</td><td>$19,500</td><td>Soft opening — phased hours, training focus</td></tr><tr><td>2</td><td>70</td><td>$27,300</td><td>Word of mouth; catering pipeline starting</td></tr><tr><td>3</td><td>95</td><td>$37,050</td><td>Post-grand opening; weekday lunch building</td></tr><tr><td>4</td><td>115</td><td>$44,850</td><td>Regulars established; catering repeats begin</td></tr><tr><td>5</td><td>130</td><td>$50,700</td><td>Dinner traffic building; delivery volume up</td></tr><tr><td>6</td><td>145</td><td>$56,550</td><td>Steady-state approaching</td></tr><tr><td>7</td><td>155</td><td>$60,450</td><td>Summer patio season</td></tr><tr><td>8</td><td>165</td><td>$64,350</td><td>Back-to-school family dinner traffic</td></tr><tr><td>9</td><td>170</td><td>$66,300</td><td>Fall catering cycle</td></tr><tr><td>10</td><td>175</td><td>$68,250</td><td>Q4 holiday catering ramp</td></tr><tr><td>11</td><td>180</td><td>$70,200</td><td>Pre-holiday catering push</td></tr><tr><td>12</td><td>185</td><td>$72,150</td><td>Year-end steady state</td></tr></tbody></table>
+<p><em>Ramp is 10–15% slower than the pre-revision draft (v1, August 2026) — conservative for a first-time franchise owner in a new suburban market. Revenue = covers/day × 26 days × $15.00.</em></p>
+<h3>9.4 Year 1 Financial Summary</h3>
+<table><thead><tr><th>Metric</th><th>Amount</th></tr></thead><tbody><tr><td>Revenue</td><td>$637,650</td></tr><tr><td>COGS (29%)</td><td>($184,919)</td></tr><tr><td><strong>Gross Profit</strong></td><td><strong>$452,732</strong></td></tr><tr><td>Operating Expenses</td><td>($359,253)</td></tr><tr><td><strong>EBITDA</strong></td><td><strong>$93,478 (14.7%)</strong></td></tr><tr><td>Debt Service</td><td>$0</td></tr><tr><td>Less: maintenance capex</td><td>($5,000)</td></tr><tr><td><strong>Free Cash Flow</strong></td><td><strong>$88,478</strong></td></tr><tr><td><strong>Project-level Return on $300K</strong></td><td><strong>31.2% (EBITDA basis)</strong></td></tr><tr><td><strong>Investor-level Year-1 cash return</strong></td><td><strong>$62,687 — 20.9%</strong> (Appendix G waterfall)</td></tr></tbody></table>
+<p><em>One cash basis throughout: EBITDA is the operating metric; <strong>free cash flow (EBITDA − maintenance capex) is the distribution basis.</strong> v1 mixed these (showing $93,478 in the five-year table and $88,478 in the cash-flow statement).</em></p>
+<h3>9.5 Monthly Financial Projections</h3>
+<table><thead><tr><th>Item</th><th>M1</th><th>M2</th><th>M3</th><th>M4</th><th>M5</th><th>M6</th></tr></thead><tbody><tr><td>Covers/Day</td><td>50</td><td>70</td><td>95</td><td>115</td><td>130</td><td>145</td></tr><tr><td>Revenue</td><td>$19,500</td><td>$27,300</td><td>$37,050</td><td>$44,850</td><td>$50,700</td><td>$56,550</td></tr><tr><td>COGS (29%)</td><td>($5,655)</td><td>($7,917)</td><td>($10,745)</td><td>($13,007)</td><td>($14,703)</td><td>($16,400)</td></tr><tr><td>Gross Profit</td><td>$13,845</td><td>$19,384</td><td>$26,306</td><td>$31,844</td><td>$35,997</td><td>$40,151</td></tr><tr><td>Labor (30%)</td><td>($5,850)</td><td>($8,190)</td><td>($11,115)</td><td>($13,455)</td><td>($15,210)</td><td>($16,965)</td></tr><tr><td>Occupancy</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td></tr><tr><td>Royalty (6%)</td><td>($1,170)</td><td>($1,638)</td><td>($2,223)</td><td>($2,691)</td><td>($3,042)</td><td>($3,393)</td></tr><tr><td>Brand Marketing (2%)</td><td>($390)</td><td>($546)</td><td>($741)</td><td>($897)</td><td>($1,014)</td><td>($1,131)</td></tr><tr><td>Other OpEx</td><td>($4,200)</td><td>($4,512)</td><td>($4,902)</td><td>($5,214)</td><td>($5,448)</td><td>($5,682)</td></tr><tr><td><strong>EBITDA</strong></td><td><strong>($1,965)</strong></td><td><strong>$297</strong></td><td><strong>$3,124</strong></td><td><strong>$5,386</strong></td><td><strong>$7,083</strong></td><td><strong>$8,780</strong></td></tr><tr><td>Cumulative CF</td><td>($1,965)</td><td>($1,668)</td><td><strong>$1,456</strong></td><td>$6,843</td><td>$13,926</td><td>$22,706</td></tr></tbody></table>
+<table><thead><tr><th>Item</th><th>M7</th><th>M8</th><th>M9</th><th>M10</th><th>M11</th><th>M12</th></tr></thead><tbody><tr><td>Covers/Day</td><td>155</td><td>165</td><td>170</td><td>175</td><td>180</td><td>185</td></tr><tr><td>Revenue</td><td>$60,450</td><td>$64,350</td><td>$66,300</td><td>$68,250</td><td>$70,200</td><td>$72,150</td></tr><tr><td>COGS (29%)</td><td>($17,531)</td><td>($18,662)</td><td>($19,227)</td><td>($19,793)</td><td>($20,358)</td><td>($20,924)</td></tr><tr><td>Gross Profit</td><td>$42,920</td><td>$45,689</td><td>$47,073</td><td>$48,458</td><td>$49,842</td><td>$51,227</td></tr><tr><td>Labor (30%)</td><td>($18,135)</td><td>($19,305)</td><td>($19,890)</td><td>($20,475)</td><td>($21,060)</td><td>($21,645)</td></tr><tr><td>Occupancy</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td><td>($4,200)</td></tr><tr><td>Royalty (6%)</td><td>($3,627)</td><td>($3,861)</td><td>($3,978)</td><td>($4,095)</td><td>($4,212)</td><td>($4,329)</td></tr><tr><td>Brand Marketing (2%)</td><td>($1,209)</td><td>($1,287)</td><td>($1,326)</td><td>($1,365)</td><td>($1,404)</td><td>($1,443)</td></tr><tr><td>Other OpEx</td><td>($5,838)</td><td>($5,994)</td><td>($6,072)</td><td>($6,150)</td><td>($6,228)</td><td>($6,306)</td></tr><tr><td><strong>EBITDA</strong></td><td><strong>$9,910</strong></td><td><strong>$11,042</strong></td><td><strong>$11,607</strong></td><td><strong>$12,172</strong></td><td><strong>$12,738</strong></td><td><strong>$13,304</strong></td></tr><tr><td>Cumulative CF</td><td>$32,616</td><td>$43,658</td><td>$55,264</td><td>$67,437</td><td>$80,175</td><td><strong>$93,478</strong></td></tr></tbody></table>
+<p><strong>Milestones:</strong> Month 2 EBITDA positive · Month 3 cumulative positive (peak trough −$1,965) · Year-end EBITDA $93,478 (14.7%), free cash flow $88,478.</p>
+<p><strong>Other OpEx — Year-1 itemization ($66,546 total):</strong></p>
+<table><thead><tr><th>Item</th><th>Amount</th><th>Note</th></tr></thead><tbody><tr><td>Third-party delivery commissions</td><td>$28,350</td><td>17.1% of sales × ~26% — <strong>now broken out</strong> (v1 buried this)</td></tr><tr><td>Insurance (general liability, property, workers' comp)</td><td>$8,000</td><td>Worker's comp for 6–8 food-service employees</td></tr><tr><td>Utilities</td><td>$13,200</td><td>~$1,100/mo</td></tr><tr><td>POS / technology subscriptions</td><td>$4,800</td><td>~$400/mo</td></tr><tr><td>Repairs &amp; maintenance</td><td>$3,600</td><td>Plus the $5K capital maintenance reserve</td></tr><tr><td>Supplies, smallwares &amp; to-go packaging</td><td>$4,800</td><td></td></tr><tr><td><strong>Local store marketing</strong></td><td><strong>$3,796</strong></td><td>Separate from the 2% brand fund (Section 6.3)</td></tr><tr><td><strong>Total</strong></td><td><strong>$66,546</strong></td><td></td></tr></tbody></table>
+<h3>9.6 Break-Even Analysis</h3>
+<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Monthly Fixed Costs</td><td>~$8,400 (occupancy $4,200 + cash fixed opex ~$4,200)</td></tr><tr><td>Variable Cost Ratio</td><td>~67% (COGS 29% + Labor 30% + Royalty 6% + Brand Mktg 2%)</td></tr><tr><td>Contribution Margin</td><td>~33%</td></tr><tr><td>Break-Even Revenue</td><td>~$25,455/mo</td></tr><tr><td>Break-Even Covers</td><td>~65/day</td></tr><tr><td><strong>EBITDA Break-Even</strong></td><td><strong>Month 2 (EBITDA = $297)</strong></td></tr><tr><td><strong>Cumulative Positive</strong></td><td><strong>Month 3</strong></td></tr></tbody></table>
+<p><strong>Sensitivity of the "Month 2" claim (new in v2):</strong> month-2 EBITDA is $297 — technically break-even but only barely. A <strong>four-week delay in the catering pipeline</strong> (catering starting Month 4 instead of Month 3) pushes the cumulative-cash-positive month from Month 3 to <strong>Month 4–5</strong> and lowers Year-1 EBITDA by roughly $8,000–12,000. That is still comfortably inside the $23,000 working-capital reserve and the $17,000 contingency. Investors should read Month 2 as "the ramp crosses zero early," not as a fixed promise.</p>
+<h3>9.7 Cash Flow Statement (Year 1)</h3>
+<table><thead><tr><th>Item</th><th>Year 1</th></tr></thead><tbody><tr><td>EBITDA</td><td>$93,478</td></tr><tr><td>Owner salary</td><td>Already included in EBITDA (labor)</td></tr><tr><td>Less: maintenance capex</td><td>($5,000)</td></tr><tr><td><strong>Free Cash Flow to Invested Capital</strong></td><td><strong>$88,478</strong></td></tr><tr><td>Debt service</td><td>$0</td></tr><tr><td><strong>Distributable Cash (before reserves)</strong></td><td><strong>$88,478</strong></td></tr><tr><td>Less: minimum operating cash floor and tax reserve</td><td>(per Appendix G distribution policy)</td></tr><tr><td><strong>Investor distributions (illustrative)</strong></td><td><strong>$62,687</strong> (preferred $24,000 + 60% of $64,478)</td></tr></tbody></table>
+<p><em>(Distribution mechanics, retention policy, and tax distributions are defined in Appendix G. The plan recommends quarterly distributions of distributable cash up to the preferred return plus the 60/40 split, retaining a stated minimum cash floor.)</em></p>
+<h3>9.8 Projected Balance Sheet</h3>
+<p><strong>Opening (at $300K close):</strong></p>
+<table><thead><tr><th>Assets</th><th></th><th>Liabilities &amp; Equity</th><th></th></tr></thead><tbody><tr><td>Cash (working capital $23,000 + contingency $17,000)</td><td>$40,000</td><td>Liabilities</td><td>$0</td></tr><tr><td>Inventory &amp; smallwares</td><td>$14,000</td><td><strong>Equity (investors)</strong></td><td><strong>$300,000</strong></td></tr><tr><td>FF&amp;E (incl. POS hardware)</td><td>$63,000</td><td></td><td></td></tr><tr><td>Leasehold improvements</td><td>$115,000</td><td></td><td></td></tr><tr><td>Franchise fee (intangible)</td><td>$35,000</td><td></td><td></td></tr><tr><td>Pre-opening costs (permits, pre-opening marketing, professional fees)</td><td>$33,000</td><td></td><td></td></tr><tr><td><strong>Total</strong></td><td><strong>$300,000</strong></td><td><strong>Total</strong></td><td><strong>$300,000</strong></td></tr></tbody></table>
+<p><strong>Year 1 End:</strong></p>
+<table><thead><tr><th>Assets</th><th></th><th>Liabilities &amp; Equity</th><th></th></tr></thead><tbody><tr><td>Cash (40,000 + 88,478 OCF)</td><td>$128,478</td><td>Liabilities</td><td>$0</td></tr><tr><td>Inventory &amp; smallwares</td><td>$14,000</td><td>Equity: opening</td><td>$300,000</td></tr><tr><td>FF&amp;E (68,000 gross incl. $5K capex, less $9,000 dep)</td><td>$59,000</td><td>Retained earnings</td><td>$69,478</td></tr><tr><td>Leasehold (less $11,500 dep)</td><td>$103,500</td><td></td><td></td></tr><tr><td>Franchise fee (less $3,500 amortization)</td><td>$31,500</td><td></td><td></td></tr><tr><td>Pre-opening costs</td><td>$33,000</td><td></td><td></td></tr><tr><td><strong>Total</strong></td><td><strong>$369,478</strong></td><td><strong>Total</strong></td><td><strong>$369,478</strong></td></tr></tbody></table>
+<p><em>Tie-out: D&amp;A = FF&amp;E $63,000 ÷ 7 = $9,000 + leasehold $115,000 ÷ 10 = $11,500 + franchise $35,000 ÷ 10 = $3,500 = <strong>$24,000</strong>. Net income (pre-tax) = $93,478 − $24,000 = <strong>$69,478</strong>. Operating cash flow = $69,478 + $24,000 − $5,000 maintenance capex = <strong>$88,478</strong>. The balance sheet balances to the dollar at $369,478. Pre-opening costs are carried unamortized in Year 1 (conservative treatment to be finalized with the CPA).</em></p>
+<h3>9.9 Investor Return Structure (Illustrative — Confirm Before Circulating)</h3>
+<table><thead><tr><th>Component</th><th>Amount</th><th>Year 1</th></tr></thead><tbody><tr><td>8% cumulative preferred on $300K</td><td>$24,000/yr</td><td>$24,000</td></tr><tr><td>Remaining after preferred ($88,478 − $24,000)</td><td>$64,478</td><td>—</td></tr><tr><td>60/40 split (investors/operator)</td><td>$38,687 / $25,791</td><td>—</td></tr><tr><td><strong>Total Year 1 investor cash return</strong></td><td></td><td><strong>$62,687 (20.9%)</strong></td></tr><tr><td>Operator Year 1</td><td>$25,791 + $60,000 salary</td><td>$85,791</td></tr></tbody></table>
+<p><strong>Alternative (8% preferred + 50/50):</strong> investors $56,239 (18.7%), operator $32,239 + salary.</p>
+<p><strong>Two return measures, kept distinct:</strong></p>
+<table><thead><tr><th>Measure</th><th>Year 1</th><th>Basis</th></tr></thead><tbody><tr><td><strong>Project-level return on capital</strong></td><td><strong>31.2%</strong></td><td>EBITDA $93,478 ÷ $300,000</td></tr><tr><td><strong>Investor-level cash return</strong></td><td><strong>20.9%</strong></td><td>$62,687 distribution ÷ $300,000</td></tr></tbody></table>
+<p><em>These are not the same number and should never be conflated in investor conversations. v1's "≈29% CAGR" conflated them and assumed a return of principal that does not exist in the terms.</em></p>
+<h3>9.10 Sensitivity — Stress Test</h3>
+<table><thead><tr><th>Metric</th><th>Base</th><th>Stress (−20% covers, 32% COGS)</th></tr></thead><tbody><tr><td>Revenue</td><td>$637,650</td><td>~$511,680 (≈ −20%)</td></tr><tr><td>EBITDA</td><td>$93,478</td><td><strong>$36,090</strong></td></tr><tr><td>Margin</td><td>14.7%</td><td>7.1%</td></tr><tr><td>Project-level ROI on $300K</td><td>31.2%</td><td>12.0%</td></tr><tr><td>Cash position</td><td>Positive M3</td><td>Positive all year</td></tr></tbody></table>
+<p><em>The stress case still covers the $24,000 preferred return ($36,090 &gt; $24,000); investor distributions would fall to roughly $31,254 (10.4%) in that year — profitable but thin.</em></p>
+<p><strong>Levers:</strong> labor to ~27% (owner lowers draw) · COGS to 27% · defer non-essential spend · accelerate catering outreach. The $23K working capital reserve covers the base trough ~12× over.</p>
+<h3>9.11 Five-Year Outlook — Line-by-Line P&amp;L and Margin Walk</h3>
+<p><strong>Five-Year P&amp;L (no debt):</strong> <em>(D&amp;A rises modestly as equipment-refresh capex accumulates; net income is pre-tax — pass-through LLC, before K-1 tax distributions.)</em></p>
+<table><thead><tr><th>Metric</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th><th>Yr 4</th><th>Yr 5</th></tr></thead><tbody><tr><td>Revenue</td><td>$637,650</td><td>$780,000</td><td>$842,000</td><td>$885,000</td><td>$925,000</td></tr><tr><td>COGS</td><td>($184,919)</td><td>($222,300)</td><td>($237,444)</td><td>($247,800)</td><td>($259,000)</td></tr><tr><td>Labor (incl. owner)</td><td>($191,295)</td><td>($215,900)</td><td>($230,784)</td><td>($240,931)</td><td>($247,927)</td></tr><tr><td>Occupancy</td><td>($50,400)</td><td>($50,400)</td><td>($51,912)</td><td>($53,469)</td><td>($55,073)</td></tr><tr><td>Royalty (6%)</td><td>($38,259)</td><td>($46,800)</td><td>($50,520)</td><td>($53,100)</td><td>($55,500)</td></tr><tr><td>Brand Marketing (2%)</td><td>($12,753)</td><td>($15,600)</td><td>($16,840)</td><td>($17,700)</td><td>($18,500)</td></tr><tr><td>Other OpEx</td><td>($66,546)</td><td>($81,000)</td><td>($86,000)</td><td>($90,000)</td><td>($94,000)</td></tr><tr><td><strong>EBITDA</strong></td><td><strong>$93,478</strong></td><td><strong>$148,000</strong></td><td><strong>$168,500</strong></td><td><strong>$182,000</strong></td><td><strong>$195,000</strong></td></tr><tr><td>D&amp;A</td><td>($24,000)</td><td>($25,000)</td><td>($26,000)</td><td>($27,000)</td><td>($28,000)</td></tr><tr><td><strong>Net income (pre-tax)</strong></td><td><strong>$69,478</strong></td><td><strong>$123,000</strong></td><td><strong>$142,500</strong></td><td><strong>$155,000</strong></td><td><strong>$167,000</strong></td></tr><tr><td>Maintenance capex</td><td>($5,000)</td><td>($7,000)</td><td>($8,000)</td><td>($9,000)</td><td>($10,000)</td></tr><tr><td><strong>Free Cash Flow</strong></td><td><strong>$88,478</strong></td><td><strong>$141,000</strong></td><td><strong>$160,500</strong></td><td><strong>$173,000</strong></td><td><strong>$185,000</strong></td></tr><tr><td><strong>Cumulative FCF</strong></td><td>$88,478</td><td>$229,478</td><td>$389,978</td><td>$562,978</td><td><strong>$747,978</strong></td></tr><tr><td>Owner salary (annual)</td><td>$60,000</td><td>$60,000</td><td>$60,000</td><td>$60,000</td><td>$60,000</td></tr></tbody></table>
+<p><strong>Margin walk — why EBITDA margin goes from 14.7% to 21.1% (new in v2):</strong></p>
+<table><thead><tr><th>Ratio</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th><th>Yr 4</th><th>Yr 5</th><th>Δ Yr1→Yr5</th></tr></thead><tbody><tr><td>COGS %</td><td>29.0%</td><td>28.5%</td><td>28.2%</td><td>28.0%</td><td>28.0%</td><td>−1.0 pp</td></tr><tr><td>Labor % (incl. owner)</td><td>30.0%</td><td>27.7%</td><td>27.4%</td><td>27.2%</td><td>26.8%</td><td>−3.2 pp</td></tr><tr><td>Occupancy %</td><td>7.9%</td><td>6.5%</td><td>6.2%</td><td>6.0%</td><td>6.0%</td><td>−1.9 pp</td></tr><tr><td>Royalty + Brand Mktg %</td><td>8.0%</td><td>8.0%</td><td>8.0%</td><td>8.0%</td><td>8.0%</td><td>0.0 pp</td></tr><tr><td>Other OpEx %</td><td>10.4%</td><td>10.4%</td><td>10.2%</td><td>10.2%</td><td>10.2%</td><td>−0.2 pp</td></tr><tr><td><strong>EBITDA margin</strong></td><td><strong>14.7%</strong></td><td><strong>19.0%</strong></td><td><strong>20.0%</strong></td><td><strong>20.6%</strong></td><td><strong>21.1%</strong></td><td><strong>+6.4 pp</strong></td></tr></tbody></table>
+<p><strong>Drivers, stated plainly:</strong></p>
+<ol>
+<li><strong>Labor leverage (−3.2 pp):</strong> the owner's fixed $60,000 salary falls from 9.4% to 6.5% of sales (−2.9 pp); crew labor holds at ~20.5% of sales because volume leverage is largely offset by ~3%/yr wage inflation.</li>
+<li><strong>Occupancy leverage (−1.9 pp):</strong> rent is fixed (escalating 3%/yr from Year 3) while revenue grows 45% — occupancy falls from 7.9% to 6.0%.</li>
+<li><strong>COGS improvement (−1.0 pp):</strong> catering volume and franchisor purchasing leverage move the mix from 29.0% to 28.0%.</li>
+<li><strong>Catering mix shift:</strong> catering grows from 15–20% of sales (Year 1) toward 25% by Year 3 — higher-margin institutional volume is the single biggest driver of both revenue and COGS improvement.</li>
+</ol>
+<p><em>No line is assumed to improve without a named mechanism. Investors can hold the model to each of these four.</em></p>
+<p><strong>5-year cumulative free cash flow $747,978 = 249% of the $300,000 invested.</strong> (v1 quoted $786,978 / 262% / "≈29% CAGR"; that figure ignored maintenance capex in Years 2–5 and implied an IRR that depended on a return of principal the terms never provided.)</p>
+<h3>9.12 Downside Scenarios and Multi-Variable Sensitivity (new in v2)</h3>
+<p><strong>A. Slow-ramp scenario (more likely than a flat −20% haircut).</strong> Reaching 185 covers/day in <strong>Month 18</strong> instead of Month 12 — a delayed ramp, which is the realistic failure mode for a new suburban unit:</p>
+<table><thead><tr><th>Metric</th><th>Base</th><th>Slow ramp (185 covers by Month 18)</th></tr></thead><tbody><tr><td>Year-1 average covers/day</td><td>136</td><td>~100</td></tr><tr><td>Year-1 revenue</td><td>$637,650</td><td>~$468,000</td></tr><tr><td>Year-1 labor %</td><td>30%</td><td>~34% (labor cannot flex down with volume)</td></tr><tr><td>Year-1 EBITDA</td><td>$93,478</td><td><strong>~$25,320 (5.4%)</strong></td></tr><tr><td>Time to cumulative positive</td><td>Month 3</td><td>~Month 8–10</td></tr><tr><td>Reserve adequacy</td><td>—</td><td>Covered by $23K working capital + $17K contingency</td></tr></tbody></table>
+<p><strong>B. Multi-variable sensitivity grid (Year-1 EBITDA):</strong></p>
+<table><thead><tr><th>Scenario</th><th>Revenue</th><th>EBITDA</th><th>Margin</th><th>ROI on $300K</th></tr></thead><tbody><tr><td>Base</td><td>$637,650</td><td>$93,479</td><td>14.7%</td><td>31.2%</td></tr><tr><td>Covers +10%</td><td>$701,415</td><td>$114,521</td><td>16.3%</td><td>38.2%</td></tr><tr><td>Covers −10%</td><td>$573,885</td><td>$72,436</td><td>12.6%</td><td>24.1%</td></tr><tr><td>Covers −10%, COGS 31%</td><td>$573,885</td><td>$60,958</td><td>10.6%</td><td>20.3%</td></tr><tr><td>Covers −10%, Labor 32%</td><td>$573,885</td><td>$60,958</td><td>10.6%</td><td>20.3%</td></tr><tr><td>Covers −10%, COGS 31%, Labor 32%</td><td>$573,885</td><td>$49,481</td><td>8.6%</td><td>16.5%</td></tr><tr><td>Stress: covers −20%, COGS 32%</td><td>$510,120</td><td>$36,090</td><td>7.1%</td><td>12.0%</td></tr></tbody></table>
+<p><em>Revenue scales with covers; COGS, labor, royalty and brand marketing scale with revenue; occupancy and Other OpEx are held fixed (conservative — a portion of Other OpEx is variable and would fall with volume).</em></p>
+<h3>9.13 Investor Waterfall — Illustrative Investor Cash Flows</h3>
+<table><thead><tr><th>Year</th><th>Free Cash Flow</th><th>Preferred (8% cum.)</th><th>60% to investors</th><th><strong>Investor cash</strong></th></tr></thead><tbody><tr><td>1</td><td>$88,478</td><td>$24,000</td><td>$38,687</td><td><strong>$62,687</strong></td></tr><tr><td>2</td><td>$141,000</td><td>$24,000</td><td>$70,200</td><td><strong>$94,200</strong></td></tr><tr><td>3</td><td>$160,500</td><td>$24,000</td><td>$81,900</td><td><strong>$105,900</strong></td></tr><tr><td>4</td><td>$173,000</td><td>$24,000</td><td>$89,400</td><td><strong>$113,400</strong></td></tr><tr><td>5</td><td>$185,000</td><td>$24,000</td><td>$96,600</td><td><strong>$120,600</strong></td></tr><tr><td><strong>Total</strong></td><td><strong>$747,978</strong></td><td><strong>$120,000</strong></td><td><strong>$376,787</strong></td><td><strong>$496,787</strong></td></tr></tbody></table>
+<p><strong>Investor IRR (computed from the above):</strong></p>
+<ul>
+<li><strong>Distributions only, no capital return: ≈17.5%</strong></li>
+<li><strong>With the Year-5 buyout at 4.0× trailing EBITDA (Section 9.15): ≈39%</strong></li>
+</ul>
+<p><em>Both are computed from this model, not asserted. The project-level five-year return (249% of capital in cumulative free cash flow) and the investor-level return are different numbers and are presented separately.</em></p>
+<h3>9.14 Securities &amp; Offering Compliance — <strong>REQUIRED BEFORE ANY SOLICITATION</strong></h3>
+<p>A $300,000 private raise is a securities offering. None of it may be solicited or accepted until the following exist:</p>
+<table><thead><tr><th>Item</th><th>Detail</th></tr></thead><tbody><tr><td><strong>Exemption</strong></td><td><strong>Regulation D, Rule 506(b)</strong> — recommended. No general solicitation or advertising; unlimited accredited investors plus up to 35 sophisticated non-accredited investors. (Rule 506(c) permits general solicitation but requires all-accredited investors and reasonable verification steps.)</td></tr><tr><td><strong>Private Placement Memorandum (PPM)</strong></td><td>Prepared by securities counsel — risk factors, terms, use of proceeds, financials, management</td></tr><tr><td><strong>Subscription agreement</strong></td><td>Investor acknowledgment, accredited/sophisticated status representation, anti-money-laundering</td></tr><tr><td><strong>Operating agreement</strong></td><td>Manager-managed LLC; investor rights, transfer restrictions, waterfall (Appendix G)</td></tr><tr><td><strong>Form D</strong></td><td>Filed with the SEC within 15 days of the first sale</td></tr><tr><td><strong>State notice filings</strong></td><td>Blue-sky notice filing in Minnesota (and in any state where an investor resides, if required)</td></tr><tr><td><strong>Investor eligibility</strong></td><td>Accredited investors preferred; non-accredited (max 35) require enhanced disclosure</td></tr><tr><td><strong>Anti-fraud</strong></td><td>No projections may be presented as guarantees; the Section 13 validation and Section 9.12 sensitivities must accompany any financial discussion</td></tr><tr><td><strong>General disclaimer</strong></td><td><em>This document is a business plan, not an offer to sell securities. Any offer will be made only through a PPM to eligible investors.</em></td></tr></tbody></table>
+<p><strong>Cost:</strong> securities counsel for a PPM of this size typically runs $15,000–$30,000. <strong>This is not in the $300,000 project budget</strong> (which funds the store), and must be funded separately by the operator/sponsor or deducted from gross proceeds before deployment — a decision the operator must make before drafting (Appendix G, item 12).</p>
+<h3>9.15 Exit &amp; Liquidity — Year-5 Mechanism (new in v2)</h3>
+<p>v1 had no exit path. Investors asked for one; here it is:</p>
+<table><thead><tr><th>Provision</th><th>Recommended term</th></tr></thead><tbody><tr><td><strong>Operator buyout right</strong></td><td>At any time from the end of Year 5, the operator (or the LLC) may buy out investor interests at <strong>4.0× trailing-twelve-month EBITDA</strong>, less outstanding preferred, subject to a minimum price of invested capital plus accrued preferred</td></tr><tr><td><strong>Alternative — sale process</strong></td><td>If no buyout is exercised by the end of Year 6, the manager must run a marketed sale of the unit; investors hold <strong>drag-along</strong> rights to compel a sale and <strong>tag-along</strong> rights on any transfer</td></tr><tr><td><strong>Multiple rationale</strong></td><td>3–4× trailing EBITDA is the common range for a single-unit franchise restaurant; 4.0× is used here as the illustrative ceiling and 3.5× as the floor</td></tr><tr><td><strong>Illustrative value at Year 5</strong></td><td>4.0 × $195,000 = <strong>$780,000</strong> enterprise value; 3.5 × $195,000 = <strong>$682,500</strong></td></tr><tr><td><strong>Investor proceeds at Year 5 (illustrative, 4.0×)</strong></td><td>$300,000 return of preferred principal + 60% of ($780,000 − $300,000) = <strong>$588,000</strong> (plus prior distributions)</td></tr><tr><td><strong>Transaction costs</strong></td><td>Capped at 3% of enterprise value, borne by the seller side</td></tr></tbody></table>
+<p><em>The buyout is a right, not an obligation, of the operator. If it is important to investors that a liquidity event be guaranteed, the alternative is a mandatory sale window in Year 6 (as above).</em></p>
+<h3>9.16 Expansion &amp; Unit-2 Conflict Resolution (new in v2)</h3>
+<p>The five-year outlook references Minnetonka (Yrs 3–5). The review correctly identified a conflict: <strong>Unit-1 cash funding a Unit-2 build would be Unit-1 investors funding a different venture.</strong> Resolved as follows:</p>
+<table><thead><tr><th>Principle</th><th>Detail</th></tr></thead><tbody><tr><td><strong>Separate entities</strong></td><td>Each unit is its own LLC with its own investors. Unit-1 capital cannot be transferred to Unit 2.</td></tr><tr><td><strong>No cross-subsidy</strong></td><td>Unit-1 free cash flow is distributed per the waterfall (9.13) after reserves. Unit-1 distributions are <strong>never subordinated</strong> to Unit-2 capital needs.</td></tr><tr><td><strong>Preemptive participation right</strong></td><td>Unit-1 investors receive a right of first refusal to fund up to 100% of any subsequent unit's equity, pro rata to their Unit-1 ownership, on the same terms offered to new investors.</td></tr><tr><td><strong>Consent right</strong></td><td>Deployment of any Unit-1 retained cash above the stated reserve floor toward a new-unit build requires <strong>majority-in-interest investor consent</strong>.</td></tr><tr><td><strong>Disclosure</strong></td><td>The expansion roadmap (Section 14) is presented as a <strong>separate future offering</strong>, not as an outcome Unit-1 investors are funding.</td></tr></tbody></table>
+<hr>
+<h2>10. Risk Assessment</h2>
+<h3>10.1 Franchisor Readiness (Front Gate — verify BEFORE committing capital)</h3>
+<ul>
+<li><strong>FDD availability</strong> — is Afro Deli registered to franchise? Obtain and review the FDD</li>
+<li><strong>Existing franchisees</strong> — how many franchise units exist beyond the 3 company locations?</li>
+<li><strong>Item 19 data</strong> — financial performance representations available?</li>
+<li><strong>Litigation history</strong> — FDD Items 3 &amp; 4, franchise attorney review</li>
+<li><strong>Franchise Fee</strong> — exact amount, promotional discounts</li>
+<li><strong>Royalty Structure</strong> — 6% + 2% marketing; caps, minimums, local ad requirements</li>
+<li><strong>Training Program</strong> — duration, location, owner-operator requirements</li>
+<li><strong>Territory Rights</strong> — Woodbury-specific protection</li>
+<li><strong>Supply Chain</strong> — approved supplier list, specialty ingredient requirements, <strong>named halal certifier</strong></li>
+<li><strong>Renewal Terms</strong> — initial term and renewal conditions</li>
+<li><strong>Transfer &amp; Exit Provisions</strong> — resale and transferability</li>
+</ul>
+<p><em>If the franchisor cannot demonstrate an active, registered franchise program with verifiable Item 19 data, investor capital should NOT be committed — this is a gate, not a formality.</em></p>
+<p><strong>Minnesota registration:</strong> Minnesota is a <strong>franchise registration state</strong>. The franchisor must register its FDD with the Minnesota Department of Commerce (Securities Division) — and renew annually — before offering or selling a franchise here. Counsel estimates 4–6 weeks for review, longer if the examiner issues comment letters. This is a franchisor obligation, but it gates our opening date and is built into the calendar (Section 11.1).</p>
+<h3>10.2 Operating Risks &amp; Mitigants</h3>
+<table><thead><tr><th>Risk</th><th>Mitigation</th></tr></thead><tbody><tr><td>Slow ramp (50% of covers)</td><td>Projections already 15% below existing-location averages; slow-ramp scenario modeled (Section 9.12)</td></tr><tr><td>Build-out cost overrun</td><td>Second-generation space required; lease contingent on kitchen inspection; <strong>dedicated $17,000 (10%) contingency</strong></td></tr><tr><td>Equipment failure</td><td>$5K/yr maintenance capex + repair reserve; leasing options for key items</td></tr><tr><td>Catering slower than expected</td><td>Not dependent on catering — even at 0%, lunch traffic fills; Month-2 break-even sensitivity disclosed (9.6)</td></tr><tr><td>Halal protein inflation</td><td>Portion control, supplier contracts, menu engineering</td></tr><tr><td>Labor pressure</td><td>Cross-trained staff, owner covers shifts, retention program, wage bands modeled (7.6)</td></tr><tr><td>Lease escalation</td><td>10-year initial term aligned to the franchise term + two 5-year options; fixed escalator</td></tr><tr><td><strong>Key-person risk</strong></td><td><strong>Day-1 General Manager hire (not deferred); written SOPs; key-person life/disability insurance on the operator ($500K–$1M) with the LLC as beneficiary</strong></td></tr><tr><td>Third-party delivery commission creep</td><td>Delivery commissions now a disclosed line (~26% modeled); mitigate with delivery-menu price markup and in-house online ordering via Toast</td></tr></tbody></table>
+<h3>10.3 Compliance &amp; Legal</h3>
+<ul>
+<li><strong>Entity:</strong> Minnesota <strong>manager-managed</strong> LLC (manager: Koo Ok; investor members passive) — formed before capital commitment. <em>(v1 said "member-managed," which is the wrong vehicle for passive investors.)</em></li>
+<li><strong>Securities:</strong> Regulation D 506(b) private placement; PPM, subscription agreement, Form D, state notice filings (Section 9.14)</li>
+<li><strong>Franchise agreements:</strong> attorney review of FDD + franchise agreement (Section 10.1)</li>
+<li><strong>Tax:</strong> pass-through LLC; <strong>tax-distribution clause required</strong> (Appendix G) so investors are not taxed on retained income without cash</li>
+<li><strong>Insurance:</strong> general liability, property, workers' comp, D&amp;O for the LLC; key-person policy on the operator</li>
+<li><strong>Permits:</strong> City of Woodbury business license, food service license, MN Dept of Health inspection, signage permits</li>
+<li><strong>Employment:</strong> MN wage/hour compliance, I-9/E-Verify, halal handling certifications</li>
+</ul>
+<hr>
+<h2>11. Milestones &amp; KPIs</h2>
+<h3>11.1 24-Month Execution Calendar</h3>
+<table><thead><tr><th>Period</th><th>Milestones</th></tr></thead><tbody><tr><td>Months 1–2</td><td><strong>FDD review complete · franchise attorney engaged · entity formed (manager-managed LLC) · site shortlist · PPM drafted</strong></td></tr><tr><td>Months 3–4</td><td><strong>Site LOI (kitchen-inspection contingent) · lease negotiated · MN FDD registration confirmed by franchisor · $300K raise opened and closed · franchise agreement signed</strong></td></tr><tr><td>Months 5–6</td><td>Permits secured · build-out begins · franchisor training scheduled</td></tr><tr><td>Months 7–9</td><td>Build-out complete · equipment install · POS live · hiring + training</td></tr><tr><td>Month 10</td><td>Soft opening (50 covers/day ramp begins)</td></tr><tr><td>Month 11</td><td>Grand opening · marketing launch · catering pipeline live</td></tr><tr><td>Months 12–24</td><td>Ramp to 185 covers/day · 40+ catering accounts · dinner ≥ 20% · loyalty 2,000+</td></tr></tbody></table>
+<p><strong>Sequencing corrected (v2):</strong> v1 raised the $300K in Months 1–2 while scheduling the site LOI for Months 3–4, contradicting its own Next Steps ("open the raise once FDD + site LOI are in place"). The raise now opens at Months 3–4, <strong>after</strong> the FDD review and the site LOI — the correct, investor-protective order.</p>
+<h3>11.2 KPI Dashboard (monthly investor report)</h3>
+<table><thead><tr><th>KPI</th><th>Target (Month 12)</th><th>Early-warning threshold</th></tr></thead><tbody><tr><td>Revenue</td><td>$72,150/mo (185 covers)</td><td>&lt; 80% of plan for 2 consecutive months</td></tr><tr><td>EBITDA margin</td><td>14.7%</td><td>&lt; 10%</td></tr><tr><td>Labor %</td><td>30% incl. owner</td><td>&gt; 34%</td></tr><tr><td>COGS %</td><td>29%</td><td>&gt; 32%</td></tr><tr><td>Average ticket</td><td>$15.00</td><td>&lt; $14.00</td></tr><tr><td>Catering %</td><td>15–20%</td><td>0% catering accounts by Month 6</td></tr><tr><td>Reviews</td><td>4.5★+, 40+/quarter</td><td>&lt; 4.0★</td></tr><tr><td>Delivery %</td><td>≥ 17%</td><td>&lt; 13%</td></tr><tr><td><strong>Cash floor</strong></td><td>≥ $15,000</td><td>&lt; $10,000</td></tr></tbody></table>
+<hr>
+<h2>12. Community Impact — Measurable Commitments</h2>
+<p>Afro Deli is a social enterprise — the mission is part of the model, not a footnote. <strong>v2 converts narrative into commitments investors can hold the operator to:</strong></p>
+<table><thead><tr><th>Commitment</th><th>Year-1 target</th><th>Reporting</th></tr></thead><tbody><tr><td>Local hiring</td><td>≥50% of team members hired from Woodbury or the Twin Cities East African community</td><td>Quarterly KPI report</td></tr><tr><td>Career path</td><td>≥1 crew member promoted to shift-lead or above</td><td>Annual</td></tr><tr><td>Halal food access</td><td>Certified-halal offering maintained without interruption</td><td>Quarterly</td></tr><tr><td>Cultural programming</td><td>≥4 community events or cultural sponsorships per year</td><td>Quarterly</td></tr><tr><td>School/community support</td><td>Sponsorship of local soccer clubs, school fundraising nights; ≥200 volunteer/staff hours</td><td>Annual</td></tr><tr><td>Transparency</td><td><strong>Annual community impact report</strong> published to investors and the community</td><td>Annual</td></tr></tbody></table>
+<p><strong>Why it matters commercially:</strong> the social-enterprise identity drives customer loyalty, media interest, institutional catering relationships (schools, medical, corporate DEI vendors), and workforce retention — a genuine competitive advantage, not charity.</p>
+<hr>
+<h2>13. Real-World Validation</h2>
+<p>Projections calibrated against <strong>actual POS data from all 3 existing Afro Deli locations</strong> (June 2025–June 2026).</p>
+<table><thead><tr><th>Metric</th><th>Actual (3-Loc Avg)</th><th>Woodbury (Yr 1)</th><th>Variance</th></tr></thead><tbody><tr><td>Annual Revenue</td><td>~$456,000</td><td>~$638,000</td><td>+40% (higher income, no verified competition, growth)</td></tr><tr><td>Average Ticket</td><td>$15.89</td><td>$15.00</td><td>Conservative</td></tr><tr><td>Catering %</td><td>25.7%</td><td>15–20% → 25% by Yr 3</td><td>Conservative ramp</td></tr><tr><td><strong>Labor % (excl. owner)</strong></td><td><strong>15–21%</strong></td><td><strong>20.6%</strong></td><td><strong>At the top of the actual range — new-market wage pressure and lower initial volume leverage</strong></td></tr><tr><td>Delivery</td><td>17.1%</td><td>17.1%</td><td>Matched</td></tr><tr><td>Lunch</td><td>55.7%</td><td>~50%</td><td>Dinner-building</td></tr><tr><td>Dinner</td><td>16.1%</td><td>~25%</td><td>Key growth thesis</td></tr></tbody></table>
+<p><strong>Labor reconciliation (v2):</strong> v1's variance table claimed 25–27% labor (excl. owner) for "new-market operations," which would have cut Year-1 EBITDA to roughly $59,000 (9.3%) — contradicting the $93,478 in the P&amp;L. The two are now reconciled: the P&amp;L's 30% total labor equals <strong>$60,000 owner salary (9.4%) plus $131,295 store labor (20.6% excl. owner)</strong>. That is the modeled figure, it sits at the top of the actual 15–21% range, and it is the basis of every financial statement in this plan. If labor overruns toward 34% total, the sensitivity grid (Section 9.12) shows the impact.</p>
+<hr>
+<h2>14. Strategic Recommendation</h2>
+<p>Woodbury is the strongest entry point for the first suburban Afro Deli franchise — high income, 12% growth, a competitive gap (no verified direct competitor), favorable real estate, and proximity to existing operations.</p>
+<p><strong>Financial Summary</strong></p>
+<ul>
+<li>EBITDA break-even <strong>Month 2</strong> (month-2 EBITDA $297 — see 9.6); cumulative positive <strong>Month 3</strong></li>
+<li>Year 1 EBITDA <strong>$93,478 — 31% project-level return on $300K, zero debt</strong>; Year-1 <strong>investor cash return 20.9%</strong></li>
+<li>$60,000 owner salary included in labor</li>
+<li>Stress-tested: −20% covers + 32% COGS still yields <strong>12% project return</strong>; slow-ramp scenario modeled (9.12)</li>
+<li>5-year cumulative free cash flow <strong>$747,978 (249%)</strong>; investor IRR <strong>≈17.5%</strong> (distributions) to <strong>≈39%</strong> (Year-5 buyout)</li>
+<li><strong>No SBA loan, no personal guarantee, no interest burden</strong></li>
+</ul>
+<p><strong>Expansion Roadmap — separate offerings, not Unit-1-funded</strong></p>
+<table><thead><tr><th>Phase</th><th>Market</th><th>Timeline</th><th>Funding</th></tr></thead><tbody><tr><td>Primary</td><td>Woodbury, MN</td><td>Year 1</td><td>This $300K raise</td></tr><tr><td>Secondary</td><td>Minnetonka, MN</td><td>Years 3–5</td><td><strong>Separate Unit-2 LLC and raise; Unit-1 investors hold a pro-rata right of first refusal (Section 9.16)</strong></td></tr><tr><td>Future</td><td>Edina, MN (express format)</td><td>Year 5+</td><td>Separate offering</td></tr></tbody></table>
+<p><strong>Next Steps</strong></p>
+<ol>
+<li>Request and review the Afro Deli <strong>FDD</strong> (front gate, Section 10.1)</li>
+<li>Validate Item 19 financial representations; confirm the franchisor's Minnesota registration status</li>
+<li>Franchise attorney + securities counsel engagement</li>
+<li>Confirm the operator capital structure (Section 8.5) and the investor terms (Appendix G)</li>
+<li>Site selection (Tamarack Village / Woodbury Lakes / Valley Creek) — second-gen space preferred; <strong>site LOI</strong></li>
+<li>Discovery day with franchisor</li>
+<li>Draft the PPM; then <strong>open the $300K equity raise — only once FDD + site LOI are in place and the offering documents exist</strong> (Section 9.14)</li>
+</ol>
+<hr>
+<p><em>Pro-forma projections based on conservative assumptions. All figures are estimates pending FDD review, final site selection, and lease negotiation. This document is a business plan and not an offer to sell securities; any offer will be made only through a private placement memorandum to eligible investors. Not a guarantee of financial performance.</em></p>
+<hr>
+<h2>15. Appendices</h2>
+<h3>Appendix A — Market Data Sources &amp; Verification Log</h3>
+<table><thead><tr><th>#</th><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>1</td><td>Woodbury population ~75,000; +12% since 2020</td><td>Unverified (carried from v1)</td><td>Metropolitan Council growth projections — to be re-pulled</td></tr><tr><td>2</td><td>Median household income ~$117,000</td><td>Unverified (carried from v1)</td><td>ACS 5-year estimates 2020–2024</td></tr><tr><td>3</td><td>ISD 833 (SoWashCo Schools) ~18,700 students, 29 schools, 6th-largest MN district</td><td><strong>Verified Sept 2026</strong></td><td>sowashco.org (About Us) and US News district profile</td></tr><tr><td>4</td><td>M Health Fairview Woodwinds Hospital is Woodbury's major medical campus</td><td><strong>Verified Sept 2026</strong></td><td>mhealthfairview.org (1925 Woodwinds Dr, Woodbury)</td></tr><tr><td>5</td><td>Competitor presence (Chipotle, Panera, Noodles &amp; Co, Crisp &amp; Green)</td><td><strong>To confirm by site survey</strong></td><td>Physical survey required</td></tr><tr><td>6</td><td>Naf Naf Grill Woodbury (265 Radio Dr) — <strong>closed</strong></td><td><strong>Verified Sept 2026</strong></td><td>Yelp listing ("CLOSED")</td></tr><tr><td>7</td><td>3M (Maplewood) and Ecolab (St. Paul) within the I-94 corridor</td><td>Verified as corporate locations; <strong>drive-time and headcount to confirm</strong></td><td>Company HQ locations</td></tr><tr><td>8</td><td>Daytime population surge 30–40%</td><td>Unverified</td><td>Requires employment/commuter data pull</td></tr><tr><td>9</td><td>DoorDash / Uber Eats delivery commissions 15–30% by plan</td><td><strong>Verified Sept 2026</strong></td><td>Multiple industry fee summaries (2026)</td></tr><tr><td>10</td><td>Minnesota franchise registration required; review 4–6 weeks</td><td><strong>Verified Sept 2026</strong></td><td>MN Dept. of Commerce; franchise counsel summaries</td></tr><tr><td>11</td><td>Twin Cities Somali/East African population 50,000–80,000</td><td>Unverified</td><td>Census/community estimates — to confirm</td></tr><tr><td>12</td><td>Home value ~$430,000</td><td>Unverified (carried from v1)</td><td>Zillow/Redfin</td></tr></tbody></table>
+<p><em>Anything marked "unverified" is flagged rather than asserted. No trade-affecting figure should be presented to investors until its source is attached.</em></p>
+<h3>Appendix B — Financial Assumptions Summary</h3>
+<p>Ticket $15.00 (actual $15.89) · COGS 29% · labor 30% incl. $60K owner · royalty 6% + brand marketing 2% · local store marketing $4,000 (separate) · occupancy $4,200/mo (conservative, top of market) · delivery commissions ~26% of delivery sales · <strong>debt $0 — 100% investor equity</strong> · working capital $23K · contingency $17K · 26 operating days/mo · depreciation FF&amp;E 7yr / leasehold 10yr / franchise 10yr · <strong>maintenance capex $5K→$10K/yr</strong> · taxes not modeled (pre-tax plan)</p>
+<h3>Appendix C — Capital Structure</h3>
+<p>$300,000 investor equity, 100%, no debt/SBA/guarantee · operator contribution per Section 8.5 · 8% cumulative preferred + 60/40 · Year-1 project return 31.2% / investor cash return 20.9% · stress 12.0% project return</p>
+<h3>Appendix D — Existing Location Benchmarks</h3>
+<p>(3 locations, June 2025–June 2026) Revenue $480,000 / $445,000 / $442,000 · ticket $16.12 / $15.74 / $15.81 · catering 26.1% / 25.4% / 25.5% · delivery 16.8% / 17.3% / 17.2% · lunch 55.2% / 56.1% / 55.8% · dinner 16.4% / 15.9% / 16.0% · labor 15–21% (excl. owner) · average turn time 17.8 min <em>(to be formally attached as a POS export)</em></p>
+<h3>Appendix E — Competitive Pricing Snapshot</h3>
+<p>Chipotle ~$10–12 · Panera ~$11–14 · Noodles &amp; Co ~$10–12 · Crisp &amp; Green ~$11–13 · Afro Deli $15.00 (actual $15.89) — premium justified by differentiation, validated by existing locations</p>
+<h3>Appendix F — FDD Verification Checklist</h3>
+<p>(Section 10.1 — 11 items)</p>
+<h3>Appendix G — Indicative Term Sheet (for counsel; not an offer)</h3>
+<table><thead><tr><th>#</th><th>Item</th><th>Recommended term</th></tr></thead><tbody><tr><td>1</td><td>Vehicle</td><td>Minnesota manager-managed LLC; manager: Koo Ok</td></tr><tr><td>2</td><td>Raise</td><td>$300,000 (Reg D 506(b)); minimum investment $25,000</td></tr><tr><td>3</td><td><strong>Preferred return</strong></td><td><strong>8% per annum, CUMULATIVE, compounding quarterly</strong>, accruing on unreturned capital until paid</td></tr><tr><td>4</td><td><strong>Definition of "profit"</strong></td><td><strong>Distributable Cash = EBITDA − maintenance capex − debt service − reserves (minimum operating cash floor $15,000 + accrued tax reserve)</strong> — not "net income," not "EBITDA"</td></tr><tr><td>5</td><td><strong>Distribution policy</strong></td><td><strong>Quarterly distributions in arrears of 100% of Distributable Cash</strong> up to the preferred, then <strong>60% investors / 40% operator</strong>; retention permitted only to maintain the cash floor or fund investor-approved items</td></tr><tr><td>6</td><td><strong>Tax distributions</strong></td><td>Mandatory annual distribution to each investor sufficient to cover estimated federal and state tax on their allocated K-1 income (assumed 40% of allocation), even if that reduces retained cash</td></tr><tr><td>7</td><td>Catch-up</td><td>None (simple 60/40 after preferred)</td></tr><tr><td>8</td><td>Operator compensation</td><td>$60,000 salary (in P&amp;L) + 40% of residual profit; profits interest vests over 4 years (1-year cliff)</td></tr><tr><td>9</td><td>Governance</td><td>Quarterly reports + annual financials; investor consent required for new debt over $25,000, related-party transactions, sale of the unit, or deployment of reserve cash to a new unit</td></tr><tr><td>10</td><td><strong>Exit / liquidity</strong></td><td>Year-5 operator buyout right at 4.0× TTM EBITDA (floor: capital + accrued preferred), else mandatory marketed sale in Year 6; drag-along + tag-along; transaction costs capped at 3%</td></tr><tr><td>11</td><td>Expansion</td><td>Unit-1 investors hold a pro-rata right of first refusal in any subsequent unit; no cross-subsidy (Section 9.16)</td></tr><tr><td>12</td><td>Offering costs</td><td>Securities counsel / PPM costs ($15–30K) funded outside the project budget or from gross proceeds <strong>before</strong> deployment — operator decision required</td></tr></tbody></table>
+<h3>Appendix H — Sensitivity Grid (Year-1 EBITDA)</h3>
+<table><thead><tr><th>Scenario</th><th>EBITDA</th><th>Margin</th></tr></thead><tbody><tr><td>Covers +10%</td><td>$114,521</td><td>16.3%</td></tr><tr><td>Base</td><td>$93,479</td><td>14.7%</td></tr><tr><td>Covers −10%</td><td>$72,436</td><td>12.6%</td></tr><tr><td>Covers −10% + COGS 31%</td><td>$60,958</td><td>10.6%</td></tr><tr><td>Covers −10% + Labor 32%</td><td>$60,958</td><td>10.6%</td></tr><tr><td>Covers −10% + COGS 31% + Labor 32%</td><td>$49,481</td><td>8.6%</td></tr><tr><td>Stress: covers −20% + COGS 32%</td><td>$36,090</td><td>7.1%</td></tr><tr><td>Slow ramp (100 covers avg, labor 34%)</td><td>$25,320</td><td>5.4%</td></tr></tbody></table>
+<h3>Appendix I — Open Items Before Circulation</h3>
+<ol>
+<li>Operator bio and references (Section 8.1) — <strong>blocking</strong></li>
+<li>Operator capital contribution decision (Section 8.5) — <strong>blocking</strong></li>
+<li>PPM / securities counsel engagement and offering-cost funding decision (Section 9.14, Appendix G item 12) — <strong>blocking</strong></li>
+<li>Broker quotes for insurance; counsel quotes for franchise review (Section 9.1)</li>
+<li>FDD obtained and Item 6 / Item 19 verified (Section 10.1) — <strong>hard gate</strong></li>
+<li>Site survey confirming competitor presence and named power-center availability</li>
+<li>Landlord TI term sheet</li>
+<li>Formal POS export for Appendix D</li>
+</ol>
+<hr>
+<p><em>Afro Deli – Woodbury Comprehensive Franchise Business Plan | Revision 2 | Confidential &amp; Proprietary | September 2026</em></p></body></html>

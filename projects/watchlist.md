@@ -329,3 +329,52 @@
 - CIEN ≤ $265: Add to 2% — all-in zone
 - CIEN < $225: Stop — thesis failed, exit
 - CIEN > $385 (reclaim): optional 1% momentum starter, stop under $317
+
+---
+
+## 💊 NVO — Novo Nordisk (GLP-1 incumbent on a dated clock) — added Sep 22, 2026
+
+> Thesis check: looks like a textbook quality-on-discount name on the screen (PE ~9.8,
+> ROIC ~39%), but the discount is NOT sentiment — it's measurable deterioration: Lilly
+> winning the GLP-1 duopoly + a hard semaglutide patent cliff the company itself dates
+> (US LOE 2032). Closest analogue in our book is the FAILED screen bucket (NKE/CRM/NOW/UNH
+> — "deteriorating business"), just with better ROIC. **Watch, do not catch the knife.**
+
+- **The event (Sep 21, 2026):** Capital Markets Day in London laid out 2030 ambitions
+  (5+ multi-blockbuster drugs by 2030, >DKK 150B risk-adjusted pipeline sales by 2035,
+  60M patients, "grow in line with peers"). Investors wanted a decisive turnaround and
+  didn't get one — the ADR gapped **$43.24 → $39.80 (−8.0%)** the same session on
+  **49.3M shares vs ~10M typical** (institutional distribution, not a dip-buy flush).
+  Sep 22 followed through to **$39.40 (−1.0%)**, after-hours $39.34.
+- **The numbers (Sep 22, 2026 close):** $39.40 · market cap $175B · **−38.4% from the
+  $64.16 52-wk high** · 52-wk low **$35.12** · RSI(14) **30** · SMA20 $44.46 / SMA50 $46.51
+  (below both) · trailing PE **9.84** / forward PE **12.24** / PB 5.18 / EV/EBITDA 7.15 /
+  P/FCF 15.1 · **ROIC 39.2%, ROE 59.8%** · Debt/Equity 0.63.
+- **Why it's a watch, not a buy at $39.40:** three structural, dated problems —
+  1) **Lilly is winning the race** (LLY +52% vs NVO −27% over the trailing year);
+  2) **Forward PE (12.2) ABOVE trailing PE (9.8)** = the market is explicitly modeling
+  *earnings decline* into the 2032 US semaglutide LOE — the CEO called it "the elephant
+  in the room";
+  3) the plan leans **volume over price** ("10x capacity for oral GLP-1"), which is
+  margin-thin growth.
+  A 9.8x PE on falling E can get cheaper. That's the value-trap signature.
+- **Entry zones (no chase, confirmation only):** **Confirmation $41–42** (reclaim + 2 closes
+  above the post-CMD shelf = sellers exhausted) · **Floor $35–36** (hard hold of the $35.12
+  52-wk low — deeper value entry, not a guess at the bottom).
+- **Stop:** **closing break below $33** (under the 52-wk low = thesis failed, exit). Do not
+  average down through it.
+- **Targets:** $52 (1yr, if stabilization confirms) / $70 (3yr, only if pipeline diversification
+  actually lands) — **1–2% spec position max**.
+- **Catalyst to wait for:** **Q3 earnings Wed Nov 4, 2026, pre-market** (confirmed). First real
+  checkpoint — buying before it is paying to find out.
+- **Venue:** IBKR for anything structural; Fidelity (Tier 1) can only do **long calls** here
+  (no spreads). NVO options are liquid.
+- **Bear risks:** GLP-1 share loss compounds; US pricing pressure; 2032 LOE arrives with the
+  market already discounting it; "diversification" stays a slide deck; further guidance cuts.
+- **Alert cron active:** NVO ≤ $41 weekdays 11 AM ET (silent unless triggered).
+
+### 🚨 NVO Triggers
+- NVO ≥ $41 (reclaim, 2 closes): Start small (1% spec) — confirmation path
+- NVO ≤ $36 (hard hold of 52-wk low): Add to 2% — floor path
+- NVO < $33 (closing break): Stop — thesis failed, exit
+- NVO before Nov 4 earnings: no new entries (binary checkpoint)
