@@ -1,11 +1,9 @@
 # AFRO DELI – WOODBURY, MINNESOTA
 ## Comprehensive Franchise Business Plan (All-Equity Investor Structure)
 
-**Prepared for:** Koo Ok, Owner-Operator
-**Prepared:** August 2026 · **Revision 2:** September 23, 2026
+**Prepared for:** Kofi Archer and Timi Edu
+**Prepared:** September 2026
 **Status:** Pre-FDD Financial Projections (Subject to Franchisor Verification)
-
-> **Revision Note (v2).** This revision responds to a full outside review of v1. Changes: covers-to-revenue reconciliation; labor-ratio reconciliation (Section 13); single cash-flow basis (free cash flow, not EBITDA); occupancy assumption disclosed as conservative; the unsupported "≈29% CAGR" replaced with a computed investor-level IRR; raise sequencing aligned to the FDD/site-LOI gate; **all structuring and legal gaps closed** (securities compliance, manager-managed LLC, tax distributions, distribution policy — Section 9.13–9.15 and Appendix G); Unit-2 expansion conflict defined (Section 9.16); operator capital contribution addressed (Section 8.5); Year-5 exit/liquidity mechanism added (Section 9.15); budget now carries a 10% build-out contingency, delivery commissions broken out, insurance and professional fees trued up, and wage bands provided (Sections 7.6, 9.1, 9.3); slow-ramp downside and a multi-variable sensitivity grid added (Section 9.12); the five-year margin walk is now shown line-by-line (Section 9.11); competitor and market claims verified (Section 5, Appendix A); Minnesota franchise-registration timing added to the calendar (Section 11.1); measurable community commitments added (Section 12); formatting proofread.
 
 ---
 
@@ -87,8 +85,8 @@ This plan covers the **first suburban franchise unit** of Afro Deli — Woodbury
 
 | Element | Detail |
 |---------|--------|
-| Owner-Operator | Koo Ok (full-time, on-site) |
-| Entity | **Minnesota LLC — manager-managed** (manager: Koo Ok), formed before any capital commitment |
+| Owner-Operator | The Owner-Operator (full-time, on-site) |
+| Entity | **Minnesota LLC — manager-managed** (manager: the Owner-Operator), formed before any capital commitment |
 | Capital | $300,000 investor equity; zero debt; **operator cash contribution per Section 8.5** |
 | Investor terms | Illustrative: 8% cumulative preferred return + 60/40 profit split (terminology defined in Appendix G) |
 | Governance | Quarterly investor reporting; operator KPI dashboard (Section 11.2); investor consent rights (Appendix G) |
@@ -317,7 +315,7 @@ The brand's social-enterprise identity (Section 12) is a marketing asset: Woodbu
 
 ### 7.6 Staffing & Training
 
-- **Year 1: 6–8 team members (≈3.6 FTE)** ramping with covers (Section 8.3). *(v1 stated "8–12 FTEs," which was inconsistent with the $131,295 crew-labor budget — corrected.)*
+- **Year 1: 6–8 team members (≈3.6 FTE)** ramping with covers (Section 8.3).
 - Franchisor training program for owner + management (FDD-verified) + on-site training at existing locations
 - Cross-training: every FOH staff can cover 2+ stations; kitchen staff halal-food-handling certified
 - **Labor target:** 30% of revenue including owner salary — at the top of the actual existing-location range (15–21% excluding owner), reflecting new-market wage pressure and lower initial volume leverage
@@ -326,7 +324,7 @@ The brand's social-enterprise identity (Section 12) is a marketing asset: Woodbu
 
 | Role | FTE (Yr 1) | Wage band | Basis |
 |------|-----------|-----------|-------|
-| Owner-Operator (Koo Ok) | 1.0 | $60,000/yr salary | Fixed by plan |
+| Owner-Operator | 1.0 | $60,000/yr salary | Fixed by plan |
 | General Manager | 1.0 | $52,000–62,000/yr salaried | Working manager; opens/closes |
 | Kitchen Lead | 1.0 | $19–22/hr | Halal-handling certified |
 | Cooks / Prep | ~1.5 | $17–20/hr | Ramping with volume |
@@ -350,7 +348,7 @@ The brand's social-enterprise identity (Section 12) is a marketing asset: Woodbu
 
 ### 7.8 Lease Strategy & Landlord TI
 
-- **Term:** target a **10-year initial term with two 5-year renewal options**, aligned to the 10-year franchise term. *(v1 targeted 5–7 years, which would have created a mid-franchise-term lease renewal while ~$180K of leasehold/FF&E was still amortizing — a mismatch now corrected.)*
+- **Term:** target a **10-year initial term with two 5-year renewal options**, aligned to the 10-year franchise term.
 - **Rent:** $18–$25/sq ft NNN (triple-net: tenant pays taxes, insurance, CAM on top of base rent).
 - **Landlord TI:** the plan requests a tenant-improvement allowance of **$25–$40/sq ft (≈$45,000–$72,000 on 1,800 sq ft)**. **The $115,000 build-out budget is stated net of a mid-range TI assumption (~$25/sq ft ≈ $45,000); gross build-out is therefore ≈$160,000.** If TI cannot be secured, the second-generation-space requirement and the $17,000 contingency become critical.
 
@@ -358,7 +356,7 @@ The brand's social-enterprise identity (Section 12) is a marketing asset: Woodbu
 
 ## 8. Management & Organization
 
-### 8.1 Owner-Operator — Koo Ok
+### 8.1 Owner-Operator
 
 Full-time, on-site owner-operator.
 
@@ -376,7 +374,7 @@ Full-time, on-site owner-operator.
 ### 8.2 Organization
 
 ```
-Owner-Operator (Koo Ok)
+Owner-Operator
 ├── General Manager (1)  ← hired before soft opening
 │   ├── Kitchen Lead + Cooks (1 + 1–2)
 │   ├── FOH / Cashier / Serving (2–3 part- and full-time)
@@ -403,7 +401,7 @@ Owner-Operator (Koo Ok)
 
 ### 8.5 Operator Capital Contribution — **TO BE CONFIRMED**
 
-The review correctly flagged that this is unstated. Investors will ask. Two defensible structures:
+This must be stated explicitly. Investors will ask. Two defensible structures:
 
 | Structure | Operator cash | Operator compensation | Investor terms | Note |
 |-----------|--------------|----------------------|----------------|------|
@@ -428,7 +426,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | Initial Inventory / Smallwares | $14,000 | |
 | Pre-Opening Marketing & PR | $13,000 | Capitalized; awareness before Day 1 |
 | Professional Fees | $10,000 | Franchise counsel ($5–10K range), CPA, entity formation, PPM review |
-| **Build-Out & FF&E Contingency (~10%)** | **$17,000** | **New in v2** — exactly 10% of build-out + FF&E ($170,000). Standard and previously absent |
+| **Build-Out & FF&E Contingency (~10%)** | **$17,000** | Exactly 10% of build-out + FF&E ($170,000). Standard industry practice |
 | **Working Capital Reserve** | **$23,000** | Covers the modeled operating trough (−$1,965) ≈ 12×; also funds insurance, first payroll, and pre-opening opex |
 | **Total** | **$300,000** | |
 
@@ -452,7 +450,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | Total Labor (incl. owner salary) | 30% | Owner salary $60K included; ≈3.6 crew FTE (Section 7.6) |
 | Franchise Royalty | 6% of gross revenue | Standard franchise structure |
 | National Marketing Fund | 2% of gross revenue | Brand fund only — **does not fund local ads** (Section 6.3) |
-| Occupancy | $4,200/mo ($50,400/yr) | **Conservative:** ≈$23.33/sq ft all-in on 1,800 sq ft, at the TOP of the $18–$25 market range. (v1's "$4,200/mo at 1,600 sq ft / $24" did not reconcile; the working assumption is 1,800 sq ft at the top of market.) |
+| Occupancy | $4,200/mo ($50,400/yr) | **Conservative:** ≈$23.33/sq ft all-in on 1,800 sq ft, at the TOP of the $18–$25 market range. Working assumption: 1,800 sq ft at the top of the market range. |
 | Debt Service | $0 | All-equity structure |
 | Operating Days | 26/mo | Closed Thanksgiving, Christmas; limited Sunday |
 | Catering (Yr 1) | 15–20% of revenue | **Conservative vs. 25.7% actual** — market case higher, financial case deliberately lower |
@@ -460,7 +458,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | Delivery commissions | ~26% of delivery sales (≈$28,350 in Yr 1) | DoorDash/Uber Eats range 15–30% by plan; **now a disclosed line** (was hidden inside Other OpEx) |
 | Local store marketing | $4,000 Yr 1 (rising to ~1% of sales) | Separate from the 2% brand fund |
 | Depreciation | FF&E 7-yr straight-line; Leasehold 10-yr; Franchise fee 10-yr | $24,000/yr |
-| Maintenance capex | $5,000 Yr 1 → $10,000 Yr 5 | **New in v2** — equipment refresh (was $0 in Years 2–5) |
+| Maintenance capex | $5,000 Yr 1 → $10,000 Yr 5 | Equipment refresh |
 | Taxes | Not modeled (pre-tax plan) | Pass-through LLC; K-1 tax distributions per Appendix G |
 
 **Conservative Ramp-Up**
@@ -480,7 +478,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | 11 | 180 | $70,200 | Pre-holiday catering push |
 | 12 | 185 | $72,150 | Year-end steady state |
 
-*Ramp is 10–15% slower than the pre-revision draft (v1, August 2026) — conservative for a first-time franchise owner in a new suburban market. Revenue = covers/day × 26 days × $15.00.*
+*Ramp is deliberately conservative for a first-time franchise owner in a new suburban market. Revenue = covers/day × 26 days × $15.00.*
 
 ### 9.4 Year 1 Financial Summary
 
@@ -497,7 +495,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | **Project-level Return on $300K** | **31.2% (EBITDA basis)** |
 | **Investor-level Year-1 cash return** | **$62,687 — 20.9%** (Appendix G waterfall) |
 
-*One cash basis throughout: EBITDA is the operating metric; **free cash flow (EBITDA − maintenance capex) is the distribution basis.** v1 mixed these (showing $93,478 in the five-year table and $88,478 in the cash-flow statement).*
+*One cash basis throughout: EBITDA is the operating metric; **free cash flow (EBITDA − maintenance capex) is the distribution basis.***
 
 ### 9.5 Monthly Financial Projections
 
@@ -535,7 +533,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 
 | Item | Amount | Note |
 |------|--------|------|
-| Third-party delivery commissions | $28,350 | 17.1% of sales × ~26% — **now broken out** (v1 buried this) |
+| Third-party delivery commissions | $28,350 | 17.1% of sales × ~26% |
 | Insurance (general liability, property, workers' comp) | $8,000 | Worker's comp for 6–8 food-service employees |
 | Utilities | $13,200 | ~$1,100/mo |
 | POS / technology subscriptions | $4,800 | ~$400/mo |
@@ -556,7 +554,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | **EBITDA Break-Even** | **Month 2 (EBITDA = $297)** |
 | **Cumulative Positive** | **Month 3** |
 
-**Sensitivity of the "Month 2" claim (new in v2):** month-2 EBITDA is $297 — technically break-even but only barely. A **four-week delay in the catering pipeline** (catering starting Month 4 instead of Month 3) pushes the cumulative-cash-positive month from Month 3 to **Month 4–5** and lowers Year-1 EBITDA by roughly $8,000–12,000. That is still comfortably inside the $23,000 working-capital reserve and the $17,000 contingency. Investors should read Month 2 as "the ramp crosses zero early," not as a fixed promise.
+**Sensitivity of the "Month 2" claim:** month-2 EBITDA is $297 — technically break-even but only barely. A **four-week delay in the catering pipeline** (catering starting Month 4 instead of Month 3) pushes the cumulative-cash-positive month from Month 3 to **Month 4–5** and lowers Year-1 EBITDA by roughly $8,000–12,000. That is still comfortably inside the $23,000 working-capital reserve and the $17,000 contingency. Investors should read Month 2 as "the ramp crosses zero early," not as a fixed promise.
 
 ### 9.7 Cash Flow Statement (Year 1)
 
@@ -620,7 +618,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | **Project-level return on capital** | **31.2%** | EBITDA $93,478 ÷ $300,000 |
 | **Investor-level cash return** | **20.9%** | $62,687 distribution ÷ $300,000 |
 
-*These are not the same number and should never be conflated in investor conversations. v1's "≈29% CAGR" conflated them and assumed a return of principal that does not exist in the terms.*
+*These are not the same number and should never be conflated in investor conversations.*
 
 ### 9.10 Sensitivity — Stress Test
 
@@ -657,7 +655,7 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 | **Cumulative FCF** | $88,478 | $229,478 | $389,978 | $562,978 | **$747,978** |
 | Owner salary (annual) | $60,000 | $60,000 | $60,000 | $60,000 | $60,000 |
 
-**Margin walk — why EBITDA margin goes from 14.7% to 21.1% (new in v2):**
+**Margin walk — why EBITDA margin goes from 14.7% to 21.1%:**
 
 | Ratio | Yr 1 | Yr 2 | Yr 3 | Yr 4 | Yr 5 | Δ Yr1→Yr5 |
 |-------|------|------|------|------|------|-----------|
@@ -676,9 +674,9 @@ Under Structure A the operator's profits interest is proposed as a **profits int
 
 *No line is assumed to improve without a named mechanism. Investors can hold the model to each of these four.*
 
-**5-year cumulative free cash flow $747,978 = 249% of the $300,000 invested.** (v1 quoted $786,978 / 262% / "≈29% CAGR"; that figure ignored maintenance capex in Years 2–5 and implied an IRR that depended on a return of principal the terms never provided.)
+**5-year cumulative free cash flow $747,978 = 249% of the $300,000 invested.**
 
-### 9.12 Downside Scenarios and Multi-Variable Sensitivity (new in v2)
+### 9.12 Downside Scenarios and Multi-Variable Sensitivity
 
 **A. Slow-ramp scenario (more likely than a flat −20% haircut).** Reaching 185 covers/day in **Month 18** instead of Month 12 — a delayed ramp, which is the realistic failure mode for a new suburban unit:
 
@@ -740,9 +738,9 @@ A $300,000 private raise is a securities offering. None of it may be solicited o
 
 **Cost:** securities counsel for a PPM of this size typically runs $15,000–$30,000. **This is not in the $300,000 project budget** (which funds the store), and must be funded separately by the operator/sponsor or deducted from gross proceeds before deployment — a decision the operator must make before drafting (Appendix G, item 12).
 
-### 9.15 Exit & Liquidity — Year-5 Mechanism (new in v2)
+### 9.15 Exit & Liquidity — Year-5 Mechanism
 
-v1 had no exit path. Investors asked for one; here it is:
+Investors asked for a defined exit path; here it is:
 
 | Provision | Recommended term |
 |-----------|------------------|
@@ -755,9 +753,9 @@ v1 had no exit path. Investors asked for one; here it is:
 
 *The buyout is a right, not an obligation, of the operator. If it is important to investors that a liquidity event be guaranteed, the alternative is a mandatory sale window in Year 6 (as above).*
 
-### 9.16 Expansion & Unit-2 Conflict Resolution (new in v2)
+### 9.16 Expansion & Unit-2 Conflict Resolution
 
-The five-year outlook references Minnetonka (Yrs 3–5). The review correctly identified a conflict: **Unit-1 cash funding a Unit-2 build would be Unit-1 investors funding a different venture.** Resolved as follows:
+The five-year outlook references Minnetonka (Yrs 3–5). This creates a structural conflict: **Unit-1 cash funding a Unit-2 build would be Unit-1 investors funding a different venture.** Resolved as follows:
 
 | Principle | Detail |
 |-----------|--------|
@@ -805,7 +803,7 @@ The five-year outlook references Minnetonka (Yrs 3–5). The review correctly id
 
 ### 10.3 Compliance & Legal
 
-- **Entity:** Minnesota **manager-managed** LLC (manager: Koo Ok; investor members passive) — formed before capital commitment. *(v1 said "member-managed," which is the wrong vehicle for passive investors.)*
+- **Entity:** Minnesota **manager-managed** LLC (manager: the Owner-Operator; investor members passive) — formed before capital commitment.
 - **Securities:** Regulation D 506(b) private placement; PPM, subscription agreement, Form D, state notice filings (Section 9.14)
 - **Franchise agreements:** attorney review of FDD + franchise agreement (Section 10.1)
 - **Tax:** pass-through LLC; **tax-distribution clause required** (Appendix G) so investors are not taxed on retained income without cash
@@ -829,7 +827,7 @@ The five-year outlook references Minnetonka (Yrs 3–5). The review correctly id
 | Month 11 | Grand opening · marketing launch · catering pipeline live |
 | Months 12–24 | Ramp to 185 covers/day · 40+ catering accounts · dinner ≥ 20% · loyalty 2,000+ |
 
-**Sequencing corrected (v2):** v1 raised the $300K in Months 1–2 while scheduling the site LOI for Months 3–4, contradicting its own Next Steps ("open the raise once FDD + site LOI are in place"). The raise now opens at Months 3–4, **after** the FDD review and the site LOI — the correct, investor-protective order.
+**Raise sequencing:** the $300K raise opens at Months 3–4, **after** the FDD review and the site LOI are in place — the investor-protective order.
 
 ### 11.2 KPI Dashboard (monthly investor report)
 
@@ -849,7 +847,7 @@ The five-year outlook references Minnetonka (Yrs 3–5). The review correctly id
 
 ## 12. Community Impact — Measurable Commitments
 
-Afro Deli is a social enterprise — the mission is part of the model, not a footnote. **v2 converts narrative into commitments investors can hold the operator to:**
+Afro Deli is a social enterprise — the mission is part of the model, not a footnote. **Measurable commitments investors can hold the operator to:**
 
 | Commitment | Year-1 target | Reporting |
 |-----------|---------------|-----------|
@@ -878,7 +876,7 @@ Projections calibrated against **actual POS data from all 3 existing Afro Deli l
 | Lunch | 55.7% | ~50% | Dinner-building |
 | Dinner | 16.1% | ~25% | Key growth thesis |
 
-**Labor reconciliation (v2):** v1's variance table claimed 25–27% labor (excl. owner) for "new-market operations," which would have cut Year-1 EBITDA to roughly $59,000 (9.3%) — contradicting the $93,478 in the P&L. The two are now reconciled: the P&L's 30% total labor equals **$60,000 owner salary (9.4%) plus $131,295 store labor (20.6% excl. owner)**. That is the modeled figure, it sits at the top of the actual 15–21% range, and it is the basis of every financial statement in this plan. If labor overruns toward 34% total, the sensitivity grid (Section 9.12) shows the impact.
+**Labor basis:** the P&L's 30% total labor equals **$60,000 owner salary (9.4%) plus $131,295 store labor (20.6% excl. owner)**. That is the modeled figure, it sits at the top of the actual 15–21% range, and it is the basis of every financial statement in this plan. If labor overruns toward 34% total, the sensitivity grid (Section 9.12) shows the impact.
 
 ---
 
@@ -925,8 +923,8 @@ Woodbury is the strongest entry point for the first suburban Afro Deli franchise
 
 | # | Claim | Status | Source |
 |---|-------|--------|--------|
-| 1 | Woodbury population ~75,000; +12% since 2020 | Unverified (carried from v1) | Metropolitan Council growth projections — to be re-pulled |
-| 2 | Median household income ~$117,000 | Unverified (carried from v1) | ACS 5-year estimates 2020–2024 |
+| 1 | Woodbury population ~75,000; +12% since 2020 | Unverified (carried forward) | Metropolitan Council growth projections — to be re-pulled |
+| 2 | Median household income ~$117,000 | Unverified (carried forward) | ACS 5-year estimates 2020–2024 |
 | 3 | ISD 833 (SoWashCo Schools) ~18,700 students, 29 schools, 6th-largest MN district | **Verified Sept 2026** | sowashco.org (About Us) and US News district profile |
 | 4 | M Health Fairview Woodwinds Hospital is Woodbury's major medical campus | **Verified Sept 2026** | mhealthfairview.org (1925 Woodwinds Dr, Woodbury) |
 | 5 | Competitor presence (Chipotle, Panera, Noodles & Co, Crisp & Green) | **To confirm by site survey** | Physical survey required |
@@ -936,7 +934,7 @@ Woodbury is the strongest entry point for the first suburban Afro Deli franchise
 | 9 | DoorDash / Uber Eats delivery commissions 15–30% by plan | **Verified Sept 2026** | Multiple industry fee summaries (2026) |
 | 10 | Minnesota franchise registration required; review 4–6 weeks | **Verified Sept 2026** | MN Dept. of Commerce; franchise counsel summaries |
 | 11 | Twin Cities Somali/East African population 50,000–80,000 | Unverified | Census/community estimates — to confirm |
-| 12 | Home value ~$430,000 | Unverified (carried from v1) | Zillow/Redfin |
+| 12 | Home value ~$430,000 | Unverified (carried forward) | Zillow/Redfin |
 
 *Anything marked "unverified" is flagged rather than asserted. No trade-affecting figure should be presented to investors until its source is attached.*
 
@@ -964,7 +962,7 @@ Chipotle ~$10–12 · Panera ~$11–14 · Noodles & Co ~$10–12 · Crisp & Gree
 
 | # | Item | Recommended term |
 |---|------|------------------|
-| 1 | Vehicle | Minnesota manager-managed LLC; manager: Koo Ok |
+| 1 | Vehicle | Minnesota manager-managed LLC; manager: the Owner-Operator |
 | 2 | Raise | $300,000 (Reg D 506(b)); minimum investment $25,000 |
 | 3 | **Preferred return** | **8% per annum, CUMULATIVE, compounding quarterly**, accruing on unreturned capital until paid |
 | 4 | **Definition of "profit"** | **Distributable Cash = EBITDA − maintenance capex − debt service − reserves (minimum operating cash floor $15,000 + accrued tax reserve)** — not "net income," not "EBITDA" |
@@ -1003,4 +1001,4 @@ Chipotle ~$10–12 · Panera ~$11–14 · Noodles & Co ~$10–12 · Crisp & Gree
 
 ---
 
-*Afro Deli – Woodbury Comprehensive Franchise Business Plan | Revision 2 | Confidential & Proprietary | September 2026*
+*Afro Deli – Woodbury Comprehensive Franchise Business Plan | Confidential & Proprietary | September 2026*

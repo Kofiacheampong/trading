@@ -57,8 +57,36 @@ VALUE_UNIVERSE = UNIVERSE + ["ACN", "INTU", "DECK", "FDS", "MCD", "PEP"]
 
 TAX_RATE = 0.21          # flat corporate-tax proxy for NOPAT estimate
 VALUE_CACHE_DAYS = 7     # refresh fundamentals weekly
+VALUE_CACHE_VERSION = 2  # v2 (9/28/26): currency-normalized fundamentals — ADR fix
 
 _CRUMB = {"cookie": None, "crumb": None}
+_FX = {}                 # (fin_ccy, quote_ccy) -> multiplier converting fin -> quote
+
+
+def fx_rate(fin_ccy, quote_ccy):
+    """Multiplier converting `fin_ccy` amounts into `quote_ccy` (DKK->USD = ~0.152).
+    Yahoo chart meta on <FIN><QUOTE>=X; tries direct pair then the inverse, and
+    sanity-checks that the quoted currency matches the pair's quote leg. None on
+    failure so callers can fail closed instead of scoring garbage."""
+    if not fin_ccy or not quote_ccy or fin_ccy == quote_ccy:
+        return 1.0
+    key = (fin_ccy, quote_ccy)
+    if key in _FX:
+        return _FX[key]
+    for a, b, invert in ((fin_ccy, quote_ccy, False), (quote_ccy, fin_ccy, True)):
+        url = f"https://query1.finance.yahoo.com/v8/finance/chart/{a}{b}=X?range=1d&interval=1d"
+        out = subprocess.run(["curl", "-s", "-m", "20", "-H", f"User-Agent: {UA}", url],
+                             capture_output=True, text=True)
+        try:
+            meta = json.loads(out.stdout)["chart"]["result"][0]["meta"]
+            p = meta.get("regularMarketPrice")
+            if p and meta.get("currency") == b:
+                rate = (1.0 / p) if invert else float(p)
+                _FX[key] = rate
+                return rate
+        except Exception:
+            continue
+    return None
 
 
 def fetch_fundamentals(sym):
@@ -86,7 +114,7 @@ def fetch_fundamentals(sym):
         except Exception:
             return None
     url = (f"https://query1.finance.yahoo.com/v10/finance/quoteSummary/{sym}"
-           f"?modules=defaultKeyStatistics,financialData&crumb={_CRUMB['crumb']}")
+           f"?modules=defaultKeyStatistics,financialData,price&crumb={_CRUMB['crumb']}")
     out = subprocess.run(["curl", "-s", "-m", "20", "-b",
                           f"A3={_CRUMB['cookie']}", "-H", f"User-Agent: {UA}", url],
                          capture_output=True, text=True)
@@ -95,21 +123,63 @@ def fetch_fundamentals(sym):
         res = d["quoteSummary"]["result"][0]
         st = (res.get("defaultKeyStatistics") or {})
         fn = (res.get("financialData") or {})
-        raw = lambda mod, k: (mod.get(k) or {}).get("raw")
+        pmod = (res.get("price") or {})
+
+        def raw(mod, k):
+            # currency / currencySymbol are plain strings, everything else is
+            # {raw, fmt} — handle both so a bare str can't crash the scan.
+            v = mod.get(k)
+            return v.get("raw") if isinstance(v, dict) else v
+
         px = raw(fn, "currentPrice") or raw(st, "currentPrice")
         shares = raw(st, "sharesOutstanding")
         teps = raw(st, "trailingEps")
-        market_cap = (px * shares) if px and shares else None
+        # --- currency normalization (ADR fix, 9/28/26) ----------------------
+        # Market data arrive in the quote currency (USD), but financialData
+        # statement figures (FCF, OCF, debt, cash, EBITDA, revenue) arrive in
+        # the *financial* currency: DKK for NVO, GBP for BP, JPY for TM, etc.
+        # Blending them silently inflated FCF yield and crushed EV/EBITDA
+        # (NVO printed FCFy 29.1% / EV/EBITDA 1.5 — pure artifact). Yahoo's own
+        # enterpriseValue is blended too (USD market cap + local debt/cash:
+        # 171.4 + 140.1 - 45.0 = 266.5 = the 267.0 it reports), so for
+        # mismatched names we convert the statement legs and rebuild EV.
+        quote_ccy = raw(pmod, "currency") or "USD"
+        fin_ccy = raw(fn, "financialCurrency") or raw(st, "financialCurrency") or quote_ccy
+        mismatch = fin_ccy != quote_ccy
+        fx = fx_rate(fin_ccy, quote_ccy) if mismatch else 1.0
+        fx_failed = mismatch and fx is None
+        conv = (lambda v: None if v is None else v * fx) if not fx_failed else (lambda v: None)
+
+        market_cap = raw(pmod, "marketCap") or ((px * shares) if px and shares else None)
         trailing_pe = (px / teps) if px and teps else None
+        debt = conv(raw(fn, "totalDebt") or raw(st, "totalDebt"))
+        cash = conv(raw(fn, "totalCash") or raw(st, "totalCash"))
+        ebitda = conv(raw(fn, "ebitda"))
+        ebitda_margin = raw(fn, "ebitdaMargins") or raw(st, "ebitdaMargins")
+        revenue = (ebitda / ebitda_margin) if (ebitda and ebitda_margin) else None
+        ev = raw(st, "enterpriseValue")
+        ev_to_ebitda = raw(st, "enterpriseToEbitda")
+        ev_to_revenue = raw(st, "enterpriseToRevenue")
+        if mismatch:
+            ev = ((market_cap + debt - cash)
+                  if None not in (market_cap, debt, cash) else None)
+            ev_to_ebitda = (ev / ebitda) if (ev and ebitda and ebitda > 0) else None
+            ev_to_revenue = (ev / revenue) if (ev and revenue) else None
         return {
             "market_cap": market_cap,
-            "enterprise_value": raw(st, "enterpriseValue"),
+            "enterprise_value": ev,
             "trailing_pe": trailing_pe,
             "forward_pe": raw(st, "forwardPE"),
-            "ev_to_ebitda": raw(st, "enterpriseToEbitda"),
-            "ev_to_revenue": raw(st, "enterpriseToRevenue"),
-            "fcf": raw(fn, "freeCashflow") or raw(st, "freeCashflow"),
-            "ocf": raw(fn, "operatingCashflow") or raw(st, "operatingCashflow"),
+            "ev_to_ebitda": ev_to_ebitda,
+            "ev_to_revenue": ev_to_revenue,
+            "revenue": revenue,
+            "quote_ccy": quote_ccy,
+            "fin_ccy": fin_ccy,
+            "fx": fx,
+            "ccy": fin_ccy if mismatch else None,
+            "fx_failed": fx_failed,
+            "fcf": conv(raw(fn, "freeCashflow") or raw(st, "freeCashflow")),
+            "ocf": conv(raw(fn, "operatingCashflow") or raw(st, "operatingCashflow")),
             "roe": raw(fn, "returnOnEquity") or raw(st, "returnOnEquity"),
             "roa": raw(fn, "returnOnAssets") or raw(st, "returnOnAssets"),
             "gross_margin": raw(fn, "grossMargins") or raw(st, "grossMargins"),
@@ -117,8 +187,8 @@ def fetch_fundamentals(sym):
             "net_margin": raw(fn, "profitMargins") or raw(st, "profitMargins"),
             "revenue_growth": raw(fn, "revenueGrowth") or raw(st, "revenueGrowth"),
             "earnings_growth": raw(fn, "earningsGrowth") or raw(st, "earningsGrowth"),
-            "total_debt": raw(fn, "totalDebt") or raw(st, "totalDebt"),
-            "total_cash": raw(fn, "totalCash") or raw(st, "totalCash"),
+            "total_debt": debt,
+            "total_cash": cash,
             "debt_to_equity": raw(fn, "debtToEquity") or raw(st, "debtToEquity"),
             "book_value": raw(st, "bookValue"),
             "shares_out": shares,
@@ -136,8 +206,11 @@ def est_roic(f):
     Returns % or None. Clearly an estimate — good enough to separate 15%+
     compounders from 9% value traps."""
     try:
-        rev = None  # revenue not in the two modules; derive from EV/EV-to-rev
-        if f.get("ev_to_revenue") and f.get("enterprise_value"):
+        # Revenue in the same (quote) currency as debt/cash/equity. Preferred
+        # source: EBITDA / EBITDA-margin (both identical units, ratio is
+        # currency-free). Fallback: EV / EV-to-revenue.
+        rev = f.get("revenue")
+        if not rev and f.get("ev_to_revenue") and f.get("enterprise_value"):
             rev = f["enterprise_value"] / f["ev_to_revenue"]
         if not rev or not f.get("net_margin") or not f.get("book_value") or not f.get("shares_out"):
             return None
@@ -162,9 +235,13 @@ def value_scan():
     for sym in VALUE_UNIVERSE:
         ent = cache.get(sym) or {}
         ent_date = ent.get("date") or ""
-        if not ent or not ent_date or datetime.date.fromisoformat(ent_date) < stale:
+        if (not ent or not ent_date
+                or ent.get("v") != VALUE_CACHE_VERSION      # pre-ADR-fix cache
+                or ent.get("fx_failed")                      # retry until FX works
+                or datetime.date.fromisoformat(ent_date) < stale):
             ent = fetch_fundamentals(sym) or {}
             ent["date"] = today
+            ent["v"] = VALUE_CACHE_VERSION
             cache[sym] = ent
         ts, closes, vols = fetch_history(sym)
         if not closes or len(closes) < 60:
@@ -225,6 +302,13 @@ def value_scan():
             "rev_growth": round(ent["revenue_growth"] * 100, 1) if ent.get("revenue_growth") else None,
             "vs_200ma": round((px / sma200 - 1) * 100, 1) if sma200 else None,
             "rsi": round(r, 1) if r is not None else None,
+            "ccy": ent.get("ccy"),
+            # plausibility guard: these bands are unreachable for a real listed
+            # company at these sizes, so they mean bad data (or unconvertible
+            # currency), not a bargain. Display-only — does not change score.
+            "suspect": bool(ent.get("fx_failed")
+                            or (fcf_yield is not None and fcf_yield > 20)
+                            or (ent.get("ev_to_ebitda") and 0 < ent["ev_to_ebitda"] < 2)),
             "gates": gates,
             "flag": score >= 55,
         })
@@ -411,10 +495,13 @@ def main():
         print("=== QUALITY-ON-DISCOUNT SCREEN ===")
         for v in vals:
             mark = "FLAG" if v["flag"] else "    "
+            ccy = f" ccy={v['ccy']}" if v.get("ccy") else ""
+            if v.get("suspect"):
+                ccy += " !!suspect-data"
             print(f"{mark} {v['ticker']:5s} score {v['score']:5.1f} px ${v['price']:8.2f} "
                   f"ROIC~{v['roic_est'] if v['roic_est'] is not None else '--':>4} ROE {v['roe'] if v['roe'] is not None else '--':>4} "
                   f"FCFy {v['fcf_yield'] if v['fcf_yield'] is not None else '--':>4} EV/EBITDA {v['ev_ebitda'] if v['ev_ebitda'] is not None else '--':>4} "
-                  f"200ma {v['vs_200ma'] if v['vs_200ma'] is not None else '--':>5} RSI {v['rsi'] if v['rsi'] is not None else '--':>4} [{', '.join(v['gates'])}]")
+                  f"200ma {v['vs_200ma'] if v['vs_200ma'] is not None else '--':>5} RSI {v['rsi'] if v['rsi'] is not None else '--':>4}{ccy} [{', '.join(v['gates'])}]")
         return
     opps = scan()
     for o in opps[:5]:
