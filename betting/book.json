@@ -498,7 +498,7 @@
    "edge": 0.137,
    "stake": 1.33,
    "entered": "2026-10-03",
-   "closing_odds": 4.3,
+   "closing_odds": 4.5,
    "result": null,
    "pnl": null
   },
@@ -513,7 +513,7 @@
    "edge": 0.093,
    "stake": 0.5,
    "entered": "2026-10-03",
-   "closing_odds": 2.35,
+   "closing_odds": 2.3,
    "result": null,
    "pnl": null
   },
@@ -558,7 +558,7 @@
    "edge": 0.084,
    "stake": 0.5,
    "entered": "2026-10-04",
-   "closing_odds": 3.5,
+   "closing_odds": 3.7,
    "result": null,
    "pnl": null
   },
@@ -573,7 +573,22 @@
    "edge": 0.071,
    "stake": 0.5,
    "entered": "2026-10-04",
-   "closing_odds": 3.4,
+   "closing_odds": 3.3,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "6dbab232dd8d2aed0cb1d6f7978fb7b1",
+   "home": "Liverpool",
+   "away": "Manchester City",
+   "commence": "2026-10-11T15:30:00Z",
+   "market": "h2h_away",
+   "odds": 2.5,
+   "model_prob": 0.515,
+   "edge": 0.138,
+   "stake": 0.5,
+   "entered": "2026-10-05",
+   "closing_odds": 2.5,
    "result": null,
    "pnl": null
   }
