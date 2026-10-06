@@ -483,7 +483,7 @@
    "edge": 0.127,
    "stake": 0.5,
    "entered": "2026-10-03",
-   "closing_odds": 2.5,
+   "closing_odds": 2.55,
    "result": null,
    "pnl": null
   },
@@ -513,7 +513,7 @@
    "edge": 0.093,
    "stake": 0.5,
    "entered": "2026-10-03",
-   "closing_odds": 2.3,
+   "closing_odds": 2.25,
    "result": null,
    "pnl": null
   },
@@ -528,7 +528,7 @@
    "edge": 0.061,
    "stake": 0.5,
    "entered": "2026-10-03",
-   "closing_odds": 2.5,
+   "closing_odds": 2.45,
    "result": null,
    "pnl": null
   },
@@ -543,7 +543,7 @@
    "edge": 0.051,
    "stake": 0.5,
    "entered": "2026-10-04",
-   "closing_odds": 2.6,
+   "closing_odds": 2.55,
    "result": null,
    "pnl": null
   },
@@ -558,7 +558,7 @@
    "edge": 0.084,
    "stake": 0.5,
    "entered": "2026-10-04",
-   "closing_odds": 3.7,
+   "closing_odds": 3.5,
    "result": null,
    "pnl": null
   },
@@ -573,7 +573,7 @@
    "edge": 0.071,
    "stake": 0.5,
    "entered": "2026-10-04",
-   "closing_odds": 3.3,
+   "closing_odds": 3.4,
    "result": null,
    "pnl": null
   },
@@ -589,6 +589,21 @@
    "stake": 0.5,
    "entered": "2026-10-05",
    "closing_odds": 2.5,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "acd5bd945dd953ad1e300df5bfe696f9",
+   "home": "Coventry City",
+   "away": "Newcastle United",
+   "commence": "2026-10-12T19:00:00Z",
+   "market": "h2h_away",
+   "odds": 2.1,
+   "model_prob": 0.549,
+   "edge": 0.099,
+   "stake": 0.5,
+   "entered": "2026-10-06",
+   "closing_odds": 2.1,
    "result": null,
    "pnl": null
   }
