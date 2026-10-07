@@ -1,43 +1,27 @@
 {
- "LASK": {
-  "attack": 0.599,
-  "defense": 1.653
- },
  "Paris Saint-Germain": {
   "attack": 1.154,
   "defense": 0.76
- },
- "Feyenoord": {
-  "attack": 0.884,
-  "defense": 1.122
- },
- "Porto": {
-  "attack": 0.9,
-  "defense": 0.51
- },
- "Real Betis": {
-  "attack": 0.933,
-  "defense": 1.101
- },
- "Lille": {
-  "attack": 0.817,
-  "defense": 0.98
  },
  "VfB Stuttgart": {
   "attack": 1.026,
   "defense": 1.051
  },
- "Real Madrid": {
-  "attack": 1.202,
-  "defense": 0.796
+ "Viking FK": {
+  "attack": 0.989,
+  "defense": 1.157
  },
  "Sporting CP": {
   "attack": 1.432,
   "defense": 0.674
  },
- "Galatasaray": {
-  "attack": 1.14,
-  "defense": 0.929
+ "Real Betis": {
+  "attack": 0.933,
+  "defense": 1.101
+ },
+ "Feyenoord": {
+  "attack": 0.884,
+  "defense": 1.122
  },
  "Club Brugge": {
   "attack": 1.074,
@@ -47,36 +31,52 @@
   "attack": 1.57,
   "defense": 0.876
  },
- "Borussia Dortmund": {
-  "attack": 1.016,
-  "defense": 0.738
- },
- "Barcelona": {
-  "attack": 1.486,
-  "defense": 0.824
- },
- "Villarreal": {
-  "attack": 1.131,
-  "defense": 1.06
- },
- "Napoli": {
-  "attack": 0.949,
-  "defense": 0.896
- },
- "Atletico Madrid": {
-  "attack": 0.967,
-  "defense": 1.006
- },
- "Slovan Bratislava": {
-  "attack": 0.696,
-  "defense": 1.517
+ "Real Madrid": {
+  "attack": 1.202,
+  "defense": 0.796
  },
  "AEK Athens": {
   "attack": 0.883,
   "defense": 0.605
  },
- "Viking FK": {
-  "attack": 0.989,
-  "defense": 1.157
+ "Barcelona": {
+  "attack": 1.486,
+  "defense": 0.824
+ },
+ "Atletico Madrid": {
+  "attack": 0.967,
+  "defense": 1.006
+ },
+ "Lille": {
+  "attack": 0.817,
+  "defense": 0.98
+ },
+ "Porto": {
+  "attack": 0.9,
+  "defense": 0.51
+ },
+ "Galatasaray": {
+  "attack": 1.14,
+  "defense": 0.929
+ },
+ "LASK": {
+  "attack": 0.599,
+  "defense": 1.653
+ },
+ "Napoli": {
+  "attack": 0.949,
+  "defense": 0.896
+ },
+ "Borussia Dortmund": {
+  "attack": 1.016,
+  "defense": 0.738
+ },
+ "Slovan Bratislava": {
+  "attack": 0.696,
+  "defense": 1.517
+ },
+ "Villarreal": {
+  "attack": 1.131,
+  "defense": 1.06
  }
 }
