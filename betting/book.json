@@ -468,7 +468,7 @@
    "edge": 0.064,
    "stake": 0.5,
    "entered": "2026-10-03",
-   "closing_odds": 1.33,
+   "closing_odds": 1.37,
    "result": null,
    "pnl": null
   },
@@ -588,7 +588,7 @@
    "edge": 0.138,
    "stake": 0.5,
    "entered": "2026-10-05",
-   "closing_odds": 2.5,
+   "closing_odds": 2.4,
    "result": null,
    "pnl": null
   },
