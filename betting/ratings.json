@@ -1,7 +1,7 @@
 {
  "Arsenal": {
-  "attack": 1.42,
-  "defense": 0.37
+  "attack": 1.419,
+  "defense": 0.372
  },
  "Manchester City": {
   "attack": 1.808,
@@ -52,8 +52,8 @@
   "defense": 0.718
  },
  "Leeds United": {
-  "attack": 1.002,
-  "defense": 1.01
+  "attack": 1.007,
+  "defense": 1.009
  },
  "Crystal Palace": {
   "attack": 0.719,
