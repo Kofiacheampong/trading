@@ -51,22 +51,36 @@ def _add_bet(bk, f, side, price, p_model, edge, kind):
         "commence": f["commence"], "market": kind, "odds": price,
         "model_prob": p_model, "edge": edge, "stake": stake,
         "entered": str(datetime.date.today()),
-        "closing_odds": price, "result": None, "pnl": None,
+        # closing_odds is filled by update_closing() on a LATER run. Seeding it
+        # with the entry price made CLV read 0.0 whenever a fixture never
+        # reappeared in the feed (2026-10-12 audit: "no data" looked like "no
+        # edge" and the CL gate could never be measured).
+        "closing_odds": None, "closing_ts": None, "result": None, "pnl": None,
     })
     return stake
 
 
 def update_closing(bk, fixtures):
-    """Refresh closing odds on open bets from the latest book snapshot."""
+    """Refresh closing odds on open bets from a LATER book snapshot.
+
+    Only runs on a later calendar day than entry; the same-run snapshot is not
+    a closing line (2026-10-12 audit: seeding closing_odds = entry made CLV
+    read a fake 0.0 for every bet whose fixture never reappeared).
+    """
+    today = str(datetime.date.today())
+    stamp = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
     by_id = {f["id"]: f for f in fixtures}
     for b in bk["bets"]:
         if b.get("result") is not None or b["event_id"] not in by_id:
             continue
+        if b.get("entered") == today:
+            continue  # same run as entry -> not a closing price
         f = by_id[b["event_id"]]
         pool = f["h2h"] if b["market"].startswith("h2h") else f["totals"]
         side = b["market"].split("_", 1)[1] if b["market"].startswith("h2h") else b["market"]
         if side in pool and pool[side]:
             b["closing_odds"] = pool[side]
+            b["closing_ts"] = stamp
 
 
 def _iso(dtstr):

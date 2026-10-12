@@ -17,14 +17,32 @@ CJ = "/tmp/sim_cookie.txt"          # shared cookie jar with sim.py
 _REGIME_CACHE = {}
 
 
+_FETCH_STATS = {"ok": 0, "fail": 0, "last_error": None}
+
+
 def _curl(url, cookie=False, timeout=20):
-    """curl GET with optional cookie jar; returns (ok, text)."""
+    """curl GET with optional cookie jar; returns (ok, text).
+
+    Counts every attempt so the daily step can report a failing feed instead of
+    letting an outage look like "no setups today" (2026-10-12 health signal).
+    """
     cmd = ["curl", "-s", "-m", str(timeout), "-H", f"User-Agent: {UA}"]
     if cookie:
         cmd += ["-b", CJ]
     cmd += [url]
     out = subprocess.run(cmd, capture_output=True, text=True)
-    return out.returncode == 0, out.stdout
+    ok = out.returncode == 0 and bool(out.stdout.strip())
+    if ok:
+        _FETCH_STATS["ok"] += 1
+    else:
+        _FETCH_STATS["fail"] += 1
+        _FETCH_STATS["last_error"] = f"curl rc={out.returncode} {url[:90]}"
+    return ok, out.stdout
+
+
+def fetch_stats():
+    """Cumulative fetch counters + last error (for the fetch-health signal)."""
+    return dict(_FETCH_STATS)
 
 
 # --------------------------------------------------------------------------

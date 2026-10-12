@@ -15,6 +15,7 @@ import mes_sim
 import mes_intraday
 import covered_calls
 import fade_flags
+import data_health as dh
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(BASE, "state.json")
@@ -444,6 +445,11 @@ def step():
     for ev in mes_intraday.step(state):
         print(f"EVENT {ev}")
 
+    # --- data health: surface silently-failing feeds (2026-10-12) ---
+    st = od.fetch_stats()
+    dh.record(state, "yahoo", ok=(st["fail"] == 0 and st["ok"] > 0),
+              note=f"ok={st['ok']} fail={st['fail']} {st.get('last_error') or ''}".strip())
+
     save(state)
     print("DONE")
 
@@ -454,6 +460,9 @@ def report():
     resolved_puts = [p for p in puts if p.get("outcome")]
     pos = state["positions"]
 
+    _hw = dh.warn(state)
+    if _hw:
+        print(_hw)
     print("=== SIM REPORT ===")
     print(f"Cash: ${state['cash']:.2f} | Open positions: {len(pos)}")
     for sym, p in pos.items():

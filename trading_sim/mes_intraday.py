@@ -19,9 +19,16 @@ Strategy v1: OR-FADE (mean reversion — matches Kofi's dip-buy style)
   - Flat by 3:50 PM daily. Zero overnight risk, zero weekend risk.
 
 Why NOT breakout (ORB): backtested 60 days of ES 5-min bars — breakout
-WR 10-27% (net -$1,300 to -$4,100 across variants). Fade WR 71% (net
-+$3,429, 45 trades). Longs 53% WR / shorts 85% WR — shorts carry it;
-separate buckets below so one side never hides the other.
+WR 10-27% (net -$1,300 to -$4,100 across variants).
+
+FADE BACKTEST CORRECTED 2026-10-12: the original replay walked exits
+from the TOP OF THE SESSION, so TP/SL could fill on pre-entry bars
+(lookahead), and it tested TP before SL within a bar. Both inflated the
+result. Fixed (exit walk starts at entry_i+1; SL tested before TP):
+59 days -> 48 trades, WR 52%, avg win +$106.4 / avg loss -$93.4,
+R:R 1.14, net +$511.25, max DD 27.0%; longs 48% / shorts 57% WR.
+The old "71% WR / +$3,429 / shorts 85%" numbers were artifacts of the
+lookahead bug. Net edge is real but thin and does NOT clear Lever-4.
 
 Backtest on 60 days (built in):  python3 mes_intraday.py --backtest
 Live replay runs inside the daily 4:15 PM sim step.
@@ -33,6 +40,8 @@ Gate (same Lever-4 standard, evaluated at the Nov 9 review):
 import json, os, subprocess, datetime, statistics, sys
 from zoneinfo import ZoneInfo
 from collections import defaultdict
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import data_health as dh
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
@@ -87,41 +96,45 @@ def replay(hist):
     or_hi = max(b[1] for b in or_bars)
     or_lo = min(b[2] for b in or_bars)
 
-    side = entry = None
-    for b in hist:
+    side = entry = entry_i = None
+    for i, b in enumerate(hist):
         t = (b[0].hour, b[0].minute)
         if t < OR_END:
             continue
         if t >= ENTRY_UNTIL:
             break
         if b[3] < or_lo:                 # broke below the range -> fade long
-            side, entry = "long", b[3]
+            side, entry, entry_i = "long", b[3], i
             break
         if b[3] > or_hi:                 # broke above the range -> fade short
-            side, entry = "short", b[3]
+            side, entry, entry_i = "short", b[3], i
             break
     if side is None:
         return None
 
+    # NO LOOKAHEAD: walk forward only from the bar AFTER entry, never from the
+    # top of the session (the pre-entry opening-range bars are history).
+    # Pessimistic intra-bar ordering: if one bar spans both levels, the STOP
+    # is assumed to fill before the TARGET.
     reason = exit_px = None
-    for b in hist:
+    for b in hist[entry_i + 1:]:
         t = (b[0].hour, b[0].minute)
         if t >= TIME_EXIT:
             reason, exit_px = "time", b[3]
             break
         if side == "long":
-            if b[1] >= entry + TP_PTS:
-                reason, exit_px = "tp", entry + TP_PTS
-                break
             if b[2] <= entry - SL_PTS:
                 reason, exit_px = "sl", entry - SL_PTS
                 break
-        else:
-            if b[2] <= entry - TP_PTS:
-                reason, exit_px = "tp", entry - TP_PTS
+            if b[1] >= entry + TP_PTS:
+                reason, exit_px = "tp", entry + TP_PTS
                 break
+        else:
             if b[1] >= entry + SL_PTS:
                 reason, exit_px = "sl", entry + SL_PTS
+                break
+            if b[2] <= entry - TP_PTS:
+                reason, exit_px = "tp", entry - TP_PTS
                 break
     if reason is None:                   # partial-day data; exit at last close
         reason, exit_px = "open", hist[-1][3]
@@ -142,6 +155,7 @@ def step(state):
     if any(t["date"] == str(today) for t in state["mes_intraday"]):
         return events
     bars = [b for b in fetch_5m() if b[0].date() == today]
+    dh.record(state, "es_5m", bool(bars), note=f"{len(bars)} bars for {today}")
     if not bars:
         return events
     tr = replay(bars)

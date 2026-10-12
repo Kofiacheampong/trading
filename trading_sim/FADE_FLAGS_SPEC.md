@@ -30,13 +30,18 @@ same-window fight.
 - Expired: settle at intrinsic (max(spot-k_short,0) - max(spot-k_long,0))
 - ret = (credit - cost) / credit * 100
 
-## Gate (LEVER 3C)
->=10 resolved fades AND win rate >=55% AND avg win / avg loss >= 1.5.
-Report shows head-to-head: fade ret vs momentum ret on matched flags.
+## Gate (LEVER 3C) — v2, 2026-10-12
+>=10 resolved fades AND win rate >=60% AND avg ret >= +10%/trade.
+Gate v1 required avg win / avg loss >= 1.5, which this payoff can never reach:
+a win is capped at +50% of credit while a stopped loss runs to -100% (break-even
+WR = 66.7%). Judged on expectancy instead. Report shows head-to-head: fade ret
+vs momentum ret on matched flags.
 
 ## Verified (8/16)
 - Module imports clean; sim.py wired (step + report).
 - Spread-pick tested on live ZTS chain: 80/85C, credit $0.675 (vs covered-call
   sim's ZTS $80C 9/18 @ $1.13 — same chain, different legs; no conflict).
-- Existing flags (pre-8/16) correctly get NO fades. First fades open when a new
-  scanner flag lands (Monday 9:35 AM sweep or later).
+- FEATURE_DATE moved 8/16 -> 8/11 (2026-10-12): the old cutoff excluded the only
+  two flags that ever existed, so the lane could never accumulate reps. Existing
+  flags (8/11 TEAM, 8/13 DRAM) are now eligible; their expiries are past, so they
+  settle as no-op and the lane waits for the next scanner flag.

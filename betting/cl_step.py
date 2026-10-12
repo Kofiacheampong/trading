@@ -47,6 +47,21 @@ BOOK_PATH = os.path.join(BASE, "book_cl.json")
 RATS_EPL = os.path.join(BASE, "ratings.json")
 RATS_CL = os.path.join(BASE, "ratings_cl.json")
 
+# --- CL model v2 (rebuilt 2026-10-12 after the -89.5% ROI audit) -------------
+# The crude CL seed (domestic stats squashed by UEFA coefficient ^0.35) was
+# massively overconfident on longshots: it priced Porto to beat Man City at 43%
+# (market ~19%), Stuttgart away at 11.0 as 29%, and a 51.0 no-hoper at 7%. Every
+# longshot got bet and almost all lost. Three guards now bound the damage:
+#   SHRINK       : pull CL-only ratings toward the mean so extreme seeds stop
+#                  dominating (applied at load time, live updates preserved).
+#   MARKET_BLEND : shrink model probs toward vig-free market probs before betting
+#                  (weight on the model; 0.5 = half-model/half-market).
+#   MAX_EDGE     : reject implausible edges — a "20% edge" from a crude model is
+#                  model error, not value.
+SHRINK = 0.65
+MARKET_BLEND = 0.50
+MAX_EDGE = 0.10
+
 
 def load_ratings():
     """Merged view: CL teams (evolving) + EPL teams (live, refreshed daily)."""
@@ -59,6 +74,10 @@ def load_ratings():
         with open(RATS_EPL) as f:
             epl = json.load(f)
     rats = dict(cl)
+    # CL-only ratings: shrink toward league mean (EPL live ratings left as-is)
+    for t in cl:
+        rats[t] = {"attack": round(1 + SHRINK * (cl[t]["attack"] - 1), 3),
+                   "defense": round(1 + SHRINK * (cl[t]["defense"] - 1), 3)}
     rats.update(epl)   # EPL live ratings win on any overlap
     return rats, set(cl.keys())
 
@@ -148,7 +167,8 @@ def main():
             h2h = {k: v for k, v in f["h2h"].items() if v}
             if len(h2h) == 3:
                 mprobs = {"home": mp["home"], "draw": mp["draw"], "away": mp["away"]}
-                for side, price, pmod, edge in bookmod.find_value(mprobs, h2h):
+                mprobs = bookmod.blend_with_market(mprobs, h2h, MARKET_BLEND)
+                for side, price, pmod, edge in bookmod.find_value(mprobs, h2h, max_edge=MAX_EDGE):
                     mkt = f"h2h_{side}"
                     if _deduped(bk, f["id"], mkt):
                         continue
@@ -159,7 +179,8 @@ def main():
             tots = {k: v for k, v in f["totals"].items() if v}
             if len(tots) == 2:
                 mprobs = {"over25": mp["over25"], "under25": mp["under25"]}
-                for side, price, pmod, edge in bookmod.find_value(mprobs, tots):
+                mprobs = bookmod.blend_with_market(mprobs, tots, MARKET_BLEND)
+                for side, price, pmod, edge in bookmod.find_value(mprobs, tots, max_edge=MAX_EDGE):
                     if _deduped(bk, f["id"], side):
                         continue
                     stake = _add_bet(bk, f, side, price, pmod, edge, side)

@@ -5,6 +5,14 @@
 **Location:** Nsawam, Eastern Region, Ghana
 **Land:** 3 acres — **PURCHASED @ GHS 5,000** ✅
 
+> ⚠️ **VERIFY BEFORE USE (flagged 2026-10-12).** Two issues in this doc:
+> 1. The **"$248B global goat meat market"** figure (§1 Key Statistic) contradicts this
+>    same doc's "**$8.7B goat farming market**" and is implausible for goat meat — unverified,
+>    do not quote it.
+> 2. The **"3 acres purchased @ GHS 5,000"** claim is prose only (no title, coordinates,
+>    receipt, or photo) and appears to be the **same plot** the poultry plan books as its own
+>    land and loan collateral. Confirm ownership with a primary source before relying on it.
+
 ---
 
 ## 1. INDUSTRY OVERVIEW

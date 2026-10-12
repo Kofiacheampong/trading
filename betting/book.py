@@ -49,15 +49,35 @@ def remove_vig(book_odds):
     return {k: imp[k] / s for k in keys}
 
 
-def find_value(model_probs, book_odds, min_edge=MIN_EDGE):
-    """Return [(side, book_price, model_prob, edge)] where model beats the book."""
+def blend_with_market(model_probs, book_odds, blend):
+    """Shrink model probs toward vig-free market probs (blend = weight on model).
+
+    Guards against an overconfident model: if the model says 43% where the
+    market says 19%, a crude Poisson has a bug, not an edge. Blending keeps a
+    tilt off the market instead of betting the model's noise. (2026-10-12 CL
+    rebuild.)
+    """
+    fair = remove_vig(book_odds)
+    out = {}
+    for side, p_model in model_probs.items():
+        m = fair.get(side)
+        out[side] = (1 - blend) * m + blend * p_model if m is not None else p_model
+    return out
+
+
+def find_value(model_probs, book_odds, min_edge=MIN_EDGE, max_edge=None):
+    """Return [(side, book_price, model_prob, edge)] where model beats the book.
+
+    max_edge (optional) rejects implausibly large edges — beyond ~10% on a
+    crude model the 'edge' is almost always model error, not value.
+    """
     fair = remove_vig(book_odds)
     out = []
     for side, p_model in model_probs.items():
         if side not in book_odds:
             continue
         edge = p_model - fair[side]
-        if edge >= min_edge:
+        if edge >= min_edge and (max_edge is None or edge <= max_edge):
             out.append((side, book_odds[side], round(p_model, 3), round(edge, 3)))
     return out
 

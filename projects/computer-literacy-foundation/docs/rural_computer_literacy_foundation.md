@@ -7,6 +7,12 @@
 **Location:** Ghana (Rural Communities)  
 **Founder:** [Your Name]
 
+> ⚠️ **VERIFY BEFORE USE (flagged 2026-10-12).** Beneficiary targets disagree across the
+> proposal set (500 / 1,500 / 500–1,000) and the grant figures are unverified — a GHS 5.0/USD
+> conversion with no date, and only two proposal files exist despite notes claiming a wider
+> "GHS 1.85–2.0M pipeline." Reconcile to one set of numbers (and a cited FX date) before
+> submitting anywhere.
+
 ---
 
 ## EXECUTIVE SUMMARY

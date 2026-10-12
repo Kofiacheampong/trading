@@ -9,7 +9,8 @@ same ticker, same expiry, same window. One gate decides which philosophy
 survives in the current regime (the OR-fade backtest says fades win).
 
 Rules (mirror the momentum flag lifecycle for a fair same-window fight):
-- Created automatically for every call flag dated >= 2026-08-16 (no retro data).
+- Created automatically for every call flag dated >= 2026-08-11 (the lane's
+  inception; the old 8/16 cutoff excluded the only two flags that ever existed).
 - Short strike: first liquid strike >= flag spot * 1.05 (5% OTM).
 - Long strike: the next listed strike above the short strike.
 - Expiry + time-stop: identical to the momentum flag's.
@@ -17,7 +18,10 @@ Rules (mirror the momentum flag lifecycle for a fair same-window fight):
         or cost >= 2x credit (cut), or time-stop, or expiry (settle at intrinsic).
 - ret measured as % of max profit (credit): (credit - cost) / credit * 100.
 
-Gate (LEVER 3C): >=10 resolved fades, WR >=55%, avg win / avg loss >= 1.5.
+Gate (LEVER 3C, v2 2026-10-12): >=10 resolved fades, WR >=60%, avg ret/trade
+>= +10%. Judged on expectancy, NOT avg-win/avg-loss: a win is capped at +50%
+of credit while a stopped loss runs to -100%, so the old "R:R >= 1.5" test was
+unsatisfiable by design (break-even WR = 66.7%).
 Report also shows the head-to-head: fade ret vs momentum ret on matched flags.
 """
 import json, os, sys, datetime, statistics
@@ -26,7 +30,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import options_data as od
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-FEATURE_DATE = datetime.date(2026, 8, 16)   # only flag dates >= this get fades
+FEATURE_DATE = datetime.date(2026, 8, 11)   # lane inception (was 8/16, which
+                                            # excluded the only two flags ever)
+GATE_WR = 60.0          # expectancy gate (see header) — replaces R:R >= 1.5
+GATE_AVG_RET = 10.0     # avg %/trade across resolved fades
 OTM_PCT = 1.05
 TP_FACTOR = 0.50    # buy back at 50% of collected credit
 SL_FACTOR = 2.00    # cut when cost reaches 2x credit
@@ -170,7 +177,7 @@ def report(state):
     flags = {f["date"] + f["ticker"]: f for f in state.get("call_flags", [])}
     lines = ["\nFADE-THE-FLAG (short call spreads vs momentum flags, paper):"]
     if not resolved:
-        lines.append("  none resolved yet (first fades mirror flags dated >= 8/16/26)")
+        lines.append(f"  none resolved yet (first fades mirror flags dated >= {FEATURE_DATE})")
     else:
         rets = [x["ret"] for x in resolved]
         wins = [r for r in rets if r > 0]
@@ -202,13 +209,15 @@ def report(state):
                          f"{x['k_long']:.2f}C {x['outcome']} ret {x['ret']:+.1f}% "
                          f"(credit ${x['credit']:.2f}, flag {x['flag_date']})")
         if len(resolved) >= 10:
-            if wr >= 55.0 and rr >= 1.5:
-                lines.append("  LEVER 3C: FADE-THE-FLAG GATE PASSED — fading momentum extremes "
-                             "has empirical backing (>=10, >=55% WR, R:R >=1.5).")
+            # GATE v2: expectancy, not R:R (a +50% cap vs -100% stop can't reach 1.5)
+            if wr >= GATE_WR and avg_ret >= GATE_AVG_RET:
+                lines.append(f"  LEVER 3C: FADE-THE-FLAG GATE PASSED — {len(resolved)} resolved, "
+                             f"WR {wr:.0f}% (>={GATE_WR:.0f}%), avg {avg_ret:+.1f}%/trade "
+                             f"(>={GATE_AVG_RET:+.0f}%). Fading extremes has empirical backing.")
             else:
                 lines.append(f"  LEVER 3C: {len(resolved)} resolved — gate NOT passed "
-                             f"(need >=55% WR + R:R >=1.5; now {wr:.0f}% / {rr:.1f}). "
-                             f"Keep paper trading.")
+                             f"(need >={GATE_WR:.0f}% WR + >={GATE_AVG_RET:+.0f}% avg ret/trade; "
+                             f"now {wr:.0f}% / {avg_ret:+.1f}%). Keep paper trading.")
         else:
             lines.append(f"  LEVER 3C: {len(resolved)}/10 fades resolved — keep paper trading.")
     open_fades = [x for x in fades if x.get("outcome") is None]

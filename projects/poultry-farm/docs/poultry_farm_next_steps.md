@@ -6,6 +6,11 @@
 **Location:** [Your Farm Location]  
 **Land Size:** 3 acres (12,140 m²)
 
+> ⚠️ **VERIFY BEFORE USE (flagged 2026-10-12).** The "land purchased (3 acres, March 2, 2026)"
+> milestone is prose only — no title, coordinates, receipt, or photo on file, and the location
+> is still a placeholder. The same plot is claimed in `goat-farm-business-plan.md`.
+> Confirm ownership with a primary source before using it as loan collateral or in projections.
+
 ---
 
 ## ADVANTAGES OF 3 ACRES

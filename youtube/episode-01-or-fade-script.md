@@ -3,6 +3,14 @@
 **Length:** ~9 min · **Format:** faceless VO + charts + screen recordings
 **Tone:** direct, curious, honest — no guru energy, numbers do the talking
 
+> 🛑 **DO NOT RECORD AS-IS (flagged 2026-10-12).** Every number in this script comes from a
+> backtest with a **lookahead bug** (the engine could fill take-profits on bars *before* the
+> trade existed). The real result is much weaker:
+> - Script says: 45 trades · **71% WR** · **+$3,429** · shorts carry it (85%)
+> - Corrected: 48 trades · **52% WR** · **+$511** · R:R 1.14 · max DD 27% (longs 48% / shorts 57%)
+> The honest version is arguably a better episode ("I thought my strategy won big — the data
+> said no"), but the script below must be rewritten before anything is recorded or uploaded.
+
 ---
 
 ## HOOK (0:00-0:35)

@@ -1,255 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afro Deli Woodbury — Investor One-Pager</title>
+<html lang="en"><head><meta charset="UTF-8"><title>Afro Deli — Woodbury Business Plan</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { 
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: #f8f6f3;
-    color: #1a1a2e;
-    padding: 40px 20px;
-  }
-  .page {
-    max-width: 900px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-  }
-  .header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-    color: white;
-    padding: 40px 48px 32px;
-  }
-  .header h1 { font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
-  .header .subtitle { font-size: 14px; color: #a0b4d6; margin-top: 6px; font-weight: 500; }
-  .header .tagline { 
-    display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap;
-  }
-  .header .tagline span {
-    background: rgba(255,255,255,0.1);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-  }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
-  .stat-box {
-    text-align: center;
-    padding: 28px 16px;
-    border-right: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-  }
-  .stat-box:last-child, .grid .stat-box:nth-child(3) { border-right: none; }
-  .stat-box .num { font-size: 32px; font-weight: 800; color: #0f3460; }
-  .stat-box .num.green { color: #1a7d3a; }
-  .stat-box .num.amber { color: #b8860b; }
-  .stat-box .label { font-size: 12px; color: #666; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
-  .section { padding: 32px 48px; }
-  .section + .section { border-top: 1px solid #eee; }
-  .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: #1a1a2e; }
-  .section h2 span { color: #0f3460; }
-  .budget-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  .budget-table th { 
-    text-align: left; padding: 10px 12px; font-weight: 600; 
-    border-bottom: 2px solid #1a1a2e; color: #1a1a2e;
-  }
-  .budget-table td { padding: 9px 12px; border-bottom: 1px solid #e8e8e8; }
-  .budget-table tr:nth-child(even) { background: #fafafa; }
-  .budget-table .total-row td { font-weight: 700; border-top: 2px solid #1a1a2e; border-bottom: none; font-size: 15px; }
-  .budget-table .total-row td:last-child { color: #0f3460; }
-  .budget-table td:last-child { text-align: right; }
-  .budget-table th:last-child { text-align: right; }
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-  .scenario { 
-    background: #f8f6f3; padding: 20px; border-radius: 12px;
-    border-left: 4px solid #0f3460;
-  }
-  .scenario.alt { border-left-color: #b8860b; }
-  .scenario h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
-  .scenario .big { font-size: 28px; font-weight: 800; color: #0f3460; margin: 4px 0; }
-  .scenario.alt .big { color: #b8860b; }
-  .scenario .details { font-size: 13px; color: #555; line-height: 1.6; }
-  .risks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .risk-item { 
-    background: #f8f6f3; padding: 14px 16px; border-radius: 8px; font-size: 13px;
-    border-left: 3px solid #d4a017;
-  }
-  .risk-item strong { display: block; margin-bottom: 4px; font-size: 13px; }
-  .options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .option-card {
-    background: #f8f6f3; padding: 20px; border-radius: 12px;
-    text-align: center;
-  }
-  .option-card h3 { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
-  .option-card p { font-size: 13px; color: #555; line-height: 1.5; }
-  .option-card .highlight { font-size: 20px; font-weight: 700; color: #0f3460; margin: 8px 0; }
-  .footer {
-    background: #1a1a2e; color: #8899bb; padding: 24px 48px;
-    font-size: 12px; text-align: center; line-height: 1.6;
-  }
-  @media (max-width: 700px) {
-    .header, .section, .footer { padding: 24px 20px; }
-    .grid { grid-template-columns: repeat(2, 1fr); }
-    .two-col, .risks, .options { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-<div class="page">
-  <div class="header">
-    <h1>AFRO DELI WOODBURY</h1>
-    <div class="subtitle">$300K All-Equity Plan | Franchise Business — Conservative Edition</div>
-    <div class="tagline">
-      <span>📍 Woodbury, MN</span>
-      <span>🍽 African-Mediterranean Fusion</span>
-      <span>🏪 Second-Gen Space</span>
-      <span>📊 Yr 1 EBITDA: $93K</span>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="stat-box">
-      <div class="num">$300K</div>
-      <div class="label">Total Investment</div>
-    </div>
-    <div class="stat-box">
-      <div class="num green">$93,478</div>
-      <div class="label">Year 1 EBITDA</div>
-    </div>
-    <div class="stat-box">
-      <div class="num green">31%</div>
-      <div class="label">Year 1 ROI</div>
-    </div>
-    <div class="stat-box">
-      <div class="num">$637K</div>
-      <div class="label">Year 1 Revenue</div>
-    </div>
-    <div class="stat-box">
-      <div class="num">Month 2</div>
-      <div class="label">Break-Even</div>
-    </div>
-    <div class="stat-box">
-      <div class="num green">$140K+</div>
-      <div class="label">Year 2 EBITDA (Proj.)</div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>💰 <span>Use of Funds</span></h2>
-    <table class="budget-table">
-      <tr><th>Category</th><th>Amount</th></tr>
-      <tr><td>Franchise Fee</td><td>$35,000</td></tr>
-      <tr><td>Build-Out (second-gen space)</td><td>$120,000</td></tr>
-      <tr><td>FF&E (used/leased)</td><td>$60,000</td></tr>
-      <tr><td>Permits, Licenses &amp; Legal</td><td>$12,000</td></tr>
-      <tr><td>Technology &amp; POS</td><td>$8,000</td></tr>
-      <tr><td>Initial Inventory</td><td>$15,000</td></tr>
-      <tr><td>Pre-Opening Marketing</td><td>$15,000</td></tr>
-      <tr><td>Professional Fees</td><td>$8,000</td></tr>
-      <tr><td>Insurance (Year 1)</td><td>$5,000</td></tr>
-      <tr class="total-row"><td>Working Capital Reserve</td><td>$22,000</td></tr>
-      <tr class="total-row"><td><strong>TOTAL</strong></td><td><strong>$300,000</strong></td></tr>
-    </table>
-    <p style="font-size:13px; color:#666; margin-top:10px;">* No debt service — 100% equity. All cash flow goes to operations and owners.</p>
-  </div>
-
-  <div class="section">
-    <h2>📈 <span>Return Scenarios</span></h2>
-    <div class="two-col">
-      <div class="scenario">
-        <h3>Conservative Base Case</h3>
-        <div class="big">+$93,478</div>
-        <div class="details">
-          Year 1 EBITDA<br>
-          <strong>31% return</strong> on $300K<br>
-          Year 2 projected: $140K-$155K (47-52%)
-        </div>
-      </div>
-      <div class="scenario alt">
-        <h3>Stress-Tested</h3>
-        <div class="big">+$36,090</div>
-        <div class="details">
-          -20% covers • 32% COGS<br>
-          <strong>12% return</strong> on $300K<br>
-          Still solidly positive in worst case
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>⚖️ <span>Capital Structure Options</span></h2>
-    <div class="options">
-      <div class="option-card">
-        <h3>50/50 Split</h3>
-        <div class="highlight">$150K each</div>
-        <p>Each side gets 50% equity<br>
-        <strong>Yr 1: $46,739 (31%)</strong><br>
-        Yr 2: $72K-$77K (48-51%)</p>
-      </div>
-      <div class="option-card">
-        <h3>Kofi $100K / Investors $200K</h3>
-        <div class="highlight">33% / 66%</div>
-        <p>Kofi: Yr 1 $31,159<br>
-        Investors: Yr 1 <strong>$62,319 (31%)</strong><br>
-        2x preference or straight equity</p>
-      </div>
-      <div class="option-card">
-        <h3>8% Preferred + Split</h3>
-        <div class="highlight">10% / 17.7%</div>
-        <p>Investors get 8% pref ($16K/yr)<br>
-        Remaining 50/50<br>
-        Investors Yr 1: <strong>17.7% return</strong></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>⚠️ <span>Key Risks &amp; Mitigants</span></h2>
-    <div class="risks">
-      <div class="risk-item">
-        <strong>🚧 Build-out cost overrun</strong>
-        Second-gen space required; lease contingent on kitchen/plumbing/hood inspection before signing.
-      </div>
-      <div class="risk-item">
-        <strong>🐢 Slower than projected ramp</strong>
-        Conservative projections already 10-15% below existing location averages. Marketing budget reserved for launch push.
-      </div>
-      <div class="risk-item">
-        <strong>🔧 Used equipment failure</strong>
-        $5K repair reserve in working capital. Leasing options available for fryers, refrigeration.
-      </div>
-      <div class="risk-item">
-        <strong>🪄 Low brand awareness</strong>
-        No direct competitor in market. Catering + delivery pipeline from Day 1. Proven franchisor support.
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>🏆 <span>Why This Works</span></h2>
-    <table class="budget-table">
-      <tr><th>Advantage</th><th>Detail</th></tr>
-      <tr><td>Proven model</td><td>3 existing Twin Cities locations, 12+ years operating</td></tr>
-      <tr><td>No direct competition</td><td>Zero African-Mediterranean concepts in Woodbury</td></tr>
-      <tr><td>Built-in catering</td><td>25.7% of existing sales — Woodbury has more corporate/medical density</td></tr>
-      <tr><td>Strong demographics</td><td>$117K median income, 12% growth, 30-40% daytime population surge</td></tr>
-      <tr><td>Halal positioning</td><td>Growing demand, minimal competition in suburbs</td></tr>
-      <tr><td>No debt service</td><td>100% equity — all EBITDA flows to owners</td></tr>
-    </table>
-  </div>
-
-  <div class="footer">
-    Prepared July 2026 | Based on Afro Deli Woodbury Franchise Business Plan (Conservative Edition)<br>
-    All projections are estimates pending FDD review, site selection, and final lease terms.<br>
-    This is not a guarantee of financial performance.
-  </div>
-</div>
-</body>
-</html>
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 9.5pt; }
+  h1 { font-size: 22pt; font-weight: 800; color: #111; border-bottom: 3px solid #d97706; padding-bottom: 6px; margin: 0 0 4px; }
+  h1 + h2 { border-bottom: none; color: #6b7280; font-size: 13pt; margin-top: 0; }
+  h2 { font-size: 15pt; font-weight: 700; color: #b45309; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin: 1.4em 0 0.6em; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 700; color: #333; margin: 1.1em 0 0.4em; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; margin: 1em 0 0.3em; }
+  p { margin: 0.45em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.7em 0; font-size: 8.8pt; page-break-inside: avoid; }
+  th { background: #fef3c7; border: 1px solid #f0d9a0; padding: 5px 7px; text-align: left; font-weight: 700; }
+  td { border: 1px solid #e5e7eb; padding: 4px 7px; vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafafa; }
+  ul, ol { margin: 0.4em 0 0.6em; padding-left: 20px; }
+  li { margin: 0.15em 0; }
+  blockquote { border-left: 3px solid #d97706; background: #fffbeb; margin: 0.7em 0; padding: 8px 14px; color: #3f3f46; font-size: 9.8pt; page-break-inside: avoid; }
+  blockquote p { margin: 0.25em 0; }
+  code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-family: ui-monospace, Menlo, monospace; font-size: 9pt; }
+  pre { background: #f8f8f7; border: 1px solid #e5e7eb; border-radius: 4px; padding: 10px 12px; font-size: 8.8pt; page-break-inside: avoid; }
+  pre code { background: none; padding: 0; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 1.2em 0; }
+  strong { color: #000; }
+  a { color: #b45309; text-decoration: none; }
+  @page { size: letter; margin: 15mm 14mm; }
+</style></head>
+<body><h1>AFRO DELI WOODBURY — Investor One-Pager</h1>
+<h2>$300K All-Equity Plan | v2 (September 2026)</h2>
+<hr>
+<p><strong>Concept:</strong> Afro Deli franchise — Woodbury, MN</p>
+<p><strong>Format:</strong> Fast-casual African-Mediterranean fusion (all-halal)</p>
+<p><strong>Space:</strong> 1,500–1,800 sq ft (second-generation restaurant preferred)</p>
+<p><strong>Capital Structure:</strong> 100% investor equity — no debt, no SBA, no personal guarantee</p>
+<p><strong>Opening Timeline:</strong> Franchisor training wks 18–22 · soft opening wk 22 · grand opening wk 24 (Section 7.7)</p>
+<hr>
+<h2>Investment Overview</h2>
+<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><strong>Total Raise</strong></td><td><strong>$300,000</strong> (Section 9.2)</td></tr><tr><td>Structure</td><td>100% investor equity (no debt, no SBA, no personal guarantee) — Section 9.2</td></tr><tr><td>Operator Contribution</td><td>$0 (Structure A, recommended) or $20,000 (Structure B) — Section 8.5</td></tr><tr><td>Investor Contribution</td><td>$300,000 (Structure A) or $280,000 (Structure B) — Section 8.5</td></tr><tr><td>Use of Funds</td><td>$277,000 startup + $23,000 working capital (Section 9.1)</td></tr><tr><td>Projected Yr 1 Revenue</td><td>$637,650 (Section 9.4)</td></tr><tr><td>Projected Yr 1 EBITDA</td><td><strong>$93,478 — 14.7% margin</strong> (Section 9.4)</td></tr><tr><td>Projected Yr 1 Free Cash Flow</td><td>$88,478 (EBITDA − $5,000 maintenance capex) — Section 9.4</td></tr><tr><td>Project-Level Return (Yr 1)</td><td><strong>31.2%</strong> (EBITDA $93,478 ÷ $300,000) — Section 9.4</td></tr><tr><td>Investor Cash Return (Yr 1)</td><td><strong>$62,687 — 20.9%</strong> (Section 9.9)</td></tr><tr><td>EBITDA Break-Even</td><td><strong>Month 2</strong> (month-2 EBITDA = $297) — Section 9.6</td></tr><tr><td>Cumulative Cash Positive</td><td><strong>Month 3</strong> (Section 9.6)</td></tr><tr><td>Year 1 Investor Terms</td><td>8% cumulative preferred + 60/40 profit split (Appendix G)</td></tr></tbody></table>
+<hr>
+<h2>Budget Breakdown — $300,000 (Section 9.1)</h2>
+<table><thead><tr><th>Category</th><th>Cost</th><th>Notes</th></tr></thead><tbody><tr><td>Franchise Fee</td><td>$35,000</td><td>Assumed; verify vs. FDD Item 5</td></tr><tr><td>Build-Out / Leasehold Improvements</td><td>$115,000</td><td>Second-gen space; <strong>net of ~$45,000 landlord TI</strong> (gross ≈ $160,000)</td></tr><tr><td>FF&amp;E (incl. POS hardware)</td><td>$55,000</td><td>Used/leased where sensible</td></tr><tr><td>Permits, Licenses &amp; Filing Fees</td><td>$10,000</td><td>City + state + health</td></tr><tr><td>Technology &amp; POS</td><td>$8,000</td><td>Toast hardware + setup</td></tr><tr><td>Initial Inventory / Smallwares</td><td>$14,000</td><td></td></tr><tr><td>Pre-Opening Marketing &amp; PR</td><td>$13,000</td><td>Capitalized</td></tr><tr><td>Professional Fees</td><td>$10,000</td><td>Franchise counsel, CPA, entity formation, PPM review</td></tr><tr><td>Build-Out &amp; FF&amp;E Contingency (~10%)</td><td>$17,000</td><td>Exactly 10% of build-out + FF&amp;E ($170,000)</td></tr><tr><td>Working Capital Reserve</td><td>$23,000</td><td>Covers modeled operating trough (−$1,965) ≈ 12×</td></tr><tr><td><strong>TOTAL</strong></td><td><strong>$300,000</strong></td><td></td></tr></tbody></table>
+<p><em>Insurance (~$8,000 Year 1) is carried as an operating cost in Other OpEx — not capitalized (Section 9.1).</em></p>
+<hr>
+<h2>Monthly Projections — Conservative Ramp (Sections 9.3 / 9.5)</h2>
+<p><em>50 → 185 covers/day • $15.00 avg ticket • 26 days/mo • 29% COGS</em></p>
+<table><thead><tr><th>Month</th><th>Covers/Day</th><th>Revenue</th><th>EBITDA</th><th>Cumulative CF</th></tr></thead><tbody><tr><td>M1</td><td>50</td><td>$19,500</td><td>-$1,965</td><td>-$1,965</td></tr><tr><td>M2</td><td>70</td><td>$27,300</td><td>$297</td><td>-$1,668</td></tr><tr><td>M3</td><td>95</td><td>$37,050</td><td>$3,124</td><td>+$1,456</td></tr><tr><td>M4</td><td>115</td><td>$44,850</td><td>$5,386</td><td>+$6,843</td></tr><tr><td>M5</td><td>130</td><td>$50,700</td><td>$7,083</td><td>+$13,926</td></tr><tr><td>M6</td><td>145</td><td>$56,550</td><td>$8,780</td><td>+$22,706</td></tr><tr><td>M7</td><td>155</td><td>$60,450</td><td>$9,910</td><td>+$32,616</td></tr><tr><td>M8</td><td>165</td><td>$64,350</td><td>$11,042</td><td>+$43,658</td></tr><tr><td>M9</td><td>170</td><td>$66,300</td><td>$11,607</td><td>+$55,264</td></tr><tr><td>M10</td><td>175</td><td>$68,250</td><td>$12,172</td><td>+$67,437</td></tr><tr><td>M11</td><td>180</td><td>$70,200</td><td>$12,738</td><td>+$80,175</td></tr><tr><td>M12</td><td>185</td><td>$72,150</td><td>$13,304</td><td>+$93,478</td></tr></tbody></table>
+<hr>
+<h2>Year 1 Summary (Section 9.4)</h2>
+<table><thead><tr><th>Metric</th><th>Amount</th></tr></thead><tbody><tr><td>Revenue</td><td>$637,650</td></tr><tr><td>COGS (29%)</td><td>($184,919)</td></tr><tr><td>Gross Profit</td><td>$452,732</td></tr><tr><td>Operating Expenses</td><td>($359,253)</td></tr><tr><td><strong>EBITDA</strong></td><td><strong>$93,478 (14.7%)</strong></td></tr><tr><td>Less: maintenance capex</td><td>($5,000)</td></tr><tr><td><strong>Free Cash Flow</strong></td><td><strong>$88,478</strong></td></tr><tr><td><strong>Project-level return on $300K</strong></td><td><strong>31.2% (EBITDA basis)</strong></td></tr><tr><td><strong>Investor-level Year-1 cash return</strong></td><td><strong>$62,687 — 20.9%</strong></td></tr></tbody></table>
+<p><em>One cash basis throughout: EBITDA is the operating metric; free cash flow (EBITDA − maintenance capex) is the distribution basis (Section 9.4).</em></p>
+<hr>
+<h2>Investor Return Structure (Section 9.9 / Appendix G)</h2>
+<table><thead><tr><th>Component</th><th>Amount</th><th>Year 1</th></tr></thead><tbody><tr><td>8% cumulative preferred on $300K</td><td>$24,000/yr</td><td>$24,000</td></tr><tr><td>Remaining after preferred ($88,478 − $24,000)</td><td>$64,478</td><td>—</td></tr><tr><td>60/40 split (investors/operator)</td><td>$38,687 / $25,791</td><td>—</td></tr><tr><td><strong>Total Year 1 investor cash return</strong></td><td></td><td><strong>$62,687 — 20.9%</strong></td></tr><tr><td>Operator Year 1 (distributions + salary)</td><td></td><td>$25,791 + $60,000 = $85,791</td></tr></tbody></table>
+<p><strong>Alternative (8% preferred + 50/50):</strong> investors $56,239 (18.7%); operator $32,239 + $60,000 salary (Section 9.9).</p>
+<p><strong>Two return measures, kept distinct (Section 9.9):</strong> project-level <strong>31.2%</strong> (EBITDA $93,478 ÷ $300K) vs. investor-level <strong>20.9%</strong> ($62,687 distribution ÷ $300K). These are not the same number and are never conflated.</p>
+<hr>
+<h2>Stress Case &amp; Slow-Ramp (Sections 9.10 / 9.12)</h2>
+<table><thead><tr><th>Metric</th><th>Base</th><th>Stress (−20% covers, 32% COGS)</th></tr></thead><tbody><tr><td>Revenue</td><td>$637,650</td><td>~$511,680</td></tr><tr><td>EBITDA</td><td>$93,478</td><td><strong>$36,090</strong></td></tr><tr><td>Margin</td><td>14.7%</td><td>7.1%</td></tr><tr><td>Project-level ROI on $300K</td><td>31.2%</td><td>12.0%</td></tr><tr><td>Cash position</td><td>Positive M3</td><td>Positive all year</td></tr><tr><td>Investor distributions</td><td>$62,687 (20.9%)</td><td>~$31,254 (10.4%)</td></tr></tbody></table>
+<p><strong>Slow ramp (185 covers by Month 18):</strong> Year-1 revenue ~$468,000, EBITDA ~$25,320 (5.4%), cumulative positive ~Month 8–10 — covered by the $23K working capital + $17K contingency (Section 9.12).</p>
+<hr>
+<h2>Capital Structure Options (Section 8.5)</h2>
+<table><thead><tr><th>Structure</th><th>Operator cash</th><th>Operator compensation</th><th>Investor terms</th></tr></thead><tbody><tr><td><strong>A — Sweat equity (recommended default)</strong></td><td><strong>$0</strong></td><td>$60,000 salary + 40% of profit after the 8% preferred</td><td>100% of the $300K; 8% cumulative pref + 60% of residual</td></tr><tr><td><strong>B — Skin in the game</strong></td><td><strong>$20,000 (6.7%)</strong></td><td>$60,000 salary + 35% of profit after the 8% preferred</td><td>$280,000 (93.3%)</td></tr></tbody></table>
+<p>Under Structure A the operator's profits interest vests over 4 years (1-year cliff). <strong>Decision required from the operator before the PPM is drafted</strong> (Section 8.5).</p>
+<hr>
+<h2>Five-Year Outlook (Section 9.11)</h2>
+<table><thead><tr><th>Metric</th><th>Yr 1</th><th>Yr 2</th><th>Yr 3</th><th>Yr 4</th><th>Yr 5</th></tr></thead><tbody><tr><td>Revenue</td><td>$637,650</td><td>$780,000</td><td>$842,000</td><td>$885,000</td><td>$925,000</td></tr><tr><td>EBITDA</td><td>$93,478</td><td>$148,000</td><td>$168,500</td><td>$182,000</td><td>$195,000</td></tr><tr><td>EBITDA margin</td><td>14.7%</td><td>19.0%</td><td>20.0%</td><td>20.6%</td><td>21.1%</td></tr><tr><td>Free Cash Flow</td><td>$88,478</td><td>$141,000</td><td>$160,500</td><td>$173,000</td><td>$185,000</td></tr><tr><td>Cumulative FCF</td><td>$88,478</td><td>$229,478</td><td>$389,978</td><td>$562,978</td><td><strong>$747,978</strong></td></tr></tbody></table>
+<p><strong>5-year cumulative free cash flow $747,978 = 249% of the $300,000 invested</strong> (Section 9.11).</p>
+<p><strong>Investor waterfall (Section 9.13):</strong></p>
+<table><thead><tr><th>Year</th><th>Free Cash Flow</th><th>Preferred (8% cum.)</th><th>60% to investors</th><th><strong>Investor cash</strong></th></tr></thead><tbody><tr><td>1</td><td>$88,478</td><td>$24,000</td><td>$38,687</td><td><strong>$62,687</strong></td></tr><tr><td>2</td><td>$141,000</td><td>$24,000</td><td>$70,200</td><td><strong>$94,200</strong></td></tr><tr><td>3</td><td>$160,500</td><td>$24,000</td><td>$81,900</td><td><strong>$105,900</strong></td></tr><tr><td>4</td><td>$173,000</td><td>$24,000</td><td>$89,400</td><td><strong>$113,400</strong></td></tr><tr><td>5</td><td>$185,000</td><td>$24,000</td><td>$96,600</td><td><strong>$120,600</strong></td></tr><tr><td><strong>Total</strong></td><td><strong>$747,978</strong></td><td><strong>$120,000</strong></td><td><strong>$376,787</strong></td><td><strong>$496,787</strong></td></tr></tbody></table>
+<p><strong>Investor IRR:</strong> ≈17.5% (distributions only) → ≈39% with the Year-5 buyout (Sections 9.13 / 9.15).</p>
+<hr>
+<h2>Term Sheet &amp; Exit (Appendix G / Section 9.15)</h2>
+<ul>
+<li><strong>Vehicle:</strong> Minnesota manager-managed LLC; manager: the Owner-Operator. <strong>Raise:</strong> $300,000 via Reg D 506(b); minimum investment $25,000.</li>
+<li><strong>Preferred return:</strong> 8% per annum, <strong>cumulative, compounding quarterly</strong>, on unreturned capital until paid.</li>
+<li><strong>Distribution basis:</strong> Distributable Cash = EBITDA − maintenance capex − debt service − reserves (minimum operating cash floor $15,000 + accrued tax reserve) — <em>not</em> "net income," <em>not</em> "EBITDA" (Appendix G item 4).</li>
+<li><strong>Distributions:</strong> quarterly in arrears, 100% of Distributable Cash up to the preferred, then <strong>60% investors / 40% operator</strong>; no catch-up. Mandatory annual tax distributions (Appendix G items 5–6).</li>
+<li><strong>Exit / liquidity:</strong> operator buyout right from the end of Year 5 at <strong>4.0× trailing-twelve-month EBITDA</strong> (floor: invested capital + accrued preferred), otherwise a <strong>mandatory marketed sale in Year 6</strong>; drag-along + tag-along; transaction costs capped at 3% (Section 9.15).</li>
+<li><strong>Illustrative Year-5 value:</strong> 4.0 × $195,000 = <strong>$780,000</strong> (3.5× floor = $682,500). Investor proceeds ≈ <strong>$588,000</strong> at 4.0× — $300,000 preferred principal returned + 60% of ($780,000 − $300,000) — plus prior distributions (Section 9.15).</li>
+</ul>
+<hr>
+<h2>Competitive Advantages (Sections 2.1 / 4.1 / 13)</h2>
+<ul>
+<li><strong>Proven model</strong> — 3 existing Twin Cities locations, 12+ years, $1.37M combined annual net sales</li>
+<li><strong>No verified direct competition</strong> in Woodbury — no African-Mediterranean fusion concept</li>
+<li><strong>Catering engine</strong> — 25.7% of sales at existing locations; Woodbury models 15–20% → 25% by Year 3</li>
+<li><strong>Woodbury demographics</strong> — ~75,000 residents (+12% since 2020), $117K median household income, 30–40% daytime surge</li>
+<li><strong>Delivery</strong> — 17.1% of sales, matched to existing locations</li>
+<li><strong>All-halal positioning</strong> — trust signal with minimal competition</li>
+</ul>
+<hr>
+<h2>Key Risks &amp; Mitigants (Section 10.2)</h2>
+<table><thead><tr><th>Risk</th><th>Mitigation</th></tr></thead><tbody><tr><td>Slow ramp</td><td>Projections 15% below existing-location averages; slow-ramp scenario modeled (Section 9.12)</td></tr><tr><td>Build-out cost overrun</td><td>Second-gen space required; lease contingent on kitchen inspection; $17,000 (10%) contingency</td></tr><tr><td>Equipment failure</td><td>$5K/yr maintenance capex + repair reserve; leasing options for key items</td></tr><tr><td>Catering slower than expected</td><td>Not dependent on catering; even at 0%, lunch traffic fills; Month-2 break-even sensitivity disclosed (Section 9.6)</td></tr><tr><td>Key-person risk</td><td>Day-1 General Manager hire (not deferred); written SOPs; key-person life/disability insurance $500K–$1M with LLC as beneficiary</td></tr><tr><td>Delivery commission creep</td><td>Commissions a disclosed line (~26% modeled); delivery-menu price markup + in-house Toast ordering</td></tr></tbody></table>
+<hr>
+<h2>Use of Funds Summary</h2>
+<pre><code>$277,000 — Startup Costs (one-time)
+$ 23,000 — Working Capital Reserve
+────────
+$300,000 — Total</code></pre>
+<p><em>No debt service = all cash flow goes to operations and owners, after the 8% preferred return.</em></p>
+<hr>
+<p><em>Prepared September 2026 | Based on the Afro Deli Woodbury Franchise Business Plan v2 (All-Equity Investor Structure).</em></p>
+<p><em>Projections are estimates pending FDD verification, site selection, and final lease terms. This document is a business plan, not an offer to sell securities; any offer will be made only through a private placement memorandum to eligible investors.</em></p></body></html>
