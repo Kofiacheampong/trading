@@ -1,82 +1,82 @@
 {
- "Porto": {
-  "attack": 0.9,
-  "defense": 0.51
- },
- "Barcelona": {
-  "attack": 1.486,
-  "defense": 0.824
- },
- "Galatasaray": {
-  "attack": 1.14,
-  "defense": 0.929
- },
- "Villarreal": {
-  "attack": 1.131,
-  "defense": 1.06
- },
- "VfB Stuttgart": {
-  "attack": 1.026,
-  "defense": 1.051
- },
- "Lille": {
-  "attack": 0.817,
-  "defense": 0.98
- },
- "Feyenoord": {
-  "attack": 0.884,
-  "defense": 1.122
- },
- "Slovan Bratislava": {
-  "attack": 0.696,
-  "defense": 1.517
+ "Real Betis": {
+  "attack": 0.956,
+  "defense": 1.066
  },
  "LASK": {
-  "attack": 0.599,
-  "defense": 1.653
- },
- "Napoli": {
-  "attack": 0.949,
-  "defense": 0.896
- },
- "Sporting CP": {
-  "attack": 1.432,
-  "defense": 0.674
- },
- "AEK Athens": {
-  "attack": 0.883,
-  "defense": 0.605
- },
- "Borussia Dortmund": {
-  "attack": 1.016,
-  "defense": 0.738
- },
- "Real Betis": {
-  "attack": 0.933,
-  "defense": 1.101
- },
- "Club Brugge": {
-  "attack": 1.074,
-  "defense": 1.223
+  "attack": 0.739,
+  "defense": 1.424
  },
  "Atletico Madrid": {
+  "attack": 0.979,
+  "defense": 1.004
+ },
+ "Galatasaray": {
+  "attack": 1.091,
+  "defense": 0.954
+ },
+ "Napoli": {
   "attack": 0.967,
-  "defense": 1.006
+  "defense": 0.932
  },
- "Real Madrid": {
-  "attack": 1.202,
-  "defense": 0.796
- },
- "Viking FK": {
-  "attack": 0.989,
-  "defense": 1.157
- },
- "Paris Saint-Germain": {
-  "attack": 1.154,
-  "defense": 0.76
+ "VfB Stuttgart": {
+  "attack": 1.017,
+  "defense": 1.033
  },
  "Inter Milan": {
-  "attack": 1.57,
-  "defense": 0.876
+  "attack": 1.371,
+  "defense": 0.919
+ },
+ "Lille": {
+  "attack": 0.881,
+  "defense": 0.987
+ },
+ "Barcelona": {
+  "attack": 1.316,
+  "defense": 0.886
+ },
+ "Sporting CP": {
+  "attack": 1.281,
+  "defense": 0.788
+ },
+ "Feyenoord": {
+  "attack": 0.925,
+  "defense": 1.079
+ },
+ "Porto": {
+  "attack": 0.935,
+  "defense": 0.681
+ },
+ "Real Madrid": {
+  "attack": 1.131,
+  "defense": 0.867
+ },
+ "Borussia Dortmund": {
+  "attack": 1.01,
+  "defense": 0.83
+ },
+ "AEK Athens": {
+  "attack": 0.924,
+  "defense": 0.743
+ },
+ "Slovan Bratislava": {
+  "attack": 0.802,
+  "defense": 1.336
+ },
+ "Villarreal": {
+  "attack": 1.085,
+  "defense": 1.039
+ },
+ "Viking FK": {
+  "attack": 0.993,
+  "defense": 1.102
+ },
+ "Club Brugge": {
+  "attack": 1.048,
+  "defense": 1.145
+ },
+ "Paris Saint-Germain": {
+  "attack": 1.1,
+  "defense": 0.844
  }
 }

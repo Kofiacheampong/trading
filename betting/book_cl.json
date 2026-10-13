@@ -267,9 +267,10 @@
    "edge": 0.054,
    "stake": 0.5,
    "entered": "2026-10-07",
-   "closing_odds": 2.1,
+   "closing_odds": 1.87,
    "result": null,
-   "pnl": null
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
   },
   {
    "event_id": "dd431688ed5c8f383b6434fd4f01e883",
@@ -282,9 +283,10 @@
    "edge": 0.194,
    "stake": 2.0,
    "entered": "2026-10-07",
-   "closing_odds": 8.0,
+   "closing_odds": 9.0,
    "result": null,
-   "pnl": null
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
   },
   {
    "event_id": "dd431688ed5c8f383b6434fd4f01e883",
@@ -297,9 +299,10 @@
    "edge": 0.081,
    "stake": 0.7,
    "entered": "2026-10-07",
-   "closing_odds": 6.0,
+   "closing_odds": 7.0,
    "result": null,
-   "pnl": null
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
   },
   {
    "event_id": "5a1a6a04c5561897741105e30d5d7ec4",
@@ -312,9 +315,10 @@
    "edge": 0.215,
    "stake": 0.5,
    "entered": "2026-10-08",
-   "closing_odds": 2.2,
+   "closing_odds": 2.1,
    "result": null,
-   "pnl": null
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
   },
   {
    "event_id": "4c7f87780ae5ab8bec9e83d6d6ec9909",
@@ -327,9 +331,10 @@
    "edge": 0.185,
    "stake": 0.5,
    "entered": "2026-10-08",
-   "closing_odds": 3.0,
+   "closing_odds": 3.5,
    "result": null,
-   "pnl": null
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
   },
   {
    "event_id": "d7576351b8cb2396e32cc3de0446f3de",
@@ -342,9 +347,10 @@
    "edge": 0.088,
    "stake": 1.32,
    "entered": "2026-10-08",
-   "closing_odds": 8.0,
+   "closing_odds": 9.5,
    "result": null,
-   "pnl": null
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
   },
   {
    "event_id": "d7576351b8cb2396e32cc3de0446f3de",
@@ -357,7 +363,24 @@
    "edge": 0.058,
    "stake": 0.5,
    "entered": "2026-10-08",
-   "closing_odds": 5.9,
+   "closing_odds": 6.0,
+   "result": null,
+   "pnl": null,
+   "closing_ts": "2026-10-13T14:05:02+00:00"
+  },
+  {
+   "event_id": "ca3f4b075d835413f9cb7bd3c439fdd0",
+   "home": "Inter Milan",
+   "away": "Club Brugge",
+   "commence": "2026-10-13T19:00:00Z",
+   "market": "h2h_away",
+   "odds": 11.0,
+   "model_prob": 0.137,
+   "edge": 0.051,
+   "stake": 0.79,
+   "entered": "2026-10-13",
+   "closing_odds": null,
+   "closing_ts": null,
    "result": null,
    "pnl": null
   }

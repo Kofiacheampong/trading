@@ -16,6 +16,7 @@ import mes_intraday
 import covered_calls
 import fade_flags
 import data_health as dh
+import breadth
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(BASE, "state.json")
@@ -450,6 +451,12 @@ def step():
     dh.record(state, "yahoo", ok=(st["fail"] == 0 and st["ok"] > 0),
               note=f"ok={st['ok']} fail={st['fail']} {st.get('last_error') or ''}".strip())
 
+    # --- market breadth (index vs Kofi's basket) (2026-10-12) ---
+    try:
+        print(breadth.report(state))
+    except Exception as e:
+        print(f"BREADTH: unavailable ({e})")
+
     save(state)
     print("DONE")
 
@@ -463,6 +470,10 @@ def report():
     _hw = dh.warn(state)
     if _hw:
         print(_hw)
+    try:
+        print(breadth.report(state))
+    except Exception as e:
+        print(f"BREADTH: unavailable ({e})")
     print("=== SIM REPORT ===")
     print(f"Cash: ${state['cash']:.2f} | Open positions: {len(pos)}")
     for sym, p in pos.items():

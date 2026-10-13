@@ -2601,6 +2601,52 @@
     "rsi(27)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "PNR",
+   "date": "2026-10-13",
+   "price": 52.96,
+   "score": 92.0,
+   "rsi": 33.2,
+   "relvol": 0.91,
+   "vs_200ma": -33.2,
+   "vs_52w_high": -52.2,
+   "flags": [
+    "oversold_quality(-33% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-10-13",
+   "price": 127.13,
+   "score": 82.5,
+   "rsi": 29.4,
+   "relvol": 1.27,
+   "vs_200ma": -35.6,
+   "vs_52w_high": -68.3,
+   "flags": [
+    "oversold_quality(-36% vs 200ma)",
+    "rsi(29)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-10-13",
+   "price": 40.35,
+   "score": 82.5,
+   "rsi": 29.8,
+   "relvol": 1.04,
+   "vs_200ma": -40.4,
+   "vs_52w_high": -69.1,
+   "flags": [
+    "oversold_quality(-40% vs 200ma)",
+    "rsi(30)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -2722,6 +2768,14 @@
    "exit": 7855.0,
    "reason": "time",
    "pnl": 10.0
+  },
+  {
+   "date": "2026-10-13",
+   "side": "long",
+   "entry": 7846.75,
+   "exit": 7855.75,
+   "reason": "time",
+   "pnl": 45.0
   }
  ],
  "fade_flags": [],
@@ -3798,6 +3852,20 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 224.73,
    "s50": 221.56
+  },
+  {
+   "date": "2026-10-13",
+   "ticker": "DRAM",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.52,
+   "s50": 57.4
+  },
+  {
+   "date": "2026-10-13",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 225.23,
+   "s50": 222.92
   }
  ],
  "value_cache": {
@@ -4794,24 +4862,34 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-10-12T20:15:09+00:00",
-   "last_try": "2026-10-12T20:15:09+00:00",
+   "last_ok": "2026-10-13T20:15:09+00:00",
+   "last_try": "2026-10-13T20:15:09+00:00",
    "streak_fail": 0,
    "attempts": [
     {
      "ts": "2026-10-12T20:15:09+00:00",
      "ok": true,
      "note": "195 bars for 2026-10-12"
+    },
+    {
+     "ts": "2026-10-13T20:15:09+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-10-13"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-10-12T20:15:09+00:00",
-   "last_try": "2026-10-12T20:15:09+00:00",
+   "last_ok": "2026-10-13T20:15:09+00:00",
+   "last_try": "2026-10-13T20:15:09+00:00",
    "streak_fail": 0,
    "attempts": [
     {
      "ts": "2026-10-12T20:15:09+00:00",
+     "ok": true,
+     "note": "ok=2 fail=0"
+    },
+    {
+     "ts": "2026-10-13T20:15:09+00:00",
      "ok": true,
      "note": "ok=2 fail=0"
     }
