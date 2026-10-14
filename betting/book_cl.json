@@ -1,5 +1,5 @@
 {
- "bankroll": 85.11,
+ "bankroll": 90.86,
  "bets": [
   {
    "event_id": "9c28ce0ac169f83e873ae8caa7f9a597",
@@ -268,9 +268,13 @@
    "stake": 0.5,
    "entered": "2026-10-07",
    "closing_odds": 1.87,
-   "result": null,
-   "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "result": "win",
+   "pnl": 0.55,
+   "closing_ts": "2026-10-13T14:05:02+00:00",
+   "settled": "2026-10-14",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": 12.3
   },
   {
    "event_id": "dd431688ed5c8f383b6434fd4f01e883",
@@ -284,9 +288,13 @@
    "stake": 2.0,
    "entered": "2026-10-07",
    "closing_odds": 9.0,
-   "result": null,
-   "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "result": "loss",
+   "pnl": -2.0,
+   "closing_ts": "2026-10-13T14:05:02+00:00",
+   "settled": "2026-10-14",
+   "home_score": 1,
+   "away_score": 4,
+   "clv": -11.11
   },
   {
    "event_id": "dd431688ed5c8f383b6434fd4f01e883",
@@ -300,9 +308,13 @@
    "stake": 0.7,
    "entered": "2026-10-07",
    "closing_odds": 7.0,
-   "result": null,
-   "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "result": "loss",
+   "pnl": -0.7,
+   "closing_ts": "2026-10-13T14:05:02+00:00",
+   "settled": "2026-10-14",
+   "home_score": 1,
+   "away_score": 4,
+   "clv": -14.29
   },
   {
    "event_id": "5a1a6a04c5561897741105e30d5d7ec4",
@@ -315,10 +327,10 @@
    "edge": 0.215,
    "stake": 0.5,
    "entered": "2026-10-08",
-   "closing_odds": 2.1,
+   "closing_odds": 2.0,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "closing_ts": "2026-10-14T14:05:02+00:00"
   },
   {
    "event_id": "4c7f87780ae5ab8bec9e83d6d6ec9909",
@@ -334,7 +346,7 @@
    "closing_odds": 3.5,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "closing_ts": "2026-10-14T14:05:02+00:00"
   },
   {
    "event_id": "d7576351b8cb2396e32cc3de0446f3de",
@@ -347,10 +359,10 @@
    "edge": 0.088,
    "stake": 1.32,
    "entered": "2026-10-08",
-   "closing_odds": 9.5,
+   "closing_odds": 7.0,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "closing_ts": "2026-10-14T14:05:02+00:00"
   },
   {
    "event_id": "d7576351b8cb2396e32cc3de0446f3de",
@@ -363,10 +375,10 @@
    "edge": 0.058,
    "stake": 0.5,
    "entered": "2026-10-08",
-   "closing_odds": 6.0,
+   "closing_odds": 5.7,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-13T14:05:02+00:00"
+   "closing_ts": "2026-10-14T14:05:02+00:00"
   },
   {
    "event_id": "ca3f4b075d835413f9cb7bd3c439fdd0",
@@ -379,6 +391,26 @@
    "edge": 0.051,
    "stake": 0.79,
    "entered": "2026-10-13",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": "win",
+   "pnl": 7.9,
+   "settled": "2026-10-14",
+   "home_score": 3,
+   "away_score": 4,
+   "clv": null
+  },
+  {
+   "event_id": "2903ee092f7e08c549b130a3d394ac3c",
+   "home": "LASK",
+   "away": "Liverpool",
+   "commence": "2026-10-14T16:45:00Z",
+   "market": "h2h_home",
+   "odds": 7.5,
+   "model_prob": 0.176,
+   "edge": 0.05,
+   "stake": 0.5,
+   "entered": "2026-10-14",
    "closing_odds": null,
    "closing_ts": null,
    "result": null,

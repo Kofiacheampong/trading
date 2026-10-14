@@ -1,82 +1,82 @@
 {
- "Real Betis": {
-  "attack": 0.956,
-  "defense": 1.066
- },
- "LASK": {
-  "attack": 0.739,
-  "defense": 1.424
- },
- "Atletico Madrid": {
-  "attack": 0.979,
-  "defense": 1.004
- },
- "Galatasaray": {
-  "attack": 1.091,
-  "defense": 0.954
- },
  "Napoli": {
-  "attack": 0.967,
-  "defense": 0.932
- },
- "VfB Stuttgart": {
-  "attack": 1.017,
-  "defense": 1.033
- },
- "Inter Milan": {
-  "attack": 1.371,
-  "defense": 0.919
- },
- "Lille": {
-  "attack": 0.881,
-  "defense": 0.987
- },
- "Barcelona": {
-  "attack": 1.316,
-  "defense": 0.886
- },
- "Sporting CP": {
-  "attack": 1.281,
-  "defense": 0.788
- },
- "Feyenoord": {
-  "attack": 0.925,
-  "defense": 1.079
- },
- "Porto": {
-  "attack": 0.935,
-  "defense": 0.681
- },
- "Real Madrid": {
-  "attack": 1.131,
-  "defense": 0.867
- },
- "Borussia Dortmund": {
-  "attack": 1.01,
-  "defense": 0.83
- },
- "AEK Athens": {
-  "attack": 0.924,
-  "defense": 0.743
- },
- "Slovan Bratislava": {
-  "attack": 0.802,
-  "defense": 1.336
- },
- "Villarreal": {
-  "attack": 1.085,
-  "defense": 1.039
+  "attack": 0.972,
+  "defense": 0.968
  },
  "Viking FK": {
-  "attack": 0.993,
-  "defense": 1.102
+  "attack": 0.99,
+  "defense": 1.075
+ },
+ "Borussia Dortmund": {
+  "attack": 1.001,
+  "defense": 0.896
  },
  "Club Brugge": {
-  "attack": 1.048,
-  "defense": 1.145
+  "attack": 1.034,
+  "defense": 1.106
  },
  "Paris Saint-Germain": {
-  "attack": 1.1,
-  "defense": 0.844
+  "attack": 1.059,
+  "defense": 0.907
+ },
+ "Real Madrid": {
+  "attack": 1.079,
+  "defense": 0.922
+ },
+ "Lille": {
+  "attack": 0.845,
+  "defense": 1.002
+ },
+ "Feyenoord": {
+  "attack": 0.946,
+  "defense": 1.059
+ },
+ "Atletico Madrid": {
+  "attack": 0.981,
+  "defense": 0.93
+ },
+ "Barcelona": {
+  "attack": 1.205,
+  "defense": 0.931
+ },
+ "Sporting CP": {
+  "attack": 1.177,
+  "defense": 0.869
+ },
+ "VfB Stuttgart": {
+  "attack": 1.006,
+  "defense": 1.029
+ },
+ "Villarreal": {
+  "attack": 1.053,
+  "defense": 1.031
+ },
+ "Real Betis": {
+  "attack": 0.966,
+  "defense": 1.051
+ },
+ "AEK Athens": {
+  "attack": 0.946,
+  "defense": 0.839
+ },
+ "LASK": {
+  "attack": 0.825,
+  "defense": 1.285
+ },
+ "Inter Milan": {
+  "attack": 1.236,
+  "defense": 0.962
+ },
+ "Porto": {
+  "attack": 0.953,
+  "defense": 0.799
+ },
+ "Galatasaray": {
+  "attack": 1.05,
+  "defense": 0.984
+ },
+ "Slovan Bratislava": {
+  "attack": 0.867,
+  "defense": 1.228
  }
 }

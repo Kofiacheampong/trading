@@ -2647,6 +2647,51 @@
     "rsi(30)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-10-14",
+   "price": 120.6,
+   "score": 82.5,
+   "rsi": 25.6,
+   "relvol": 1.15,
+   "vs_200ma": -38.7,
+   "vs_52w_high": -69.3,
+   "flags": [
+    "oversold_quality(-39% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-10-14",
+   "price": 39.33,
+   "score": 82.5,
+   "rsi": 27.4,
+   "relvol": 1.08,
+   "vs_200ma": -41.8,
+   "vs_52w_high": -69.9,
+   "flags": [
+    "oversold_quality(-42% vs 200ma)",
+    "rsi(27)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-10-14",
+   "price": 4.73,
+   "score": 82.5,
+   "rsi": 17.4,
+   "relvol": 0.99,
+   "vs_200ma": -56.4,
+   "vs_52w_high": -72.8,
+   "flags": [
+    "oversold_quality(-56% vs 200ma)",
+    "rsi(17)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -2776,6 +2821,14 @@
    "exit": 7855.75,
    "reason": "time",
    "pnl": 45.0
+  },
+  {
+   "date": "2026-10-14",
+   "side": "long",
+   "entry": 7805.25,
+   "exit": 7785.25,
+   "reason": "sl",
+   "pnl": -100.0
   }
  ],
  "fade_flags": [],
@@ -3866,6 +3919,20 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 225.23,
    "s50": 222.92
+  },
+  {
+   "date": "2026-10-14",
+   "ticker": "DRAM",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 59.26,
+   "s50": 57.31
+  },
+  {
+   "date": "2026-10-14",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 225.8,
+   "s50": 224.2
   }
  ],
  "value_cache": {
@@ -4862,8 +4929,8 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-10-13T20:15:09+00:00",
-   "last_try": "2026-10-13T20:15:09+00:00",
+   "last_ok": "2026-10-14T20:15:13+00:00",
+   "last_try": "2026-10-14T20:15:13+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -4875,12 +4942,17 @@
      "ts": "2026-10-13T20:15:09+00:00",
      "ok": true,
      "note": "194 bars for 2026-10-13"
+    },
+    {
+     "ts": "2026-10-14T20:15:13+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-10-14"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-10-13T20:15:09+00:00",
-   "last_try": "2026-10-13T20:15:09+00:00",
+   "last_ok": "2026-10-14T20:15:13+00:00",
+   "last_try": "2026-10-14T20:15:13+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -4890,6 +4962,11 @@
     },
     {
      "ts": "2026-10-13T20:15:09+00:00",
+     "ok": true,
+     "note": "ok=2 fail=0"
+    },
+    {
+     "ts": "2026-10-14T20:15:13+00:00",
      "ok": true,
      "note": "ok=2 fail=0"
     }
