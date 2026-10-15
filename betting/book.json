@@ -680,7 +680,7 @@
    "closing_odds": 3.2,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "8f1945e7272bc7e89016439f5ab321c7",
@@ -693,10 +693,10 @@
    "edge": 0.073,
    "stake": 0.5,
    "entered": "2026-10-10",
-   "closing_odds": 2.3,
+   "closing_odds": 2.35,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "7895f97f2f9577f3b13287a3d086859d",
@@ -709,10 +709,10 @@
    "edge": 0.076,
    "stake": 0.5,
    "entered": "2026-10-10",
-   "closing_odds": 3.8,
+   "closing_odds": 3.9,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "7895f97f2f9577f3b13287a3d086859d",
@@ -728,7 +728,7 @@
    "closing_odds": 4.8,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "bf2142d1ca76ba2fc9e61afce80f86c0",
@@ -741,10 +741,10 @@
    "edge": 0.158,
    "stake": 0.5,
    "entered": "2026-10-10",
-   "closing_odds": 1.17,
+   "closing_odds": 1.21,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "d1bbbdcd3d430e70091b518369b559cf",
@@ -760,7 +760,7 @@
    "closing_odds": 2.25,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "9fc08b390a49c4434f7cf631a0bb88fb",
@@ -773,10 +773,10 @@
    "edge": 0.068,
    "stake": 0.5,
    "entered": "2026-10-11",
-   "closing_odds": 1.48,
+   "closing_odds": 1.51,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "676b3b0b609e9cf565da450786618d26",
@@ -792,7 +792,7 @@
    "closing_odds": 2.35,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "dfd5d6648be46426e418801584d46a68",
@@ -805,10 +805,10 @@
    "edge": 0.056,
    "stake": 0.5,
    "entered": "2026-10-12",
-   "closing_odds": 2.0,
+   "closing_odds": 2.05,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "f696a248965373d9071dc0662e5c58a8",
@@ -821,10 +821,10 @@
    "edge": 0.152,
    "stake": 0.5,
    "entered": "2026-10-12",
-   "closing_odds": 1.53,
+   "closing_odds": 1.59,
    "result": null,
    "pnl": null,
-   "closing_ts": "2026-10-14T14:00:12+00:00"
+   "closing_ts": "2026-10-15T14:00:03+00:00"
   },
   {
    "event_id": "9baaf4e48b041cfef04e70e42532502e",
@@ -837,8 +837,8 @@
    "edge": 0.15,
    "stake": 1.92,
    "entered": "2026-10-13",
-   "closing_odds": 4.5,
-   "closing_ts": "2026-10-14T14:00:12+00:00",
+   "closing_odds": 4.6,
+   "closing_ts": "2026-10-15T14:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -853,8 +853,8 @@
    "edge": 0.176,
    "stake": 2.0,
    "entered": "2026-10-13",
-   "closing_odds": 6.0,
-   "closing_ts": "2026-10-14T14:00:12+00:00",
+   "closing_odds": 6.5,
+   "closing_ts": "2026-10-15T14:00:03+00:00",
    "result": null,
    "pnl": null
   }

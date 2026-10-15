@@ -604,7 +604,10 @@
    "flags": [
     "oversold_quality(-32% vs 200ma)",
     "near_52w_low"
-   ]
+   ],
+   "outcome": "bounce",
+   "ret": 5.5,
+   "resolved_date": "2026-10-15"
   },
   {
    "ticker": "LULU",
@@ -2375,7 +2378,10 @@
     "oversold_quality(-35% vs 200ma)",
     "rsi(32)",
     "near_52w_low"
-   ]
+   ],
+   "outcome": "bounce",
+   "ret": 6.4,
+   "resolved_date": "2026-10-15"
   },
   {
    "ticker": "KTOS",
@@ -2420,7 +2426,10 @@
     "oversold_quality(-35% vs 200ma)",
     "rsi(34)",
     "near_52w_low"
-   ]
+   ],
+   "outcome": "bounce",
+   "ret": 5.9,
+   "resolved_date": "2026-10-15"
   },
   {
    "ticker": "RCAT",
@@ -2692,6 +2701,53 @@
     "rsi(17)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-10-15",
+   "price": 30.04,
+   "score": 92.5,
+   "rsi": 32.3,
+   "relvol": 1.03,
+   "vs_200ma": -47.7,
+   "vs_52w_high": -81.6,
+   "flags": [
+    "oversold_quality(-48% vs 200ma)",
+    "rsi(32)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "SMR",
+   "date": "2026-10-15",
+   "price": 6.15,
+   "score": 92.5,
+   "rsi": 31.0,
+   "relvol": 0.92,
+   "vs_200ma": -46.7,
+   "vs_52w_high": -87.1,
+   "flags": [
+    "oversold_quality(-47% vs 200ma)",
+    "rsi(31)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-10-15",
+   "price": 40.74,
+   "score": 85.5,
+   "rsi": 35.1,
+   "relvol": 1.05,
+   "vs_200ma": -39.5,
+   "vs_52w_high": -68.8,
+   "flags": [
+    "oversold_quality(-40% vs 200ma)",
+    "near_52w_low",
+    "early_reversal"
+   ]
   }
  ],
  "lottery": {
@@ -2827,6 +2883,14 @@
    "side": "long",
    "entry": 7805.25,
    "exit": 7785.25,
+   "reason": "sl",
+   "pnl": -100.0
+  },
+  {
+   "date": "2026-10-15",
+   "side": "short",
+   "entry": 7748.5,
+   "exit": 7768.5,
    "reason": "sl",
    "pnl": -100.0
   }
@@ -3933,6 +3997,20 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 225.8,
    "s50": 224.2
+  },
+  {
+   "date": "2026-10-15",
+   "ticker": "DRAM",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.84,
+   "s50": 57.22
+  },
+  {
+   "date": "2026-10-15",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 227.14,
+   "s50": 225.76
   }
  ],
  "value_cache": {
@@ -4929,8 +5007,8 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-10-14T20:15:13+00:00",
-   "last_try": "2026-10-14T20:15:13+00:00",
+   "last_ok": "2026-10-15T20:15:07+00:00",
+   "last_try": "2026-10-15T20:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -4947,12 +5025,17 @@
      "ts": "2026-10-14T20:15:13+00:00",
      "ok": true,
      "note": "194 bars for 2026-10-14"
+    },
+    {
+     "ts": "2026-10-15T20:15:07+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-10-15"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-10-14T20:15:13+00:00",
-   "last_try": "2026-10-14T20:15:13+00:00",
+   "last_ok": "2026-10-15T20:15:07+00:00",
+   "last_try": "2026-10-15T20:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -4967,6 +5050,11 @@
     },
     {
      "ts": "2026-10-14T20:15:13+00:00",
+     "ok": true,
+     "note": "ok=2 fail=0"
+    },
+    {
+     "ts": "2026-10-15T20:15:07+00:00",
      "ok": true,
      "note": "ok=2 fail=0"
     }
