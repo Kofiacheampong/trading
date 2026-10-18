@@ -1,82 +1,82 @@
 {
  "Arsenal": {
-  "attack": 1.445,
-  "defense": 0.383
+  "attack": 1.463,
+  "defense": 0.388
  },
  "Manchester City": {
-  "attack": 1.862,
-  "defense": 0.485
+  "attack": 1.88,
+  "defense": 0.496
  },
  "Manchester United": {
-  "attack": 1.024,
-  "defense": 1.291
+  "attack": 1.035,
+  "defense": 1.308
  },
  "Aston Villa": {
-  "attack": 0.853,
-  "defense": 0.945
+  "attack": 0.862,
+  "defense": 0.881
  },
  "Liverpool": {
-  "attack": 1.001,
-  "defense": 0.786
+  "attack": 1.016,
+  "defense": 0.795
  },
  "Bournemouth": {
-  "attack": 1.184,
-  "defense": 1.396
+  "attack": 1.198,
+  "defense": 1.414
  },
  "Sunderland": {
-  "attack": 0.69,
-  "defense": 1.071
+  "attack": 0.698,
+  "defense": 1.085
  },
  "Brighton & Hove Albion": {
-  "attack": 1.296,
-  "defense": 0.858
+  "attack": 1.311,
+  "defense": 0.869
  },
  "Brentford": {
-  "attack": 1.345,
-  "defense": 0.828
+  "attack": 1.357,
+  "defense": 0.842
  },
  "Chelsea": {
-  "attack": 1.144,
-  "defense": 1.243
+  "attack": 1.162,
+  "defense": 1.158
  },
  "Fulham": {
-  "attack": 0.822,
-  "defense": 1.146
+  "attack": 0.832,
+  "defense": 1.069
  },
  "Newcastle United": {
-  "attack": 1.279,
-  "defense": 1.17
+  "attack": 1.19,
+  "defense": 1.184
  },
  "Everton": {
-  "attack": 0.829,
-  "defense": 0.741
+  "attack": 0.772,
+  "defense": 0.754
  },
  "Leeds United": {
-  "attack": 1.036,
-  "defense": 1.024
+  "attack": 1.047,
+  "defense": 1.038
  },
  "Crystal Palace": {
-  "attack": 0.742,
-  "defense": 1.157
+  "attack": 0.75,
+  "defense": 1.172
  },
  "Nottingham Forest": {
-  "attack": 0.675,
-  "defense": 1.128
+  "attack": 0.683,
+  "defense": 1.142
  },
  "Tottenham Hotspur": {
-  "attack": 0.485,
-  "defense": 1.004
+  "attack": 0.492,
+  "defense": 1.018
  },
  "Coventry City": {
-  "attack": 0.668,
-  "defense": 1.128
+  "attack": 0.675,
+  "defense": 1.142
  },
  "Ipswich Town": {
-  "attack": 0.778,
-  "defense": 1.488
+  "attack": 0.794,
+  "defense": 1.505
  },
  "Hull City": {
-  "attack": 0.841,
-  "defense": 0.728
+  "attack": 0.783,
+  "defense": 0.739
  }
 }
