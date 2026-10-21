@@ -2948,6 +2948,51 @@
     "rsi(22)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-10-21",
+   "price": 117.51,
+   "score": 82.5,
+   "rsi": 26.1,
+   "relvol": 0.91,
+   "vs_200ma": -39.2,
+   "vs_52w_high": -70.1,
+   "flags": [
+    "oversold_quality(-39% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-10-21",
+   "price": 38.74,
+   "score": 82.5,
+   "rsi": 29.8,
+   "relvol": 0.79,
+   "vs_200ma": -41.8,
+   "vs_52w_high": -70.4,
+   "flags": [
+    "oversold_quality(-42% vs 200ma)",
+    "rsi(30)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-10-21",
+   "price": 4.58,
+   "score": 82.5,
+   "rsi": 21.1,
+   "relvol": 0.72,
+   "vs_200ma": -57.4,
+   "vs_52w_high": -73.6,
+   "flags": [
+    "oversold_quality(-57% vs 200ma)",
+    "rsi(21)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -3117,6 +3162,14 @@
    "exit": 7776.0,
    "reason": "sl",
    "pnl": -100.0
+  },
+  {
+   "date": "2026-10-21",
+   "side": "long",
+   "entry": 7755.0,
+   "exit": 7785.0,
+   "reason": "tp",
+   "pnl": 150.0
   }
  ],
  "fade_flags": [],
@@ -4301,6 +4354,13 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 231.63,
    "s50": 228.21
+  },
+  {
+   "date": "2026-10-21",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 233.6,
+   "s50": 229.19
   }
  ],
  "value_cache": {
@@ -5297,8 +5357,8 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-10-20T20:15:07+00:00",
-   "last_try": "2026-10-20T20:15:07+00:00",
+   "last_ok": "2026-10-21T20:15:06+00:00",
+   "last_try": "2026-10-21T20:15:06+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -5335,12 +5395,17 @@
      "ts": "2026-10-20T20:15:07+00:00",
      "ok": true,
      "note": "194 bars for 2026-10-20"
+    },
+    {
+     "ts": "2026-10-21T20:15:06+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-10-21"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-10-20T20:15:07+00:00",
-   "last_try": "2026-10-20T20:15:07+00:00",
+   "last_ok": "2026-10-21T20:15:06+00:00",
+   "last_try": "2026-10-21T20:15:06+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -5377,6 +5442,11 @@
      "ts": "2026-10-20T20:15:07+00:00",
      "ok": true,
      "note": "ok=6 fail=0"
+    },
+    {
+     "ts": "2026-10-21T20:15:06+00:00",
+     "ok": true,
+     "note": "ok=1 fail=0"
     }
    ]
   }

@@ -1,5 +1,5 @@
 {
- "bankroll": 87.54,
+ "bankroll": 86.54,
  "bets": [
   {
    "event_id": "9c28ce0ac169f83e873ae8caa7f9a597",
@@ -449,8 +449,12 @@
    "entered": "2026-10-15",
    "closing_odds": 6.0,
    "closing_ts": "2026-10-20T14:05:02+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-10-21",
+   "home_score": 4,
+   "away_score": 3,
+   "clv": 0.0
   },
   {
    "event_id": "d3b3e714b6af9e5430e3030ed639e6dd",
@@ -464,7 +468,7 @@
    "stake": 0.5,
    "entered": "2026-10-15",
    "closing_odds": 6.5,
-   "closing_ts": "2026-10-20T14:05:02+00:00",
+   "closing_ts": "2026-10-21T14:05:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -479,8 +483,8 @@
    "edge": 0.079,
    "stake": 0.76,
    "entered": "2026-10-15",
-   "closing_odds": 5.1,
-   "closing_ts": "2026-10-20T14:05:02+00:00",
+   "closing_odds": 4.6,
+   "closing_ts": "2026-10-21T14:05:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -495,8 +499,8 @@
    "edge": 0.042,
    "stake": 0.5,
    "entered": "2026-10-15",
-   "closing_odds": 11.0,
-   "closing_ts": "2026-10-20T14:05:02+00:00",
+   "closing_odds": 10.5,
+   "closing_ts": "2026-10-21T14:05:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -513,8 +517,12 @@
    "entered": "2026-10-20",
    "closing_odds": null,
    "closing_ts": null,
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-10-21",
+   "home_score": 1,
+   "away_score": 1,
+   "clv": null
   },
   {
    "event_id": "d3b3e714b6af9e5430e3030ed639e6dd",
@@ -527,8 +535,8 @@
    "edge": 0.092,
    "stake": 1.69,
    "entered": "2026-10-20",
-   "closing_odds": null,
-   "closing_ts": null,
+   "closing_odds": 11.0,
+   "closing_ts": "2026-10-21T14:05:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -543,8 +551,8 @@
    "edge": 0.049,
    "stake": 0.5,
    "entered": "2026-10-20",
-   "closing_odds": null,
-   "closing_ts": null,
+   "closing_odds": 6.5,
+   "closing_ts": "2026-10-21T14:05:03+00:00",
    "result": null,
    "pnl": null
   }
