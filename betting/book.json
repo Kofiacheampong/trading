@@ -1,5 +1,5 @@
 {
- "bankroll": 100.73,
+ "bankroll": 99.73,
  "bets": [
   {
    "event_id": "eb2553d10d63dc912b99f8fd0d675721",
@@ -919,8 +919,12 @@
    "entered": "2026-10-17",
    "closing_odds": 3.2,
    "closing_ts": "2026-10-22T14:00:02+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-10-24",
+   "home_score": 1,
+   "away_score": 1,
+   "clv": -9.38
   },
   {
    "event_id": "aca5dd297dbee71f576f7641569fe578",
@@ -935,8 +939,12 @@
    "entered": "2026-10-17",
    "closing_odds": 1.65,
    "closing_ts": "2026-10-22T14:00:02+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-10-24",
+   "home_score": 2,
+   "away_score": 1,
+   "clv": 1.21
   },
   {
    "event_id": "f66e4f29c1b7bcfc5ab58c0b88c8850b",
@@ -949,8 +957,8 @@
    "edge": 0.048,
    "stake": 0.5,
    "entered": "2026-10-17",
-   "closing_odds": 4.4,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 5.2,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -965,8 +973,8 @@
    "edge": 0.071,
    "stake": 0.5,
    "entered": "2026-10-18",
-   "closing_odds": 1.61,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 1.87,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -981,8 +989,8 @@
    "edge": 0.117,
    "stake": 0.5,
    "entered": "2026-10-18",
-   "closing_odds": 3.5,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 3.1,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -998,7 +1006,7 @@
    "stake": 0.5,
    "entered": "2026-10-18",
    "closing_odds": 4.8,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1014,7 +1022,7 @@
    "stake": 0.5,
    "entered": "2026-10-18",
    "closing_odds": 3.9,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1029,8 +1037,8 @@
    "edge": 0.075,
    "stake": 0.5,
    "entered": "2026-10-18",
-   "closing_odds": 3.1,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 3.2,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1045,8 +1053,8 @@
    "edge": 0.081,
    "stake": 0.5,
    "entered": "2026-10-18",
-   "closing_odds": 2.3,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 2.35,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1061,8 +1069,8 @@
    "edge": 0.099,
    "stake": 0.5,
    "entered": "2026-10-19",
-   "closing_odds": 2.4,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 2.45,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1077,8 +1085,24 @@
    "edge": 0.059,
    "stake": 0.5,
    "entered": "2026-10-21",
-   "closing_odds": 1.38,
-   "closing_ts": "2026-10-22T14:00:02+00:00",
+   "closing_odds": 1.33,
+   "closing_ts": "2026-10-24T14:00:04+00:00",
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "6601f69175a02f03fb7065aacb538e01",
+   "home": "Chelsea",
+   "away": "Manchester United",
+   "commence": "2026-10-31T12:30:00Z",
+   "market": "h2h_home",
+   "odds": 1.83,
+   "model_prob": 0.579,
+   "edge": 0.067,
+   "stake": 0.5,
+   "entered": "2026-10-24",
+   "closing_odds": null,
+   "closing_ts": null,
    "result": null,
    "pnl": null
   }

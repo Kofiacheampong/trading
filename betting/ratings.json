@@ -4,16 +4,16 @@
   "defense": 0.313
  },
  "Manchester City": {
-  "attack": 1.941,
-  "defense": 0.522
+  "attack": 1.933,
+  "defense": 0.526
  },
  "Manchester United": {
   "attack": 1.068,
   "defense": 1.345
  },
  "Aston Villa": {
-  "attack": 0.888,
-  "defense": 0.775
+  "attack": 0.894,
+  "defense": 0.772
  },
  "Liverpool": {
   "attack": 1.058,
@@ -61,7 +61,7 @@
  },
  "Nottingham Forest": {
   "attack": 0.552,
-  "defense": 1.168
+  "defense": 1.166
  },
  "Tottenham Hotspur": {
   "attack": 0.52,
@@ -72,8 +72,8 @@
   "defense": 1.215
  },
  "Ipswich Town": {
-  "attack": 0.83,
-  "defense": 1.56
+  "attack": 0.828,
+  "defense": 1.559
  },
  "Hull City": {
   "attack": 0.746,
