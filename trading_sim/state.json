@@ -518,6 +518,33 @@
    "expiry": "2026-11-20",
    "credit": 2.73,
    "outcome": null
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-10-26",
+   "strike": 92.5,
+   "spot": 102.91,
+   "expiry": "2026-10-30",
+   "credit": 1.11,
+   "outcome": null
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-10-26",
+   "strike": 97.5,
+   "spot": 109.63,
+   "expiry": "2026-10-30",
+   "credit": 1.17,
+   "outcome": null
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-10-26",
+   "strike": 50.0,
+   "spot": 54.99,
+   "expiry": "2026-10-30",
+   "credit": 0.57,
+   "outcome": null
   }
  ],
  "events": [],
@@ -3090,6 +3117,51 @@
     "rsi(21)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-10-26",
+   "price": 4.4,
+   "score": 82.5,
+   "rsi": 21.0,
+   "relvol": 0.75,
+   "vs_200ma": -58.7,
+   "vs_52w_high": -74.7,
+   "flags": [
+    "oversold_quality(-59% vs 200ma)",
+    "rsi(21)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PUSA",
+   "date": "2026-10-26",
+   "price": 2.03,
+   "score": 82.5,
+   "rsi": 31.0,
+   "relvol": 0.77,
+   "vs_200ma": -46.7,
+   "vs_52w_high": -74.0,
+   "flags": [
+    "oversold_quality(-47% vs 200ma)",
+    "rsi(31)",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-10-26",
+   "price": 25.93,
+   "score": 82.5,
+   "rsi": 26.4,
+   "relvol": 0.68,
+   "vs_200ma": -53.1,
+   "vs_52w_high": -81.9,
+   "flags": [
+    "oversold_quality(-53% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -3283,6 +3355,14 @@
    "exit": 7661.25,
    "reason": "time",
    "pnl": 86.25
+  },
+  {
+   "date": "2026-10-26",
+   "side": "short",
+   "entry": 7708.0,
+   "exit": 7728.0,
+   "reason": "sl",
+   "pnl": -100.0
   }
  ],
  "fade_flags": [],
@@ -4499,6 +4579,19 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 238.89,
    "s50": 231.43
+  },
+  {
+   "date": "2026-10-26",
+   "ticker": "KMB",
+   "reason": "low premium",
+   "yield": 0.78
+  },
+  {
+   "date": "2026-10-26",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 241.28,
+   "s50": 232.43
   }
  ],
  "value_cache": {
@@ -5495,8 +5588,8 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-10-23T20:15:07+00:00",
-   "last_try": "2026-10-23T20:15:07+00:00",
+   "last_ok": "2026-10-26T20:15:08+00:00",
+   "last_try": "2026-10-26T20:15:08+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -5548,12 +5641,17 @@
      "ts": "2026-10-23T20:15:07+00:00",
      "ok": true,
      "note": "194 bars for 2026-10-23"
+    },
+    {
+     "ts": "2026-10-26T20:15:08+00:00",
+     "ok": true,
+     "note": "195 bars for 2026-10-26"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-10-23T20:15:07+00:00",
-   "last_try": "2026-10-23T20:15:07+00:00",
+   "last_ok": "2026-10-26T20:15:08+00:00",
+   "last_try": "2026-10-26T20:15:08+00:00",
    "streak_fail": 0,
    "attempts": [
     {
@@ -5605,6 +5703,11 @@
      "ts": "2026-10-23T20:15:07+00:00",
      "ok": true,
      "note": "ok=7 fail=0"
+    },
+    {
+     "ts": "2026-10-26T20:15:08+00:00",
+     "ok": true,
+     "note": "ok=6 fail=0"
     }
    ]
   }
