@@ -3260,6 +3260,49 @@
     "rsi(34)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "PUSA",
+   "date": "2026-10-29",
+   "price": 1.81,
+   "score": 82.5,
+   "rsi": 27.2,
+   "relvol": 0.54,
+   "vs_200ma": -52.1,
+   "vs_52w_high": -71.7,
+   "flags": [
+    "oversold_quality(-52% vs 200ma)",
+    "rsi(27)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "OKLO",
+   "date": "2026-10-29",
+   "price": 26.77,
+   "score": 72.5,
+   "rsi": 31.8,
+   "relvol": 0.61,
+   "vs_200ma": -50.6,
+   "vs_52w_high": -80.5,
+   "flags": [
+    "oversold_quality(-51% vs 200ma)",
+    "rsi(32)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-10-29",
+   "price": 5.05,
+   "score": 55.5,
+   "rsi": 39.4,
+   "relvol": 1.04,
+   "vs_200ma": -52.1,
+   "vs_52w_high": -70.9,
+   "flags": [
+    "oversold_quality(-52% vs 200ma)"
+   ]
   }
  ],
  "lottery": {
@@ -3467,6 +3510,14 @@
    "side": "long",
    "entry": 7715.25,
    "exit": 7745.25,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-10-29",
+   "side": "short",
+   "entry": 7757.25,
+   "exit": 7727.25,
    "reason": "tp",
    "pnl": 150.0
   }
@@ -4724,6 +4775,20 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 245.7,
    "s50": 234.33
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 103.22,
+   "s50": 102.83
+  },
+  {
+   "date": "2026-10-29",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 247.36,
+   "s50": 235.1
   }
  ],
  "value_cache": {
@@ -5720,15 +5785,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-10-28T20:15:09+00:00",
-   "last_try": "2026-10-28T20:15:09+00:00",
+   "last_ok": "2026-10-29T20:15:07+00:00",
+   "last_try": "2026-10-29T20:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-13T20:15:09+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-10-13"
-    },
     {
      "ts": "2026-10-14T20:15:13+00:00",
      "ok": true,
@@ -5783,19 +5843,19 @@
      "ts": "2026-10-28T20:15:09+00:00",
      "ok": true,
      "note": "194 bars for 2026-10-28"
+    },
+    {
+     "ts": "2026-10-29T20:15:07+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-10-29"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-10-28T20:15:09+00:00",
-   "last_try": "2026-10-28T20:15:09+00:00",
+   "last_ok": "2026-10-29T20:15:07+00:00",
+   "last_try": "2026-10-29T20:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-13T20:15:09+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-10-14T20:15:13+00:00",
      "ok": true,
@@ -5850,6 +5910,11 @@
      "ts": "2026-10-28T20:15:09+00:00",
      "ok": true,
      "note": "ok=6 fail=0"
+    },
+    {
+     "ts": "2026-10-29T20:15:07+00:00",
+     "ok": true,
+     "note": "ok=2 fail=0"
     }
    ]
   }
