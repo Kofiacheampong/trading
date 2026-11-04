@@ -3468,6 +3468,51 @@
     "rsi(31)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-04",
+   "price": 4.0,
+   "score": 82.5,
+   "rsi": 26.3,
+   "relvol": 1.36,
+   "vs_200ma": -61.3,
+   "vs_52w_high": -77.0,
+   "flags": [
+    "oversold_quality(-61% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "PUSA",
+   "date": "2026-11-04",
+   "price": 1.6,
+   "score": 82.5,
+   "rsi": 26.2,
+   "relvol": 0.87,
+   "vs_200ma": -57.2,
+   "vs_52w_high": -75.1,
+   "flags": [
+    "oversold_quality(-57% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "CCJ",
+   "date": "2026-11-04",
+   "price": 71.68,
+   "score": 82.5,
+   "rsi": 29.1,
+   "relvol": 1.39,
+   "vs_200ma": -30.8,
+   "vs_52w_high": -46.5,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "rsi(29)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -3529,13 +3574,18 @@
    "resolved_date": "2026-08-14"
   }
  ],
- "mes": {
-  "entry": 7581.75,
-  "entry_date": "2026-11-02",
-  "sl": 7556.75,
-  "tp": 7611.75
- },
- "mes_trades": [],
+ "mes": null,
+ "mes_trades": [
+  {
+   "entry": 7581.75,
+   "exit": 7725.25,
+   "entry_date": "2026-11-02",
+   "exit_date": "2026-11-04",
+   "reason": "tp",
+   "pnl": 717.5,
+   "hold_days": 2
+  }
+ ],
  "put_flags": [
   {
    "ticker": "ABNB",
@@ -3714,6 +3764,14 @@
    "exit": 7621.75,
    "reason": "sl",
    "pnl": -100.0
+  },
+  {
+   "date": "2026-11-04",
+   "side": "short",
+   "entry": 7736.0,
+   "exit": 7706.0,
+   "reason": "tp",
+   "pnl": 150.0
   }
  ],
  "fade_flags": [],
@@ -5043,6 +5101,20 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 253.57,
    "s50": 237.26
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 105.54,
+   "s50": 102.61
+  },
+  {
+   "date": "2026-11-04",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 255.79,
+   "s50": 237.99
   }
  ],
  "value_cache": {
@@ -6039,15 +6111,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-03T21:15:06+00:00",
-   "last_try": "2026-11-03T21:15:06+00:00",
+   "last_ok": "2026-11-04T21:15:08+00:00",
+   "last_try": "2026-11-04T21:15:08+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-19T20:15:07+00:00",
-     "ok": true,
-     "note": "195 bars for 2026-10-19"
-    },
     {
      "ts": "2026-10-20T20:15:07+00:00",
      "ok": true,
@@ -6102,19 +6169,19 @@
      "ts": "2026-11-03T21:15:06+00:00",
      "ok": true,
      "note": "194 bars for 2026-11-03"
+    },
+    {
+     "ts": "2026-11-04T21:15:08+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-11-04"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-03T21:15:06+00:00",
-   "last_try": "2026-11-03T21:15:06+00:00",
+   "last_ok": "2026-11-04T21:15:08+00:00",
+   "last_try": "2026-11-04T21:15:08+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-19T20:15:07+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-10-20T20:15:07+00:00",
      "ok": true,
@@ -6167,6 +6234,11 @@
     },
     {
      "ts": "2026-11-03T21:15:06+00:00",
+     "ok": true,
+     "note": "ok=2 fail=0"
+    },
+    {
+     "ts": "2026-11-04T21:15:08+00:00",
      "ok": true,
      "note": "ok=2 fail=0"
     }

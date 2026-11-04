@@ -1,5 +1,5 @@
 {
- "bankroll": 86.84,
+ "bankroll": 83.96,
  "bets": [
   {
    "event_id": "9c28ce0ac169f83e873ae8caa7f9a597",
@@ -589,8 +589,12 @@
    "entered": "2026-10-28",
    "closing_odds": 7.0,
    "closing_ts": "2026-11-03T15:05:03+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.77,
+   "settled": "2026-11-04",
+   "home_score": 3,
+   "away_score": 0,
+   "clv": 0.0
   },
   {
    "event_id": "f6f3cf01c2b20b7f746b5a06097a0569",
@@ -605,8 +609,12 @@
    "entered": "2026-10-28",
    "closing_odds": 3.6,
    "closing_ts": "2026-11-03T15:05:03+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-11-04",
+   "home_score": 0,
+   "away_score": 3,
+   "clv": 22.22
   },
   {
    "event_id": "adf608a0e9be02eb1d8b0a6f464a12b1",
@@ -621,8 +629,12 @@
    "entered": "2026-10-28",
    "closing_odds": 7.5,
    "closing_ts": "2026-11-03T15:05:03+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -1.11,
+   "settled": "2026-11-04",
+   "home_score": 4,
+   "away_score": 0,
+   "clv": -13.33
   },
   {
    "event_id": "f43ef699c987e112e115f7035114854e",
@@ -635,8 +647,8 @@
    "edge": 0.048,
    "stake": 0.5,
    "entered": "2026-10-29",
-   "closing_odds": 6.5,
-   "closing_ts": "2026-11-03T15:05:03+00:00",
+   "closing_odds": 7.0,
+   "closing_ts": "2026-11-04T15:05:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -651,8 +663,8 @@
    "edge": 0.045,
    "stake": 0.5,
    "entered": "2026-10-29",
-   "closing_odds": 4.3,
-   "closing_ts": "2026-11-03T15:05:03+00:00",
+   "closing_odds": 4.6,
+   "closing_ts": "2026-11-04T15:05:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -667,6 +679,26 @@
    "edge": 0.047,
    "stake": 0.5,
    "entered": "2026-11-03",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-11-04",
+   "home_score": 4,
+   "away_score": 0,
+   "clv": null
+  },
+  {
+   "event_id": "ba82ee37f64a66a30d85f8b90082ec2f",
+   "home": "Porto",
+   "away": "Napoli",
+   "commence": "2026-11-04T20:00:00Z",
+   "market": "h2h_away",
+   "odds": 4.3,
+   "model_prob": 0.271,
+   "edge": 0.052,
+   "stake": 0.5,
+   "entered": "2026-11-04",
    "closing_odds": null,
    "closing_ts": null,
    "result": null,
