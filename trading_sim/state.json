@@ -3513,6 +3513,51 @@
     "rsi(29)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-11-05",
+   "price": 102.08,
+   "score": 82.5,
+   "rsi": 27.1,
+   "relvol": 1.43,
+   "vs_200ma": -43.5,
+   "vs_52w_high": -74.0,
+   "flags": [
+    "oversold_quality(-43% vs 200ma)",
+    "rsi(27)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-11-05",
+   "price": 33.39,
+   "score": 82.5,
+   "rsi": 28.9,
+   "relvol": 2.03,
+   "vs_200ma": -46.5,
+   "vs_52w_high": -74.5,
+   "flags": [
+    "oversold_quality(-46% vs 200ma)",
+    "rsi(29)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-05",
+   "price": 3.4,
+   "score": 82.5,
+   "rsi": 21.4,
+   "relvol": 1.37,
+   "vs_200ma": -66.9,
+   "vs_52w_high": -80.4,
+   "flags": [
+    "oversold_quality(-67% vs 200ma)",
+    "rsi(21)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -3574,7 +3619,12 @@
    "resolved_date": "2026-08-14"
   }
  ],
- "mes": null,
+ "mes": {
+  "entry": 7368.5,
+  "entry_date": "2026-11-05",
+  "sl": 7343.5,
+  "tp": 7398.5
+ },
  "mes_trades": [
   {
    "entry": 7581.75,
@@ -3772,6 +3822,14 @@
    "exit": 7706.0,
    "reason": "tp",
    "pnl": 150.0
+  },
+  {
+   "date": "2026-11-05",
+   "side": "long",
+   "entry": 7577.0,
+   "exit": 7557.0,
+   "reason": "sl",
+   "pnl": -100.0
   }
  ],
  "fade_flags": [],
@@ -5115,6 +5173,20 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 255.79,
    "s50": 237.99
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 106.18,
+   "s50": 102.62
+  },
+  {
+   "date": "2026-11-05",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 256.8,
+   "s50": 238.34
   }
  ],
  "value_cache": {
@@ -6111,15 +6183,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-04T21:15:08+00:00",
-   "last_try": "2026-11-04T21:15:08+00:00",
+   "last_ok": "2026-11-05T21:15:07+00:00",
+   "last_try": "2026-11-05T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-20T20:15:07+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-10-20"
-    },
     {
      "ts": "2026-10-21T20:15:06+00:00",
      "ok": true,
@@ -6174,19 +6241,19 @@
      "ts": "2026-11-04T21:15:08+00:00",
      "ok": true,
      "note": "194 bars for 2026-11-04"
+    },
+    {
+     "ts": "2026-11-05T21:15:07+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-11-05"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-04T21:15:08+00:00",
-   "last_try": "2026-11-04T21:15:08+00:00",
+   "last_ok": "2026-11-05T21:15:07+00:00",
+   "last_try": "2026-11-05T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-20T20:15:07+00:00",
-     "ok": true,
-     "note": "ok=6 fail=0"
-    },
     {
      "ts": "2026-10-21T20:15:06+00:00",
      "ok": true,
@@ -6239,6 +6306,11 @@
     },
     {
      "ts": "2026-11-04T21:15:08+00:00",
+     "ok": true,
+     "note": "ok=2 fail=0"
+    },
+    {
+     "ts": "2026-11-05T21:15:07+00:00",
      "ok": true,
      "note": "ok=2 fail=0"
     }

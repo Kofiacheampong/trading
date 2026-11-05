@@ -1398,7 +1398,7 @@
    "stake": 0.5,
    "entered": "2026-10-31",
    "closing_odds": 3.9,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1413,8 +1413,8 @@
    "edge": 0.113,
    "stake": 0.5,
    "entered": "2026-10-31",
-   "closing_odds": 2.6,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_odds": 2.7,
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1429,8 +1429,8 @@
    "edge": 0.046,
    "stake": 0.5,
    "entered": "2026-11-01",
-   "closing_odds": 3.2,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_odds": 3.3,
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1446,7 +1446,7 @@
    "stake": 0.53,
    "entered": "2026-11-01",
    "closing_odds": 8.0,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1462,7 +1462,7 @@
    "stake": 0.5,
    "entered": "2026-11-01",
    "closing_odds": 1.69,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1477,8 +1477,8 @@
    "edge": 0.196,
    "stake": 0.5,
    "entered": "2026-11-01",
-   "closing_odds": 1.87,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_odds": 1.95,
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1493,8 +1493,8 @@
    "edge": 0.084,
    "stake": 0.5,
    "entered": "2026-11-01",
-   "closing_odds": 3.6,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_odds": 3.7,
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1510,7 +1510,7 @@
    "stake": 0.5,
    "entered": "2026-11-01",
    "closing_odds": 1.54,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1526,7 +1526,7 @@
    "stake": 0.73,
    "entered": "2026-11-02",
    "closing_odds": 3.1,
-   "closing_ts": "2026-11-03T15:00:03+00:00",
+   "closing_ts": "2026-11-05T15:00:14+00:00",
    "result": null,
    "pnl": null
   }
