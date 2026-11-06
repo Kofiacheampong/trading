@@ -1,6 +1,14 @@
 {
- "cash": 1513.4488703275993,
- "positions": {},
+ "cash": 1393.4488703275993,
+ "positions": {
+  "PAYC": {
+   "shares": 0.5059,
+   "entry": 237.19000244140625,
+   "entry_date": "2026-11-06",
+   "notional": 120.0,
+   "sma20": 257.05
+  }
+ },
  "closed": [
   {
    "ticker": "ZTS",
@@ -556,7 +564,8 @@
    "spot": 107.83,
    "expiry": "2026-11-06",
    "credit": 1.17,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 110.79
   },
   {
    "ticker": "KMB",
@@ -565,7 +574,8 @@
    "spot": 108.25,
    "expiry": "2026-11-06",
    "credit": 1.17,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 108.43
   },
   {
    "ticker": "PYPL",
@@ -574,7 +584,8 @@
    "spot": 58.78,
    "expiry": "2026-11-06",
    "credit": 0.63,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 59.24
   }
  ],
  "events": [],
@@ -3558,6 +3569,55 @@
     "rsi(21)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "BWXT",
+   "date": "2026-11-06",
+   "price": 119.52,
+   "score": 104.5,
+   "rsi": 34.9,
+   "relvol": 1.65,
+   "vs_200ma": -34.6,
+   "vs_52w_high": -49.9,
+   "flags": [
+    "oversold_quality(-35% vs 200ma)",
+    "rsi(35)",
+    "near_52w_low",
+    "early_reversal",
+    "accumulation(volx1.7)"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-11-06",
+   "price": 35.1,
+   "score": 97.5,
+   "rsi": 35.1,
+   "relvol": 1.65,
+   "vs_200ma": -43.4,
+   "vs_52w_high": -73.1,
+   "flags": [
+    "oversold_quality(-43% vs 200ma)",
+    "near_52w_low",
+    "early_reversal",
+    "accumulation(volx1.6)"
+   ]
+  },
+  {
+   "ticker": "CCJ",
+   "date": "2026-11-06",
+   "price": 71.3,
+   "score": 92.5,
+   "rsi": 33.2,
+   "relvol": 1.27,
+   "vs_200ma": -30.9,
+   "vs_52w_high": -46.8,
+   "flags": [
+    "oversold_quality(-31% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low",
+    "early_reversal"
+   ]
   }
  ],
  "lottery": {
@@ -3619,12 +3679,7 @@
    "resolved_date": "2026-08-14"
   }
  ],
- "mes": {
-  "entry": 7368.5,
-  "entry_date": "2026-11-05",
-  "sl": 7343.5,
-  "tp": 7398.5
- },
+ "mes": null,
  "mes_trades": [
   {
    "entry": 7581.75,
@@ -3634,6 +3689,15 @@
    "reason": "tp",
    "pnl": 717.5,
    "hold_days": 2
+  },
+  {
+   "entry": 7368.5,
+   "exit": 7400.75,
+   "entry_date": "2026-11-05",
+   "exit_date": "2026-11-06",
+   "reason": "tp",
+   "pnl": 161.25,
+   "hold_days": 1
   }
  ],
  "put_flags": [
@@ -3984,7 +4048,12 @@
    "yield_pct": 1.63,
    "s20": 97.61,
    "s50": 109.43,
-   "outcome": null
+   "outcome": "assigned",
+   "settle": 110.79,
+   "pnl_usd": 1004.0,
+   "ret_pct": 10.62,
+   "hold_pct": 17.24,
+   "resolved_date": "2026-11-06"
   },
   {
    "ticker": "PYPL",
@@ -5187,6 +5256,27 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 256.8,
    "s50": 238.34
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 102.79,
+   "s50": 102.16
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 106.72,
+   "s50": 102.59
+  },
+  {
+   "date": "2026-11-06",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 257.05,
+   "s50": 238.35
   }
  ],
  "value_cache": {
@@ -6183,15 +6273,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-05T21:15:07+00:00",
-   "last_try": "2026-11-05T21:15:07+00:00",
+   "last_ok": "2026-11-06T21:15:07+00:00",
+   "last_try": "2026-11-06T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-21T20:15:06+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-10-21"
-    },
     {
      "ts": "2026-10-22T20:15:07+00:00",
      "ok": true,
@@ -6246,19 +6331,19 @@
      "ts": "2026-11-05T21:15:07+00:00",
      "ok": true,
      "note": "194 bars for 2026-11-05"
+    },
+    {
+     "ts": "2026-11-06T21:15:07+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-11-06"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-05T21:15:07+00:00",
-   "last_try": "2026-11-05T21:15:07+00:00",
+   "last_ok": "2026-11-06T21:15:07+00:00",
+   "last_try": "2026-11-06T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-21T20:15:06+00:00",
-     "ok": true,
-     "note": "ok=1 fail=0"
-    },
     {
      "ts": "2026-10-22T20:15:07+00:00",
      "ok": true,
@@ -6313,6 +6398,11 @@
      "ts": "2026-11-05T21:15:07+00:00",
      "ok": true,
      "note": "ok=2 fail=0"
+    },
+    {
+     "ts": "2026-11-06T21:15:07+00:00",
+     "ok": true,
+     "note": "ok=4 fail=0"
     }
    ]
   }

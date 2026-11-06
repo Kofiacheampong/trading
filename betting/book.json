@@ -1397,8 +1397,8 @@
    "edge": 0.062,
    "stake": 0.5,
    "entered": "2026-10-31",
-   "closing_odds": 3.9,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_odds": 4.0,
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1413,8 +1413,8 @@
    "edge": 0.113,
    "stake": 0.5,
    "entered": "2026-10-31",
-   "closing_odds": 2.7,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_odds": 2.75,
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1430,7 +1430,7 @@
    "stake": 0.5,
    "entered": "2026-11-01",
    "closing_odds": 3.3,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1446,7 +1446,7 @@
    "stake": 0.53,
    "entered": "2026-11-01",
    "closing_odds": 8.0,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1461,8 +1461,8 @@
    "edge": 0.315,
    "stake": 0.5,
    "entered": "2026-11-01",
-   "closing_odds": 1.69,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_odds": 1.71,
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1477,8 +1477,8 @@
    "edge": 0.196,
    "stake": 0.5,
    "entered": "2026-11-01",
-   "closing_odds": 1.95,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_odds": 1.91,
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1494,7 +1494,7 @@
    "stake": 0.5,
    "entered": "2026-11-01",
    "closing_odds": 3.7,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1509,8 +1509,8 @@
    "edge": 0.109,
    "stake": 0.5,
    "entered": "2026-11-01",
-   "closing_odds": 1.54,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_odds": 1.57,
+   "closing_ts": "2026-11-06T15:00:14+00:00",
    "result": null,
    "pnl": null
   },
@@ -1526,7 +1526,23 @@
    "stake": 0.73,
    "entered": "2026-11-02",
    "closing_odds": 3.1,
-   "closing_ts": "2026-11-05T15:00:14+00:00",
+   "closing_ts": "2026-11-06T15:00:14+00:00",
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "3903e98a54db0f2cc23095407fe9dad8",
+   "home": "Fulham",
+   "away": "Newcastle United",
+   "commence": "2026-11-07T15:00:00Z",
+   "market": "h2h_away",
+   "odds": 3.7,
+   "model_prob": 0.303,
+   "edge": 0.048,
+   "stake": 0.5,
+   "entered": "2026-11-06",
+   "closing_odds": null,
+   "closing_ts": null,
    "result": null,
    "pnl": null
   }
