@@ -8,7 +8,8 @@ const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&
 function inline(s) {
   s = esc(s);
   s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
-  s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  // Lazy match so bold can contain *italic* runs (**bold with *inner* emphasis**).
+  s = s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<em>$2</em>');
   s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
   return s;
@@ -91,7 +92,12 @@ function render(md) {
 
 const input = path.resolve(process.argv[2]);
 const output = path.resolve(process.argv[3] || input.replace(/\.\w+$/, '.html'));
-const body = render(fs.readFileSync(input, 'utf8'));
+const mdSrc = fs.readFileSync(input, 'utf8');
+const body = render(mdSrc);
+
+// Derive <title> from the first H1 so PDF metadata matches the document.
+const h1 = mdSrc.split('\n').find(l => /^#\s+/.test(l));
+const docTitle = h1 ? h1.replace(/^#\s+/, '').replace(/[*`]/g, '').trim() : path.basename(input, path.extname(input));
 
 const css = `
   * { box-sizing: border-box; }
@@ -120,7 +126,7 @@ const css = `
 `;
 
 fs.writeFileSync(output, `<!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><title>Afro Deli — Woodbury Business Plan</title>
+<html lang="en"><head><meta charset="UTF-8"><title>${esc(docTitle)}</title>
 <style>${css}</style></head>
 <body>${body}</body></html>`);
 console.log('HTML written:', output);

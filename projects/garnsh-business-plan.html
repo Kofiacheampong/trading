@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Garnsh — Business Plan</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 9.5pt; }
+  h1 { font-size: 22pt; font-weight: 800; color: #111; border-bottom: 3px solid #d97706; padding-bottom: 6px; margin: 0 0 4px; }
+  h1 + h2 { border-bottom: none; color: #6b7280; font-size: 13pt; margin-top: 0; }
+  h2 { font-size: 15pt; font-weight: 700; color: #b45309; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin: 1.4em 0 0.6em; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 700; color: #333; margin: 1.1em 0 0.4em; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; margin: 1em 0 0.3em; }
+  p { margin: 0.45em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.7em 0; font-size: 8.8pt; page-break-inside: avoid; }
+  th { background: #fef3c7; border: 1px solid #f0d9a0; padding: 5px 7px; text-align: left; font-weight: 700; }
+  td { border: 1px solid #e5e7eb; padding: 4px 7px; vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafafa; }
+  ul, ol { margin: 0.4em 0 0.6em; padding-left: 20px; }
+  li { margin: 0.15em 0; }
+  blockquote { border-left: 3px solid #d97706; background: #fffbeb; margin: 0.7em 0; padding: 8px 14px; color: #3f3f46; font-size: 9.8pt; page-break-inside: avoid; }
+  blockquote p { margin: 0.25em 0; }
+  code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-family: ui-monospace, Menlo, monospace; font-size: 9pt; }
+  pre { background: #f8f8f7; border: 1px solid #e5e7eb; border-radius: 4px; padding: 10px 12px; font-size: 8.8pt; page-break-inside: avoid; }
+  pre code { background: none; padding: 0; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 1.2em 0; }
+  strong { color: #000; }
+  a { color: #b45309; text-decoration: none; }
+  @page { size: letter; margin: 15mm 14mm; }
+</style></head>
+<body><h1>Garnsh — Business Plan</h1>
+<p><strong>The menu publishing layer for Toast restaurants.</strong></p>
+<p>Prepared for Kofi · 7 November 2026 · v1.0</p>
+<hr>
+<h2>1. Executive summary</h2>
+<p>Garnsh is a publishing layer that sits on top of a restaurant's Toast POS. The operator keeps running the menu in Toast — the single source of truth — and Garnsh renders that menu correctly on every guest-facing surface: a hosted menu page per location, an embed for the existing website, a QR view, and a designed digital menu board. It adds the things a POS was never built to do: preview before publish, version history, rollback, per-location mapping, and a last-known-good fallback when the upstream feed breaks.</p>
+<p><strong>The wedge is not "menus." It is menu <em>release discipline</em>.</strong> Every surface a guest sees is someone's draft that got shipped by accident. Garnsh treats a menu the way engineering treats a deploy: draft → preview → publish → rollback, with an audit trail.</p>
+<p><strong>The strategic call in this plan: do not sell to single-location independents.</strong> That market is owned by Owner.com and Popmenu at $249–$500/month with ordering, marketing and websites bundled — you cannot win a feature fight against a bundle, and a $39/month independent churns 40%+ a year. Garnsh's real customer is the <strong>multi-unit Toast operator (3–200 locations)</strong>, where the menu-per-location problem is acute, the buying process is rational, churn is 3–4x lower, and the same product sells for 3–6x the price.</p>
+<p><strong>Bottom line:</strong> this is a real, profitable, defensible niche business — roughly <strong>$35–70M of addressable spend inside the Toast base alone</strong> — not a venture-scale outcome on its own. Base case is ~$670K ARR by year three at ~70%+ EBITDA margins on a bootstrap budget. The venture version requires expanding off Toast to Square/Clover/Lightspeed and selling to 20+ location groups; that path supports a $250K raise and a $3–6M ARR outcome. Both are worth doing; only one is worth raising money for.</p>
+<p><strong>The single biggest risk is not competition — it is Toast itself</strong>: API access, marketplace economics, and Toast shipping this natively. Section 8 treats that as the critical path, not a footnote.</p>
+<hr>
+<h2>2. The problem</h2>
+<p>A restaurant's menu exists in five or six places at once, and they disagree.</p>
+<ul>
+<li>The POS has the <em>real</em> menu — items, prices, modifiers, availability.</li>
+<li>The website has a PDF or a hand-built page that was accurate in March.</li>
+<li>The QR code points at a third copy, often a Google Drive file.</li>
+<li>The in-store screens run off a USB stick or a vendor CMS that only the owner knows how to log into.</li>
+<li>Delivery marketplaces and Google/Yelp each hold their own version.</li>
+<li>Multi-location groups have all of the above, multiplied, with different prices per location — airport, stadium, and flagship pricing on the same item.</li>
+</ul>
+<p>The cost of this is not aesthetic. It is:</p>
+<ol>
+<li><strong>Price mismatch at the table.</strong> Guest sees $16 on the QR code, is charged $18. That is a service recovery, a comp, a bad review, and in some jurisdictions a consumer-protection exposure.</li>
+<li><strong>Labor cost of manual sync.</strong> Someone — usually the GM — retypes the menu into Canva and a website builder every time a price changes. In a 6-location group that is hours per month, done badly.</li>
+<li><strong>Menu drift after turnover.</strong> The person who knew how to update the PDF quit. Now nobody does.</li>
+<li><strong>Broken screens during service.</strong> Upstream tool fails, board goes blank, guests stare at a black rectangle at the counter.</li>
+<li><strong>Lost discovery.</strong> PDFs and image menus are poorly parsed by search and AI answer engines. As guests increasingly ask an assistant "what's on the menu at X," a machine-readable, current menu page becomes a discovery asset.</li>
+</ol>
+<p>Existing tools solve adjacent problems. Website builders solve the site, not the menu. Menu-sync tools (Marqii and similar) push menus <em>out</em> to Google/Yelp/Apple — a distribution problem, not a rendering problem. Digital signage vendors sell screens and a CMS. Nobody sells the operator a clean, reliable, per-location <em>publishing</em> pipeline that treats the POS as source of truth and everything else as a build target.</p>
+<hr>
+<h2>3. Product</h2>
+<h3>What Garnsh does</h3>
+<table><thead><tr><th>Surface</th><th>What it is</th><th>Who it is for</th></tr></thead><tbody><tr><td><strong>Hosted page</strong></td><td>A public menu page per location, server-rendered, phone-first, branded</td><td>Fast setup; the default landing surface</td></tr><tr><td><strong>Website embed</strong></td><td>An iframe/JS embed that drops the same menu into the operator's existing site</td><td>Restaurants with a site they like and don't want to rebuild</td></tr><tr><td><strong>QR menu</strong></td><td>A phone view opened from a printed code, one per location</td><td>Tables, patios, counters</td></tr><tr><td><strong>Menu board</strong></td><td>A designed display for in-store screens, 16:9 and 3-panel landscape</td><td>Lines and counters; replaces the USB stick</td></tr></tbody></table>
+<h3>The features that actually differentiate</h3>
+<ul>
+<li><strong>Preview → publish → rollback.</strong> Draft v15 is never visible to guests while v14 is live. Every published version is retained. This is the feature nobody in restaurant tech has, and it is the entire pitch to an operator who has been burned.</li>
+<li><strong>Last-known-good fallback.</strong> If the upstream feed is unavailable, public surfaces keep serving the most recent version that published correctly. No blank boards, no error pages at the table.</li>
+<li><strong>Location mapping.</strong> Each surface is bound to one location's menu context, so the airport price never appears on the flagship board. This is the multi-unit unlock.</li>
+<li><strong>Freshness readout.</strong> "Source last read 6 minutes ago" — an honest operational signal, not a fake "real-time" claim.</li>
+<li><strong>Brand at the center.</strong> Typography, color, logo per brand, with per-location overrides.</li>
+</ul>
+<h3>What Garnsh deliberately is not</h3>
+<p>No cart, no checkout, no payments, no ordering, no delivery, no 86/stock status, no promise of real-time sync. This is a strategic choice, not a limitation:</p>
+<ul>
+<li>It keeps Garnsh <strong>out of Toast's revenue path</strong> — the single most dangerous place for a dependent partner to stand.</li>
+<li>It keeps the company <strong>out of PCI scope</strong> entirely.</li>
+<li>It makes the product <strong>easy to say yes to</strong> — it does not threaten the operator's existing ordering vendor.</li>
+<li>It focuses the engineering effort on the thing that is genuinely hard: correct, versioned, per-location rendering.</li>
+</ul>
+<h3>Honest product debt</h3>
+<p>The current build is a strong demo with real interaction design (three sample restaurants, four surfaces, publish/rollback simulation). To be sellable it needs: a real ingestion path (see §8), tenant auth and isolation, per-location asset management, an upload pipeline for logos/fonts, board scheduling, and an accessibility pass to WCAG 2.1 AA. That is roughly 8–12 weeks of focused work, not a weekend.</p>
+<hr>
+<h2>4. Market</h2>
+<h3>Bottom-up sizing</h3>
+<p>Toast reported approximately <strong>189,000 locations</strong> at Q3 2026, up 21% year over year, adding ~8,500 net locations per quarter. That is the beachhead, and it is growing faster than the restaurant industry.</p>
+<table><thead><tr><th>Layer</th><th>Estimate</th><th>Basis</th></tr></thead><tbody><tr><td>Toast locations (global)</td><td>~189,000</td><td>Toast Q3 2026 disclosure</td></tr><tr><td>US share of Toast base</td><td>~150,000 (est.)</td><td>Toast is US-weighted; treat as estimate</td></tr><tr><td>Locations that plausibly need a public menu surface</td><td>~120,000 (est.)</td><td>Most, but not all, have a web presence</td></tr><tr><td><strong>Target segment: multi-unit groups, 3–200 locations</strong></td><td>~35,000–50,000 locations (est.)</td><td>~25% of the base sits inside multi-unit groups</td></tr><tr><td>Blended price per location per month</td><td>$45–$62</td><td>See §6</td></tr><tr><td><strong>SAM (Toast multi-unit only)</strong></td><td><strong>$19M–$37M ARR</strong></td><td>35–50k × $45–62 × 12</td></tr><tr><td>TAM if single-unit independents included</td><td>$65M–$90M ARR</td><td>Whole Toast base, lower ARPU</td></tr><tr><td><strong>Expansion TAM: all POS platforms</strong></td><td><strong>$250M–$400M ARR (est.)</strong></td><td>Square, Clover, Lightspeed, SpotOn add roughly 3–4x the location count</td></tr></tbody></table>
+<p><strong>Read this honestly:</strong> the Toast-only opportunity is a genuine but small market. A 10% share of the multi-unit segment is ~$3M ARR — an excellent business for a small team, a disappointing one for a VC. The expansion to other POS platforms is what turns it into a venture story, and that is a year-two decision, not a year-one one.</p>
+<h3>Why now</h3>
+<ul>
+<li><strong>Menu data is becoming a discovery asset.</strong> AI answer engines and Google's summaries reward current, structured, machine-readable menu pages. A PDF is invisible to them.</li>
+<li><strong>Digital signage hardware got cheap.</strong> A 43" commercial display is a few hundred dollars; the bottleneck is software and content, not hardware.</li>
+<li><strong>Restaurant labor turnover</strong> makes "the person who knew how to update it" a recurring failure mode — which makes a self-serve, guarded publishing pipeline more valuable every year.</li>
+<li><strong>Toast's installed base compounds at ~8,500 locations a quarter.</strong> Every quarter the addressable base grows without Garnsh spending a dollar.</li>
+<li><strong>Consolidation in restaurant marketing</strong> (website builders bundling more, POS platforms bundling more) means the window for a focused, independent layer is open now and may not stay open.</li>
+</ul>
+<hr>
+<h2>5. Customers and segmentation</h2>
+<h3>Primary ICP: the multi-unit operator, 3–200 locations</h3>
+<ul>
+<li><strong>Who:</strong> franchisee groups, local chains, hospitality groups with 4–40 units, airport/stadium concessionaires with per-location pricing.</li>
+<li><strong>Where they feel pain:</strong> per-location price differences, brand consistency, every new opening requiring a manual site build, boards that break during service.</li>
+<li><strong>Who signs:</strong> Director of Operations, Marketing Manager, or the owner-operator in smaller groups. Not IT.</li>
+<li><strong>Budget:</strong> they already pay for a website, a signage tool, and someone's time. $45–$70 per location per month is inside existing line items.</li>
+<li><strong>Why they churn less:</strong> switching means re-mapping every location; the product becomes part of opening procedures. Expect 1–1.5% monthly logo churn versus 4%+ for independents.</li>
+</ul>
+<h3>Secondary ICP: the single-location independent with screens</h3>
+<p>Only worth serving <strong>product-led</strong> — self-serve signup, no sales calls, no onboarding calls. At $39/month with 4% monthly churn, the LTV supports roughly a $250 CAC. That means SEO and the Toast marketplace only; never paid acquisition, never outbound.</p>
+<h3>Deliberately excluded</h3>
+<ul>
+<li><strong>Enterprise chains (500+ locations).</strong> Long sales cycles, RFP processes, custom integrations, and they already have internal menu systems or an enterprise CMS. Revisit at $2M ARR, not before.</li>
+<li><strong>Restaurants without a POS-managed menu.</strong> Garbage in, garbage out.</li>
+<li><strong>Ghost kitchens and delivery-only brands</strong> with no guest-facing surface.</li>
+</ul>
+<hr>
+<h2>6. Pricing and packaging</h2>
+<table><thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead><tbody><tr><td><strong>Solo</strong></td><td>$39/mo per location</td><td>Hosted page, embed, QR, 1 board screen</td></tr><tr><td><strong>Growth</strong></td><td>$69/mo per location</td><td>Everything in Solo, unlimited board screens, custom domain, brand kit</td></tr><tr><td><strong>Multi</strong></td><td>$45/mo per location, min. 3 locations ($135/mo floor)</td><td>Everything in Growth, location mapping, shared brand kit, per-location overrides</td></tr><tr><td><strong>Group</strong></td><td>$35/mo per location, annual contract, 26+ locations</td><td>Everything in Multi, onboarding, priority support, invoicing</td></tr><tr><td><strong>Setup</strong></td><td>$199 one-time (waived on annual)</td><td>Brand import, first location live, QR assets</td></tr></tbody></table>
+<p><strong>Pricing logic.</strong> The reference points are: UpMenu at $49–$169 per location for menu modules, Popmenu at a reported ~$500/month plus ~$1,300 setup, Owner.com at $249–$499/month. Garnsh must sit clearly <em>below</em> the bundled website+ordering players so it reads as an obvious add-on rather than a replacement, and clearly <em>above</em> a $17/month commodity menu builder so it doesn't read as a toy. $39–$69 per location threads that needle.</p>
+<p><strong>Two pricing rules to hold:</strong></p>
+<ol>
+<li><strong>Never discount the per-location price.</strong> Discount implementation (waive setup, extra months) instead. Per-location price is the entire revenue model.</li>
+<li><strong>Charge per location, not per surface.</strong> Surface-count pricing invites the operator to turn things off. Location pricing aligns with how they think about their business and grows automatically when they open a new unit.</li>
+</ol>
+<p><strong>Expansion revenue</strong> (year two, only after the core is stable): $5/screen/month beyond the included allowance for groups running 6+ screens; a $19/month "menu analytics" add-on (which surfaces get scanned, which items get viewed); a $99/month per-brand custom design service.</p>
+<hr>
+<h2>7. Unit economics</h2>
+<p>Assumptions: blended ARPU $52/location/month, gross margin 88% (below SaaS-typical 90% because of per-location rendering, image CDN, and support), multi-unit logo churn 1.2%/month, single-unit 4.0%/month.</p>
+<table><thead><tr><th>Metric</th><th>Multi-unit</th><th>Single-unit</th></tr></thead><tbody><tr><td>ARPU/month</td><td>$52</td><td>$39</td></tr><tr><td>Gross margin</td><td>88%</td><td>88%</td></tr><tr><td>Direct cost per location/month</td><td>~$2.10 (hosting, CDN, image processing)</td><td>~$1.60</td></tr><tr><td>Support cost per location/month</td><td>~$4.20 (amortized)</td><td>~$2.80</td></tr><tr><td>Monthly logo churn</td><td>1.2%</td><td>4.0%</td></tr><tr><td>Average lifetime</td><td>~83 months</td><td>~25 months</td></tr><tr><td><strong>LTV</strong></td><td><strong>~$3,800</strong></td><td><strong>~$860</strong></td></tr><tr><td>Target CAC</td><td>$600–$900</td><td>$200–$280</td></tr><tr><td><strong>LTV:CAC</strong></td><td><strong>4.2–6.3x</strong></td><td><strong>3.1–4.3x</strong></td></tr><tr><td>CAC payback</td><td>13–20 months</td><td>6–8 months</td></tr></tbody></table>
+<p><strong>The tension to plan around:</strong> multi-unit accounts have a slower payback (sales cycle plus onboarding) but 4.4x the LTV and a far more durable revenue base. Single-unit accounts pay back fast but bleed. The correct strategy is a <strong>product-led single-unit funnel feeding a sales-assisted multi-unit pipeline</strong> — the same product, two motions, and the multi-unit motion is where the company's value actually accrues.</p>
+<p><strong>Gross margin risk:</strong> onboarding is the hidden cost. Budget 2–4 hours of human time per location in year one. At $52/month, a 4-hour onboarding is a 4–6 month payback before gross profit — which is why setup fees should not be discounted casually, and why self-serve onboarding must become good by year two.</p>
+<hr>
+<h2>8. The Toast dependency (critical path)</h2>
+<p>This section is the plan's most important. Everything else is executable; this is the thing that can end the company.</p>
+<h3>The situation</h3>
+<ul>
+<li>Toast's <strong>Menus API</strong> exists and returns a fully resolved menu for a location. It is available to <strong>Partner integrations</strong>, <strong>Custom integrations</strong>, and <strong>Standard API access</strong>.</li>
+<li><strong>Partner</strong> status requires a formal application, vetting, and an eight-stage process ending in certification, with approval from Toast legal, compliance, privacy and security. Toast explicitly states it cannot integrate with all applicants.</li>
+<li><strong>Fees are not published.</strong> Reporting from 2019 indicated a ~30% revenue share; current terms are unknown. Rate limit is documented at 20 requests/second.</li>
+<li><strong>Custom integrations</strong> serve a single merchant and are not a route to a product.</li>
+</ul>
+<h3>The risk, stated plainly</h3>
+<ol>
+<li><strong>Application rejection.</strong> No partner status means no clean, stable menu feed at scale — and any workaround (screen-scraping the Toast admin, asking customers to export CSVs weekly) is fragile, high-effort, and likely a terms-of-service problem. A business built on a workaround is not investable and is one enforcement action from zero.</li>
+<li><strong>Marketplace economics.</strong> If a 30%-style revenue share applies, a $52 ARPU becomes ~$36 and the multi-unit CAC payback stretches past 24 months. That changes the pricing, not the viability — but it must be known before scaling.</li>
+<li><strong>Toast ships it natively.</strong> Toast already sells <strong>Delphi digital menu boards</strong> and has every incentive to bundle hosted menus into its marketing suite. When a platform owner moves into your feature, the independent vendor's only defenses are (a) being multi-surface and multi-POS, (b) being genuinely better at the operator's workflow, and (c) owning distribution outside the marketplace.</li>
+</ol>
+<h3>Mitigations — do these in this order</h3>
+<ol>
+<li><strong>Apply for Toast partner status in week one.</strong> It is the longest-lead item in the company. Apply before the product is finished; the application is about business case, not code.</li>
+<li><strong>Build a POS-agnostic ingestion layer from day one.</strong> The internal model should be "menu document in, surfaces out." Toast is an adapter, not the architecture. This costs a week now and saves the company later.</li>
+<li><strong>Ship a non-API path for early customers</strong>: CSV/Google Sheets import and a manual editor. Not because it is the future, but because it lets you take money before partner approval lands — and it proves willingness-to-pay without betting the company on a gate you don't control.</li>
+<li><strong>Get to 3+ POS platforms by month 18</strong> (Square, then Clover). This is the actual strategic hedge and the thing that converts this from a Toast feature into a company.</li>
+<li><strong>Own a channel Toast doesn't control.</strong> SEO on the operator's own problem language ("toast menu on our website," "digital menu board for toast"), plus web-design agencies who serve restaurants. If the marketplace closes, the business survives.</li>
+</ol>
+<p><strong>Go/no-go gate:</strong> if partner approval has not landed by <strong>day 120</strong>, redirect all effort to the multi-POS + agency-channel path or stop. Do not spend a year building a Toast-dependent company without Toast's blessing.</p>
+<hr>
+<h2>9. Competition</h2>
+<table><thead><tr><th>Player</th><th>What they do</th><th>Price</th><th>How Garnsh differs</th></tr></thead><tbody><tr><td><strong>Toast (native)</strong></td><td>POS, own marketing suite, Delphi digital menu boards</td><td>Bundled / hardware</td><td>Garnsh is brand-first, per-location, versioned, and works on screens the operator already owns. Toast's boards are Toast's hardware.</td></tr><tr><td><strong>Owner.com</strong></td><td>Website + ordering + marketing, AI-assisted</td><td>$249/mo + 5% of orders, or $499/mo flat</td><td>Doesn't publish to screens; requires the operator to move their site onto Owner. Garnsh layers on top of what exists.</td></tr><tr><td><strong>Popmenu</strong></td><td>Website + menu + marketing, restaurant-focused</td><td>~$500/mo + ~$1,300 setup (reported, unpublished)</td><td>Same — it's a website replacement, sold with a long contract. Garnsh is cheap, narrow, and removable.</td></tr><tr><td><strong>Marqii</strong></td><td>Menu sync out to Google, Yelp, Apple, Facebook</td><td>Mid-market, unpublished</td><td>Distribution, not rendering. Natural partner, plausible acquirer.</td></tr><tr><td><strong>BentoBox / Squarespace</strong></td><td>Restaurant websites</td><td>Bundled</td><td>Site hosting, not a per-location publishing pipeline.</td></tr><tr><td><strong>UpMenu, MenuTiger and regional menu builders</strong></td><td>Menu pages + ordering modules</td><td>$17–$169/location</td><td>Weaker on versioning, rollback and multi-location mapping — but they are cheap and they are already there.</td></tr><tr><td><strong>Wallboard, 42 Digital Signage</strong></td><td>Digital signage with Toast integration</td><td>Signage-tier pricing</td><td>Screen-first, not menu-first. No hosted page or embed story.</td></tr></tbody></table>
+<p><strong>Where Garnsh actually wins:</strong> multi-location pricing integrity, the preview/publish/rollback workflow, last-known-good reliability, and the fact that it does not require the operator to change their website, their POS, or their ordering vendor.</p>
+<p><strong>Where Garnsh actually loses:</strong> anyone who wants one vendor for everything, anyone who wants ordering, and anyone who will not pay for a second tool for a problem they have decided to live with.</p>
+<p><strong>Moat assessment — be honest.</strong> There is no technical moat here. This is a well-executed CRUD app with good design taste. The durable advantages available are: (1) <strong>switching cost</strong> once every location is mapped and opening procedures reference it; (2) <strong>distribution</strong> via marketplace listing plus SEO; (3) <strong>brand/design quality</strong> in a category where the incumbents look like 2014; (4) <strong>the multi-POS adapter layer</strong> once built. None of these are strong on day one. All of them compound. Plan accordingly: speed and distribution matter more than features.</p>
+<hr>
+<h2>10. Go-to-market</h2>
+<h3>Channel sequence</h3>
+<p><strong>Months 0–3 — design partners, not marketing.</strong></p>
+<p>Sign 5–8 paying design partners, ideally 2–3 multi-unit groups, at a discount in exchange for weekly feedback and a case study. Do this through direct outreach to restaurant groups in one metro and through hospitality web-design agencies. Target: product that survives a real service day.</p>
+<p><strong>Months 2–6 — agency and reseller channel.</strong></p>
+<p>Web design agencies serving restaurants are the highest-leverage channel: they get asked "can you also update our menu?" constantly, they hate doing it, and they can white-label. Offer 25% recurring revenue share. Twenty active agency partners beats 2,000 organic visitors.</p>
+<p><strong>Months 3–9 — SEO on the operator's language.</strong></p>
+<p>The site's existing resource pages are the right instinct. Build 30–50 pieces targeting the exact queries operators type: "toast menu on website," "update menu on toast," "digital menu board for restaurant toast," "qr menu per location," "toast menu export." This is slow, cheap, and compounding — and it is the only channel that survives losing marketplace access.</p>
+<p><strong>Months 6+ — Toast Integration Marketplace.</strong></p>
+<p>Highest-intent, lowest-CAC channel available, once certified. Being listed is worth more than any ad budget at this price point.</p>
+<p><strong>Continuous — POS resellers and restaurant associations.</strong></p>
+<p>Resellers sell Toast all day and get asked adjacent questions. State restaurant associations run vendor programs and newsletters. Both are relationship-slow and CAC-efficient.</p>
+<p><strong>Explicitly not doing:</strong> paid Google Ads (CAC will exceed LTV at $39–$69 ARPU), cold outbound at scale (sales cost per location too high under 10 locations), trade show booths (cost per lead is brutal for a sub-$100 ACV), and channel partnerships with delivery marketplaces (misaligned incentives).</p>
+<h3>Sales motion for multi-unit</h3>
+<p>The deal is won or lost on a <strong>live pilot on two locations</strong>. Process: 20-minute demo with the operator's own menu, not a demo restaurant → free 30-day pilot on 2 locations → convert at Multi pricing with annual terms. Keep the sales cycle to 21–30 days; if it runs longer, the account is too big for the current product.</p>
+<h3>Positioning and message</h3>
+<blockquote><p><strong>Your team already runs the menu in Toast. Garnsh makes every guest-facing version match it — per location, with preview, rollback, and a menu that never goes dark.</strong></p></blockquote>
+<p>Three objections to pre-empt, every time:</p>
+<ul>
+<li><em>"Can't my website guy do this?"</em> — Yes, once. Not every price change, not per location, and not with a rollback.</li>
+<li><em>"Is this official Toast?"</em> — No, and that is disclosed plainly. It reads the menu, it never touches payments or orders.</li>
+<li><em>"What if we switch POS?"</em> — The hosted pages, QR codes and boards keep working.</li>
+</ul>
+<hr>
+<h2>11. Operating plan</h2>
+<h3>Team</h3>
+<table><thead><tr><th>Phase</th><th>Headcount</th><th>Notes</th></tr></thead><tbody><tr><td>Months 0–6</td><td>Founder (product + eng), contract designer</td><td>Design quality is a core differentiator; do not skimp on it</td></tr><tr><td>Months 6–18</td><td>+ part-time support/CS (contract, ~$2,500/mo)</td><td>At ~150 locations, support becomes the founder's whole day otherwise</td></tr><tr><td>Months 18–36</td><td>+ 1 engineer, + 1 growth/partnerships</td><td>Only after the multi-unit motion is proven</td></tr></tbody></table>
+<h3>Milestones</h3>
+<p><strong>Days 1–90</strong></p>
+<ul>
+<li>Toast partner application submitted (day 5)</li>
+<li>POS-agnostic ingestion model + CSV/Sheets import shipped</li>
+<li>3 paying design partners live on real menus</li>
+<li>WCAG 2.1 AA pass on all four surfaces</li>
+<li>Pricing page, docs, onboarding flow, terms of service, DPA</li>
+</ul>
+<p><strong>Days 91–180</strong></p>
+<ul>
+<li>10–15 paying locations; first multi-unit account signed</li>
+<li>5 active agency partners</li>
+<li>10 SEO pieces published; first organic signups</li>
+<li>Toast approval status resolved (go/no-go gate at day 120)</li>
+</ul>
+<p><strong>Months 7–12</strong></p>
+<ul>
+<li>40–60 locations live; 3+ multi-unit accounts</li>
+<li>Marketplace listing live (if approved)</li>
+<li>Self-serve onboarding under 20 minutes</li>
+<li>$30K+ ARR run-rate; gross margin measured, not assumed</li>
+</ul>
+<p><strong>Year 2</strong></p>
+<ul>
+<li>250–350 locations; $180K–$250K ARR</li>
+<li>Second POS adapter (Square) shipped</li>
+<li>First 20+ location group closed</li>
+<li>Support hire; founder out of day-to-day support</li>
+</ul>
+<p><strong>Year 3</strong></p>
+<ul>
+<li>800–1,000 locations; $600K–$700K ARR</li>
+<li>3 POS platforms; agency channel producing 40%+ of new logos</li>
+<li>Decision point: raise to accelerate, or run as a profitable $700K-ARR business</li>
+</ul>
+<h3>Metrics that matter (monthly)</h3>
+<p>Locations live · net new locations · ARPU · logo churn (split single vs multi) · gross margin per location · CAC by channel · onboarding hours per location · publish success rate · last-known-good activations (a leading indicator of upstream fragility) · support tickets per 100 locations.</p>
+<hr>
+<h2>12. Financial plan</h2>
+<h3>Base case</h3>
+<table><thead><tr><th></th><th>Year 1</th><th>Year 2</th><th>Year 3</th></tr></thead><tbody><tr><td>Ending locations</td><td>60</td><td>320</td><td>900</td></tr><tr><td>Blended ARPU/location/mo</td><td>$48</td><td>$56</td><td>$62</td></tr><tr><td>Exit ARR</td><td>$34.6K</td><td>$215K</td><td>$670K</td></tr><tr><td>Revenue recognized</td><td>$18K</td><td>$105K</td><td>$400K</td></tr><tr><td>Gross margin</td><td>80%</td><td>86%</td><td>88%</td></tr><tr><td>Gross profit</td><td>$14K</td><td>$90K</td><td>$352K</td></tr><tr><td>People &amp; contractors</td><td>$0</td><td>$45K</td><td>$150K</td></tr><tr><td>Tools, infra, marketing</td><td>$6K</td><td>$18K</td><td>$48K</td></tr><tr><td>Legal, insurance, admin</td><td>$3K</td><td>$7K</td><td>$12K</td></tr><tr><td><strong>Operating result</strong></td><td><strong>+$5K</strong></td><td><strong>+$20K</strong></td><td><strong>+$142K</strong></td></tr><tr><td>Operating margin</td><td>28%</td><td>19%</td><td>36%</td></tr></tbody></table>
+<p><em>Founder salary excluded in years 1–2; $90K assumed inside "people" from year 3.</em></p>
+<h3>Scenarios at year 3</h3>
+<table><thead><tr><th>Scenario</th><th>Locations</th><th>ARR</th><th>Character</th></tr></thead><tbody><tr><td><strong>Bear</strong></td><td>150</td><td>$81K</td><td>Side project. Something is wrong with channel or churn — stop and reassess.</td></tr><tr><td><strong>Base</strong></td><td>900</td><td>$670K</td><td>Profitable niche business, ~$140K/yr to the owner. Good outcome for bootstrapping.</td></tr><tr><td><strong>Bull</strong></td><td>1,800</td><td>$1.5M</td><td>Multi-POS + agency channel working. Now a fundable company.</td></tr><tr><td><strong>Venture</strong></td><td>4,500+</td><td>$3.5M+</td><td>Requires $250K–$500K raised, 2 sales reps, and 4 POS platforms. Only attempt after base case is proven.</td></tr></tbody></table>
+<h3>Capital requirement</h3>
+<ul>
+<li><strong>Bootstrap path (recommended): $0–$15K.</strong> Covers infrastructure, legal templates, insurance, and a designer. The business is cash-generative from month 9–12 at this cost structure.</li>
+<li><strong>Accelerated path: $250K–$350K.</strong> Two salespeople, one engineer, 18 months of runway, target $1.5M ARR in 24 months. Only raise after: 50+ locations live, churn measured under 2%, Toast status known, and one 20+ location group signed. Raising before those four facts exist is how this category eats founders.</li>
+</ul>
+<hr>
+<h2>13. Risks</h2>
+<table><thead><tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody><tr><td><strong>Toast denies partner access</strong></td><td>Medium</td><td>Fatal</td><td>Apply day 5; POS-agnostic architecture; non-API import path; day-120 go/no-go gate</td></tr><tr><td><strong>Toast ships this natively</strong></td><td>High (2–3 yrs)</td><td>Severe</td><td>Multi-POS by month 18; own SEO + agency channel; win the multi-location workflow where Toast is weak</td></tr><tr><td><strong>Marketplace revenue share compresses margin</strong></td><td>Medium</td><td>Moderate</td><td>Price for it from day one; keep direct-sold mix above 50%</td></tr><tr><td><strong>Restaurant SMB churn</strong> (3–5%/mo industry norm)</td><td>High</td><td>Moderate</td><td>Weight the book toward multi-unit; annual contracts; setup fees</td></tr><tr><td><strong>Thin moat / fast copycat</strong></td><td>High</td><td>Moderate</td><td>Speed, design quality, distribution, and switching cost via location mapping</td></tr><tr><td><strong>Liability for a wrong price or allergen on a rendered menu</strong></td><td>Low–Medium</td><td>Severe</td><td>Contract makes Toast the system of record; show "as of" timestamps; never render nutrition or allergen claims; E&amp;O insurance from month one</td></tr><tr><td><strong>ADA/WCAG exposure on public menu pages</strong></td><td>Medium</td><td>Moderate</td><td>WCAG 2.1 AA as a ship gate; accessibility statement; note that restaurant sites are heavily targeted by plaintiffs and courts have held operators cannot simply push liability onto their website vendor</td></tr><tr><td><strong>Founder concentration / solo build risk</strong></td><td>High</td><td>Severe</td><td>Contractor designer early; document everything; no single-person deployment path</td></tr><tr><td><strong>Data/security incident</strong></td><td>Low</td><td>Severe</td><td>Tenant isolation, least-privilege API scopes, SOC 2 readiness by year 2 if selling 20+ location groups (they will ask)</td></tr></tbody></table>
+<p><strong>Legal and compliance baseline:</strong> terms of service with a clear "POS is the system of record" clause and an indemnity carve-out for menu content accuracy; a data processing agreement; privacy policy; trademark non-affiliation disclaimer (already handled well on the site — keep it prominent, never imply Toast endorsement); business insurance including tech E&amp;O and cyber ($1.5K–$3K/yr at this stage).</p>
+<hr>
+<h2>14. Kill criteria</h2>
+<p>Decide these in advance, in writing, so the decision is not made emotionally at month nine:</p>
+<ol>
+<li><strong>No Toast partner approval by day 120</strong> → pivot to multi-POS + agency channel, or stop.</li>
+<li><strong>Fewer than 10 paying locations by day 180</strong> → the ICP or the price is wrong. Do not add features; re-interview the 20 people who said no.</li>
+<li><strong>Multi-unit logo churn above 3%/month after 25 multi-unit locations</strong> → the product is not embedded in their workflow. Stop marketing spend and fix onboarding.</li>
+<li><strong>CAC payback above 18 months on any channel after $5K spent</strong> → kill that channel, permanently.</li>
+<li><strong>Gross margin below 75% at 100 locations</strong> → the unit economics are broken by support cost; re-price or automate onboarding before growing.</li>
+</ol>
+<hr>
+<h2>15. What I would do in the next 14 days</h2>
+<ol>
+<li><strong>Submit the Toast partner application.</strong> Today. Everything downstream depends on it, and it is free to start.</li>
+<li><strong>Talk to 10 multi-unit operators</strong> (4–40 locations) and ask one question: "Walk me through what happens when you change a price." Do not pitch. Count how many describe a manual process involving Canva, a web person, or a spreadsheet. That number is the business.</li>
+<li><strong>Talk to 5 restaurant web-design agencies</strong> and ask what they charge for menu updates and whether they would resell. This validates the highest-leverage channel before a line of code is written.</li>
+<li><strong>Ship the CSV/Sheets import path</strong> so the first customer can pay you without Toast's blessing.</li>
+<li><strong>Set the price and publish it.</strong> $39 Solo / $69 Growth / $45-per-location Multi. Public pricing filters out the wrong customers and shortens every sales cycle.</li>
+<li><strong>Write the WCAG and price-accuracy clauses into the terms</strong> before the first invoice, not after the first complaint.</li>
+</ol>
+<hr>
+<h2>16. Verdict</h2>
+<p>Garnsh is solving a real, unglamorous, recurring problem with unusually good design instincts, in a market where the incumbents are either too big (Toast), too bundled (Owner.com, Popmenu), or solving a different problem (Marqii, signage vendors). The product as designed — preview, publish, rollback, last-known-good, per-location — is genuinely better than what multi-unit operators have today, and the site already communicates it more clearly than most seed-stage companies manage.</p>
+<p>The honest constraints: the Toast-only market is ~$20–37M of addressable ARR, the moat is distribution and switching cost rather than technology, and the entire company sits downstream of a partner gate controlled by a publicly traded company that also sells a competing product.</p>
+<p><strong>So the plan is: land 5 design partners on the strength of the product, win the multi-location segment on the strength of location mapping and release discipline, get the Toast relationship settled inside 120 days, and treat multi-POS expansion in year two as the thing that turns a $700K business into a $3M+ one.</strong> Bootstrap it. It can be profitable by month twelve. Do not raise money until the four facts in §12 exist.</p>
+<hr>
+<p><em>Sources: Garnsh public site (product, positioning, disclaimers); Toast Q3 2026 results and investor materials (189,000 locations, +21% YoY, ~8,500 net adds); Toast developer documentation (Menus API availability, partner integration process, 20 req/sec limit); Toast support documentation (Delphi digital menu boards); Owner.com published pricing; reported Popmenu and UpMenu pricing; Marqii product pages; SaaS churn benchmarks for SMB segments; accessibility litigation commentary (Level Access). Market sizing figures marked "est." are this plan's own bottom-up estimates and should be re-derived before any external use.</em></p></body></html>
