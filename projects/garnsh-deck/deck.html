@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Garnsh — Pitch Deck</title>
+<style>
+@font-face{font-family:Manrope;font-weight:400;src:url(fonts/Manrope-400.ttf)}
+@font-face{font-family:Manrope;font-weight:500;src:url(fonts/Manrope-500.ttf)}
+@font-face{font-family:Manrope;font-weight:700;src:url(fonts/Manrope-700.ttf)}
+@font-face{font-family:Manrope;font-weight:800;src:url(fonts/Manrope-800.ttf)}
+@font-face{font-family:Fraunces;font-weight:400;src:url(fonts/Fraunces-400.ttf)}
+@font-face{font-family:Fraunces;font-weight:600;src:url(fonts/Fraunces-600.ttf)}
+@font-face{font-family:Fraunces;font-weight:700;src:url(fonts/Fraunces-700.ttf)}
+:root{--mango:#FFBF1F;--carbon:#151515;--cloud:#FFFDF8;--paper:#F6F2E7;--green:#22C878;
+--tomato:#FF644B;--brown:#2E2118;--muted:#5E5E5A;--line:#D9D7D0}
+@page{size:13.333in 7.5in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,sans-serif;-webkit-font-smoothing:antialiased}
+.slide{width:13.333in;height:7.5in;padding:0.72in 0.85in 0.6in;position:relative;
+page-break-after:always;overflow:hidden;display:block}
+.slide:last-child{page-break-after:auto}
+.kicker{display:flex;align-items:center;font-size:10.5pt;font-weight:700;
+letter-spacing:.14em;color:var(--brown);margin-bottom:.42in}
+.kicker span{display:inline-block;width:.28in;height:3px;background:var(--mango);margin-right:.16in}
+.dark .kicker{color:var(--mango)}
+.head{font-family:Fraunces,serif;font-weight:700;font-size:27pt;line-height:1.08;
+color:var(--carbon);margin-bottom:.2in;max-width:11.2in}
+.dark .head{color:var(--cloud)}
+.mega{font-family:Fraunces,serif;font-weight:700;font-size:64pt;line-height:1;color:var(--cloud);margin-top:.35in}
+.mega2{font-family:Fraunces,serif;font-weight:700;font-size:38pt;line-height:1.12;color:var(--cloud);margin-top:1.1in}
+.sub{font-family:Manrope,sans-serif;font-weight:700;font-size:19pt;color:var(--mango);margin-top:.12in}
+.rule{width:1.6in;height:3px;background:var(--mango);margin:.3in 0}
+.lede{font-size:11pt;line-height:1.5;color:#C9C4B8;max-width:10.4in}
+.lead{font-size:11.5pt;line-height:1.45;color:var(--brown);max-width:10.8in;margin-bottom:.24in;font-weight:500}
+.bul{list-style:none;max-width:11.3in}
+.bul li{position:relative;padding-left:.26in;margin-bottom:.15in;font-size:10.5pt;line-height:1.42;color:var(--muted)}
+.bul li:before{content:"";position:absolute;left:0;top:.045in;width:5px;height:5px;background:var(--mango)}
+.bul li b{color:var(--brown);font-weight:700}
+.dark .bul li{color:#C9C4B8}
+.dark .bul li b{color:var(--mango)}
+.bul.sm li{font-size:9.8pt}
+.stats{display:flex;margin-top:.42in}
+.stats>div{flex:1;border-top:3px solid var(--mango);padding-top:.14in}
+.stats>div:not(:last-child){margin-right:.3in}
+.sv{font-family:Fraunces,serif;font-weight:700;font-size:26pt;color:var(--carbon);line-height:1.05}
+.dark .sv{color:var(--mango)}
+.sl{font-size:9pt;color:var(--muted);margin-top:.06in;line-height:1.3}
+.dark .sl{color:#C9C4B8}
+.cards{display:flex;margin-top:.3in}
+.card{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:4px;
+border-top:3px solid var(--mango);padding:.26in .24in}
+.card:not(:last-child){margin-right:.3in}
+.card h3{font-family:Manrope;font-size:12pt;font-weight:700;color:var(--carbon);margin-bottom:.1in}
+.card p{font-size:9.6pt;line-height:1.45;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin-top:.16in}
+th{background:var(--carbon);color:var(--cloud);font-size:9.2pt;font-weight:700;text-align:left;
+padding:.11in .1in;letter-spacing:.03em}
+td{font-size:9.2pt;padding:.1in;border-bottom:1px solid var(--line);color:var(--muted);background:var(--cloud)}
+tr:nth-child(even) td{background:var(--paper)}
+td.k{color:var(--carbon);font-weight:700}
+.cols{display:flex;margin-top:.28in}
+.cols>div{flex:1}
+.cols>div:not(:last-child){margin-right:.45in}
+.colh{font-size:10pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+color:var(--carbon);border-top:3px solid var(--brown);padding-top:.1in;margin-bottom:.16in}
+.colh.amber{border-top-color:var(--mango)}
+.note{font-size:9.6pt;font-style:italic;line-height:1.4;color:var(--brown);margin-top:.3in;max-width:11.3in}
+.num{position:absolute;right:.85in;bottom:.3in;font-size:9pt;color:var(--muted)}
+.dark .num{color:#7A7368}
+.brandmark{position:absolute;left:.85in;bottom:.3in;font-size:9pt;font-weight:700;
+letter-spacing:.16em;color:var(--muted)}
+.dark .brandmark{color:#7A7368}
+.foot-r{position:absolute;right:.85in;bottom:1.05in;font-size:9pt;color:#7A7368}
+.foot-l{position:absolute;left:.85in;bottom:1.2in;font-size:10pt;color:#7A7368}
+</style></head><body>
+<section class="slide dark" style="background:var(--carbon)">
+        <div class="kicker"><span></span>MENU PUBLISHING LAYER FOR TOAST</div>
+        <h1 class="mega">Garnsh</h1>
+        <div class="sub">Your menu, everywhere.</div>
+        <div class="rule"></div>
+        <p class="lede">We publish the menu a restaurant already runs in Toast to every guest-facing surface it has — website, QR, screens — per location, with preview, rollback, and a menu that never goes dark.</p>
+        <div class="foot-r">2027 · Confidential</div><div class="num">01</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>THE PROBLEM</div>
+      <h2 class="head">One menu. Five versions.<br>None of them agree.</h2>
+      <p class="lead">The menu a guest sees is never the menu the kitchen runs. It is a copy of a copy, edited by whoever had the login.</p>
+      <ul class="bul"><li><b>Fragmentation</b> The POS holds the real menu. The website holds a PDF from March. The QR code points at a third copy. The boards run off a USB stick.</li><li><b>Multi-location</b> Groups multiply it — airport, stadium and flagship pricing on the same item, each with its own stale copy.</li><li><b>Cost</b> The guest reads $16 and gets charged $18. That is a comp, a bad review, and in some jurisdictions a consumer-protection exposure.</li><li><b>Turnover</b> Someone retypes the menu into Canva every time a price changes. Then that person quits.</li></ul><div class="stats"><div><div class="sv">3</div><div class="sl">guest surfaces per location, minimum</div></div><div><div class="sv">0</div><div class="sl">rollbacks available when a bad menu ships</div></div><div><div class="sv">1</div><div class="sl">person who knows how to update it</div></div></div><div class="num">02</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>WHY NOW</div>
+      <h2 class="head">The menu became the product listing.</h2>
+      
+      <ul class="bul"><li><b>Machine-readable</b> AI answer engines and search summaries reward current, structured menus. A PDF is invisible to them.</li><li><b>Hardware collapsed</b> A 43" commercial display is a few hundred dollars. The bottleneck is software and content, not screens.</li><li><b>Labor churn</b> "The person who knew how" is now a recurring annual failure mode in every restaurant.</li><li><b>Compounding base</b> Toast adds ~8,500 net locations a quarter. Our addressable market grows without us spending a dollar.</li></ul><div class="num">03</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>WHAT IT IS</div>
+        <h2 class="head">Four surfaces. One source of truth.</h2>
+        <div class="cards"><div class="card"><h3>Hosted page</h3><p>A public menu page per location, server-rendered, phone-first, in the restaurant's own brand.</p></div><div class="card"><h3>Website embed</h3><p>Drops the same menu into the site they already have. No rebuild, no migration.</p></div><div class="card"><h3>QR menu</h3><p>A phone view behind a printed code, one per location — tables, patios, counters.</p></div><div class="card"><h3>Menu board</h3><p>A designed display for screens they already own. 16:9 and 3-panel landscape.</p></div></div>
+        <p class="note">The operator keeps running the menu in Toast. We handle what guests see, where, and for which location.</p><div class="num">04</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>THE DIFFERENCE</div>
+      <h2 class="head">We ship menus like software.</h2>
+      <p class="lead">Nobody in restaurant tech treats a menu like a release. That is the entire product.</p>
+      <ul class="bul"><li><b>Preview → publish → rollback</b> Draft v15 is never visible while v14 is live. Every published version is retained and restorable.</li><li><b>Last-known-good</b> If the upstream feed breaks, surfaces keep serving the most recent version that published correctly. No blank boards at the counter.</li><li><b>Location mapping</b> Each surface is bound to one location. The airport price never appears on the flagship board.</li><li><b>Freshness, honestly</b> "Source last read 6 minutes ago" — an operational readout, not a fake real-time claim.</li></ul><div class="num">05</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>SCOPE</div>
+      <h2 class="head">What we refuse to build — and why.</h2>
+      <p class="lead">No ordering. No payments. No cart. No delivery. No 86 status.</p>
+      <ul class="bul"><li><b>Off Toast's revenue path</b> We never touch orders or money, so we are never competing with the platform we depend on.</li><li><b>Out of PCI scope</b> No card data, no chargebacks, no tax and tip logic. A different company, with different risk, is what we are deliberately not.</li><li><b>No conflict for the operator</b> We do not threaten their ordering vendor, so saying yes costs them nothing politically.</li><li><b>Focus</b> Every engineering hour goes to the hard part: correct, versioned, per-location rendering.</li></ul><div class="num">06</div><div class="brandmark">GARNSH</div></section>
+<section class="slide dark" style="background:var(--carbon)"><div class="kicker"><span></span>MARKET</div>
+      <h2 class="head">Bottom-up, not top-down.</h2>
+      
+      <ul class="bul"><li><b>Expansion axis</b> More POS platforms, not bigger accounts. Square, then Clover, takes the addressable market to $250–400M.</li><li><b>Why 10+ first</b> Longer contracts, real budgets, rational buyers, and location mapping is an acute pain at that scale — not a nice-to-have.</li></ul><div class="stats"><div><div class="sv">189K</div><div class="sl">Toast locations, +21% YoY</div></div><div><div class="sv">8.5K</div><div class="sl">net locations added per quarter</div></div><div><div class="sv">15–23K</div><div class="sl">locations in groups of 10+</div></div><div><div class="sv">$8–17M</div><div class="sl">SAM, Toast 10+ segment</div></div></div><div class="num">07</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>CUSTOMER</div>
+      <h2 class="head">Operators with 10+ locations.</h2>
+      <p class="lead">Not single-unit independents. That market is owned by bundles we cannot beat on price or features.</p>
+      <ul class="bul"><li><b>Who</b> Franchisee groups, local chains, hospitality groups, airport and stadium concessionaires.</li><li><b>Who signs</b> Director of Operations or Marketing. Not IT — which means a 20-minute demo, not a procurement cycle.</li><li><b>Why they say yes</b> Pricing integrity per location, brand consistency, and a new opening that does not require rebuilding a website.</li><li><b>Why they stay</b> Switching means re-mapping every location. It becomes part of the opening procedure.</li></ul><div class="stats"><div><div class="sv">1.2%</div><div class="sl">monthly churn, multi-unit</div></div><div><div class="sv">4.0%</div><div class="sl">monthly churn, single-unit</div></div></div><div class="num">08</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>BUSINESS MODEL</div>
+        <h2 class="head">Priced per location, because that is how they think.</h2>
+        <table><thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead>
+        <tbody><tr><td class="k">Solo</td><td>$39 / location / mo</td><td>Hosted page, embed, QR, one board screen</td></tr><tr><td class="k">Growth</td><td>$69 / location / mo</td><td>Unlimited boards, custom domain, brand kit</td></tr><tr><td class="k">Multi</td><td>$45 / location / mo</td><td>Min. 3 locations. Location mapping, per-location overrides</td></tr><tr><td class="k">Group</td><td>$35 / location / mo</td><td>26+ locations, annual, onboarding, priority support</td></tr><tr><td class="k">Setup</td><td>$199 one-time</td><td>Brand import, first location live, QR assets</td></tr></tbody></table>
+        <ul class="bul"><li><b>Rule one</b> Never discount the per-location price. Per-location price is the entire revenue model.</li><li><b>Rule two</b> Charge per location, not per surface. Surface pricing invites the operator to turn things off.</li></ul><div class="num">09</div><div class="brandmark">GARNSH</div></section>
+<section class="slide dark" style="background:var(--carbon)"><div class="kicker"><span></span>UNIT ECONOMICS</div>
+      <h2 class="head">88% gross margin. 4–6x LTV to CAC.</h2>
+      
+      <ul class="bul"><li><b>Payback</b> 13–20 months on multi-unit, 6–8 on single-unit. Single-unit pays back faster; multi-unit is 4x the lifetime value.</li><li><b>The margin risk</b> Onboarding, not infrastructure. Two to four hours of human time per location is why setup fees are not discounted casually.</li></ul><div class="stats"><div><div class="sv">$52</div><div class="sl">blended ARPU / location / mo</div></div><div><div class="sv">88%</div><div class="sl">gross margin</div></div><div><div class="sv">$3,800</div><div class="sl">LTV, multi-unit</div></div><div><div class="sv">4.2–6.3x</div><div class="sl">LTV : CAC</div></div></div><div class="num">10</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>COMPETITION</div>
+        <h2 class="head">Everyone solves a different part of this.</h2>
+        <table><thead><tr><th>Player</th><th>What they do</th><th>Price</th><th>Why we differ</th></tr></thead>
+        <tbody><tr><td class="k">Toast (native)</td><td>POS, marketing suite, Delphi boards</td><td>Bundled / hardware</td><td>Brand-first, versioned, any screen they own</td></tr><tr><td class="k">Owner.com</td><td>Website + ordering + marketing</td><td>$249/mo + 5% of orders</td><td>We layer on top; no site migration</td></tr><tr><td class="k">Popmenu</td><td>Website + menu + marketing</td><td>~$500/mo + ~$1,300 setup</td><td>Cheap, narrow, removable</td></tr><tr><td class="k">Marqii</td><td>Menu sync to Google, Yelp, Apple</td><td>Mid-market</td><td>Rendering, not distribution</td></tr><tr><td class="k">Signage vendors</td><td>Screens + CMS</td><td>Signage pricing</td><td>Menu-first; also page and embed</td></tr></tbody></table>
+        <div class="num">11</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>HONESTLY</div>
+      <h2 class="head">Where we win. Where we lose.</h2>
+      
+      <ul class="bul"><li><b>Win</b> Multi-location pricing integrity, release discipline, last-known-good reliability — and no requirement to change POS, website or ordering vendor.</li><li><b>Win</b> Design quality in a category where the incumbents look like 2014.</li><li><b>Lose</b> Anyone who wants one vendor for everything. Anyone who wants ordering. Anyone who has decided to live with the problem.</li><li><b>No technical moat</b> This is a well-made CRUD app with taste. The durable advantages are switching cost, distribution and brand — all of which compound, none of which exist on day one.</li></ul><div class="num">12</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>ROADMAP</div>
+        <h2 class="head">Gen 1.0 is the company.<br>Gen 2.0 is the risk.</h2>
+        <div class="cards"><div class="card"><h3>Gen 1.0 · 2027</h3><p>Custom menus, order-ready menu boards, location picker. This is the entire company for eighteen months.</p></div><div class="card"><h3>Gen 2.0 · 2028</h3><p>Branded ordering experience that submits into the operator's existing Toast Online Ordering. Not our own checkout.</p></div><div class="card"><h3>Gen 3.0 · 2029</h3><p>Branded mobile app and commerce. Funded from revenue, only after the base case is proven.</p></div></div>
+        <p class="note">Owning checkout means PCI scope, chargebacks, and direct competition with the platform that controls our API access. We take the front-end, not the rails — until there is a signed partnership that makes the rest safe.</p><div class="num">13</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>2027 PLAN</div>
+      <h2 class="head">Ten locations, six of them paying.</h2>
+      
+      <ul class="bul"><li><b>January</b> Entity formed, operating agreement signed, $10K per partner in. Toast partner application filed in week one — it is the longest pole in the company.</li><li><b>Jan–March</b> Product vision, pricing and pitch finalized. Pricing published publicly — it filters customers and shortens every cycle.</li><li><b>March–June</b> Ten locations onboarded. At least six paying, even $50/month. A free showcase is a favour, not validation.</li><li><b>July–September</b> Cash-positive gate. If we are not revenue-positive by September, we stop and reassess instead of spending the buffer.</li></ul><div class="stats"><div><div class="sv">$20K</div><div class="sl">initial paid-in capital</div></div><div><div class="sv">Day 120</div><div class="sl">Toast approval go / no-go</div></div></div><div class="num">14</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--paper)"><div class="kicker"><span></span>TEAM &amp; ASK</div>
+        <h2 class="head">Two founders. $20,000.<br>A deliberately narrow wedge.</h2>
+        <div class="cols">
+          <div><div class="colh">The team</div><ul class="bul sm"><li>Two partners, $10,000 each, equal vesting — four years with a one-year cliff.</li><li>Founder-led product and engineering; contract design, because design is the differentiator.</li><li>Advisors wanted: multi-unit restaurant operations, and POS channel sales.</li></ul></div>
+          <div><div class="colh amber">The ask</div><ul class="bul sm"><li>Three design partners at 10+ locations, on a 30-day pilot, two locations each.</li><li>One advisor with restaurant-group operations experience.</li><li>Not raising yet — deliberately. We raise after 50 paid locations, measured churn, known Toast status, and one 20+ location group signed.</li></ul></div>
+        </div>
+        <p class="note">Bootstrap budget: legal and trademark $1.5K · insurance $2K · design $6K · infrastructure $3.6K · buffer $6.9K.</p><div class="num">15</div><div class="brandmark">GARNSH</div></section>
+<section class="slide dark" style="background:var(--carbon)"><div class="kicker"><span></span>GARNSH</div>
+        <h1 class="mega2">Change it in Toast.<br>Show it with Garnsh.</h1>
+        <div class="sub">garnsh.vercel.app</div><div class="foot-l">Kofi · 2027</div><div class="num">16</div><div class="brandmark">GARNSH</div></section>
+</body></html>

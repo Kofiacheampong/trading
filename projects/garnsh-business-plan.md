@@ -1,7 +1,7 @@
 # Garnsh — Business Plan
 
 **The menu publishing layer for Toast restaurants.**
-Prepared for Kofi · 7 November 2026 · v1.0
+Prepared for Kofi · 7 November 2026 · v1.1 — incorporates the founders' January 2027 timeline and the Generation 1.0 / 2.0 / 3.0 roadmap
 
 ---
 
@@ -70,6 +70,26 @@ No cart, no checkout, no payments, no ordering, no delivery, no 86/stock status,
 - It makes the product **easy to say yes to** — it does not threaten the operator's existing ordering vendor.
 - It focuses the engineering effort on the thing that is genuinely hard: correct, versioned, per-location rendering.
 
+### Generation roadmap — assessed
+
+The founders' roadmap sequences the product across three generations. Gen 1.0 is correct and should consume all of 2027. Gen 2.0 is where the company's risk concentrates.
+
+| Generation | Year | Founders' scope | Recommendation |
+|---|---|---|---|
+| **Gen 1.0** | 2027 | Custom menus, order-ready menu boards, location picker | **Ship as scoped.** This is the entire company for 18 months. Do not add surfaces. |
+| **Gen 2.0** | 2028 | Custom online ordering | **Build a branded ordering front-end that hands off to Toast Online Ordering — not your own cart and checkout.** See below. |
+| **Gen 3.0** | 2029 | Branded mobile app, custom e-commerce | **Keep as vision, not as plan.** Fund from revenue. Restaurant-branded apps have collapsing install rates below ~25 locations. |
+
+**Why Gen 2.0 must not be "your own online ordering" by default:**
+
+1. **It puts you in direct competition with your own platform.** Toast Online Ordering is one of Toast's core products and a major payments-adjacent revenue line. A partner that intercepts those orders is the first partner Toast restricts. Certification is discretionary and revocable.
+2. **It changes the company's regulatory identity.** Owning checkout means PCI DSS scope, chargeback and refund handling, sales-tax and tip-compliance logic, gift cards, and a support model measured in minutes not hours. That is a different company with different insurance and a different hiring plan.
+3. **It changes the competitive set completely.** You go from competing with website builders to competing with Owner.com (venture-funded, $249/mo + 5% of orders), Olo, Chowly, Lunchbox and Toast itself.
+
+The middle path gets ~80% of the value at ~20% of the risk: **a branded ordering experience that submits into the operator's existing Toast Online Ordering.** The guest sees the restaurant's brand and domain; Toast still processes the order and the payment; Garnsh never touches a card. That is a product Toast can tolerate — arguably one it wants, because it makes their ordering look better — and it preserves the partner relationship you cannot operate without.
+
+Revisit owning checkout in 2029, and only if there is a signed partnership that makes it safe.
+
 ### Honest product debt
 
 The current build is a strong demo with real interaction design (three sample restaurants, four surfaces, publish/rollback simulation). To be sellable it needs: a real ingestion path (see §8), tenant auth and isolation, per-location asset management, an upload pipeline for logos/fonts, board scheduling, and an accessibility pass to WCAG 2.1 AA. That is roughly 8–12 weeks of focused work, not a weekend.
@@ -87,11 +107,15 @@ Toast reported approximately **189,000 locations** at Q3 2026, up 21% year over 
 | Toast locations (global) | ~189,000 | Toast Q3 2026 disclosure |
 | US share of Toast base | ~150,000 (est.) | Toast is US-weighted; treat as estimate |
 | Locations that plausibly need a public menu surface | ~120,000 (est.) | Most, but not all, have a web presence |
-| **Target segment: multi-unit groups, 3–200 locations** | ~35,000–50,000 locations (est.) | ~25% of the base sits inside multi-unit groups |
+| Multi-unit groups, 3+ locations | ~35,000–50,000 locations (est.) | ~25% of the base |
+| **Founders' target: groups with 10+ locations** | **~15,000–23,000 locations (est.)** | ~8–12% of the base |
 | Blended price per location per month | $45–$62 | See §6 |
-| **SAM (Toast multi-unit only)** | **$19M–$37M ARR** | 35–50k × $45–62 × 12 |
+| SAM — whole multi-unit segment (3+) | $19M–$37M ARR | 35–50k × $45–62 × 12 |
+| **SAM — 10+ locations only (founders' focus)** | **$8M–$17M ARR** | 15–23k × $45–62 × 12 |
 | TAM if single-unit independents included | $65M–$90M ARR | Whole Toast base, lower ARPU |
 | **Expansion TAM: all POS platforms** | **$250M–$400M ARR (est.)** | Square, Clover, Lightspeed, SpotOn add roughly 3–4x the location count |
+
+**Note on the 10+ focus:** concentrating on 10+ location groups is the right call for 2027 — longer contracts, real budgets, fewer support tickets per dollar. But understand what it costs: it roughly halves the addressable base versus targeting 3+. The stated evolution from 10+ to **25+** shrinks it further, and that is the wrong direction to grow. Growth comes from **more POS platforms** (Square, Clover, Lightspeed) and from **moving down into 3–9 location groups** once onboarding is self-serve — not from chasing bigger accounts, which brings enterprise CMS incumbents, 6–9 month cycles, and RFPs that a two-person company cannot service.
 
 **Read this honestly:** the Toast-only opportunity is a genuine but small market. A 10% share of the multi-unit segment is ~$3M ARR — an excellent business for a small team, a disappointing one for a VC. The expansion to other POS platforms is what turns it into a venture story, and that is a year-two decision, not a year-one one.
 
@@ -336,7 +360,23 @@ Locations live · net new locations · ARPU · logo churn (split single vs multi
 
 ### Capital requirement
 
-- **Bootstrap path (recommended): $0–$15K.** Covers infrastructure, legal templates, insurance, and a designer. The business is cash-generative from month 9–12 at this cost structure.
+**The founders' plan: $20,000 initial paid-in capital, two partners at $10,000 each, funded January 2027.** That is enough — narrowly — for Gen 1.0, and it is not close to enough for Gen 2.0. Plan the two separately.
+
+| Use of the $20,000 | Amount |
+|---|---|
+| Entity formation, operating agreement, trademark filing | $1,500 |
+| Tech E&O + cyber insurance, year one | $2,000 |
+| Contract design (the core differentiator — do not cut this) | $6,000 |
+| Infrastructure and tooling, 12 months | $3,600 |
+| Toast partner application (no published fee at application stage) | $0 |
+| Buffer | $6,900 |
+| **Founder salaries** | **$0 — both partners work unpaid through 2027** |
+
+**The rule that makes $20K work:** Gen 1.0 must be cash-positive by month 9 (i.e. by September 2027) or the capital is gone and the company is a hobby. That means revenue from paying customers by month 5–6, not "showcase" customers who pay nothing.
+
+**What $20K does not fund:** Gen 2.0 ordering work ($150K–$400K), paid acquisition, a support hire, or a second engineer. Gen 2.0 is funded from revenue at ~$250K ARR or from a raise at proof — not from the initial capital.
+
+- **Bootstrap path (recommended, and what $20K buys): $20K.** Covers infrastructure, legal, insurance, and a designer. The business is cash-generative from month 9–12 at this cost structure.
 - **Accelerated path: $250K–$350K.** Two salespeople, one engineer, 18 months of runway, target $1.5M ARR in 24 months. Only raise after: 50+ locations live, churn measured under 2%, Toast status known, and one 20+ location group signed. Raising before those four facts exist is how this category eats founders.
 
 ---
@@ -371,6 +411,23 @@ Decide these in advance, in writing, so the decision is not made emotionally at 
 
 ---
 
+## 14b. Calendar plan — founders' timeline, with the gaps closed
+
+The founders' document sets the shape. Three things are missing from it, and one is fatal if unaddressed.
+
+| When | Founders' plan | Add this |
+|---|---|---|
+| **Jan 2027** | Form entity, $10K each in | **Toast partner application submitted in week 1** (8-stage certification, months of lead time — this is the longest pole and is absent from the timeline). Also: operating agreement signed *before* money moves (§17). |
+| **Jan–Mar 2027** | Finalize vision, plan, pitch, pricing | **Publish pricing publicly in month 1.** Also spec WCAG 2.1 AA and the price-accuracy terms before the first customer, not after. |
+| **Mar–Jun 2027** | 10 showcase customers | **Make at least 6 of the 10 paying** — even $50/month. A free showcase customer is a favour, not validation, and cannot be used to prove willingness-to-pay. Trade the discount for a public case study and a logo. |
+| **Jul–Sep 2027** | *(unstated)* | **Cash-positive gate.** If not revenue-positive by September 2027, stop and reassess rather than spending the buffer. |
+| **Oct–Dec 2027** | *(unstated)* | Multi-unit sales motion: 2–3 groups at 10+ locations on annual terms. This is what proves the actual thesis. |
+| **Day-120 gate (May 2027)** | *(unstated)* | Toast partner approval status resolved, or pivot to multi-POS import path. |
+
+The stated note "March–June 2026" is a typo for 2027 — worth fixing before this document goes to a partner or an advisor, because a timeline that appears to start in the past reads as unserious.
+
+---
+
 ## 15. What I would do in the next 14 days
 
 1. **Submit the Toast partner application.** Today. Everything downstream depends on it, and it is free to start.
@@ -389,6 +446,26 @@ Garnsh is solving a real, unglamorous, recurring problem with unusually good des
 The honest constraints: the Toast-only market is ~$20–37M of addressable ARR, the moat is distribution and switching cost rather than technology, and the entire company sits downstream of a partner gate controlled by a publicly traded company that also sells a competing product.
 
 **So the plan is: land 5 design partners on the strength of the product, win the multi-location segment on the strength of location mapping and release discipline, get the Toast relationship settled inside 120 days, and treat multi-POS expansion in year two as the thing that turns a $700K business into a $3M+ one.** Bootstrap it. It can be profitable by month twelve. Do not raise money until the four facts in §12 exist.
+
+---
+
+---
+
+## 17. Partnership and entity checklist
+
+A 50/50 two-person company funded with $10,000 each is the most common structure in software and the most common structure to fail. All of the following are cheap in January 2027 and unaffordable later.
+
+**Before the $10,000 moves:**
+
+1. **Operating agreement, signed.** 50/50 is fine, but it must specify decision rights (who owns product, who owns sales), the expense policy, and what happens when the two of you disagree. A deadlock clause with mediation followed by a buy-sell is not pessimism — it is the difference between a resolved disagreement and a dissolved company.
+2. **Vesting, even for founders.** Four-year vest with a one-year cliff, applied to both partners' equity. Without it, a partner who leaves in month four keeps half the company forever.
+3. **IP assignment from both partners to the entity.** Critical and routinely missed. Any code, design or copy written *before* the entity existed belongs personally to whoever wrote it unless assigned. The current demo and site need an explicit assignment.
+4. **Buy-sell / right of first refusal** with a valuation formula agreed while everyone is friendly.
+5. **Entity choice.** LLC taxed as a partnership is correct at $20K — cheap, flexible, no double taxation. Elect S-corp later when there is profit worth optimizing, or convert to a Delaware C-corp if you raise.
+6. **Trademark.** Search and file "Garnsh" (USPTO, roughly $250–$350 per class; classes 9 and 42). Do it before spending on brand and domain assets.
+7. **Separate books from day one.** Business bank account, accounting software, no commingling. It matters at tax time and it matters in any future diligence.
+
+**Ongoing:** tech E&O and cyber insurance in month one; a written contractor agreement with IP assignment for the designer; and documented security practices, because a 20+ location group will ask for a security questionnaire and eventually SOC 2.
 
 ---
 
