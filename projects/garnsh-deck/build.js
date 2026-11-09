@@ -137,33 +137,98 @@ const SLIDES = [
     table: {
       head: ['Plan', 'Price', 'Includes'],
       rows: [
-        ['Solo', '$39 / location / mo', 'Hosted page, embed, QR, one board screen'],
-        ['Growth', '$69 / location / mo', 'Unlimited boards, custom domain, brand kit'],
-        ['Multi', '$45 / location / mo', 'Min. 3 locations. Location mapping, per-location overrides'],
-        ['Group', '$35 / location / mo', '26+ locations, annual, onboarding, priority support'],
-        ['Setup', '$199 one-time', 'Brand import, first location live, QR assets'],
+        ['Core publishing', '$59 / location / mo', 'Hosted page, embed, QR, location picker'],
+        ['Menu boards', '+$40 / location / mo', 'Per location running boards — 55% attach assumed by 2028'],
+        ['Multi-location management', 'Included at 10+', 'Per-location overrides, group dashboard, shared brand kit'],
+        ['Gen 2 ordering (2028)', '+$99 / location / mo', 'Branded ordering submitted into Toast Online Ordering'],
+        ['Gen 3 app (2029)', '$5,000 + $149 / location', 'Branded app and commerce, 25+ location groups'],
+        ['Setup', '$1,500 / brand', 'Covers ~2 hours per location — break-even, not profit'],
       ],
-      colW: [2.0, 3.3, 6.3],
+      colW: [2.6, 2.9, 6.1],
     },
     bullets: [
-      { label: 'Rule one', text: 'Never discount the per-location price. Per-location price is the entire revenue model.' },
+      { label: 'Rule one', text: 'Never discount the per-location price. Discount implementation — waive setup, add months — because the per-location price compounds forever.' },
       { label: 'Rule two', text: 'Charge per location, not per surface. Surface pricing invites the operator to turn things off.' },
+      { label: 'Watch the setup fee', text: 'At two hours of onboarding per location it breaks even. At three hours it loses $660 per brand. Cap the hours or charge $2,500.' },
     ],
   },
   {
     type: 'stats',
     kicker: 'UNIT ECONOMICS',
-    title: '88% gross margin. 4–6x LTV to CAC.',
+    title: '89% software margin. 81% fully loaded.\n4.9x LTV to CAC.',
     stats: [
-      { value: '$52', label: 'blended ARPU / location / mo' },
-      { value: '88%', label: 'gross margin' },
-      { value: '$3,800', label: 'LTV, multi-unit' },
-      { value: '4.2–6.3x', label: 'LTV : CAC' },
+      { value: '$98', label: 'blended ARPU / location / mo, 2028' },
+      { value: '81%', label: 'fully loaded gross margin, 2028' },
+      { value: '$5,800', label: 'LTV per multi-unit group' },
+      { value: '4.9x', label: 'LTV : CAC, multi-unit' },
     ],
     bullets: [
-      { label: 'Payback', text: '13–20 months on multi-unit, 6–8 on single-unit. Single-unit pays back faster; multi-unit is 4x the lifetime value.' },
-      { label: 'The margin risk', text: 'Onboarding, not infrastructure. Two to four hours of human time per location is why setup fees are not discounted casually.' },
+      { label: 'Payback', text: 'About 15 months per group including onboarding, 5 months for a single location. Single-unit pays back faster; a multi-unit group is 4x the lifetime value.' },
+      { label: 'The margin risk', text: 'Onboarding and support labour, not infrastructure. The 89% software margin is what we would like to believe; 81% is what pays salaries in 2028.' },
     ],
+  },
+  {
+    type: 'table',
+    kicker: 'BASE CASE',
+    title: 'Profitable every year.\n$1.33M revenue by 2029.',
+    table: {
+      head: ['', '2027', '2028', '2029'],
+      rows: [
+        ['Locations (end of year)', '210', '640', '1,250'],
+        ['Revenue', '$66K', '$501K', '$1.33M'],
+        ['Gross margin', '88%', '81%', '84%'],
+        ['Operating result', '+$30K', '+$215K', '+$503K'],
+        ['Exit ARR', '$154K', '$753K', '$1.77M'],
+        ['Year-end cash', '$50K', '$265K', '$768K'],
+      ],
+      colW: [4.4, 2.4, 2.4, 2.4],
+    },
+    bullets: [
+      { label: 'Founder pay', text: '$0 in 2027, $36K in 2028, $100K in 2029. Below market in every year — that is the cheapest capital in the business.' },
+    ],
+  },
+  {
+    type: 'table',
+    kicker: 'THE MONTH THAT MATTERS',
+    title: 'The trough is $5,914 in April.\nThat is the whole plan.',
+    table: {
+      head: ['2027', 'Locations', 'Revenue', 'Costs', 'Net', 'Cash'],
+      rows: [
+        ['Jan', '0', '$0', '$4,617', '−$4,617', '$15,383'],
+        ['Feb', '0', '$0', '$5,617', '−$5,617', '$9,766'],
+        ['Mar', '0', '$0', '$2,916', '−$2,916', '$6,850'],
+        ['Apr', '14', '$336', '$1,272', '−$936', '$5,914'],
+        ['May', '42', '$1,400', '$1,338', '$62', '$5,976'],
+        ['Jun', '84', '$3,276', '$1,602', '$1,674', '$7,650'],
+        ['Jul', '112', '$5,390', '$1,573', '$3,817', '$11,467'],
+        ['Aug', '126', '$6,783', '$1,149', '$5,634', '$17,101'],
+        ['Sep', '140', '$8,113', '$5,411', '$2,702', '$19,803'],
+        ['Oct', '168', '$12,394', '$2,871', '$9,523', '$29,326'],
+        ['Nov', '196', '$14,102', '$4,168', '$9,934', '$39,259'],
+        ['Dec', '210', '$13,883', '$2,998', '$10,885', '$50,144'],
+      ],
+      colW: [1.5, 1.7, 2.0, 1.9, 2.0, 2.5],
+    },
+    rowH: 0.3,
+    cellSize: 9,
+  },
+  {
+    type: 'table',
+    kicker: 'IF WE ARE WRONG',
+    title: 'The conservative case still pays both founders.',
+    table: {
+      head: ['', '2027', '2028', '2029'],
+      rows: [
+        ['Locations (end of year)', '60', '334', '904'],
+        ['Revenue', '$18.5K', '$126K', '$449K'],
+        ['Founder pay (total)', '$0', '$60K', '$120K'],
+        ['Total costs', '$18.4K', '$112K', '$229K'],
+        ['Operating result', '+$0.1K', '+$14K', '+$220K'],
+        ['Year-end cash', '$20.1K', '$34K', '$254K'],
+        ['Cash floor during year', '$8.7K', '$7.8K', '$36.8K'],
+      ],
+      colW: [4.4, 2.4, 2.4, 2.4],
+    },
   },
   {
     type: 'table',
@@ -206,12 +271,12 @@ const SLIDES = [
   {
     type: 'content',
     kicker: '2027 PLAN',
-    title: 'Ten locations, six of them paying.',
+    title: 'Ten groups, six of them paying.',
     bullets: [
       { label: 'January', text: 'Entity formed, operating agreement signed, $10K per partner in. Toast partner application filed in week one — it is the longest pole in the company.' },
       { label: 'Jan–March', text: 'Product vision, pricing and pitch finalized. Pricing published publicly — it filters customers and shortens every cycle.' },
-      { label: 'March–June', text: 'Ten locations onboarded. At least six paying, even $50/month. A free showcase is a favour, not validation.' },
-      { label: 'July–September', text: 'Cash-positive gate. If we are not revenue-positive by September, we stop and reassess instead of spending the buffer.' },
+      { label: 'March–June', text: 'Ten groups signed; six live and paying by June (~84 locations). A free showcase is a favour, not validation.' },
+      { label: 'May–October', text: 'Cash gates: revenue covers costs from May; capital recovered by October. The April trough is $5,914 — that is the number we manage to.' },
     ],
     stats: [
       { value: '$20K', label: 'initial paid-in capital' },
@@ -238,7 +303,7 @@ const SLIDES = [
         'Not raising yet — deliberately. We raise after 50 paid locations, measured churn, known Toast status, and one 20+ location group signed.',
       ],
     },
-    foot: 'Bootstrap budget: legal and trademark $1.5K · insurance $2K · design $6K · infrastructure $3.6K · buffer $6.9K.',
+    foot: 'Peak capital deployed $14,086 in April 2027 · cash floor $5,914 · revenue covers costs from May · capital recovered October.',
   },
   {
     type: 'end',
@@ -442,14 +507,14 @@ function buildPptx(outFile) {
       const rows = [
         t.head.map(h => ({
           text: h,
-          options: { bold: true, color: C.cloud, fill: { color: C.carbon }, fontSize: 11, fontFace: SANS },
+          options: { bold: true, color: C.cloud, fill: { color: C.carbon }, fontSize: sl.cellSize ? sl.cellSize + 0.5 : 11, fontFace: SANS },
         })),
         ...t.rows.map((r, ri) => r.map((cell, ci) => ({
           text: cell,
           options: {
             color: ci === 0 ? C.carbon : C.muted,
             bold: ci === 0,
-            fontSize: 10.5,
+            fontSize: sl.cellSize || 10.5,
             fontFace: SANS,
             fill: { color: ri % 2 === 0 ? C.cloud : C.paper },
           },
@@ -458,9 +523,9 @@ function buildPptx(outFile) {
       s.addTable(rows, {
         x: M, y, w: W - 2 * M, colW: t.colW,
         border: { type: 'solid', color: C.line, pt: 0.75 },
-        rowH: 0.42, valign: 'middle', margin: 0.09,
+        rowH: sl.rowH || 0.42, valign: 'middle', margin: 0.09,
       });
-      const tblH = 0.42 * (t.rows.length + 1);
+      const tblH = (sl.rowH || 0.42) * (t.rows.length + 1);
       if (sl.bullets) {
         bulletList(s, sl.bullets, y + tblH + 0.35, {
           labelColor: C.brown, textColor: C.muted, size: 11.5, h: 1.2,
