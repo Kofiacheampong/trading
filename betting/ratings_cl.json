@@ -1,82 +1,82 @@
 {
- "Club Brugge": {
-  "attack": 1.018,
-  "defense": 1.021
- },
- "Borussia Dortmund": {
-  "attack": 1.019,
-  "defense": 1.016
- },
- "Villarreal": {
-  "attack": 0.889,
-  "defense": 1.037
- },
- "Barcelona": {
-  "attack": 1.032,
-  "defense": 0.888
- },
- "Paris Saint-Germain": {
-  "attack": 1.037,
-  "defense": 0.888
- },
- "AEK Athens": {
-  "attack": 1.018,
-  "defense": 1.023
- },
- "Atletico Madrid": {
-  "attack": 1.017,
-  "defense": 1.017
- },
- "Porto": {
-  "attack": 1.023,
-  "defense": 1.015
- },
- "Galatasaray": {
-  "attack": 1.022,
-  "defense": 0.889
- },
- "Inter Milan": {
-  "attack": 1.031,
-  "defense": 0.887
- },
- "Viking FK": {
-  "attack": 1.017,
-  "defense": 1.021
- },
- "LASK": {
-  "attack": 1.025,
-  "defense": 0.892
+ "Real Betis": {
+  "attack": 1.01,
+  "defense": 1.01
  },
  "Sporting CP": {
-  "attack": 1.021,
-  "defense": 1.018
+  "attack": 1.014,
+  "defense": 1.012
+ },
+ "Club Brugge": {
+  "attack": 1.012,
+  "defense": 1.014
+ },
+ "Viking FK": {
+  "attack": 1.011,
+  "defense": 1.014
  },
  "Napoli": {
-  "attack": 1.015,
-  "defense": 1.025
- },
- "Lille": {
-  "attack": 1.014,
-  "defense": 1.02
- },
- "Real Betis": {
-  "attack": 1.015,
+  "attack": 1.01,
   "defense": 1.016
  },
- "Real Madrid": {
+ "Paris Saint-Germain": {
   "attack": 1.024,
-  "defense": 1.021
+  "defense": 0.927
  },
- "Feyenoord": {
-  "attack": 0.879,
-  "defense": 1.028
- },
- "VfB Stuttgart": {
-  "attack": 0.886,
-  "defense": 1.021
+ "Porto": {
+  "attack": 1.015,
+  "defense": 1.01
  },
  "Slovan Bratislava": {
-  "attack": 0.884,
-  "defense": 1.033
+  "attack": 0.925,
+  "defense": 1.021
+ },
+ "Villarreal": {
+  "attack": 0.928,
+  "defense": 1.024
+ },
+ "Feyenoord": {
+  "attack": 0.921,
+  "defense": 1.018
+ },
+ "Galatasaray": {
+  "attack": 1.014,
+  "defense": 0.928
+ },
+ "AEK Athens": {
+  "attack": 1.012,
+  "defense": 1.015
+ },
+ "Atletico Madrid": {
+  "attack": 1.011,
+  "defense": 1.011
+ },
+ "Barcelona": {
+  "attack": 1.021,
+  "defense": 0.927
+ },
+ "Lille": {
+  "attack": 1.009,
+  "defense": 1.013
+ },
+ "LASK": {
+  "attack": 1.016,
+  "defense": 0.93
+ },
+ "Real Madrid": {
+  "attack": 1.016,
+  "defense": 1.014
+ },
+ "Borussia Dortmund": {
+  "attack": 1.012,
+  "defense": 1.01
+ },
+ "Inter Milan": {
+  "attack": 1.02,
+  "defense": 0.927
+ },
+ "VfB Stuttgart": {
+  "attack": 0.926,
+  "defense": 1.014
  }
 }
