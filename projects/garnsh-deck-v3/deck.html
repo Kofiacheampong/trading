@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>Garnsh — Pitch Deck</title>
+<style>
+@font-face{font-family:Manrope;font-weight:400;src:url(fonts/Manrope-400.ttf)}
+@font-face{font-family:Manrope;font-weight:500;src:url(fonts/Manrope-500.ttf)}
+@font-face{font-family:Manrope;font-weight:700;src:url(fonts/Manrope-700.ttf)}
+@font-face{font-family:Manrope;font-weight:800;src:url(fonts/Manrope-800.ttf)}
+@font-face{font-family:Fraunces;font-weight:400;src:url(fonts/Fraunces-400.ttf)}
+@font-face{font-family:Fraunces;font-weight:600;src:url(fonts/Fraunces-600.ttf)}
+@font-face{font-family:Fraunces;font-weight:700;src:url(fonts/Fraunces-700.ttf)}
+:root{--mango:#FFBF1F;--carbon:#151515;--cloud:#FFFDF8;--paper:#F6F2E7;--green:#22C878;
+--tomato:#FF644B;--brown:#2E2118;--muted:#5E5E5A;--line:#D9D7D0}
+@page{size:13.333in 7.5in;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Manrope,sans-serif;-webkit-font-smoothing:antialiased}
+.slide{width:13.333in;height:7.5in;padding:0.72in 0.85in 0.6in;position:relative;
+page-break-after:always;overflow:hidden;display:block}
+.slide:last-child{page-break-after:auto}
+.kicker{display:flex;align-items:center;font-size:10.5pt;font-weight:700;
+letter-spacing:.14em;color:var(--brown);margin-bottom:.42in}
+.kicker span{display:inline-block;width:.28in;height:3px;background:var(--mango);margin-right:.16in}
+.dark .kicker{color:var(--mango)}
+.head{font-family:Fraunces,serif;font-weight:700;font-size:27pt;line-height:1.08;
+color:var(--carbon);margin-bottom:.2in;max-width:11.2in}
+.dark .head{color:var(--cloud)}
+.mega{font-family:Fraunces,serif;font-weight:700;font-size:64pt;line-height:1;color:var(--cloud);margin-top:.35in}
+.mega2{font-family:Fraunces,serif;font-weight:700;font-size:38pt;line-height:1.12;color:var(--cloud);margin-top:1.1in}
+.sub{font-family:Manrope,sans-serif;font-weight:700;font-size:19pt;color:var(--mango);margin-top:.12in}
+.rule{width:1.6in;height:3px;background:var(--mango);margin:.3in 0}
+.lede{font-size:11pt;line-height:1.5;color:#C9C4B8;max-width:10.4in}
+.lead{font-size:11.5pt;line-height:1.45;color:var(--brown);max-width:10.8in;margin-bottom:.24in;font-weight:500}
+.bul{list-style:none;max-width:11.3in}
+.bul li{position:relative;padding-left:.26in;margin-bottom:.15in;font-size:10.5pt;line-height:1.42;color:var(--muted)}
+.bul li:before{content:"";position:absolute;left:0;top:.045in;width:5px;height:5px;background:var(--mango)}
+.bul li b{color:var(--brown);font-weight:700}
+.dark .bul li{color:#C9C4B8}
+.dark .bul li b{color:var(--mango)}
+.bul.sm li{font-size:9.8pt}
+.stats{display:flex;margin-top:.42in}
+.stats>div{flex:1;border-top:3px solid var(--mango);padding-top:.14in}
+.stats>div:not(:last-child){margin-right:.3in}
+.sv{font-family:Fraunces,serif;font-weight:700;font-size:26pt;color:var(--carbon);line-height:1.05}
+.dark .sv{color:var(--mango)}
+.sl{font-size:9pt;color:var(--muted);margin-top:.06in;line-height:1.3}
+.dark .sl{color:#C9C4B8}
+.cards{display:flex;margin-top:.3in}
+.card{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:4px;
+border-top:3px solid var(--mango);padding:.26in .24in}
+.card:not(:last-child){margin-right:.3in}
+.card h3{font-family:Manrope;font-size:12pt;font-weight:700;color:var(--carbon);margin-bottom:.1in}
+.card p{font-size:9.6pt;line-height:1.45;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin-top:.16in}
+th{background:var(--carbon);color:var(--cloud);font-size:9.2pt;font-weight:700;text-align:left;
+padding:.11in .1in;letter-spacing:.03em}
+td{font-size:9.2pt;padding:.1in;border-bottom:1px solid var(--line);color:var(--muted);background:var(--cloud)}
+tr:nth-child(even) td{background:var(--paper)}
+td.k{color:var(--carbon);font-weight:700}
+.cols{display:flex;margin-top:.28in}
+.cols>div{flex:1}
+.cols>div:not(:last-child){margin-right:.45in}
+.colh{font-size:10pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+color:var(--carbon);border-top:3px solid var(--brown);padding-top:.1in;margin-bottom:.16in}
+.colh.amber{border-top-color:var(--mango)}
+.note{font-size:9.6pt;font-style:italic;line-height:1.4;color:var(--brown);margin-top:.3in;max-width:11.3in}
+.num{position:absolute;right:.85in;bottom:.3in;font-size:9pt;color:var(--muted)}
+.dark .num{color:#7A7368}
+.brandmark{position:absolute;left:.85in;bottom:.3in;font-size:9pt;font-weight:700;
+letter-spacing:.16em;color:var(--muted)}
+.dark .brandmark{color:#7A7368}
+.foot-r{position:absolute;right:.85in;bottom:1.05in;font-size:9pt;color:#7A7368}
+.foot-l{position:absolute;left:.85in;bottom:1.2in;font-size:10pt;color:#7A7368}
+</style></head><body>
+<section class="slide dark" style="background:var(--carbon)">
+        <div class="kicker"><span></span>MENU PUBLISHING FOR MULTI-LOCATION RESTAURANT GROUPS</div>
+        <h1 class="mega">Garnsh</h1>
+        <div class="sub">One menu. Every location. Published on purpose.</div>
+        <div class="rule"></div>
+        <p class="lede">A controlled publishing layer for restaurant groups on Toast: prepare the menu once, preview every surface, publish per location, and roll back if something is wrong.</p>
+        <div class="foot-r">Investor Deck v3.0 · November 2026 · Pre-revenue</div><div class="num">01</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>THE PROBLEM</div>
+      <h2 class="head">One menu. Four surfaces.<br>None guaranteed to agree.</h2>
+      <p class="lead">A 10-location group maintains one menu in Toast and presents it on the website, a hosted page, QR codes and in-store boards — usually by hand.</p>
+      <ul class="bul"><li><b>Price drift</b> Toast says $16.25; the website says $14.50.</li><li><b>Dead items</b> Discontinued items and last season’s menu linger for weeks.</li><li><b>Wrong location</b> One location’s prices or items appear at another.</li><li><b>No safety net</b> A bad publish leaves a blank board during service.</li></ul><div class="num">02</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>CUSTOMER</div>
+      <h2 class="head">10–50 location Toast groups<br>with a brand to protect.</h2>
+      
+      <ul class="bul"><li><b>ICP</b> Regional fast-casual and casual-dining groups, all on Toast, with a marketing or operations owner for menu presentation.</li><li><b>Buyer</b> VP of Marketing, Director of Operations, or the founder-operator.</li><li><b>Trigger</b> A price change, rebrand, new location, menu cycle or agency handover.</li><li><b>Why now</b> Menu data is a discovery asset, signage is cheap, and labor turnover keeps recreating the manual updater.</li></ul><p class="note">Below 10 locations the pain is real but the budget is small. Above 50 the sales cycle exceeds a two-person team.</p><div class="num">03</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>SOLUTION</div>
+        <h2 class="head">Publish once. Preview everything.<br>Roll back if wrong.</h2>
+        <div class="cards"><div class="card"><h3>One menu document</h3><p>Ingest from Toast or CSV/Sheets. Normalize items, modifiers, prices and location variants.</p></div><div class="card"><h3>Per-location control</h3><p>Map every surface to the right location, with overrides and a group dashboard.</p></div><div class="card"><h3>Publishing safety</h3><p>Preview, deliberate publish, version history, rollback and last-known-good serving.</p></div></div>
+        <p class="note">Gen 1 is menu publishing. Not ordering, payments, live inventory or real-time sync.</p><div class="num">04</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>PRODUCT</div>
+      <h2 class="head">Four surfaces. One source of truth.</h2>
+      <p class="lead">The workflow: ingest → normalize → map → preview → publish → serve.</p>
+      <ul class="bul"><li><b>Website embed</b> The group’s own site, styled to the brand.</li><li><b>Hosted page</b> A Garnsh-hosted menu per location.</li><li><b>QR menu</b> A phone view opened by a printed code.</li><li><b>Menu boards</b> In-store screens fed from the same published version.</li></ul><p class="note">Current stage: working demo. Production build Q1 2027. No customer screenshots are presented as live.</p><div class="num">05</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>DIFFERENTIATION</div>
+      <h2 class="head">The moat is publishing discipline,<br>not menu rendering.</h2>
+      
+      <ul class="bul"><li><b>Version history</b> Every publish is recorded; one click rolls back.</li><li><b>Last-known-good</b> A broken upstream source serves the last good menu, not a blank board.</li><li><b>Per-location mapping</b> Prices, items and overrides follow the location, not the template.</li><li><b>Audit trail</b> Brand teams and agencies can see who changed what, and when.</li></ul><p class="note">Agencies are the real incumbent. Toast native is view-only. Ordering suites treat menus as plumbing.</p><div class="num">06</div><div class="brandmark">GARNSH</div></section>
+<section class="slide dark" style="background:var(--carbon)"><div class="kicker"><span></span>MARKET</div>
+      <h2 class="head">$14–28M Gen 1 SAM.<br>3–6% share is a real business.</h2>
+      
+      <ul class="bul"><li><b>Bottom-up</b> 189,000 locations × 10–20% in 10+ groups × $61/location/month.</li><li><b>Excluded</b> Ordering, apps and payments are upside, not the base case.</li><li><b>Share</b> 1,183 locations is 3.1–6.3% of the Gen 1 SAM.</li></ul><div class="stats"><div><div class="sv">189K</div><div class="sl">Toast locations, Q3 2026</div></div><div><div class="sv">19–38K</div><div class="sl">locations in 10+ groups</div></div><div><div class="sv">$14–28M</div><div class="sl">Gen 1 SAM at $61/location</div></div><div><div class="sv">1,183</div><div class="sl">locations in the 2029 plan</div></div></div><div class="num">07</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>BUSINESS MODEL</div>
+        <h2 class="head">$59 per location. $40 for boards.
+$1,500 setup.</h2>
+        <table><thead><tr><th>Item</th><th>Price</th><th>Note</th></tr></thead>
+        <tbody><tr><td class="k">Core publishing</td><td>$59 / location / month</td><td>Entry product</td></tr><tr><td class="k">Menu boards</td><td>+$40 / location / month</td><td>Locations with screens</td></tr><tr><td class="k">Setup</td><td>$1,500 / brand</td><td>2h/location; waived for showcase</td></tr><tr><td class="k">Gen 2 ordering</td><td>+$99 / location / month</td><td>Gated on Toast certification</td></tr><tr><td class="k">Gen 3 app</td><td>$5,000 + $149 / location / month</td><td>25+ location groups</td></tr></tbody></table>
+        <ul class="bul"><li><b>Setup economics</b> At 14 locations and 2h/location, onboarding costs $1,680 against a $1,500 fee — a $180 loss. Break-even is 1.79h/location.</li><li><b>Validation</b> Every price is an assumption. Ten interviews before it is fixed.</li></ul><div class="num">08</div><div class="brandmark">GARNSH</div></section>
+<section class="slide dark" style="background:var(--carbon)"><div class="kicker"><span></span>VALIDATION</div>
+      <h2 class="head">Pre-revenue. Zero signed.<br>The next 90 days are the test.</h2>
+      
+      <ul class="bul"><li><b>Target</b> 10 design partners; 6 paying at 20% off, 4 free for 12 months.</li><li><b>Integrity</b> No logos, testimonials or pilot results are claimed.</li><li><b>Purpose</b> The first 10 groups replace founder assumptions with data.</li></ul><div class="stats"><div><div class="sv">0</div><div class="sl">signed design partners</div></div><div><div class="sv">0</div><div class="sl">live locations</div></div><div><div class="sv">0</div><div class="sl">paying customers</div></div><div><div class="sv">40</div><div class="sl">target conversations</div></div></div><div class="num">09</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>GO-TO-MARKET</div>
+      <h2 class="head">Founder-led. Agency-assisted.<br>No paid acquisition.</h2>
+      
+      <ul class="bul"><li><b>Pipeline</b> 40 qualified conversations → 10 design partners at a 1-in-4 close.</li><li><b>Pilot</b> 30 days, 3 locations, $59/location; setup waived on annual conversion.</li><li><b>Agencies</b> 25% recurring revenue share. They already handle menu updates and dislike it.</li><li><b>Marketplace</b> Toast Partner Connect only after approval; not in the 2027 plan.</li></ul><p class="note">At 1-in-6 close, the same 10 signatures need 60 conversations and roughly 50% more selling time.</p><div class="num">10</div><div class="brandmark">GARNSH</div></section>
+<section class="slide dark" style="background:var(--carbon)"><div class="kicker"><span></span>UNIT ECONOMICS</div>
+      <h2 class="head">One 14-location group:<br>$1,221 gross profit. 1.5-month payback.</h2>
+      
+      <ul class="bul"><li><b>Churn</b> 2.0% monthly revenue churn = 1.5% group + 0.5% location; LTV $61K.</li><li><b>Downside</b> 3.5% churn → 13x LTV:CAC. Still investable.</li><li><b>Setup</b> The $1,500 fee loses $180 per 14-location group at 2h/location.</li></ul><div class="stats"><div><div class="sv">$1,372</div><div class="sl">monthly revenue</div></div><div><div class="sv">$1,221</div><div class="sl">recurring gross profit</div></div><div><div class="sv">$1,590</div><div class="sl">CAC, fully loaded</div></div><div><div class="sv">38x</div><div class="sl">LTV : CAC</div></div></div><div class="num">11</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>FINANCIALS</div>
+        <h2 class="head">Cash-positive in 2027 only because
+founders work unpaid.</h2>
+        <table><thead><tr><th></th><th>2027</th><th>2028</th><th>2029</th></tr></thead>
+        <tbody><tr><td class="k">Revenue</td><td>$42K</td><td>$441K</td><td>$1.29M</td></tr><tr><td class="k">Cash from operations</td><td>+$4K</td><td>+$164K</td><td>+$437K</td></tr><tr><td class="k">Economic result</td><td>−$21K</td><td>+$165K</td><td>+$435K</td></tr><tr><td class="k">Year-end cash</td><td>$24K</td><td>$188K</td><td>$625K</td></tr><tr><td class="k">Net groups</td><td>14</td><td>46</td><td>90</td></tr><tr><td class="k">Exit ARR</td><td>$88K</td><td>$698K</td><td>$1.63M</td></tr></tbody></table>
+        <ul class="bul"><li><b>Cash floor</b> The trough is $5,923 in April, $923 above the $5,000 floor.</li><li><b>Onboarding</b> 2027 economic result includes $25,200 of imputed founder onboarding. Paid onboarding exhausts the $20,000.</li></ul><div class="num">12</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>COMPETITION</div>
+        <h2 class="head">Everyone solves a different part of this.</h2>
+        <table><thead><tr><th>Player</th><th>What they do</th><th>Gap</th></tr></thead>
+        <tbody><tr><td class="k">Toast native</td><td>Websites, ordering, boards</td><td>Generic; menus on Toast properties</td></tr><tr><td class="k">Agencies</td><td>Hand-built sites + manual updates</td><td>Slow, manual, expensive</td></tr><tr><td class="k">Marqii</td><td>Menu sync to Google/Yelp</td><td>Distribution, not rendering</td></tr><tr><td class="k">Popmenu / BentoBox</td><td>Website + menu + marketing</td><td>Marketing suite first</td></tr><tr><td class="k">Owner.com / Lunchbox</td><td>Ordering + websites</td><td>Ordering-first; expensive</td></tr></tbody></table>
+        <ul class="bul"><li><b>The opening</b> Per-location publishing control and multi-surface reach without changing POS, website or ordering vendor.</li><li><b>The incumbent</b> The agency, not another SaaS product.</li></ul><div class="num">13</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--cloud)"><div class="kicker"><span></span>ROADMAP &amp; RISKS</div>
+        <h2 class="head">Gen 1 is the company.<br>Gen 2 is an option, not a promise.</h2>
+        <div class="cards"><div class="card"><h3>Gen 1 · 2027</h3><p>Menu publishing. The only product in the base case.</p></div><div class="card"><h3>Gen 2 · 2028</h3><p>Ordering on the group’s own site. Gated on Toast certification and demand.</p></div><div class="card"><h3>Gen 3 · 2029</h3><p>Branded app and commerce. Funded from revenue, only after proof.</p></div></div>
+        <p class="note">Critical path: Toast access. Fallback: CSV/Sheets import and a second POS adapter by month 18.</p><div class="num">14</div><div class="brandmark">GARNSH</div></section>
+<section class="slide" style="background:var(--paper)"><div class="kicker"><span></span>TEAM &amp; ASK</div>
+        <h2 class="head">Two founders. $20,000.<br>A deliberately narrow wedge.</h2>
+        <div class="cols">
+          <div><div class="colh">The team</div><ul class="bul sm"><li>Two partners, $10,000 each, equal vesting.</li><li>Product/engineering and sales/operator relationships.</li><li>Contract design; advisors in multi-unit operations and POS channels.</li></ul></div>
+          <div><div class="colh amber">The ask</div><ul class="bul sm"><li>Not raising now.</li><li>Raise after 10 paying groups, ~140 paying locations, measured churn and a clear Toast status.</li><li>Use of funds: engineering, certification, first sales hire.</li></ul></div>
+        </div>
+        <p class="note">The $20,000 works only if the founders perform 2027 onboarding. Paid onboarding needs ~$25K more.</p><div class="num">15</div><div class="brandmark">GARNSH</div></section>
+</body></html>

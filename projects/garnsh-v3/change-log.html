@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Garnsh — Change Log</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 9.5pt; }
+  h1 { font-size: 22pt; font-weight: 800; color: #111; border-bottom: 3px solid #d97706; padding-bottom: 6px; margin: 0 0 4px; }
+  h1 + h2 { border-bottom: none; color: #6b7280; font-size: 13pt; margin-top: 0; }
+  h2 { font-size: 15pt; font-weight: 700; color: #b45309; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin: 1.2em 0 0.55em; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 700; color: #333; margin: 1.1em 0 0.4em; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; margin: 1em 0 0.3em; }
+  p { margin: 0.38em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.7em 0; font-size: 8.8pt; page-break-inside: avoid; }
+  th { background: #fef3c7; border: 1px solid #f0d9a0; padding: 5px 7px; text-align: left; font-weight: 700; }
+  td { border: 1px solid #e5e7eb; padding: 4px 7px; vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafafa; }
+  ul, ol { margin: 0.4em 0 0.6em; padding-left: 20px; }
+  li { margin: 0.15em 0; }
+  blockquote { border-left: 3px solid #d97706; background: #fffbeb; margin: 0.7em 0; padding: 8px 14px; color: #3f3f46; font-size: 9.8pt; page-break-inside: avoid; }
+  blockquote p { margin: 0.25em 0; }
+  code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-family: ui-monospace, Menlo, monospace; font-size: 9pt; }
+  pre { background: #f8f8f7; border: 1px solid #e5e7eb; border-radius: 4px; padding: 10px 12px; font-size: 8.8pt; page-break-inside: avoid; }
+  pre code { background: none; padding: 0; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 1.2em 0; }
+  strong { color: #000; }
+  a { color: #b45309; text-decoration: none; }
+  @page { size: letter; margin: 14mm 13mm; }
+</style></head>
+<body><h1>Garnsh — Change Log</h1>
+<p><strong>v3.0</strong> · 11 November 2026 · From Business Plan v2.4 and 19-slide deck to v3.0 and 15-slide deck</p>
+<h2>1. What was removed</h2>
+<ul>
+<li><strong>Length and repetition.</strong> The plan was 29 pages and repeated the same problem, product boundary and pricing arguments in three or four places. The new plan is 15 pages of main body plus 3 pages of appendices.</li>
+<li><strong>Changelog language.</strong> References to "the earlier draft," "v2.2," "the old 30% slower case" and "will replace this table" were removed. The plan now reads as a standalone document.</li>
+<li><strong>Per-location LTV divided by per-group CAC.</strong> The 4.8x ratio was a category error. It has been replaced with a per-group LTV:CAC calculation.</li>
+<li><strong>Unverified real-time and 86 claims.</strong> The plan no longer implies live stock, 86 status or real-time sync. Gen 1 is explicitly a publish-time system.</li>
+<li><strong>"10 showcase customers" framing.</strong> The plan now says zero signed, zero live and zero paying. The 10 design partners are a target.</li>
+<li><strong>The 19-slide deck.</strong> Replaced with 15 slides, each carrying one message.</li>
+<li><strong>The old "30% slower" sensitivity.</strong> Replaced with explicit group-size, close-rate, churn, collection-lag and onboarding-funding cases.</li>
+<li><strong>The $20–40M market claim.</strong> Replaced with a bottom-up $14–28M Gen 1 SAM.</li>
+</ul>
+<h2>2. What was rewritten</h2>
+<ul>
+<li><strong>Executive summary.</strong> Now states the stage, the zero-customer position, the 2027 economic loss and the capital constraint in the first two pages.</li>
+<li><strong>Problem and market.</strong> Separates the operational problem from the Toast API wall and gives a transparent bottom-up market calculation.</li>
+<li><strong>Product.</strong> Separates what exists (demo), what is planned (production build), what requires Toast approval (API, Gen 2) and what is out of scope (86, live stock, ordering).</li>
+<li><strong>Go-to-market.</strong> Replaces the mixed 30-day pilot and 12-month design-partner language with two defined instruments and one coherent conversion path.</li>
+<li><strong>Pricing.</strong> Corrects the setup-fee economics, adds the customer's all-in cost and sets pricing triggers relative to $59.</li>
+<li><strong>Technology.</strong> Adds the four-way Toast status table and an objective day-120 gate.</li>
+<li><strong>Operations.</strong> Rebuilds the founder-hours budget; the real peak is 17.6 hours/week, not 16.</li>
+<li><strong>Financial plan.</strong> Rebuilt on a cohort model with churn, onboarding labor, cash collection timing and a downside.</li>
+<li><strong>Risks and milestones.</strong> Now tied to specific gates and kill criteria.</li>
+</ul>
+<h2>3. What was added</h2>
+<ul>
+<li><strong>Validation status.</strong> A clear statement that Garnsh is pre-revenue, with 0 signed design partners, 0 live locations and 0 paying customers.</li>
+<li><strong>2027 onboarding finding.</strong> The 2027 cohort needs 210 location-onboardings, or $25,200 at $60/hour. If the founders do it, cash works and the economic result is −$20.6K. If it is paid, the company runs out of cash.</li>
+<li><strong>Churn.</strong> Group logo churn (1.5%/month) and location churn (0.5%/month) are modeled, with a 2.5%/1.0% downside.</li>
+<li><strong>Cash-flow reconciliation.</strong> Subscription collection timing, setup-fee collection, accounts receivable and the $5,000 reserve are explicit.</li>
+<li><strong>Downside case.</strong> 10-location groups, 1-in-6 close, 2.5% churn, 1.0% location churn and a 30-day collection lag.</li>
+<li><strong>Sensitivity analysis.</strong> Group size, close rate, launch timing, churn, collection lag, onboarding funding, onboarding hours, price and Toast denial.</li>
+<li><strong>Assumptions and Evidence Register.</strong> A separate 45-item register classifying claims as VERIFIED, MODELED or UNVERIFIED.</li>
+<li><strong>Deck v3.0.</strong> 15 slides with a single argument per slide, including a validation slide that states the zero-customer position.</li>
+</ul>
+<h2>4. Financial assumptions that changed</h2>
+<table><thead><tr><th>Item</th><th>v2.4</th><th>v3.0</th><th>Why</th></tr></thead><tbody><tr><td>2027 revenue</td><td>$44,377</td><td>$42,195</td><td>Churn reduces live locations to 193 and paying locations to 142</td></tr><tr><td>2027 cash from operations</td><td>+$6,463</td><td>+$3,892</td><td>Churn and setup-collection timing</td></tr><tr><td>2027 economic result</td><td>+$6,463</td><td>−$20,558</td><td>$25,200 of imputed founder onboarding at $60/hour</td></tr><tr><td>2027 year-end cash</td><td>$26,463</td><td>$23,892</td><td>Lower revenue and churn</td></tr><tr><td>2027 trough</td><td>$5,923</td><td>$5,923</td><td>April remains the low point</td></tr><tr><td>2028 revenue</td><td>$459,413</td><td>$440,883</td><td>Churn; 615 live locations vs 644</td></tr><tr><td>2028 operating result</td><td>$188,282</td><td>$165,401</td><td>Lower revenue, churn, onboarding</td></tr><tr><td>2029 revenue</td><td>$1,349,045</td><td>$1,287,970</td><td>Churn; 1,183 live locations vs 1,288</td></tr><tr><td>2029 operating result</td><td>$507,711</td><td>$435,027</td><td>Lower revenue and gross adds</td></tr><tr><td>2029 exit ARR</td><td>$1.79M</td><td>$1.63M</td><td>1,183 locations × $115</td></tr><tr><td>Net groups 2027/28/29</td><td>15 / 46 / 92</td><td>14.1 / 45.8 / 89.6</td><td>Churn applied; gross adds calibrated</td></tr><tr><td>Setup fee at 14 locations</td><td>−$180</td><td>−$180</td><td>Arithmetic confirmed; break-even 1.79h/location</td></tr><tr><td>CAC</td><td>$1,200</td><td>$1,590</td><td>18 hours × $55 + $600 = $1,590</td></tr><tr><td>LTV:CAC</td><td>4.8x (per location vs per group)</td><td>38.4x (per group, 2% revenue churn)</td><td>Correct denominator</td></tr><tr><td>Gen 1 SAM</td><td>$20–40M</td><td>$14–28M</td><td>$61 Gen 1 ARPU, not $89 blended</td></tr></tbody></table>
+<h2>5. Inconsistencies corrected</h2>
+<ol>
+<li><strong>Setup fee.</strong> The deck said it breaks even at two hours. At 14 locations and two hours, it loses $180. Break-even is 1.79 hours per location.</li>
+<li><strong>CAC.</strong> The old $1,200 did not match its own inputs. Corrected to $1,590.</li>
+<li><strong>LTV:CAC.</strong> The old 4.8x divided a per-location LTV by a per-group CAC. Corrected to 38.4x per group, with 13.0x in the downside.</li>
+<li><strong>2027 onboarding.</strong> The model omitted it. It is now $25,200 imputed; paid onboarding breaks the $5,000 floor.</li>
+<li><strong>Churn.</strong> The old model had no churn. It now has group and location churn.</li>
+<li><strong>Cash flow.</strong> The old model treated revenue as cash. It now separates collections, AR and setup timing.</li>
+<li><strong>Market size.</strong> The old $20–40M used a blended ARPU that included Gen 2/3. The Gen 1 SAM is $14–28M.</li>
+<li><strong>Customer counts.</strong> The old plan could be read as having 10 showcase customers. It has zero. The plan now says so.</li>
+<li><strong>Pilot strategy.</strong> The 30-day pilot and 12-month design partner are now two defined instruments, not competing claims.</li>
+<li><strong>Toast status.</strong> The old plan called customer-credential access the "fastest legal path." It is now UNVERIFIED and gated by a legal checkpoint.</li>
+<li><strong>2029 ARR.</strong> Corrected from $1.79M to $1.63M after churn and 1,183 locations.</li>
+<li><strong>Deck and plan reconciliation.</strong> Both use the same model outputs, rounded consistently.</li>
+</ol>
+<h2>6. What still requires founder input</h2>
+<ol>
+<li><strong>2027 onboarding funding.</strong> Founders perform it (cash works, economics do not) or raise ~$25K to pay for it.</li>
+<li><strong>Final pricing.</strong> $59 is a hypothesis; ten interviews decide.</li>
+<li><strong>Toast legal position.</strong> Whether customer credentials may power a public website.</li>
+<li><strong>Founder roles and equity.</strong> Who owns product, sales, onboarding and support.</li>
+<li><strong>Design-partner commitments.</strong> Zero signed; the 2027 plan assumes 10.</li>
+<li><strong>Entity and jurisdiction.</strong> LLC vs. corporation; state of formation.</li>
+<li><strong>Hiring timing.</strong> Engineer July vs. October 2028; growth October 2028.</li>
+<li><strong>Board attach and churn.</strong> No data; measure from the first cohort.</li>
+</ol>
+<h2>7. Deliverables produced</h2>
+<ol>
+<li><code>garnsh-business-plan-v3.0.md</code> / <code>.pdf</code> / <code>.docx</code> — 15 pages of main body plus appendices.</li>
+<li><code>garnsh-pitch-deck.pptx</code> / <code>deck.pdf</code> — 15 slides.</li>
+<li><code>model_v3.py</code> / <code>model_v3.json</code> — corrected executable model with churn, onboarding and cash timing.</li>
+<li><code>assumptions-evidence-register.md</code> / <code>.pdf</code> — 45-item evidence register.</li>
+<li><code>change-log.md</code> / <code>.pdf</code> — this document.</li>
+</ol></body></html>

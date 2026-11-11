@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>Garnsh</title>
+<style>
+  * { box-sizing: border-box; }
+  body { font-family: 'Inter', 'Segoe UI', 'DejaVu Sans', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; font-size: 9.5pt; }
+  h1 { font-size: 22pt; font-weight: 800; color: #111; border-bottom: 3px solid #d97706; padding-bottom: 6px; margin: 0 0 4px; }
+  h1 + h2 { border-bottom: none; color: #6b7280; font-size: 13pt; margin-top: 0; }
+  h2 { font-size: 15pt; font-weight: 700; color: #b45309; border-bottom: 1px solid #e5e7eb; padding-bottom: 4px; margin: 1.2em 0 0.55em; page-break-after: avoid; }
+  h3 { font-size: 12pt; font-weight: 700; color: #333; margin: 1.1em 0 0.4em; page-break-after: avoid; }
+  h4 { font-size: 11pt; font-weight: 700; margin: 1em 0 0.3em; }
+  p { margin: 0.38em 0; }
+  table { width: 100%; border-collapse: collapse; margin: 0.7em 0; font-size: 8.8pt; page-break-inside: avoid; }
+  th { background: #fef3c7; border: 1px solid #f0d9a0; padding: 5px 7px; text-align: left; font-weight: 700; }
+  td { border: 1px solid #e5e7eb; padding: 4px 7px; vertical-align: top; }
+  tbody tr:nth-child(even) td { background: #fafafa; }
+  ul, ol { margin: 0.4em 0 0.6em; padding-left: 20px; }
+  li { margin: 0.15em 0; }
+  blockquote { border-left: 3px solid #d97706; background: #fffbeb; margin: 0.7em 0; padding: 8px 14px; color: #3f3f46; font-size: 9.8pt; page-break-inside: avoid; }
+  blockquote p { margin: 0.25em 0; }
+  code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-family: ui-monospace, Menlo, monospace; font-size: 9pt; }
+  pre { background: #f8f8f7; border: 1px solid #e5e7eb; border-radius: 4px; padding: 10px 12px; font-size: 8.8pt; page-break-inside: avoid; }
+  pre code { background: none; padding: 0; }
+  hr { border: none; border-top: 1px solid #e5e7eb; margin: 1.2em 0; }
+  strong { color: #000; }
+  a { color: #b45309; text-decoration: none; }
+  @page { size: letter; margin: 14mm 13mm; }
+</style></head>
+<body><h1>Garnsh</h1>
+<h2>Menu publishing for multi-location restaurant groups</h2>
+<p><strong>Business Plan v3.0</strong> · 11 November 2026</p>
+<p>Confidential. Prepared for the founders, advisors and prospective investors.</p>
+<blockquote><p><strong>Status:</strong> pre-revenue. Garnsh has a working demo, no signed customers and no live locations. Any customer, pilot or partnership mentioned in this plan is a target or a proposed program unless it is explicitly labeled as signed. Financial figures are planning estimates, not actuals.</p></blockquote>
+<hr>
+<h2>1. Executive Summary</h2>
+<p>Garnsh is a software-as-a-service (SaaS) menu publishing platform for restaurant groups that operate 10 or more locations on Toast. It gives a group one controlled place to prepare a menu, map it to each location, preview every guest-facing surface, publish it, and roll back if something is wrong.</p>
+<p>The problem is operational, not cosmetic. A multi-location group maintains one menu in Toast but presents it on at least four surfaces: its website, a hosted menu page, QR menus and in-store digital boards. Each surface is usually updated by hand. Prices drift, discontinued items linger, one location's prices appear at another, and a bad publish can leave a blank board during service. The group usually has no single owner for the problem.</p>
+<p>Garnsh Gen 1 solves menu accuracy and publishing control. It is deliberately not an ordering system, a payments product, a live inventory system or a real-time sync engine. It does not show 86 status. It does not claim that a Toast change reaches guests until someone previews and publishes it. Those boundaries are central to the product and to the credibility of the plan.</p>
+<p>The initial customer is a regional fast-casual or casual-dining group with 10–50 locations, all on Toast, and a brand team or operations leader who owns menu presentation. The buyer is usually the VP of Marketing, the Director of Operations, or the founder-operator in a smaller group. The product is sold on control, not on being the cheapest menu page.</p>
+<p>The business model is a per-location subscription: $59 per location per month for core publishing, $40 per location per month for menu boards, and a $1,500 setup fee per brand. Optional Gen 2 ordering ($99 per location per month) and Gen 3 branded app ($149 per location per month) are expansion products, not part of the Gen 1 base case.</p>
+<p><strong>Stage and 2027 objective.</strong> Garnsh is pre-revenue. In 2027 the plan is to sign 10 design partners, of which six pay a discounted subscription and four are free for 12 months in exchange for feedback and case-study rights. The target is 14 net groups, 193 live locations and 142 paying locations by December 2027. The 10 design partners are a target, not traction.</p>
+<p><strong>Financial headline (base case, modeled).</strong></p>
+<table><thead><tr><th></th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody><tr><td>Revenue</td><td>$42,195</td><td>$440,883</td><td>$1,287,970</td></tr><tr><td>Cash from operations</td><td>+$3,892</td><td>+$163,901</td><td>+$437,277</td></tr><tr><td>Economic result after founder labor</td><td>−$20,558</td><td>+$165,401</td><td>+$435,027</td></tr><tr><td>Year-end cash</td><td>$23,892</td><td>$187,794</td><td>$625,070</td></tr><tr><td>Net groups</td><td>14.1</td><td>45.8</td><td>89.6</td></tr><tr><td>Exit ARR</td><td>$88K</td><td>$698K</td><td>$1.63M</td></tr></tbody></table>
+<p>The 2027 cash result is positive only because the founders perform onboarding unpaid. Imputing that time at $60 per hour turns the year into a <strong>−$20.6K economic result</strong>. If a contractor performs the 2027 onboarding, the company runs out of cash. That is the most important financial fact in this plan, and it drives the operating rules in §9.</p>
+<p><strong>Capital and fundraising.</strong> The company is capitalized with $20,000 from the two founders. It is not raising now. The plan is to reach 10 paying groups, approximately 140 paying locations, a measured churn rate and a clear Toast status before opening a round. A raise at that point would fund engineering, Toast certification and the first sales hire, not basic survival.</p>
+<p><strong>The main risks</strong> are Toast access, demand for a menu-only product, founder capacity and the possibility that the $59 price is too high for the value delivered. Each is treated in §10. The plan is designed to survive being wrong about some of them, not to assume it is right about all of them.</p>
+<hr>
+<h2>2. Problem and Market Opportunity</h2>
+<h3>2.1 The operational problem</h3>
+<p>A restaurant group runs one operational menu in Toast. Guests see a different set of surfaces:</p>
+<ul>
+<li>the group's website, often a PDF or a page maintained by an agency;</li>
+<li>a hosted menu page;</li>
+<li>QR codes at the table;</li>
+<li>digital menu boards in each location;</li>
+<li>printed menus and inserts.</li>
+</ul>
+<p>Each surface is maintained separately, usually by someone whose real job is running restaurants. The failure modes are predictable:</p>
+<ul>
+<li><strong>Price drift.</strong> Toast says $16.25; the website says $14.50. A guest who sees one price and is charged another is a comp, a bad review and, in some jurisdictions, a consumer-protection risk.</li>
+<li><strong>Dead items.</strong> A discontinued item stays on the QR page and the board for weeks because removing it means editing every surface.</li>
+<li><strong>Wrong-location menus.</strong> One location's prices or items appear at another.</li>
+<li><strong>Stale PDFs.</strong> The website menu is two cycles old because updating it means calling the web person.</li>
+<li><strong>No safety net.</strong> A broken integration or a bad publish leaves a blank board during service.</li>
+</ul>
+<p>For a 10-location group, this is a steady stream of small public errors multiplied by every surface, with no single person able to fix them at the source.</p>
+<h3>2.2 Why existing answers do not fit</h3>
+<p><strong>Toast's native tools.</strong> Toast Websites is a template site builder aimed at operators who need a website, not groups with brand teams, agencies and existing web properties. Its menu channel is "Websites View-Only": the menu appears on a Toast Website, view only, and is not orderable. Toast Online Ordering runs on Toast's pages, in Toast's frame, with limited customization. Neither gives a group a branded, per-location menu on its own domain.</p>
+<p><strong>Agencies and freelancers.</strong> They build the site and then maintain the menu by hand. They are the real incumbent. They are slow, expensive and the reason menus go stale. They are also a potential reseller channel.</p>
+<p><strong>Ordering and marketing suites.</strong> Lunchbox, ChowNow, Owner.com, Popmenu and BentoBox sell ordering, websites or marketing. Menu display is plumbing inside a larger product. Their pricing is built around ordering economics, not menu control.</p>
+<p><strong>The API wall.</strong> Toast's Menus API is real but partner-gated. The documentation is public; production credentials are issued only to accepted partners after vetting, a signed agreement and certification. Toast's standard API access is read-only, per-location, limited to the older Menus V2, and positioned for reporting and internal use. It cannot write orders. Whether a customer's own credentials can lawfully power a public-facing website is <strong>unverified</strong> and is a pre-sale legal checkpoint (§6).</p>
+<h3>2.3 The initial customer</h3>
+<p><strong>Ideal customer profile:</strong> a regional fast-casual or casual-dining group with 10–50 locations, all on Toast, with a brand worth protecting and a marketing or operations owner for menu presentation. Multi-unit franchisees and growing concepts in the 10–50 location band fit the same profile.</p>
+<p>Below 10 locations, the pain is real but the budget and brand risk are small. Above 50 locations, the sales cycle and security requirements exceed a two-person company's capacity. The plan deliberately starts in the middle.</p>
+<p><strong>Buyer:</strong> VP of Marketing, Director of Operations, or the founder-operator. The pitch is operational: your menus are wrong in public, and fixing them consumes hours every week. Garnsh gives you one controlled publishing process and a rollback when someone gets it wrong.</p>
+<h3>2.4 Market sizing</h3>
+<p>The market is sized bottom-up from Toast's disclosed location count, not from a top-down restaurant-software forecast.</p>
+<table><thead><tr><th>Input</th><th>Value</th><th>Status</th></tr></thead><tbody><tr><td>Toast locations, Q3 2026</td><td>~189,000, up 21% year over year</td><td>VERIFIED — Toast Q3 2026 results</td></tr><tr><td>Share in groups of 10+</td><td>10–20%</td><td>MODELED — no public breakdown</td></tr><tr><td>Serviceable locations</td><td>18,900–37,800</td><td>MODELED</td></tr><tr><td>Gen 1 revenue per location</td><td>$61/month</td><td>MODELED — $59 core + $2 boards</td></tr><tr><td><strong>Gen 1 SAM</strong></td><td><strong>$13.8M–$27.7M ARR</strong></td><td>MODELED</td></tr><tr><td>2029 base-case locations</td><td>1,183</td><td>MODELED</td></tr><tr><td><strong>Share of SAM</strong></td><td><strong>3.1%–6.3%</strong></td><td>MODELED</td></tr></tbody></table>
+<p>The Gen 1 SAM excludes ordering, apps and payments. Including those products would raise the ceiling, but they are not in the base case and should not be used to justify the first round. A 3–6% share of the Gen 1 SAM is a credible niche, not a venture-scale outcome on its own.</p>
+<p><strong>Why now.</strong> Menu data is becoming a discovery asset: search engines and AI answer engines reward current, structured menu pages, and a PDF is invisible to them. Digital signage hardware is cheap, so the bottleneck is software. Restaurant labor turnover keeps recreating the "person who knew how to update it" failure. And Toast's base compounds by roughly 8,500 net new locations a quarter without Garnsh spending a dollar.</p>
+<hr>
+<h2>3. Product and Solution</h2>
+<h3>3.1 What Gen 1 does</h3>
+<p>Garnsh Gen 1 is a publishing system for menus. It has five capability groups:</p>
+<ol>
+<li><strong>Custom menus.</strong> The Toast menu, or an imported menu file, rendered on the group's own website (embed) or on a Garnsh-hosted page per location, styled to the brand.</li>
+<li><strong>Order-ready menu boards.</strong> Designed displays for in-store screens, fed from the same source menu.</li>
+<li><strong>Location picker.</strong> Each surface is mapped to the correct location's menu and prices, with per-location overrides.</li>
+<li><strong>QR menus.</strong> A per-location phone view opened by a printed code.</li>
+<li><strong>Publishing controls.</strong> Preview every surface before publishing, deliberate publish rather than silent auto-sync, full version history, one-click rollback, and last-known-good serving if an upstream source breaks.</li>
+</ol>
+<h3>3.2 How it works</h3>
+<p>The workflow is deliberately simple:</p>
+<ol>
+<li><strong>Ingest.</strong> A menu arrives from Toast (when approved access exists), a CSV/Google Sheets import, or the manual editor. The import bridge is a shipped part of the product, not a temporary hack.</li>
+<li><strong>Normalize.</strong> Items, modifiers, prices and location variants are cleaned into one menu document.</li>
+<li><strong>Map.</strong> The operator assigns the menu to locations, surfaces and overrides.</li>
+<li><strong>Preview.</strong> The operator sees every surface before publishing.</li>
+<li><strong>Publish.</strong> One action publishes the selected locations and surfaces, with a version record.</li>
+<li><strong>Serve.</strong> The hosted page, website embed, QR view and board display read from the published version. If anything breaks, the last-known-good version is served.</li>
+</ol>
+<p>The architecture is intentionally boring: an ingestion service, a publishing/versioning layer, and four renderers. The hard engineering is menu-data hygiene and publishing safety, not rendering.</p>
+<h3>3.3 What Gen 1 does not do</h3>
+<ul>
+<li>It does not read or display 86 status, live stock or table availability.</li>
+<li>It is not real-time. A change reaches guests only when someone previews and publishes it.</li>
+<li>It does not take orders, process payments, run a loyalty program or provide a branded mobile app.</li>
+<li>It does not replace Toast as the system of record.</li>
+</ul>
+<p>These are product boundaries, not temporary gaps. The site, deck, contract and sales script must state them consistently.</p>
+<h3>3.4 Current stage and product debt</h3>
+<p>The current build is a demo with real interaction design, not a production service. To be sellable it needs:</p>
+<ul>
+<li>a production ingestion path and the CSV/Sheets import bridge;</li>
+<li>tenant authentication and isolation;</li>
+<li>per-location asset management;</li>
+<li>an upload pipeline for logos and fonts;</li>
+<li>board scheduling;</li>
+<li>an accessibility pass to WCAG 2.1 AA;</li>
+<li>bulk publish across locations and an unpublished-change alert. Without these two, a 14-location group repeats the same click fourteen times and "deliberate publish" becomes a tidy name for silent drift.</li>
+</ul>
+<p>The estimate is 8–12 weeks of focused work. It is a quarter, not a weekend, and the 2027 plan is sized to it. These two requirements are <strong>ASSUMPTION</strong> until the build confirms them.</p>
+<h3>3.5 Roadmap and gates</h3>
+<ul>
+<li><strong>Gen 1 (2027):</strong> menu publishing. The only product in the base case.</li>
+<li><strong>Gen 2 (2028, gated):</strong> branded online ordering on the group's own site, with orders written into Toast through the certified Orders API. It requires Toast ordering-partner certification and a signed commercial agreement. It is not pre-sold.</li>
+<li><strong>Gen 3 (2029, optional):</strong> branded mobile app and merchandise e-commerce for 25+ location groups. Funded from revenue, not from the initial capital.</li>
+</ul>
+<p>Gen 2 and Gen 3 are options. The company is viable as a Gen 1 business; that is the test the plan is built to pass.</p>
+<hr>
+<h2>4. Target Customers and Go-to-Market</h2>
+<h3>4.1 Customer and buyer</h3>
+<p>The initial segment is 10–50 location groups on Toast with a brand team, an existing website and a recurring menu-update problem. The economic buyer is the VP of Marketing or Director of Operations. The day-to-day user is a marketing coordinator, an operations manager or an agency.</p>
+<p>The trigger events are concrete: a price change that appears in one place and not another, a rebrand, a new location opening, a menu cycle change, or an agency handover. These are the moments when the cost of manual updating becomes visible.</p>
+<h3>4.2 Validation status</h3>
+<p>Garnsh has <strong>zero signed design partners, zero live locations and zero paying customers</strong> as of 11 November 2026. The 10 design partners in this plan are a target. The company has not yet run the 40 qualified conversations that would validate the segment, the price or the pilot terms.</p>
+<p>That is not a weakness to hide. It changes what the plan can claim. It cannot claim product-market fit, a conversion rate or a churn rate. It can claim a defined customer, a defined problem, a demo and a testable sales motion.</p>
+<h3>4.3 One coherent pilot strategy</h3>
+<p>A 30-day pilot and a 12-month design-partner program are different instruments and should be described that way.</p>
+<p><strong>Standard sales motion: 30-day paid pilot.</strong></p>
+<table><thead><tr><th>Element</th><th>Terms</th></tr></thead><tbody><tr><td>Eligibility</td><td>10+ locations on Toast, one brand owner, willingness to provide menu access and feedback</td></tr><tr><td>Duration</td><td>30 days</td></tr><tr><td>Scope</td><td>3 locations, one website embed, one QR view, one board</td></tr><tr><td>Price</td><td>Setup waived; $59 per location per month during the pilot</td></tr><tr><td>Deliverables</td><td>Menu audit, three published surfaces, operator training, written results</td></tr><tr><td>Success measures</td><td>Menu accuracy on audit, admin time per week, publish time, operator sign-off</td></tr><tr><td>Conversion</td><td>Annual contract at list price within 30 days; setup waived on conversion</td></tr></tbody></table>
+<p><strong>Showcase program: 12-month design partners.</strong></p>
+<table><thead><tr><th>Element</th><th>Terms</th></tr></thead><tbody><tr><td>Eligibility</td><td>10+ locations, brand team, willingness to be a public reference</td></tr><tr><td>Duration</td><td>12 months from go-live</td></tr><tr><td>Scope</td><td>All locations in the group</td></tr><tr><td>Price</td><td>Six groups at 20% off core; four groups free for 12 months; setup waived for all ten</td></tr><tr><td>Deliverables</td><td>Logo rights, written case study, one reference call per quarter, product feedback</td></tr><tr><td>Success measures</td><td>Case study published, reference completed, renewal at list</td></tr><tr><td>Conversion</td><td>List price at month 13; no renewal at the discounted rate</td></tr></tbody></table>
+<p>A prospect can start with the 30-day pilot and convert to either an annual contract or a design-partner slot. The pilot is the sales motion; the design-partner program is a capped marketing program.</p>
+<h3>4.4 Sales and channels</h3>
+<p>The first 10 groups will be sold founder-led. The target is 40 qualified conversations in the first half of 2027, a 1-in-4 close rate and a 21–30 day cycle. At a 1-in-6 close rate, the same 10 signatures require 60 conversations and roughly 50% more selling time; that is a capacity risk, not a cash risk (§8).</p>
+<p>Channels, in order:</p>
+<ol>
+<li><strong>Founder network and warm introductions.</strong> The founding team operates in the Afro Deli franchise system; that is a source of introductions, not a customer commitment.</li>
+<li><strong>Agencies.</strong> Web-design agencies serving restaurants are asked to update menus constantly, dislike the work and can white-label Garnsh. Offer a 25% recurring revenue share.</li>
+<li><strong>Toast Partner Connect (later).</strong> A marketplace listing becomes available only after partner approval. It is not part of the 2027 plan.</li>
+<li><strong>No paid search, no cold outbound at scale.</strong> At these price points, CAC exceeds LTV.</li>
+</ol>
+<h3>4.5 Onboarding and retention</h3>
+<p>Onboarding is the product's first real test. The standard is two hours per location: brand template, location mapping, surface setup, training. The setup fee covers that scope and no more (§5).</p>
+<p>Retention comes from switching cost: once every location is mapped and opening procedures reference Garnsh, replacing it means re-mapping the estate. The plan assumes 1.5% monthly group churn and 0.5% monthly location churn. Those are assumptions, not measurements. The first 10 groups exist to replace them with data.</p>
+<hr>
+<h2>5. Business Model and Pricing</h2>
+<h3>5.1 Price</h3>
+<table><thead><tr><th>Item</th><th>Proposed price</th><th>Notes</th></tr></thead><tbody><tr><td>Core publishing (hosted page, embed, QR)</td><td>$59 / location / month</td><td>Entry product</td></tr><tr><td>Menu boards add-on</td><td>+$40 / location / month</td><td>Per location with screens</td></tr><tr><td>Onboarding / setup</td><td>$1,500 / brand</td><td>Two hours per location; waived for showcase groups</td></tr><tr><td>Multi-location management</td><td>Included at 10+ locations</td><td>Location picker, overrides, group dashboard</td></tr><tr><td>Gen 2 ordering (2028)</td><td>+$99 / location / month</td><td>Gated on Toast certification</td></tr><tr><td>Gen 3 branded app (2029)</td><td>$5,000 build + $149 / location / month</td><td>25+ location groups</td></tr><tr><td>Enterprise (25+ locations)</td><td>~$119 / location / month all-in</td><td>Annual contract, SLA</td></tr></tbody></table>
+<p>Every price is a founder assumption. None has been tested against a real invoice. The Q1 2027 interviews are the test.</p>
+<h3>5.2 What the customer actually pays</h3>
+<table><thead><tr><th>Line</th><th>14-location group</th></tr></thead><tbody><tr><td>Core publishing</td><td>$826 / month; $9,912 / year</td></tr><tr><td>Core + boards at every location</td><td>$1,386 / month; $16,632 / year</td></tr><tr><td>Setup</td><td>$1,500 one-time</td></tr><tr><td>Toast plan, if not already carried</td><td>+$T / location / month — <strong>UNVERIFIED</strong></td></tr></tbody></table>
+<p>If the group already runs Toast's Restaurant Management Suite Essentials, the plan that includes API access, the incremental Toast cost is zero. If not, it may have to upgrade every location. At $50 per location, a 14-location group pays an extra $700 per month, a 51% uplift on the core-plus-boards invoice and 85% on core alone. The first ten interviews must price this; the plan does not assume it away.</p>
+<h3>5.3 Setup-fee economics</h3>
+<p>Onboarding is two hours per location at $60 per hour, or $120 per location.</p>
+<table><thead><tr><th>Group size</th><th>Onboarding cost</th><th>Setup fee</th><th>Margin</th><th>Break-even hours per location</th></tr></thead><tbody><tr><td>10 locations</td><td>$1,200</td><td>$1,500</td><td>+$300</td><td>2.50</td></tr><tr><td>12 locations</td><td>$1,440</td><td>$1,500</td><td>+$60</td><td>2.08</td></tr><tr><td>14 locations</td><td>$1,680</td><td>$1,500</td><td>−$180</td><td>1.79</td></tr><tr><td>16 locations</td><td>$1,920</td><td>$1,500</td><td>−$420</td><td>1.56</td></tr></tbody></table>
+<p>The setup fee is not a profit center. For the planned 14-location average it loses $180 per group at the two-hour cap; at three hours it loses $1,020. The options are to cap onboarding at two hours, raise setup to $2,500, or accept the loss as a customer-acquisition cost. The plan holds $1,500 and the two-hour cap; raising to $2,500 adds $37K of 2028 revenue and $56K of 2029 revenue without changing any other assumption.</p>
+<h3>5.4 Pricing rules and validation</h3>
+<p><strong>Rule one:</strong> no standard discount on the per-location price. Discount implementation instead: waive setup, add months, add a pilot location. A discounted rate compounds for the life of the account.</p>
+<p><strong>Rule two:</strong> the showcase program is a capped exception. Ten groups maximum, 20% off core for 12 months, automatic expiry to list, no renewal at the discounted rate. It is approved by both founders in writing and recorded as marketing spend.</p>
+<p><strong>Validation triggers.</strong> Ten interviews, not three, before the price is fixed:</p>
+<table><thead><tr><th>Trigger</th><th>Threshold</th><th>Action</th></tr></thead><tbody><tr><td>Median acceptable price</td><td>below $45 (24% below list)</td><td>adopt the $39/$69/$45 ladder and cut the cost base</td></tr><tr><td>Credential friction</td><td>3+ of 10 cannot supply Toast credentials</td><td>make the CSV/Sheets bridge the primary path</td></tr><tr><td>Pilot commitment</td><td>fewer than 4 of 10 agree to a 30-day pilot</td><td>the segment or the pain is wrong; re-interview</td></tr><tr><td>86 status</td><td>top pain in more than 3 of 10</td><td>revisit the Gen 1 promise</td></tr><tr><td>Toast plan cost</td><td>+$25/location or more for half the group</td><td>the real price is $84+; retest the value story</td></tr></tbody></table>
+<hr>
+<h2>6. Technology and Integration Strategy</h2>
+<h3>6.1 What works today</h3>
+<p>The current demo renders menus and interaction flows. The CSV/Google Sheets import bridge and manual editor are the parts that can go live without Toast approval once built. They are not a temporary workaround; they are the fallback that lets the first groups pay before certification lands.</p>
+<h3>6.2 Toast access: the four-way distinction</h3>
+<table><thead><tr><th>Category</th><th>Status</th></tr></thead><tbody><tr><td><strong>Works without Toast approval (planned production scope)</strong></td><td>CSV/Sheets import, manual editor, Garnsh-hosted pages, QR views, board rendering</td></tr><tr><td><strong>Demonstrated in the demo</strong></td><td>Per-location menu rendering, preview/publish interaction, version history, rollback</td></tr><tr><td><strong>Requires Toast approval or certification</strong></td><td>Production Menus API access, Partner Connect listing, Gen 2 Orders API</td></tr><tr><td><strong>Unverified</strong></td><td>Whether a customer's own read-only credentials may lawfully power a public-facing website; partner fees and revenue share; certification timeline</td></tr></tbody></table>
+<p>The plan must not describe the Toast integration as approved, production-ready or commercially permitted. It is not. The partner application is submitted in week one because it is the longest-lead item in the company.</p>
+<h3>6.3 The day-120 gate</h3>
+<p>The original gate ("approval in hand or clearly in process") is subjective. Replace it with four objective tests. By day 120, Garnsh must have:</p>
+<ol>
+<li>a named Toast partner contact;</li>
+<li>a written timeline for the application;</li>
+<li>a sandbox credential or a written reason it has not been issued;</li>
+<li>a written position on whether customer-supplied credentials may be used for public-facing menu publishing.</li>
+</ol>
+<p>If all four are absent, redirect effort to the import bridge and the multi-POS path, or stop. "In process" is not a status.</p>
+<h3>6.4 Fallback and architecture</h3>
+<p>The internal model is "menu document in, surfaces out." Toast is an adapter, not the architecture. That costs about a week now and saves the company later. The fallback is:</p>
+<ul>
+<li>CSV/Sheets import plus manual editor for the first groups;</li>
+<li>a second POS adapter (Square, then Clover) by month 18;</li>
+<li>no dependency on Gen 2 ordering for the Gen 1 business case.</li>
+</ul>
+<h3>6.5 Technical risks</h3>
+<ul>
+<li><strong>API terms.</strong> The legal right to use customer credentials for a public website is unverified.</li>
+<li><strong>Certification delay.</strong> Gen 2 revenue depends on a process Toast controls.</li>
+<li><strong>Menu-data hygiene.</strong> Modifiers, pricing tiers and location variants are the hard engineering, not rendering.</li>
+<li><strong>Tenant isolation and accessibility.</strong> Both are ship gates, not later fixes.</li>
+</ul>
+<hr>
+<h2>7. Competition and Differentiation</h2>
+<table><thead><tr><th>Competitor</th><th>What they sell</th><th>Price signal</th><th>Garnsh's opening</th></tr></thead><tbody><tr><td>Toast native (Websites, Online Ordering, Delphi boards)</td><td>Website, ordering and boards inside Toast</td><td>Bundled with POS plans</td><td>Generic templates; menus on Toast properties; publishing discipline is not the product</td></tr><tr><td>Agencies / freelancers</td><td>Hand-built sites and manual menu updates</td><td>Project fee + retainer</td><td>The real incumbent; slow and manual. Also a reseller channel</td></tr><tr><td>Marqii</td><td>Menu sync to Google, Yelp, Apple, Facebook</td><td>Mid-market, unpublished</td><td>Distribution, not rendering; a partner or acquirer, not a direct rival</td></tr><tr><td>Popmenu</td><td>Website, menu and marketing</td><td>$159–$499 / location / month</td><td>Marketing suite first; menu accuracy is not the core claim</td></tr><tr><td>BentoBox</td><td>Restaurant websites and ordering</td><td>Unpublished; Clover-only in 2026</td><td>Its Clover move leaves the Toast-side gap open</td></tr><tr><td>Owner.com</td><td>Website, ordering and marketing</td><td>$249/month + 5% of orders, or $499 flat</td><td>Aimed at independents; per-order fees</td></tr><tr><td>Lunchbox / ChowNow</td><td>Enterprise ordering and apps</td><td>$229–$499 / location / month</td><td>Ordering-first and expensive; Gen 2 is where they collide</td></tr></tbody></table>
+<p><strong>Advantages.</strong> Publishing craft — versioning, rollback, last-known-good, per-location mapping — done better than the alternatives; no requirement to change POS, website or ordering vendor; a design-led product in a category where incumbents look dated; and a switching cost once every location is mapped.</p>
+<p><strong>Disadvantages.</strong> No technical moat in reading a menu API; Toast dependency; a two-person team; and a price that must be validated. The plan should not pretend otherwise.</p>
+<p><strong>Defensibility over time.</strong> Switching cost, showcase case studies, Toast partner certification/marketplace presence, and a multi-POS adapter. None is strong on day one; all compound.</p>
+<hr>
+<h2>8. Operations and Management</h2>
+<h3>8.1 Team</h3>
+<p>Two founding partners. Names and role split are to be completed in the operating agreement. Four functions must each have a named owner from day one: product/engineering, Toast integration and certification, sales/operator relationships, and onboarding/support. With two people, each owns two. "We both do sales" means nobody does support during a Friday dinner rush.</p>
+<h3>8.2 Founder hours</h3>
+<p>The 2027 budget is 1,410 hours:</p>
+<table><thead><tr><th>Activity</th><th>Hours</th><th>Basis</th></tr></thead><tbody><tr><td>Build</td><td>400</td><td>10 weeks × 40 hours total</td></tr><tr><td>Selling</td><td>270</td><td>60 conversations × 3 hours + 15 pilots × 6 hours</td></tr><tr><td>Onboarding</td><td>420</td><td>15 groups × 14 locations × 2 hours</td></tr><tr><td>Support</td><td>60</td><td>~1 hour/day from October</td></tr><tr><td>Admin</td><td>260</td><td>5 hours/week × 52</td></tr><tr><td><strong>Total</strong></td><td><strong>1,410</strong></td><td><strong>13.6 hours/week each</strong></td></tr></tbody></table>
+<p>Split 60/40 on the build, 30/70 on sales, 50/50 elsewhere:</p>
+<table><thead><tr><th>Quarter</th><th>Founder A (build lead)</th><th>Founder B (sales lead)</th><th>Part-time capacity</th></tr></thead><tbody><tr><td>Q1 2027</td><td>17.6 h/week</td><td>14.7 h/week</td><td>20 h/week each</td></tr><tr><td>Q2 2027</td><td>15.4 h/week</td><td>16.4 h/week</td><td>20 h/week each</td></tr><tr><td>Q3 2027</td><td>8.0 h/week</td><td>9.7 h/week</td><td>20 h/week each</td></tr><tr><td>Q4 2027</td><td>12.0 h/week</td><td>14.6 h/week</td><td>20 h/week each</td></tr></tbody></table>
+<p>The real peak is 17.6 hours/week for the build lead in Q1, 88% of a 20-hour part-time week with no slack. At a 12-week build it is 20.3 hours/week, at the ceiling. If one founder builds alone, that founder carries 26.8 hours/week, which is full-time. The plan must choose: a 10-week two-founder build at ~18 hours/week each, or a 10-week full-time build lead.</p>
+<h3>8.3 Support and hiring</h3>
+<p>Support becomes a founder's full day at roughly 150 live locations. Budget a part-time support contractor at <strong>$2,500/month</strong> from that point, funded from revenue. The model puts that in October 2027.</p>
+<p>Hiring gates are thresholds, not dates:</p>
+<ul>
+<li><strong>Engineer:</strong> $35K MRR. The model crosses it in August 2028 and books the hire from July; move to October if the gate must be literal.</li>
+<li><strong>Growth/partnerships:</strong> $50K MRR, reached in October 2028.</li>
+<li><strong>Second engineer and founder salaries:</strong> 2029, funded from operating cash.</li>
+<li><strong>Founder pay:</strong> $0 in 2027, $6,000/month total from July 2028, $100K total in 2029.</li>
+</ul>
+<h3>8.4 Legal and operating checklist</h3>
+<p>Before the $10,000 moves: operating agreement with decision rights and a deadlock clause; four-year vesting with a one-year cliff for both founders; IP assignment from both partners to the entity, including the pre-entity demo and site; buy-sell/right of first refusal with a valuation formula; trademark search and filing for "Garnsh" (USPTO classes 9 and 42); separate bank account and books; tech E&amp;O and cyber insurance; contractor agreements with IP assignment.</p>
+<hr>
+<h2>9. Financial Plan</h2>
+<h3>9.1 Model basis</h3>
+<p>The financials come from a 36-month cohort model. It tracks groups, locations, revenue, cash collection, onboarding labor, churn and cash. It is a planning model, not a forecast.</p>
+<p>Key assumptions:</p>
+<table><thead><tr><th>Assumption</th><th>Base</th><th>Downside</th><th>Status</th></tr></thead><tbody><tr><td>Average group size</td><td>14 locations</td><td>10 locations</td><td>MODELED</td></tr><tr><td>Group logo churn</td><td>1.5%/month</td><td>2.5%/month</td><td>MODELED — no data</td></tr><tr><td>Location churn</td><td>0.5%/month</td><td>1.0%/month</td><td>MODELED — no data</td></tr><tr><td>Subscription collection</td><td>Same month (card on file)</td><td>30-day lag</td><td>MODELED</td></tr><tr><td>Setup collection</td><td>50% at go-live, 50% next month</td><td>Same</td><td>MODELED</td></tr><tr><td>Onboarding labor</td><td>2h/location at $60/h</td><td>4h/location</td><td>MODELED</td></tr><tr><td>2027 onboarding funding</td><td>Founders unpaid</td><td>Paid contractor</td><td>MODELED</td></tr><tr><td>Support contractor</td><td>$2,500/month from 150 locations</td><td>Same</td><td>MODELED</td></tr><tr><td>Price</td><td>$59 core, $40 boards</td><td>$59</td><td>MODELED</td></tr><tr><td>Toast plan cost</td><td>Excluded</td><td>Excluded</td><td>UNVERIFIED</td></tr></tbody></table>
+<h3>9.2 2027 by quarter</h3>
+<table><thead><tr><th>Quarter</th><th>Revenue</th><th>Cash from operations</th><th>Economic result</th><th>Cash at quarter-end</th></tr></thead><tbody><tr><td>Q1</td><td>$0</td><td>−$13,150</td><td>−$13,150</td><td>$6,850</td></tr><tr><td>Q2</td><td>$4,753</td><td>$550</td><td>−$9,530</td><td>$7,400</td></tr><tr><td>Q3</td><td>$11,753</td><td>$3,888</td><td>−$2,832</td><td>$11,288</td></tr><tr><td>Q4</td><td>$25,689</td><td>$12,604</td><td>$4,954</td><td><strong>$23,892</strong></td></tr></tbody></table>
+<p>The trough is <strong>$5,923 in April</strong>, $923 above the $5,000 floor. Peak capital deployed is $14,077; capital is returned in December. The cash result is positive because the founders perform onboarding unpaid. Monthly detail is in Appendix A.</p>
+<h3>9.3 The 2027 onboarding problem</h3>
+<p>The 2027 cohort adds 210 live locations. At two hours per location and $60 per hour, that is <strong>$25,200 of labor</strong>.</p>
+<ul>
+<li><strong>If the founders do it:</strong> cash cost is $0; economic cost is $25,200; the year's economic result is <strong>−$20,558</strong>.</li>
+<li><strong>If the first 14-location cohort is paid:</strong> April cash falls from $5,923 to <strong>$4,243</strong>, breaching the $5,000 floor.</li>
+<li><strong>If all 2027 onboarding is paid:</strong> the cash trough is <strong>−$6,386 in October</strong> and year-end cash is <strong>−$1,308</strong>. The company runs out of money.</li>
+</ul>
+<p>This is the single most important operating constraint. The $20,000 capitalization only works if the founders perform 2027 onboarding. If they cannot, the company needs roughly $25,000 of additional capital or a much slower launch.</p>
+<h3>9.4 Three-year summary</h3>
+<table><thead><tr><th></th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody><tr><td>Revenue</td><td>$42,195</td><td>$440,883</td><td>$1,287,970</td></tr><tr><td>COGS (cash)</td><td>$10,103</td><td>$111,882</td><td>$237,955</td></tr><tr><td>Gross profit (cash)</td><td>$32,093</td><td>$329,001</td><td>$1,050,015</td></tr><tr><td>Gross margin (cash)</td><td>76.1%</td><td>74.6%</td><td>81.5%</td></tr><tr><td>Operating costs</td><td>$27,450</td><td>$163,600</td><td>$614,988</td></tr><tr><td>Cash from operations</td><td>+$3,892</td><td>+$163,901</td><td>+$437,277</td></tr><tr><td>Economic result</td><td>−$20,558</td><td>+$165,401</td><td>+$435,027</td></tr><tr><td>Year-end cash</td><td>$23,892</td><td>$187,794</td><td>$625,070</td></tr><tr><td>Net groups</td><td>14.1</td><td>45.8</td><td>89.6</td></tr><tr><td>Live locations</td><td>193</td><td>615</td><td>1,183</td></tr><tr><td>Exit ARR</td><td>$88K</td><td>$698K</td><td>$1.63M</td></tr><tr><td>Cash floor during year</td><td>$5,923</td><td>$25,315</td><td>$186,155</td></tr></tbody></table>
+<p>The 2028 and 2029 figures include churn and the gross adds required to replace it. The model adds 37 gross groups in 2028 and 56 in 2029 to end with 46 and 90 net groups. The extra onboarding and setup cost is visible in the model; a gross-add-only plan would overstate profit.</p>
+<h3>9.5 Unit economics per group</h3>
+<p>At 14 locations and the 2028 blended ARPU of $98:</p>
+<table><thead><tr><th>Line</th><th>Amount</th></tr></thead><tbody><tr><td>Monthly revenue</td><td>$1,372</td></tr><tr><td>Recurring gross profit (89%)</td><td>$1,221</td></tr><tr><td>CAC (18 selling hours × $55 + $600)</td><td>$1,590</td></tr><tr><td>Onboarding labor (14 × 2h × $60)</td><td>$1,680</td></tr><tr><td>Less setup fee</td><td>−$1,500</td></tr><tr><td>Net onboarding cost</td><td>$180</td></tr><tr><td>Upfront investment</td><td>$1,770</td></tr><tr><td>Payback</td><td>1.45 months</td></tr><tr><td>Average life at 2.0% revenue churn</td><td>50 months</td></tr><tr><td>LTV</td><td>$61,054</td></tr><tr><td>LTV:CAC</td><td>38.4x</td></tr></tbody></table>
+<p>The 2.0% revenue churn is 1.5% group churn plus 0.5% location churn. At the downside 3.5%, LTV is $24,920 and LTV:CAC is 13.0x. Both are attractive; the constraint is cash and founder time, not unit economics.</p>
+<h3>9.6 Cash flow, working capital and reserve</h3>
+<p>The base case assumes card-on-file subscription collection in the same month and setup fees collected 50% at go-live and 50% the following month. That produces $750 of accounts receivable at the end of 2027 and $2,250 at the end of 2028.</p>
+<p>A 30-day subscription lag is a realistic downside for larger groups. It lowers the 2027 trough to <strong>$4,355 in June</strong>, below the floor, and 2028 year-end cash to $123K. The plan should not assume same-month collection for enterprise accounts without confirming the billing terms.</p>
+<p>The $5,000 reserve is a hard floor, not a buffer. If cash falls below $5,000 before recurring revenue passes $3,000 per month, the company stops spending, stops building and sells what exists.</p>
+<h3>9.7 Downside</h3>
+<p>The downside combines 10-location groups, a 1-in-6 close rate (four live by June), 2.5% group churn, 1.0% location churn and a 30-day collection lag.</p>
+<table><thead><tr><th></th><th>2027</th><th>2028</th><th>2029</th></tr></thead><tbody><tr><td>Revenue</td><td>$30,398</td><td>$276,518</td><td>$694,112</td></tr><tr><td>Cash from operations</td><td>−$4,474</td><td>+$18,971</td><td>−$129,486</td></tr><tr><td>Economic result</td><td>−$16,743</td><td>+$46,810</td><td>−$94,132</td></tr><tr><td>Year-end cash</td><td>$15,526</td><td>$34,497</td><td>−$94,989</td></tr><tr><td>Net groups</td><td>13.6</td><td>36.7</td><td>67.1</td></tr></tbody></table>
+<p>The downside breaches the 2027 floor in September ($3,171) and is insolvent in 2029 at the planned cost base. The response is not to hope: freeze the 2029 hires, run one engineer and a support contractor, and hold operating costs near $395K. At that cost level, 2029 revenue of $694K and COGS of $173K produce roughly <strong>$126K of operating result</strong> and positive cash. The downside is survivable only with that cost response.</p>
+<h3>9.8 Sensitivities</h3>
+<p>The cases that matter are group size, close rate, launch timing, churn, collection timing, onboarding funding, onboarding hours and price. Group size 10 cuts 2027 revenue to $32,282 and leaves the trough at $5,492. A 1-in-6 close rate leaves revenue at $40,974 and the trough unchanged at $5,923; its cost is 50% more selling time. A slow launch (three live by June) lowers revenue to $33,984 and the trough to $5,169. A 30-day collection lag takes the trough to $4,355, below the floor. Paying for 2027 onboarding takes it to −$6,386. Onboarding at four hours per location cuts the 2027 economic result to −$45,758. A $45 core price leaves revenue at $34,284 and the trough at $5,572. The full table is in Appendix A.2.</p>
+<h3>9.9 What the model cannot tell you</h3>
+<p>It cannot tell you whether groups will pay $59, whether Toast will approve the partner application, what the revenue share will be, or whether the first 10 design partners will convert. It cannot price the case studies or model a founder quitting. Those are the risks in §10, not spreadsheet cells.</p>
+<p>What it can tell you is narrower: at these prices, costs and churn assumptions, the company survives its own base case with $5,923 at the worst moment, provided the founders absorb 2027 onboarding. It does not survive paid onboarding on $20,000. That is the boundary of the plan.</p>
+<hr>
+<h2>10. Risks, Milestones and Execution</h2>
+<h3>10.1 Principal risks</h3>
+<table><thead><tr><th>Risk</th><th>Impact</th><th>Mitigation</th></tr></thead><tbody><tr><td>Toast denies or delays access</td><td>No clean menu feed at scale; Gen 2 impossible</td><td>Apply week one; objective day-120 gate; import bridge; multi-POS by month 18</td></tr><tr><td>No demand at $59</td><td>Revenue does not cover the cost base</td><td>10 interviews before pricing; 40 conversations; design partners; cut to conservative cost line</td></tr><tr><td>Founder capacity</td><td>Build, sales and onboarding collide</td><td>1,410-hour budget; 15 March checkpoint; hire/contract only at gates</td></tr><tr><td>Setup fee loses money</td><td>Each 14-location group costs $180 to onboard</td><td>Cap at 2h/location or raise setup to $2,500</td></tr><tr><td>2027 onboarding paid</td><td>Cash exhausted</td><td>Founders perform it; otherwise raise ~$25K or slow the launch</td></tr><tr><td>Churn higher than 1.5%</td><td>LTV and growth fall</td><td>Annual contracts; QBRs; measure from first cohort</td></tr><tr><td>Collection lag</td><td>Trough breaches floor</td><td>Card-on-file; deposit; 50% setup at signing</td></tr><tr><td>API terms unverified</td><td>Legal/ToS exposure</td><td>Pre-sale legal checkpoint; no public-facing use until confirmed</td></tr><tr><td>Competition</td><td>Toast ships natively or agencies bundle</td><td>Publishing craft; multi-surface; agency channel; certification</td></tr><tr><td>Accessibility/legal</td><td>ADA exposure; enterprise blocker</td><td>WCAG 2.1 AA ship gate; E&amp;O insurance; contract terms</td></tr></tbody></table>
+<h3>10.2 2027 milestones</h3>
+<table><thead><tr><th>When</th><th>Milestone</th></tr></thead><tbody><tr><td>Jan 2027, week 1</td><td>Entity formed; $20,000 paid in; operating agreement, vesting and IP assignment signed; Toast partner application submitted</td></tr><tr><td>Jan–Mar</td><td>Build Gen 1; ship CSV/Sheets bridge; 40-group target list; pricing interviews; legal checkpoint on Toast credentials</td></tr><tr><td>15 Mar</td><td>First design partner signed. If not, run the delay case: freeze travel and demos, move certification, cut launch scope</td></tr><tr><td>Mar–Jun</td><td>10 design partners signed; six live and paying by June (about 84 locations)</td></tr><tr><td>Day 120 (~May)</td><td>Toast gate: named contact, written timeline, sandbox credential, written position on customer credentials</td></tr><tr><td>H2 2027</td><td>Four design partners live; five full-price groups; case studies; agency channel first groups</td></tr><tr><td>Dec 2027</td><td>14 net groups, 193 live locations, 142 paying; $42K revenue; cash floor $5.9K; capital returned December</td></tr></tbody></table>
+<h3>10.3 Gates and kill criteria</h3>
+<ul>
+<li><strong>Day 120 Toast gate:</strong> if the four objective tests are not met, pivot to import + multi-POS or stop.</li>
+<li><strong>Day 180 sales gate:</strong> fewer than 4 of 10 design partners signed, or fewer than 3 live and paying, means the ICP, price or sales motion is wrong. Do not add features; re-interview.</li>
+<li><strong>Cash floor:</strong> below $5,000 before $3,000/month recurring revenue means stop and sell.</li>
+<li><strong>Gross margin:</strong> below 75% at 100 live locations for two consecutive months, including onboarding labor at $60/hour, means the unit economics are broken. At 100 locations and 2h/location, gross margin is 77.9%; at 4h/location it is 61.5%.</li>
+<li><strong>Churn:</strong> above 3% monthly group churn after 25 groups means the product is not embedded; stop marketing and fix onboarding.</li>
+</ul>
+<h3>10.4 Fundraising</h3>
+<p>The company is not raising now. The milestones that justify a round are:</p>
+<ul>
+<li>10 paying groups and approximately 140 paying locations;</li>
+<li>at least six months of measured churn;</li>
+<li>a clear Toast status: approved, rejected or a named path with a date;</li>
+<li>a CAC and payback measured from real cohorts, not founder estimates;</li>
+<li>one 20+ location group on an annual contract.</li>
+</ul>
+<p>A round at that point would fund engineering, certification and the first sales hire. It would not fund survival; the $20,000 and revenue must do that.</p>
+<hr>
+<h2>11. Conclusion</h2>
+<p>Garnsh is a narrow, credible Gen 1 business: menu publishing for multi-location Toast groups. The problem is real, the product boundary is honest, and the unit economics work if the price holds. The risks are Toast access, demand and founder capacity, not the arithmetic.</p>
+<p>The plan is deliberately small. It does not assume ordering, payments or a branded app. It does not assume customers it does not have. It assumes two founders can build a useful product, sell ten design partners and learn whether the market will pay $59 per location before spending money the company does not have.</p>
+<p>That is the right test. If it passes, Garnsh has a business worth scaling. If it fails, it fails cheaply and in public, with the evidence written down.</p>
+<hr>
+<h2>Appendix A — Financial model assumptions</h2>
+<p><strong>Revenue.</strong> Per-location subscription, recognized monthly. Lists: $59 core, $40 boards, $99 ordering (2028+), $149 app (2029). Attach rates: boards 5% (2027), ramping to 55% (2028) and 65% (2029); ordering 0% (2027), 17% (2028), 28% (2029); app 0% (2027–28), 3.5% (2029). Setup $1,500 per group, recognized at go-live.</p>
+<p><strong>Cohorts.</strong> 2027: 15 gross groups (6 showcase, 4 design partners, 5 full-price). 2028: 37 gross groups. 2029: 56 gross groups. Net of churn: 14.1, 45.8, 89.6 groups.</p>
+<p><strong>Churn.</strong> Group logo churn 1.5%/month; location churn 0.5%/month. Downside 2.5% and 1.0%. Churn is applied monthly to active groups and locations.</p>
+<p><strong>Onboarding.</strong> 2h/location at $60/hour. 2027: founders perform it; cash $0, economic cost $25,200. 2028–29: contractor, cash cost. Downside 4h/location.</p>
+<p><strong>Cash.</strong> Subscription collected same month in the base, 30-day lag in the downside. Setup 50% at go-live, 50% next month. Expenses paid in month incurred. AR tracked.</p>
+<p><strong>Costs.</strong> Infrastructure $1.70/location/month. Payment fees 2.9% of revenue. Support $2,500/month from 150 live locations; 2029 support team $7,500/month. 2028 marketing/travel/design MRR-gated: travel at $15K MRR, marketing at $25K, design at $35K. 2029 fixed operating costs $614,988.</p>
+<p><strong>Capital.</strong> $20,000 paid-in January 2027. No debt, grants or outside equity in the base case.</p>
+<h3>A.1 2027 monthly cash</h3>
+<table><thead><tr><th>Month</th><th>Live locations</th><th>Paying locations</th><th>Revenue</th><th>Cash from operations</th><th>Economic result</th><th>Cash</th></tr></thead><tbody><tr><td>Jan</td><td>0</td><td>0</td><td>$0</td><td>−$4,617</td><td>−$4,617</td><td>$15,383</td></tr><tr><td>Feb</td><td>0</td><td>0</td><td>$0</td><td>−$5,617</td><td>−$5,617</td><td>$9,766</td></tr><tr><td>Mar</td><td>0</td><td>0</td><td>$0</td><td>−$2,916</td><td>−$2,916</td><td>$6,850</td></tr><tr><td>Apr</td><td>14</td><td>14</td><td>$344</td><td>−$927</td><td>−$2,607</td><td>$5,923</td></tr><tr><td>May</td><td>42</td><td>42</td><td>$1,364</td><td>$27</td><td>−$3,333</td><td>$5,949</td></tr><tr><td>Jun</td><td>83</td><td>83</td><td>$3,045</td><td>$1,451</td><td>−$3,589</td><td>$7,400</td></tr><tr><td>Jul</td><td>109</td><td>81</td><td>$3,997</td><td>$2,468</td><td>−$892</td><td>$9,868</td></tr><tr><td>Aug</td><td>121</td><td>80</td><td>$3,917</td><td>$2,858</td><td>$1,178</td><td>$12,726</td></tr><tr><td>Sep</td><td>133</td><td>78</td><td>$3,839</td><td>−$1,438</td><td>−$3,118</td><td>$11,288</td></tr><tr><td>Oct</td><td>158</td><td>104</td><td>$7,617</td><td>$2,486</td><td>$626</td><td>$13,774</td></tr><tr><td>Nov</td><td>183</td><td>130</td><td>$9,216</td><td>$4,296</td><td>$936</td><td>$18,070</td></tr><tr><td>Dec</td><td>193</td><td>142</td><td>$8,856</td><td>$5,823</td><td>$3,393</td><td>$23,892</td></tr></tbody></table>
+<h3>A.2 Sensitivities</h3>
+<table><thead><tr><th>Case</th><th>2027 revenue</th><th>2027 economic result</th><th>2027 trough</th><th>2028 cash floor</th></tr></thead><tbody><tr><td>Base</td><td>$42,195</td><td>−$20,558</td><td>$5,923</td><td>$25,315</td></tr><tr><td>Group size 10</td><td>$32,282</td><td>−$15,027</td><td>$5,492</td><td>$23,082</td></tr><tr><td>1-in-6 close</td><td>$40,974</td><td>−$21,635</td><td>$5,923</td><td>$24,259</td></tr><tr><td>Slow launch (3 live June)</td><td>$33,984</td><td>−$25,611</td><td>$5,169</td><td>$20,412</td></tr><tr><td>2.5% group churn</td><td>$40,672</td><td>−$21,979</td><td>$5,923</td><td>$23,406</td></tr><tr><td>30-day collection lag</td><td>$42,195</td><td>−$20,558</td><td>$4,355</td><td>$15,979</td></tr><tr><td>2027 onboarding paid</td><td>$42,195</td><td>−$20,558</td><td>−$6,386</td><td>$115</td></tr><tr><td>Onboarding 4h/location</td><td>$42,195</td><td>−$45,758</td><td>$5,923</td><td>$18,595</td></tr><tr><td>Core price $45</td><td>$34,284</td><td>−$28,239</td><td>$5,572</td><td>$15,559</td></tr><tr><td>Toast denies ordering</td><td>$42,195</td><td>−$20,558</td><td>$5,923</td><td>$25,315</td></tr><tr><td>Toast denies ordering + app</td><td>$42,195</td><td>−$20,558</td><td>$5,923</td><td>$25,315</td></tr></tbody></table>
+<h2>Appendix B — Evidence register</h2>
+<p>The full register is a separate deliverable. The main classifications:</p>
+<ul>
+<li><strong>VERIFIED:</strong> Toast Q3 2026 location count (189,000), ARR ($2.5B), net adds (~8,500); Toast standard API is read-only, per-location, Menus V2; Toast partner process is gated; Toast Websites is view-only.</li>
+<li><strong>MODELED:</strong> market share of 10+ groups (10–20%), pricing, attach rates, churn, CAC, onboarding hours, conversion, 2027–29 financials, SOM share.</li>
+<li><strong>UNVERIFIED:</strong> whether customer credentials may power a public website; partner fees/revenue share; certification timeline; Toast plan cost per location; competitor prices not published; demand at $59.</li>
+</ul>
+<h2>Appendix C — Sources</h2>
+<ul>
+<li>Toast Q3 2026 results (investor relations / Business Wire, 3 November 2026): ~189,000 locations, +21% YoY, ARR $2.5B, ~8,500 net new locations.</li>
+<li>Toast developer documentation (2026): partner program, Menus API, standard API access, Orders API.</li>
+<li>Toast support documentation (2026): Websites View-Only, Online Ordering menu constraints.</li>
+<li>Published competitor pricing roundups (October 2026): ChowNow, Popmenu, Owner.com, Lunchbox, BentoBox.</li>
+<li>US restaurant counts: industry reporting, 700,000+ eating and drinking establishments (2024–2026).</li>
+<li>Founders' working notes and the Garnsh demo site, November 2026.</li>
+</ul>
+<p><em>Where a claim is not sourced above, it is an assumption and is labeled MODELED or UNVERIFIED in the register.</em></p></body></html>

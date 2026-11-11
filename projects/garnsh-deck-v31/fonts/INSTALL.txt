@@ -1,0 +1,17 @@
+Garnsh deck fonts
+=================
+The deck uses two free Google Fonts, which are also what garnsh.vercel.app uses:
+
+  Manrope   — body / UI sans     (weights 400, 500, 700, 800)
+  Fraunces  — display serif      (weights 400, 600, 700, optical size 72)
+
+Install before opening the .pptx or PowerPoint/Keynote will substitute fonts
+and the layout will look wrong.
+
+macOS:   double-click each .ttf -> "Install Font"
+Windows: select all .ttf -> right-click -> "Install for all users"
+
+Or drop them into:
+  macOS   ~/Library/Fonts
+  Windows C:\Windows\Fonts
+  Linux   ~/.fonts  (then: fc-cache -f)
