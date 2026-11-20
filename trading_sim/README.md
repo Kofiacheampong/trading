@@ -36,3 +36,16 @@ plus a quality-extras opportunity scanner (QCOM, ADBE, IT, PNR).
 - < 60% → skip or widen strike.
 - **Lever 2:** if a ticker's opportunity flags bounce ≥ 70% of the time, its oversold
   flags are a green light to sell puts that week (bot intuition → real trade).
+
+## monitor.py — the alert engine (Nov 20, 2026)
+
+`monitor.py` replaces the 17 per-ticker alert crons. It reads `projects/watchlist-levels.json`,
+evaluates every level edge-triggered (fires once per crossing), and stays silent otherwise.
+
+```bash
+python3 monitor.py              # alerts only (silent when nothing crosses)
+python3 monitor.py --status     # full board
+python3 monitor.py --board out.md   # write board to a file
+python3 monitor.py --init       # arm current state without alerting
+python3 monitor.py --dry        # show what would fire, don't save state
+```

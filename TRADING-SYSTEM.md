@@ -131,3 +131,18 @@ Log it. One sentence. After 10 weeks you'll see patterns in what works for you.
 ---
 
 *Last updated: 2026-06-18*
+
+---
+
+## 📍 Where levels live (changed Nov 20, 2026)
+
+All price levels now live in **one machine-readable file**: `projects/watchlist-levels.json`.
+`trading_sim/monitor.py` reads it, fires **once** per crossing (edge-triggered, 1.5% re-arm
+hysteresis, 3% material-move re-notify), and writes state to `trading_sim/monitor_state.json`.
+Cron: "Stock monitor — edge-triggered" at 10:15 AM and 3:50 PM ET (command payload — no LLM call).
+
+- **▼ below-level** = dip / stop trigger. **▲ above-level** = reclaim / base-confirmation trigger.
+- The 17 per-ticker alert crons are **disabled**, not deleted (rollback path).
+- Live board: `projects/watchlist-board.md` (rewritten each run).
+- Human doc: `projects/watchlist.md` (thesis history + the live levels table).
+- Do not hand-edit levels in prompts or in the markdown — edit the JSON.
