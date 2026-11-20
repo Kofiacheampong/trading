@@ -1,240 +1,626 @@
 {
-  "_comment": "Single source of truth for all price levels. Edge-triggered by trading_sim/monitor.py. Re-based 2026-11-20 (market in broad downtrend: SPY below 200-SMA, VIX 28). 'below' = dip/stop triggers, 'above' = reclaim/base-confirmation triggers. Hysteresis 1.5% before a fired level re-arms.",
+  "_comment": "Single source of truth for all price levels. Edge-triggered by trading_sim/monitor.py. Re-based 2026-11-20 (market in broad downtrend: SPY below 200-SMA, VIX 28). 'below' = dip/stop triggers, 'above' = reclaim/base-confirmation triggers. Hysteresis 1.5% before a fired level re-arms. Zones are display-only (status/board); they never alert.",
   "version": 2,
-  "rebalanced": "2026-11-20",
+  "rebalanced": "2026-11-20b",
   "themes": {
     "dc_power_analog": {
       "label": "DC Power / Analog (entry plan)",
-      "tickers": ["TXN", "ADI", "VRT", "INTC", "NVTS", "ON"]
+      "tickers": [
+        "TXN",
+        "ADI",
+        "VRT",
+        "INTC",
+        "NVTS",
+        "ON"
+      ]
     },
     "ai_power": {
       "label": "AI Power (quality + story tier)",
-      "tickers": ["CEG", "VST", "GEV", "CCJ", "BWXT", "OKLO", "SMR", "FCEL"]
+      "tickers": [
+        "CEG",
+        "VST",
+        "GEV",
+        "CCJ",
+        "BWXT",
+        "OKLO",
+        "SMR",
+        "FCEL"
+      ]
     },
     "drone": {
-      "label": "Drone/UAS (thesis broken — reclaims only)",
-      "tickers": ["AVAV", "KTOS", "ONDS", "RCAT"]
+      "label": "Drone/UAS (thesis broken \u2014 reclaims only)",
+      "tickers": [
+        "AVAV",
+        "KTOS",
+        "ONDS",
+        "RCAT"
+      ]
     },
     "specials": {
       "label": "Turnarounds / Specials",
-      "tickers": ["HNST", "NBIS", "IREN", "WOLF", "USAR", "CRCL", "CLF", "CIEN", "NVO", "HIMS"]
+      "tickers": [
+        "HNST",
+        "NBIS",
+        "IREN",
+        "WOLF",
+        "USAR",
+        "CRCL",
+        "CLF",
+        "CIEN",
+        "NVO",
+        "HIMS"
+      ]
     },
     "macro": {
       "label": "Macro hedges",
-      "tickers": ["GLD", "GDX"]
+      "tickers": [
+        "GLD",
+        "GDX"
+      ]
     }
   },
   "tickers": {
     "TXN": {
-      "note": "Only analog name still above its 200-SMA (266). In $260-275 All-In band.",
+      "note": "Above its 200-SMA ($266.4) at $271.5, inside the $260\u2013275 All-In band; the $280\u2013300 Best Zone sits overhead.",
       "below": [
-        {"px": 266, "why": "lost 200-SMA ($266) — trend repair failed"},
-        {"px": 250, "why": "deep-flush add zone"}
+        {
+          "px": 266,
+          "why": "lost 200-SMA ($266) \u2014 trend repair failed"
+        },
+        {
+          "px": 250,
+          "why": "All-In floor lost"
+        },
+        {
+          "px": 240,
+          "why": "plan stop ($240) hit"
+        }
       ],
       "above": [
-        {"px": 299, "why": "reclaimed 20-SMA ($299) — first base signal"}
-      ]
+        {
+          "px": 299,
+          "why": "reclaimed 20-SMA ($299) \u2014 first base signal"
+        }
+      ],
+      "zone": {
+        "low": 280,
+        "high": 300,
+        "label": "Best Zone"
+      }
     },
     "ADI": {
-      "note": "Slipped below 200-SMA (378); sitting on the $360 All-In floor.",
+      "note": "Below its 200-SMA ($378) at $357.8 \u2014 under the $360 All-In floor; \u25bc$350 is the next live trigger.",
       "below": [
-        {"px": 350, "why": "All-In floor lost — next leg down"},
-        {"px": 330, "why": "plan stop ($330) hit"}
+        {
+          "px": 350,
+          "why": "All-In floor lost \u2014 next leg down"
+        },
+        {
+          "px": 330,
+          "why": "plan stop ($330) hit"
+        }
       ],
       "above": [
-        {"px": 378, "why": "reclaimed 200-SMA ($378)"}
-      ]
+        {
+          "px": 378,
+          "why": "reclaimed 200-SMA ($378)"
+        }
+      ],
+      "zone": {
+        "low": 360,
+        "high": 380,
+        "label": "All-In Zone"
+      }
     },
     "VRT": {
       "note": "Watch-only. Stop ($240) blown months ago; no entry framework left.",
-      "below": [{"px": 148, "why": "52-wk low break"}],
-      "above": [{"px": 205, "why": "reclaimed 20-SMA ($205) — base forming"}]
+      "below": [
+        {
+          "px": 148,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 205,
+          "why": "reclaimed 20-SMA ($205) \u2014 base forming"
+        }
+      ]
     },
     "INTC": {
       "note": "Holding + thesis broken. Entry framework void; only a reclaim matters.",
-      "below": [{"px": 52, "why": "new leg low"}],
-      "above": [{"px": 65, "why": "reclaimed 20-SMA ($65) — turnaround getting traction"}]
+      "below": [
+        {
+          "px": 52,
+          "why": "new leg low"
+        }
+      ],
+      "above": [
+        {
+          "px": 65,
+          "why": "reclaimed 20-SMA ($65) \u2014 turnaround getting traction"
+        }
+      ]
     },
     "NVTS": {
-      "note": "Watch-only. At a new 52-wk low ($6.47); stop ($10) blown.",
-      "below": [{"px": 6.0, "why": "new 52-wk low"}],
-      "above": [{"px": 8.55, "why": "reclaimed 20-SMA ($8.55)"}]
+      "note": "Watch-only. Making new 52-wk lows live ($6.28 verified 15:47 UTC; the $6.47 and $6.58 figures in earlier notes were stale intraday prints). Stop ($10) blown.",
+      "below": [
+        {
+          "px": 6.0,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 8.55,
+          "why": "reclaimed 20-SMA ($8.55)"
+        }
+      ]
     },
     "ON": {
       "note": "Watch-only / exit-review. Stop ($80) blown.",
-      "below": [{"px": 60, "why": "breaks $60"}],
-      "above": [{"px": 70, "why": "reclaimed 20-SMA ($70)"}]
+      "below": [
+        {
+          "px": 60,
+          "why": "breaks $60"
+        }
+      ],
+      "above": [
+        {
+          "px": 70,
+          "why": "reclaimed 20-SMA ($70)"
+        }
+      ]
     },
-
     "CEG": {
       "note": "Quality tier. Below 200-SMA ($278); watching for a base, not a dip-buy.",
-      "below": [{"px": 228.63, "why": "52-wk low break"}],
-      "above": [{"px": 262, "why": "reclaimed 20-SMA ($262)"}]
+      "below": [
+        {
+          "px": 228.63,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 262,
+          "why": "reclaimed 20-SMA ($262)"
+        }
+      ]
     },
     "VST": {
       "note": "Quality tier, RSI 40, near 52-wk low ($110.89).",
-      "below": [{"px": 110, "why": "52-wk low break"}],
-      "above": [{"px": 132, "why": "reclaimed 20-SMA ($132)"}]
+      "below": [
+        {
+          "px": 110,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 132,
+          "why": "reclaimed 20-SMA ($132)"
+        }
+      ]
     },
     "GEV": {
-      "note": "Quality tier. Broke 200-SMA ($952) decisively — uptrend over.",
-      "below": [{"px": 700, "why": "loses $700"}],
-      "above": [{"px": 819, "why": "reclaimed 20-SMA ($819)"}]
+      "note": "Quality tier. Broke 200-SMA ($952) decisively \u2014 uptrend over.",
+      "below": [
+        {
+          "px": 700,
+          "why": "loses $700"
+        }
+      ],
+      "above": [
+        {
+          "px": 819,
+          "why": "reclaimed 20-SMA ($819)"
+        }
+      ]
     },
     "CCJ": {
-      "note": "Uranium. RSI 28.6 — most washed out in the group.",
-      "below": [{"px": 59, "why": "52-wk low break"}],
-      "above": [{"px": 72, "why": "reclaimed 20-SMA ($72)"}]
+      "note": "Uranium. RSI 28.6 \u2014 most washed out in the group.",
+      "below": [
+        {
+          "px": 59,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 72,
+          "why": "reclaimed 20-SMA ($72)"
+        }
+      ]
     },
     "BWXT": {
-      "note": "Reactor components. Falling knife, −36% under 200-SMA.",
-      "below": [{"px": 112, "why": "52-wk low break"}],
-      "above": [{"px": 125, "why": "reclaimed 20-SMA ($125)"}]
+      "note": "Reactor components. Falling knife, \u221236% under 200-SMA.",
+      "below": [
+        {
+          "px": 112,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 125,
+          "why": "reclaimed 20-SMA ($125)"
+        }
+      ]
     },
     "OKLO": {
-      "note": "Story tier — spec size only, defined risk. −82% from high.",
-      "below": [{"px": 18.5, "why": "52-wk low break"}],
-      "above": [{"px": 24, "why": "reclaimed 20-SMA ($24)"}]
+      "note": "Story tier \u2014 spec size only, defined risk. \u221282% from high.",
+      "below": [
+        {
+          "px": 18.5,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 24,
+          "why": "reclaimed 20-SMA ($24)"
+        }
+      ]
     },
     "SMR": {
-      "note": "Story tier, lottery only. −85% from high.",
-      "below": [{"px": 3.4, "why": "new 52-wk low"}],
-      "above": [{"px": 4.92, "why": "reclaimed 20-SMA ($4.92)"}]
+      "note": "Story tier, lottery only. \u221285% from high.",
+      "below": [
+        {
+          "px": 3.4,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 4.92,
+          "why": "reclaimed 20-SMA ($4.92)"
+        }
+      ]
     },
     "FCEL": {
-      "note": "Fuel cells, −81% from high, below 200-SMA now too.",
-      "below": [{"px": 5.71, "why": "52-wk low break"}],
-      "above": [{"px": 10.10, "why": "reclaimed 20-SMA ($10.10)"}]
+      "note": "Fuel cells, \u221281% from high, below 200-SMA now too.",
+      "below": [
+        {
+          "px": 5.71,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 10.1,
+          "why": "reclaimed 20-SMA ($10.10)"
+        }
+      ]
     },
-
     "AVAV": {
-      "note": "Drone thesis broken (−77% from high, under 200-SMA). Reclaim-only.",
-      "below": [{"px": 92, "why": "new 52-wk low"}],
-      "above": [{"px": 117, "why": "reclaimed 20-SMA ($117) — base attempt"}]
+      "note": "Drone thesis broken (\u221277% from high, under 200-SMA). Reclaim-only.",
+      "below": [
+        {
+          "px": 92,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 117,
+          "why": "reclaimed 20-SMA ($117) \u2014 base attempt"
+        }
+      ]
     },
     "KTOS": {
-      "note": "Best quality of the four, but −79% from high. Reclaim-only.",
-      "below": [{"px": 28, "why": "new 52-wk low"}],
-      "above": [{"px": 36.2, "why": "reclaimed 20-SMA ($36)"}]
+      "note": "Best quality of the four, but \u221279% from high. Reclaim-only.",
+      "below": [
+        {
+          "px": 28,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 36.2,
+          "why": "reclaimed 20-SMA ($36)"
+        }
+      ]
     },
     "ONDS": {
       "note": "Position closed Aug 13 (+15.8%). Re-entry watch only; at a new low.",
-      "below": [{"px": 3.9, "why": "new 52-wk low"}],
-      "above": [{"px": 5.45, "why": "reclaimed 20-SMA ($5.45)"}]
+      "below": [
+        {
+          "px": 3.9,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 5.45,
+          "why": "reclaimed 20-SMA ($5.45)"
+        }
+      ]
     },
     "RCAT": {
-      "note": "Microcap lottery, −90% from high. Reclaim-only, 1-2% sizing max.",
-      "below": [{"px": 1.8, "why": "new 52-wk low"}],
-      "above": [{"px": 3.85, "why": "reclaimed 20-SMA ($3.85)"}]
-    },
-
-    "HNST": {
-      "note": "Only watchlist name ABOVE its 200-SMA (+15%). Best-in-class setup on the board.",
+      "note": "Microcap lottery, \u221290% from high. Reclaim-only, 1-2% sizing max.",
       "below": [
-        {"px": 4.5, "why": "add tranche — 2% position"},
-        {"px": 4.0, "why": "full spec — 3% position"},
-        {"px": 3.5, "why": "stop ($3.50) hit"}
+        {
+          "px": 1.8,
+          "why": "new 52-wk low"
+        }
       ],
-      "above": []
+      "above": [
+        {
+          "px": 3.85,
+          "why": "reclaimed 20-SMA ($3.85)"
+        }
+      ]
+    },
+    "HNST": {
+      "note": "Only watchlist name clearly above its 200-SMA (+15%: $4.56 vs $3.95). Best-in-class setup on the board.",
+      "below": [
+        {
+          "px": 4.5,
+          "why": "add tranche \u2014 2% position"
+        },
+        {
+          "px": 4.0,
+          "why": "full spec \u2014 3% position"
+        },
+        {
+          "px": 3.5,
+          "why": "stop ($3.50) hit"
+        }
+      ],
+      "above": [],
+      "zone": {
+        "low": 4.0,
+        "high": 5.0,
+        "label": "Best/All-In Zone"
+      }
     },
     "NBIS": {
-      "note": "AI neocloud, −70% from high. Entry (was ≤$230) retired — blown.",
-      "below": [{"px": 73.5, "why": "52-wk low break"}],
-      "above": [{"px": 135, "why": "reclaimed 20-SMA ($135)"}]
+      "note": "AI neocloud, \u221270% from high. Entry (was \u2264$230) retired \u2014 blown.",
+      "below": [
+        {
+          "px": 73.5,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 135,
+          "why": "reclaimed 20-SMA ($135)"
+        }
+      ]
     },
     "IREN": {
-      "note": "AI cloud/bitcoin, −82% from high, at a new low. Reclaim-only.",
-      "below": [{"px": 12.5, "why": "new 52-wk low"}],
-      "above": [{"px": 20.7, "why": "reclaimed 20-SMA ($20.7)"}]
+      "note": "AI cloud/bitcoin, \u221282% from high, at a new low. Reclaim-only.",
+      "below": [
+        {
+          "px": 12.5,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 20.7,
+          "why": "reclaimed 20-SMA ($20.7)"
+        }
+      ]
     },
     "WOLF": {
-      "note": "Post-bankruptcy SiC. RSI 47, but −36% under 200-SMA.",
-      "below": [{"px": 13.48, "why": "52-wk low break"}],
-      "above": [{"px": 23.7, "why": "reclaimed 20-SMA ($23.7)"}]
+      "note": "Post-bankruptcy SiC. RSI 47, but \u221236% under 200-SMA.",
+      "below": [
+        {
+          "px": 13.48,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 23.7,
+          "why": "reclaimed 20-SMA ($23.7)"
+        }
+      ]
     },
     "USAR": {
-      "note": "Rare earths spec, −80% from high. Entry (≤$17) retired.",
-      "below": [{"px": 6.5, "why": "52-wk low break"}],
-      "above": [{"px": 8.3, "why": "reclaimed 20-SMA ($8.3)"}]
+      "note": "Rare earths spec, \u221280% from high. Entry (\u2264$17) retired.",
+      "below": [
+        {
+          "px": 6.5,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 8.3,
+          "why": "reclaimed 20-SMA ($8.3)"
+        }
+      ]
     },
     "CRCL": {
-      "note": "Stablecoin. RSI 18.2 — deeply oversold, at the 52-wk low.",
-      "below": [{"px": 49.9, "why": "52-wk low break"}],
-      "above": [{"px": 67.5, "why": "reclaimed 20-SMA ($67.5)"}]
+      "note": "Stablecoin. RSI 18.2 \u2014 deeply oversold, at the 52-wk low.",
+      "below": [
+        {
+          "px": 49.9,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 67.5,
+          "why": "reclaimed 20-SMA ($67.5)"
+        }
+      ]
     },
     "CLF": {
-      "note": "Only name holding its 200-SMA (−2%). The one well-calibrated trigger.",
+      "note": "Just under its 200-SMA (\u22122.4%: $10.97 vs $11.24) \u2014 the one entry trigger still in front of price; \u25bc$9 = All-In.",
       "below": [
-        {"px": 10.5, "why": "original entry trigger"},
-        {"px": 9.0, "why": "loses 200-SMA decisively"}
+        {
+          "px": 10.5,
+          "why": "original entry trigger"
+        },
+        {
+          "px": 9.0,
+          "why": "loses 200-SMA decisively"
+        }
       ],
       "above": []
     },
     "CIEN": {
-      "note": "Optical/AI interconnect, −62% from high. Plan stop $225.",
+      "note": "Optical/AI interconnect, \u221262% from high. Plan stop $225.",
       "below": [
-        {"px": 225, "why": "plan stop ($225) hit"},
-        {"px": 210, "why": "deeper flush"}
+        {
+          "px": 225,
+          "why": "plan stop ($225) hit"
+        },
+        {
+          "px": 210,
+          "why": "deeper flush"
+        }
       ],
-      "above": [{"px": 288, "why": "reclaimed 20-SMA ($288)"}]
+      "above": [
+        {
+          "px": 288,
+          "why": "reclaimed 20-SMA ($288)"
+        }
+      ]
     },
     "NVO": {
       "note": "GLP-1 incumbent. Waiting on the $41 reclaim; floor $36.",
-      "below": [{"px": 36, "why": "loses $36 floor"}],
-      "above": [{"px": 41, "why": "$41 reclaim — momentum shift"}]
+      "below": [
+        {
+          "px": 36,
+          "why": "loses $36 floor",
+          "close_only": true
+        },
+        {
+          "px": 33,
+          "why": "closing break < $33 \u2014 thesis failed, exit",
+          "close_only": true
+        }
+      ],
+      "above": [
+        {
+          "px": 41,
+          "why": "$41 reclaim \u2014 momentum shift"
+        }
+      ]
     },
     "HIMS": {
-      "note": "Entry (≤$25) retired — blown. −62% from high.",
-      "below": [{"px": 13.74, "why": "52-wk low break"}],
-      "above": [{"px": 22.8, "why": "reclaimed 20-SMA ($22.8)"}]
+      "note": "Entry (\u2264$25) retired \u2014 blown. \u221262% from high.",
+      "below": [
+        {
+          "px": 13.74,
+          "why": "52-wk low break"
+        }
+      ],
+      "above": [
+        {
+          "px": 22.8,
+          "why": "reclaimed 20-SMA ($22.8)"
+        }
+      ]
     },
-
     "GLD": {
-      "note": "Gold ETF at a fresh 52-wk low (323.5), RSI 27.8. Original ≤$378 trigger long gone.",
-      "below": [{"px": 315, "why": "new leg low"}],
-      "above": [{"px": 360, "why": "reclaimed 20-SMA ($360)"}]
+      "note": "Gold ETF at a fresh 52-wk low (323.5), RSI 27.8. Original \u2264$378 trigger long gone.",
+      "below": [
+        {
+          "px": 315,
+          "why": "new leg low"
+        }
+      ],
+      "above": [
+        {
+          "px": 360,
+          "why": "reclaimed 20-SMA ($360)"
+        }
+      ]
     },
     "GDX": {
       "note": "Miners at the 52-wk low.",
-      "below": [{"px": 68, "why": "new 52-wk low"}],
-      "above": [{"px": 81, "why": "reclaimed 20-SMA ($81)"}]
+      "below": [
+        {
+          "px": 68,
+          "why": "new 52-wk low"
+        }
+      ],
+      "above": [
+        {
+          "px": 81,
+          "why": "reclaimed 20-SMA ($81)"
+        }
+      ]
     }
   },
   "holdings": {
     "DRAM": {
       "sh": 15.5176,
       "avg": 64.35,
-      "note": "Biggest position and biggest loser (−45%). Memory bust; −16% today.",
+      "note": "Biggest position and biggest loser (\u221245%). Memory bust; \u221216% today.",
       "below": [
-        {"px": 33, "why": "breaks $33 support — cut decision"},
-        {"px": 30, "why": "hard stop — exit review"}
+        {
+          "px": 33,
+          "why": "breaks $33 support \u2014 cut decision"
+        },
+        {
+          "px": 30,
+          "why": "hard stop \u2014 exit review"
+        }
       ],
-      "above": [{"px": 42.4, "why": "reclaims today's open/$42 — bounce legs"}]
+      "above": [
+        {
+          "px": 42.4,
+          "why": "reclaims today's open/$42 \u2014 bounce legs"
+        }
+      ]
     },
     "AMPG": {
       "sh": 1.0,
       "avg": 8.72,
-      "note": "1 share, −79%. Token position; no thesis left.",
-      "below": [{"px": 1.64, "why": "52-wk low break"}],
+      "note": "1 share, \u221279%. Token position; no thesis left.",
+      "below": [
+        {
+          "px": 1.64,
+          "why": "52-wk low break"
+        }
+      ],
       "above": []
     },
     "MP": {
       "sh": 5.9683,
       "avg": 67.35,
-      "note": "Rare earths. −33% under 200-SMA; breakeven is +90% away.",
-      "below": [{"px": 31.9, "why": "52-wk low break — exit review"}],
-      "above": [{"px": 42.2, "why": "reclaimed 50-SMA ($42)"}]
+      "note": "Rare earths. \u221233% under 200-SMA; breakeven is +90% away.",
+      "below": [
+        {
+          "px": 31.9,
+          "why": "52-wk low break \u2014 exit review"
+        }
+      ],
+      "above": [
+        {
+          "px": 42.2,
+          "why": "reclaimed 50-SMA ($42)"
+        }
+      ]
     },
     "INTC": {
       "sh": 1.6867,
       "avg": 104.34,
       "note": "IBKR cleanup lot (+ 11 sh at Fidelity). Thesis broken.",
-      "below": [{"px": 52, "why": "new leg low — exit review"}],
-      "above": [{"px": 65, "why": "reclaimed 20-SMA ($65)"}]
+      "below": [
+        {
+          "px": 52,
+          "why": "new leg low \u2014 exit review"
+        }
+      ],
+      "above": [
+        {
+          "px": 65,
+          "why": "reclaimed 20-SMA ($65)"
+        }
+      ]
     }
   },
   "retired": {
-    "TE": "Ex-FREYR solar, −90.6% from high, $1.18. Thesis dead — removed from alerts 2026-11-20.",
+    "TE": "Ex-FREYR solar, \u221290.6% from high, $1.18. Thesis dead \u2014 removed from alerts 2026-11-20.",
     "PUSA": "Golf-course shell w/ drone unit, never had an entry level. Removed 2026-11-20 (track-only ended).",
     "MDB": "Sold Aug 3 to fund ONDS. Removed from portfolio check-in 2026-11-20."
   }

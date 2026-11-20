@@ -70,6 +70,17 @@ def all_tickers(cfg):
     return seen
 
 
+def zone_tag(px, ticker_cfg):
+    """Display-only buy band. Never fires an alert."""
+    z = ticker_cfg.get("zone")
+    if not z:
+        return ""
+    if z["low"] <= px <= z["high"]:
+        return f" · IN {z['label']} ${z['low']:g}-{z['high']:g}"
+    side = "above" if px > z["high"] else "below"
+    return f" · {side} {z['label']} ${z['low']:g}-{z['high']:g}"
+
+
 def nearest(px, ticker_cfg):
     """Distance in % to the nearest untriggered level, for --status."""
     cands = []
@@ -171,9 +182,10 @@ def main():
                 if not q:
                     out.append(f"  {t:6} no data")
                     continue
-                n = nearest(q["px"], cfg["tickers"].get(t, {}))
+                tc = cfg["tickers"].get(t, {})
+                n = nearest(q["px"], tc)
                 extra = f" · nearest {n[1]} ${n[2]:g} ({n[3]:+.1f}%)" if n else ""
-                out.append(f"  {t:6} ${q['px']:<9.2f} {q['chg']:+5.1f}%{extra}")
+                out.append(f"  {t:6} ${q['px']:<9.2f} {q['chg']:+5.1f}%{extra}{zone_tag(q['px'], tc)}")
             out.append("")
         if cfg.get("holdings"):
             out.append("— HOLDINGS")
@@ -184,7 +196,8 @@ def main():
                     continue
                 pl = (q["px"] - h["avg"]) * h["sh"]
                 tot += pl
-                out.append(f"  {t:6} ${q['px']:<9.2f} {q['chg']:+5.1f}% · {h['sh']:g} sh @ ${h['avg']:g} → {pl:+.0f} usd ({(q['px']/h['avg']-1)*100:+.1f}%)")
+                lv = " · ".join(f"{'▼' if d=='below' else '▲'} ${l['px']:g}" for d in ("below", "above") for l in h.get(d, []))
+                out.append(f"  {t:6} ${q['px']:<9.2f} {q['chg']:+5.1f}% · {h['sh']:g} sh @ ${h['avg']:g} → {pl:+.0f} usd ({(q['px']/h['avg']-1)*100:+.1f}%) · {lv or 'no levels'}")
             out.append(f"  TOTAL unrealised: {tot:+.0f} usd")
         if errors:
             out.append(f"\n⚠️ data errors: {', '.join(errors)}")

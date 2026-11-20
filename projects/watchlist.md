@@ -17,22 +17,24 @@
 
 ---
 
+<!-- LEVELS:BEGIN -->
 ### 🎯 Live Levels — single source of truth
 
-> Machine-readable: `projects/watchlist-levels.json` · rendered by `trading_sim/monitor.py`
-> (edge-triggered: fires once per cross, re-arms only after a 1.5% move back through the level).
-> Live board with prices: `projects/watchlist-board.md` · Job: cron "Stock monitor — edge-triggered" (10:15 AM + 3:50 PM ET).
-> **▼ = dip/stop trigger · ▲ = reclaim / base-confirmation trigger.**
+> Machine-readable: `projects/watchlist-levels.json` (edit this, then run `python3 scripts/render_watchlist.py`).
+> Engine: `trading_sim/monitor.py` — edge-triggered, fires once per crossing, re-arms after a 1.5% move back, re-notifies on a 3% follow-through.
+> Board: `projects/watchlist-board.md` · Cron: *Stock monitor — edge-triggered* 10:15 AM + 3:50 PM ET (command payload, zero LLM calls).
+
+**▼ = dip/stop trigger · ▲ = reclaim / base-confirmation trigger · zone = buy band shown on the board, never alerts**
 
 **DC Power / Analog (entry plan)**
 
 | Ticker | Live levels | Note |
 |---|---|---|
-| **TXN** | ▼ $266 · ▼ $250 · ▲ $299 | Only analog name still above its 200-SMA (266). In $260-275 All-In band. |
-| **ADI** | ▼ $350 · ▼ $330 · ▲ $378 | Slipped below 200-SMA (378); sitting on the $360 All-In floor. |
+| **TXN** | ▼ $266 · ▼ $250 · ▼ $240 · ▲ $299 | Above its 200-SMA ($266.4) at $271.5, inside the $260–275 All-In band; the $280–300 Best Zone sits overhead. |
+| **ADI** | ▼ $350 · ▼ $330 · ▲ $378 | Below its 200-SMA ($378) at $357.8 — under the $360 All-In floor; ▼$350 is the next live trigger. |
 | **VRT** | ▼ $148 · ▲ $205 | Watch-only. Stop ($240) blown months ago; no entry framework left. |
 | **INTC** | ▼ $52 · ▲ $65 | Holding + thesis broken. Entry framework void; only a reclaim matters. |
-| **NVTS** | ▼ $6 · ▲ $8.55 | Watch-only. At a new 52-wk low ($6.47); stop ($10) blown. |
+| **NVTS** | ▼ $6 · ▲ $8.55 | Watch-only. Making new 52-wk lows live ($6.28 verified 15:47 UTC; the $6.47 and $6.58 figures in earlier notes were stale intraday prints). Stop ($10) blown. |
 | **ON** | ▼ $60 · ▲ $70 | Watch-only / exit-review. Stop ($80) blown. |
 
 **AI Power (quality + story tier)**
@@ -61,15 +63,15 @@
 
 | Ticker | Live levels | Note |
 |---|---|---|
-| **HNST** | ▼ $4.5 · ▼ $4 · ▼ $3.5 | Only watchlist name ABOVE its 200-SMA (+15%). Best-in-class setup on the board. |
+| **HNST** | ▼ $4.5 · ▼ $4 · ▼ $3.5 | Only watchlist name clearly above its 200-SMA (+15%: $4.56 vs $3.95). Best-in-class setup on the board. |
 | **NBIS** | ▼ $73.5 · ▲ $135 | AI neocloud, −70% from high. Entry (was ≤$230) retired — blown. |
 | **IREN** | ▼ $12.5 · ▲ $20.7 | AI cloud/bitcoin, −82% from high, at a new low. Reclaim-only. |
 | **WOLF** | ▼ $13.48 · ▲ $23.7 | Post-bankruptcy SiC. RSI 47, but −36% under 200-SMA. |
 | **USAR** | ▼ $6.5 · ▲ $8.3 | Rare earths spec, −80% from high. Entry (≤$17) retired. |
 | **CRCL** | ▼ $49.9 · ▲ $67.5 | Stablecoin. RSI 18.2 — deeply oversold, at the 52-wk low. |
-| **CLF** | ▼ $10.5 · ▼ $9 | Only name holding its 200-SMA (−2%). The one well-calibrated trigger. |
+| **CLF** | ▼ $10.5 · ▼ $9 | Just under its 200-SMA (−2.4%: $10.97 vs $11.24) — the one entry trigger still in front of price; ▼$9 = All-In. |
 | **CIEN** | ▼ $225 · ▼ $210 · ▲ $288 | Optical/AI interconnect, −62% from high. Plan stop $225. |
-| **NVO** | ▼ $36 · ▲ $41 | GLP-1 incumbent. Waiting on the $41 reclaim; floor $36. |
+| **NVO** | ▼ $36 (close) · ▼ $33 (close) · ▲ $41 | GLP-1 incumbent. Waiting on the $41 reclaim; floor $36. |
 | **HIMS** | ▼ $13.74 · ▲ $22.8 | Entry (≤$25) retired — blown. −62% from high. |
 
 **Macro hedges**
@@ -83,9 +85,9 @@
 
 | Ticker | Sh | Avg | Live levels | Note |
 |---|---|---|---|---|
-| **DRAM** | 15.5176 | $64.35 | — | Biggest position and biggest loser (−45%). Memory bust; −16% today. |
-| **AMPG** | 1 | $8.72 | — | 1 share, −79%. Token position; no thesis left. |
-| **MP** | 5.9683 | $67.35 | — | Rare earths. −33% under 200-SMA; breakeven is +90% away. |
+| **DRAM** | 15.5176 | $64.35 | ▼ $33 · ▼ $30 · ▲ $42.4 | Biggest position and biggest loser (−45%). Memory bust; −16% today. |
+| **AMPG** | 1 | $8.72 | ▼ $1.64 | 1 share, −79%. Token position; no thesis left. |
+| **MP** | 5.9683 | $67.35 | ▼ $31.9 · ▲ $42.2 | Rare earths. −33% under 200-SMA; breakeven is +90% away. |
 | **INTC** | 1.6867 | $104.34 | ▼ $52 · ▲ $65 | IBKR cleanup lot (+ 11 sh at Fidelity). Thesis broken. |
 
 **Retired**
@@ -94,11 +96,24 @@
 - **PUSA** — Golf-course shell w/ drone unit, never had an entry level. Removed 2026-11-20 (track-only ended).
 - **MDB** — Sold Aug 3 to fund ONDS. Removed from portfolio check-in 2026-11-20.
 
-*Re-based 2026-11-20: the market is in a broad downtrend (SPY below its 200-day, VIX 28.4), so entry-below levels were replaced with reclaim-above levels for every name already past its old zone. Old below-levels only survive where they are still in front of price (CLF, HNST, NVO, CIEN, GLD/GDX).*
+*Re-based 2026-11-20b. Reasoning in `projects/monitoring-audit-2026-11-20.md`.*
+<!-- LEVELS:END -->
+
+### ✅ Open decisions — resolved (Nov 20, 15:47 UTC)
+
+| # | Question | Resolution |
+|---|---|---|
+| 1 | TXN entry: $280 zone floor vs ▼$266 trigger | **Both, with different jobs.** A *level* can't fire when price is already below it (nothing to cross — TXN at $274 is already inside the $280–300 Best Zone). So $280–300 is now a **display-only zone** shown on the board ("IN Best Zone"), and ▼$266 (200-SMA) stays the live alert. Adding ▼$280 would have produced one meaningless "already crossed" ping and then silence. |
+| 2 | TXN stop: $240 or $250? | **$240 is the stop, $250 is the All-In floor.** Both are live: ▼$250 "All-In floor lost", ▼$240 "plan stop hit" (matches TRADING-SYSTEM.md). |
+| 3 | Holdings with no exit levels | **Not true — the doc was wrong.** The JSON always had DRAM ▼$33/▼$30, MP ▼$31.90, AMPG ▼$1.64, INTC ▼$52. The renderer only read the ticker table, not the holdings table, so it printed "—". Fixed in `scripts/render_watchlist.py` + the board now prints holding levels inline. |
+| 4 | NVTS 52-wk low $6.47 vs $6.58 | **Live check: $6.28** (15:47 UTC, two pulls). The name is at a fresh low right now, which is why every quote looks different — both earlier figures were stale intraday prints. Note corrected. |
+| 5 | Cron history claim ("dead Aug–Nov") | **Overclaim, corrected.** Failures are 3–5 consecutive runs from ~Nov 17. The Nov 13 and Nov 16 notes were written by the (then-working) Watchlist Daily Price Check job. |
+
+---
 
 ### 📝 Notes (last 4 checks — older notes archived)
-- **Nov 20 manual retry check (15:05 UTC / 10:05 AM ET, live intraday — cron lane was dead on deepseek billing cooldown Aug–Nov, so this was run by hand):** ✅ **TXN $280.20 (−1.9%, +1.2% off the $280 floor — back INSIDE the $280–300 Best Zone after a week above it; <$290 start-building HIT; $275 All-In −1.9% away; $240 stop +16.8% clear) 🔔 THE ENTRY**, **ADI $369.46 (−2.1%, fell from $397.97 on 11/16 → −7.2% in four sessions, now INSIDE the $360–380 All-In Zone: +2.6% over the $360 floor, −2.8% under the $380 Best floor; <$380 full-position trigger HIT, <$400 start-building HIT; $330 stop +12.0% clear) 🔔**, **VRT $175.98 (−4.9%, −29.6% under the $250 All-In floor and −26.6% UNDER the $240 stop; −37% below Best Zone floor) 🔔**, **INTC $55.98 (+0.5%, still −41.6% under the $95 All-In floor and −37.8% UNDER the $90 stop; framework void — thesis-break review, NOT an add) 🔔🔔**, **NVTS $6.77 (−5.6%, −43.6% under the $12 All-In floor, −32.3% UNDER the $10 stop, only +2.9% above the $6.58 52-wk low) 🔔**, **ON $64.64 (−1.6%, −28.2% under the $90 All-In floor, −19.2% UNDER the $80 stop; plan = exit/review) 🔔**.** Net: **two buyables — TXN reclaimed its Best Zone floor and ADI dropped into All-In** (the first time both analog names are in-zone at once since Nov 10). Tape behind it is ugly: SPY 715.91 below its 200-day (733) — momentum scanner is REGIME BLOCKED — and VIX 28.4 (+64% in a month). Buy small into a broken tape, not full-size.
-- **Nov 20 check (3:00 PM UTC / 10:00 AM ET, market OPEN — live intraday quotes, vs Thu Nov 19 close $285.75/$377.44/$184.99/$55.72/$7.17/$65.72 — Thursday was red across five of six):** the four-day slide finally delivered the plan's entry — **TXN $280.16 (−1.96%, slid back from $295.86 Tue → $292.43 → $285.75 → $280.16 and is sitting ON the $280 Best-Zone floor (+0.1% above it, −6.6% under the $300 ceiling); <$290 start-building HIT; <$270 full-position only −3.6% away; $240 stop +16.7% clear) 🔔 THE ENTRY**, **ADI $368.91 (−2.26%, cracked the $380 Best floor and dropped INTO the $360–380 All-In Zone, +2.5% over the $360 floor; <$380 full-position trigger HIT; $330 stop +11.8% clear) 🔔**, **VRT $175.98 (−4.87%❗, −29.6% under the $250 All-In floor, −26.7% UNDER the $240 stop; −37.1% below Best Zone floor) 🔔**, **INTC $56.00 (+0.50%, the ONLY green name in the group, still −41.1% under the $95 All-In floor, −37.8% UNDER the $90 stop, −49.1% under the $110 Best floor; framework invalid, thesis-break review, NOT an add) 🔔🔔**, **NVTS $6.77 (−5.58%❗ worst in group for the second straight check, −43.6% under the $12 All-In floor and −32.3% UNDER the $10 stop, breach widening toward the 52-wk low; −57.7% below Best Zone floor) 🔔**, **ON $64.53 (−1.81%, −28.3% under the $90 All-In floor, −19.3% UNDER the $80 stop; −35.5% below Best Zone floor; plan = exit/review) 🔔**. Net: **TWO entries live — TXN is back in its Best Zone at the $280 floor and ADI has pulled into All-In below $380**, the first time the plan has offered both analog levels together since Nov 10; everything power/auto kept sliding (VRT −4.9%, NVTS −5.6% re-widening under $10) with only INTC green on a +0.5% dead-cat tick. Size the analog pair per plan, don't add to the four stop-breached names.
+- **Nov 20 manual retry check (15:05 UTC / 10:05 AM ET, live intraday — cron lane was in deepseek billing cooldown from ~Nov 17 (not Aug — the Nov 13 and Nov 16 notes were written by the then-working Watchlist Daily Price Check job), so this was run by hand):** ✅ **TXN $280.20 (−1.9%, +1.2% off the $280 floor — back INSIDE the $280–300 Best Zone after a week above it; <$290 start-building HIT; $275 All-In −1.9% away; $240 stop +16.8% clear) 🔔 THE ENTRY**, **ADI $369.46 (−2.1%, fell from $397.97 on 11/16 → −7.2% in four sessions, now INSIDE the $360–380 All-In Zone: +2.6% over the $360 floor, −2.8% under the $380 Best floor; <$380 full-position trigger HIT, <$400 start-building HIT; $330 stop +12.0% clear) 🔔**, **VRT $175.98 (−4.9%, −29.6% under the $250 All-In floor and −26.6% UNDER the $240 stop; −37% below Best Zone floor) 🔔**, **INTC $55.98 (+0.5%, still −41.1% under the $95 All-In floor and −37.8% UNDER the $90 stop; framework void — thesis-break review, NOT an add) 🔔🔔**, **NVTS $6.77 (−5.6%, −43.6% under the $12 All-In floor, −32.3% UNDER the $10 stop, only +2.9% above the $6.58 52-wk low) 🔔**, **ON $64.64 (−1.6%, −28.2% under the $90 All-In floor, −19.2% UNDER the $80 stop; plan = exit/review) 🔔**.** Net: **two buyables — TXN reclaimed its Best Zone floor and ADI dropped into All-In** (the first time both analog names are in-zone at once since Nov 10). Tape behind it is ugly: SPY 715.91 below its 200-day (733) — momentum scanner is REGIME BLOCKED — and VIX 28.4 (+64% in a month). Buy small into a broken tape, not full-size.
+- **Nov 20 check (3:00 PM UTC / 10:00 AM ET — **superseded by the 10:05 manual retry above**, kept for the full narrative; market OPEN — live intraday quotes, vs Thu Nov 19 close $285.75/$377.44/$184.99/$55.72/$7.17/$65.72 — Thursday was red across five of six):** the four-day slide finally delivered the plan's entry — **TXN $280.16 (−1.96%, slid back from $295.86 Tue → $292.43 → $285.75 → $280.16 and is sitting ON the $280 Best-Zone floor (+0.1% above it, −6.6% under the $300 ceiling); <$290 start-building HIT; <$270 full-position only −3.6% away; $240 stop +16.7% clear) 🔔 THE ENTRY**, **ADI $368.91 (−2.26%, cracked the $380 Best floor and dropped INTO the $360–380 All-In Zone, +2.5% over the $360 floor; <$380 full-position trigger HIT; $330 stop +11.8% clear) 🔔**, **VRT $175.98 (−4.87%❗, −29.6% under the $250 All-In floor, −26.7% UNDER the $240 stop; −37.1% below Best Zone floor) 🔔**, **INTC $56.00 (+0.50%, the ONLY green name in the group, still −41.1% under the $95 All-In floor, −37.8% UNDER the $90 stop, −49.1% under the $110 Best floor; framework invalid, thesis-break review, NOT an add) 🔔🔔**, **NVTS $6.77 (−5.58%❗ worst in group for the second straight check, −43.6% under the $12 All-In floor and −32.3% UNDER the $10 stop, breach widening toward the 52-wk low; −57.7% below Best Zone floor) 🔔**, **ON $64.53 (−1.81%, −28.3% under the $90 All-In floor, −19.3% UNDER the $80 stop; −35.5% below Best Zone floor; plan = exit/review) 🔔**. Net: **TWO entries live — TXN is back in its Best Zone at the $280 floor and ADI has pulled into All-In below $380**, the first time the plan has offered both analog levels together since Nov 10; everything power/auto kept sliding (VRT −4.9%, NVTS −5.6% re-widening under $10) with only INTC green on a +0.5% dead-cat tick. Size the analog pair per plan, don't add to the four stop-breached names.
 - **Nov 16 check (2:00 PM UTC / 9:00 AM ET pre-market; no live pre-market print yet — quotes = Fri Nov 13 close, vs Thu Nov 12 close $312.48/$409.29/$209.64/$61.20/$9.56/$73.73 — Friday was red across all six, −2.5% to −6.4%):** the pullback finally did something useful — **ADI $397.97 (−2.77%, dropped back INSIDE the $380–400 Best Zone after one session above it: −0.5% under the $400 ceiling, +4.7% over the $380 floor; <$400 start-building HIT; <$380 full-position only −4.5% away; $330 stop +20.6% clear) 🔔 THE ENTRY**, **TXN $303.60 (−2.84%, came back to only +1.2% OVER the $300 ceiling, +8.4% over the floor — nearest it's been to the zone in a week but still no-buy; <$290 start-building OFF, −4.5% away; $240 stop +26.5% clear) ⚠️**, **VRT $202.07 (−3.61%, −19.2% under the $250 All-In floor, −15.8% UNDER the $240 stop; −27.8% below Best Zone floor) 🔔**, **INTC $59.66 (−2.52%, −37.2% under the $95 All-In floor, −33.7% UNDER the $90 stop, −45.8% under the $110 Best floor; framework invalid, thesis-break review, NOT an add) 🔔🔔**, **NVTS $8.95 (−6.38%❗ worst in group, −25.4% under the $12 All-In floor and −10.5% UNDER the $10 stop, breach widening again; −44.1% below Best Zone floor) 🔔**, **ON $71.06 (−3.62%, −21.0% under the $90 All-In floor, −11.2% UNDER the $80 stop; −28.9% below Best Zone floor; plan = exit/review) 🔔**. Net: **one entry triggered — ADI is back in its Best Zone** ($397.97, −0.5% under the $400 ceiling) on Friday's −2.8% fade, the first live buy signal since Nov 10; TXN is knocking on the door at +1.2% over $300 (needs ≤$290 to start, −4.5% away); the power/auto four stayed stop-breached and got worse — NVTS −6.4% re-widening under $10, INTC still deepest at −37.2% below All-In.
 - **Nov 13 check (2:00 PM UTC / 9:00 AM ET pre-market; no live pre-market print yet — quotes = Thu Nov 12 close, vs Wed Nov 11 close $309.81/$409.08/$206.51/$62.50/$10.07/$73.62 — Thursday split the group: analog flat, NVTS/INTC red):** the two-day rally stalled at the top — **TXN $312.48 (+0.86%, still +4.2% OVER the $300 Best-Zone ceiling, +11.6% over the floor; <$290 start-building OFF; <$270 full-position OFF (−13.6% away); $240 stop +30.2% clear — extended, no chase) ⚠️**, **ADI $409.29 (+0.05%, dead flat, +2.3% over the $400 ceiling, +7.7% over the $380 floor; <$400 start-building OFF; <$380 full-position OFF (−7.1% away); $330 stop +24.0% clear — not a buy) ⚠️**, **VRT $209.64 (+1.52%, −16.1% under the $250 All-In floor, −12.6% UNDER the $240 stop; −34.5% below Best Zone floor) 🔔**, **INTC $61.20 (−2.03%, gave back Wednesday's +7.5%❗ — −35.6% under the $95 All-In floor, −32.0% UNDER the $90 stop, −44.4% under the $110 Best floor; framework void, thesis-break review, NOT an add) 🔔🔔**, **NVTS $9.56 (−5.07%❗ worst in group, lost the $10 stop reclaim after one session — −20.3% under the $12 All-In floor, now −4.4% UNDER the $10 stop again; −40.3% below Best Zone floor) 🔔**, **ON $73.73 (+0.15%, −18.1% under the $90 All-In floor, −7.8% UNDER the $80 stop; −26.3% below Best Zone floor; plan = exit/review) 🔔**. Net: **zero entries triggered** — the analog pair is still parked above its ceilings (TXN +4.2% over $300, ADI +2.3% over $400), so the plan's only buy levels remain OFF on the upside; the power/auto four reversed Thursday (NVTS −5.1%, INTC −2.0%) and all four are stop-breached again, NVTS re-breaking $10 and INTC deepest at −32.0%. Nothing to do: wait for TXN ≤$290 or ADI ≤$400, and treat VRT/INTC/NVTS/ON as thesis-break reviews, not adds.
 
@@ -161,7 +176,7 @@
 - NBIS ≤ $205: Add to 2%
 - NBIS ≤ $190: Full spec position (3%)
 - NBIS < $175: Stop — thesis failed, exit
-- NBIS ≤ $230: daily 11 AM ET alert active (entry zone watch)
+- [Historical] NBIS ≤ $230 daily alert — retired Nov 20, 2026; levels live in the table above.
 
 ### IREN — Iren Limited (AI cloud + bitcoin, Microsoft/Nvidia-backed) — added Aug 13, 2026
 
@@ -178,7 +193,7 @@
 - IREN ≤ $38: Add to 2%
 - IREN ≤ $35: Full spec position (3%)
 - IREN < $32: Stop — thesis failed, exit
-- IREN ≤ $42: daily 11 AM ET alert active (entry zone watch)
+- [Historical] IREN ≤ $42 daily alert — retired Nov 20, 2026; levels live in the table above.
 
 ---
 
@@ -216,7 +231,7 @@
 - WOLF ≤ $30: Start small (1% spec) — **only after Aug 19 earnings print**
 - WOLF ≤ $26: Add to 2%
 - WOLF < $22: Stop — thesis failed, exit
-- WOLF ≤ $30: daily 11 AM ET alert active (entry zone watch; reminder: post-earnings only)
+- [Historical] WOLF ≤ $30 daily alert — retired Nov 20, 2026; levels live in the table above.
 
 ---
 
@@ -247,7 +262,7 @@
 - USAR ≤ $17: Start small (1% spec) — toe-dip zone
 - USAR ≤ $14: Add to 2%
 - USAR < $11: Stop — thesis failed, exit
-- USAR ≤ $17: daily 11 AM ET alert active (entry zone watch)
+- [Historical] USAR ≤ $17 daily alert — retired Nov 20, 2026; levels live in the table above.
 
 ---
 
@@ -270,7 +285,7 @@
   beta, legislation binary risk, no dividend, high vol)
 - **Bear risks:** CLARITY Act stalls or weakens; stablecoin yield competition; crypto
   deleverage again; OCC charter path hits friction.
-- **Alert cron active:** CRCL ≤ $70 weekdays 11 AM ET (silent unless triggered).
+- [Historical] CRCL ≤ $70 alert cron — retired Nov 20, 2026; levels live in the table above.
 
 ### 🚨 CRCL Triggers
 - CRCL ≤ $70: Start small (1% spec) — best-zone top
@@ -304,7 +319,7 @@
 - **Peers (quality comparison):** NUE $248.74 (PE 19.9, fwd 11.6, ROIC 12%, debt/EBITDA
   1.2x, dividend) · STLD $231.01 (PE 21, fwd 11.4, ROIC 12.4%, dividend) — profitable,
   clean balance sheets, but less pure AI/GOES exposure and pricier.
-- **Alert cron active:** CLF ≤ $10.50 weekdays 11 AM ET (silent unless triggered).
+- [Historical] CLF ≤ $10.50 alert cron — retired Nov 20, 2026; levels live in the table above.
 
 ### 🚨 CLF Triggers
 - CLF ≤ $10.50: Start small (1% spec) — best-zone top
@@ -347,7 +362,7 @@
 - **Bear risks:** component supply stays tight into 2028 (revenue recognition capped); AI capex
   slows and a ~50x multiple compresses hard; two customers >10% of revenue (concentration);
   backlog ≠ booked revenue; direct cloud/DC revenue is lumpy quarter to quarter.
-- **Alert cron active:** CIEN ≤ $305 weekdays 11 AM ET (silent unless triggered).
+- [Historical] CIEN ≤ $305 alert cron — retired Nov 20, 2026; levels live in the table above.
 
 ### 🚨 CIEN Triggers
 - CIEN ≤ $305: Start small (1% spec) — best-zone top
@@ -396,10 +411,10 @@
   (no spreads). NVO options are liquid.
 - **Bear risks:** GLP-1 share loss compounds; US pricing pressure; 2032 LOE arrives with the
   market already discounting it; "diversification" stays a slide deck; further guidance cuts.
-- **Alert cron active:** NVO ≤ $41 weekdays 11 AM ET (silent unless triggered).
+- [Historical] NVO ≤ $41 alert cron — retired Nov 20, 2026; levels live in the table above.
 
 ### 🚨 NVO Triggers
 - NVO ≥ $41 (reclaim, 2 closes): Start small (1% spec) — confirmation path
 - NVO ≤ $36 (hard hold of 52-wk low): Add to 2% — floor path
 - NVO < $33 (closing break): Stop — thesis failed, exit
-- NVO before Nov 4 earnings: no new entries (binary checkpoint)
+- NVO before Nov 4 earnings: no new entries (binary checkpoint) — **EXPIRED, earnings are out.**
