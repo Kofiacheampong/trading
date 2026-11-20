@@ -1,5 +1,5 @@
 {
- "cash": 1393.4488703275993,
+ "cash": 1273.4488703275993,
  "positions": {
   "PAYC": {
    "shares": 0.5059,
@@ -7,6 +7,13 @@
    "entry_date": "2026-11-06",
    "notional": 120.0,
    "sma20": 257.05
+  },
+  "PYPL": {
+   "shares": 2.2518,
+   "entry": 53.290000915527344,
+   "entry_date": "2026-11-20",
+   "notional": 120.0,
+   "sma20": 57.87
   }
  },
  "closed": [
@@ -506,7 +513,8 @@
    "spot": 79.58,
    "expiry": "2026-11-20",
    "credit": 0.87,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 79.1
   },
   {
    "ticker": "PYPL",
@@ -525,7 +533,8 @@
    "spot": 252.85,
    "expiry": "2026-11-20",
    "credit": 2.73,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 241.55
   },
   {
    "ticker": "LULU",
@@ -616,6 +625,33 @@
    "credit": 0.66,
    "outcome": "win",
    "expiry_close": 59.28
+  },
+  {
+   "ticker": "LULU",
+   "date": "2026-11-20",
+   "strike": 92.5,
+   "spot": 102.62,
+   "expiry": "2026-11-27",
+   "credit": 1.11,
+   "outcome": null
+  },
+  {
+   "ticker": "KMB",
+   "date": "2026-11-20",
+   "strike": 95.0,
+   "spot": 106.38,
+   "expiry": "2026-11-27",
+   "credit": 1.14,
+   "outcome": null
+  },
+  {
+   "ticker": "PYPL",
+   "date": "2026-11-20",
+   "strike": 47.5,
+   "spot": 53.29,
+   "expiry": "2026-11-27",
+   "credit": 0.57,
+   "outcome": null
   }
  ],
  "events": [],
@@ -3865,6 +3901,51 @@
     "rsi(32)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "AVAV",
+   "date": "2026-11-20",
+   "price": 86.79,
+   "score": 82.5,
+   "rsi": 27.6,
+   "relvol": 1.39,
+   "vs_200ma": -49.2,
+   "vs_52w_high": -77.9,
+   "flags": [
+    "oversold_quality(-49% vs 200ma)",
+    "rsi(28)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-11-20",
+   "price": 26.89,
+   "score": 82.5,
+   "rsi": 24.0,
+   "relvol": 1.24,
+   "vs_200ma": -54.0,
+   "vs_52w_high": -79.4,
+   "flags": [
+    "oversold_quality(-54% vs 200ma)",
+    "rsi(24)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-20",
+   "price": 1.79,
+   "score": 82.5,
+   "rsi": 21.4,
+   "relvol": 1.12,
+   "vs_200ma": -81.4,
+   "vs_52w_high": -89.7,
+   "flags": [
+    "oversold_quality(-81% vs 200ma)",
+    "rsi(21)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -4181,6 +4262,14 @@
    "exit": 7544.25,
    "reason": "sl",
    "pnl": -100.0
+  },
+  {
+   "date": "2026-11-20",
+   "side": "long",
+   "entry": 7145.25,
+   "exit": 7125.25,
+   "reason": "sl",
+   "pnl": -100.0
   }
  ],
  "fade_flags": [],
@@ -4322,7 +4411,12 @@
    "yield_pct": 2.24,
    "s20": 71.69,
    "s50": 74.21,
-   "outcome": null
+   "outcome": "kept",
+   "settle": 79.1,
+   "pnl_usd": 937.0,
+   "ret_pct": 13.14,
+   "hold_pct": 10.89,
+   "resolved_date": "2026-11-20"
   },
   {
    "ticker": "LULU",
@@ -4371,7 +4465,12 @@
    "yield_pct": 3.71,
    "s20": 56.73,
    "s50": 57.04,
-   "outcome": null
+   "outcome": "kept",
+   "settle": 33.62,
+   "pnl_usd": -1233.0,
+   "ret_pct": -25.84,
+   "hold_pct": -29.55,
+   "resolved_date": "2026-11-20"
   },
   {
    "ticker": "MP",
@@ -4384,6 +4483,19 @@
    "yield_pct": 4.12,
    "s20": 41.82,
    "s50": 47.95,
+   "outcome": null
+  },
+  {
+   "ticker": "DRAM",
+   "date": "2026-11-20",
+   "spot": 33.62,
+   "strike": 37.0,
+   "expiry": "2026-12-18",
+   "dte": 28,
+   "premium": 2.12,
+   "yield_pct": 6.32,
+   "s20": 43.54,
+   "s50": 51.1,
    "outcome": null
   }
  ],
@@ -5681,6 +5793,41 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 257.03,
    "s50": 238.8
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 107.41,
+   "s50": 101.54
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 108.6,
+   "s50": 103.42
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "ZTS",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 81.99,
+   "s50": 77.19
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 57.87,
+   "s50": 55.95
+  },
+  {
+   "date": "2026-11-20",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 252.24,
+   "s50": 241.32
   }
  ],
  "value_cache": {
@@ -6677,15 +6824,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-13T21:15:07+00:00",
-   "last_try": "2026-11-13T21:15:07+00:00",
+   "last_ok": "2026-11-20T21:15:09+00:00",
+   "last_try": "2026-11-20T21:15:09+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-29T20:15:07+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-10-29"
-    },
     {
      "ts": "2026-10-30T20:15:07+00:00",
      "ok": true,
@@ -6740,19 +6882,19 @@
      "ts": "2026-11-13T21:15:07+00:00",
      "ok": true,
      "note": "194 bars for 2026-11-13"
+    },
+    {
+     "ts": "2026-11-20T21:15:09+00:00",
+     "ok": true,
+     "note": "193 bars for 2026-11-20"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-13T21:15:07+00:00",
-   "last_try": "2026-11-13T21:15:07+00:00",
+   "last_ok": "2026-11-20T21:15:09+00:00",
+   "last_try": "2026-11-20T21:15:09+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-10-29T20:15:07+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-10-30T20:15:07+00:00",
      "ok": true,
@@ -6807,6 +6949,11 @@
      "ts": "2026-11-13T21:15:07+00:00",
      "ok": true,
      "note": "ok=5 fail=0"
+    },
+    {
+     "ts": "2026-11-20T21:15:09+00:00",
+     "ok": true,
+     "note": "ok=12 fail=0"
     }
    ]
   }

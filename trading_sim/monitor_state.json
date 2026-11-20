@@ -2,31 +2,31 @@
  "levels": {
   "ADI:above:378": {
    "last_notify": null,
-   "last_px": 360.78,
+   "last_px": 350.43,
    "since": "2026-11-20",
    "state": "armed"
   },
   "ADI:below:330": {
    "last_notify": null,
-   "last_px": 360.78,
+   "last_px": 350.43,
    "since": "2026-11-20",
    "state": "armed"
   },
   "ADI:below:350": {
    "last_notify": null,
-   "last_px": 360.78,
+   "last_px": 350.43,
    "since": "2026-11-20",
    "state": "armed"
   },
   "AMPG:below:1.64": {
    "last_notify": null,
-   "last_px": 1.81,
+   "last_px": 1.79,
    "since": "2026-11-20",
    "state": "armed"
   },
   "AVAV:above:117": {
    "last_notify": null,
-   "last_px": 91.55,
+   "last_px": 87.71,
    "since": "2026-11-20",
    "state": "armed"
   },
@@ -38,73 +38,73 @@
   },
   "BWXT:above:125": {
    "last_notify": null,
-   "last_px": 112.94,
+   "last_px": 109.53,
    "since": "2026-11-20",
    "state": "armed"
   },
   "BWXT:below:112": {
-   "last_notify": null,
-   "last_px": 112.94,
+   "last_notify": "2026-11-20",
+   "last_px": 109.53,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "CCJ:above:72": {
    "last_notify": null,
-   "last_px": 60.415,
+   "last_px": 58.45,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CCJ:below:59": {
-   "last_notify": null,
-   "last_px": 60.415,
+   "last_notify": "2026-11-20",
+   "last_px": 58.45,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "CEG:above:262": {
    "last_notify": null,
-   "last_px": 243.03,
+   "last_px": 239.23,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CEG:below:228.63": {
    "last_notify": null,
-   "last_px": 243.03,
+   "last_px": 239.23,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CIEN:above:288": {
    "last_notify": null,
-   "last_px": 238.45,
+   "last_px": 233.76,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CIEN:below:210": {
    "last_notify": null,
-   "last_px": 238.45,
+   "last_px": 233.76,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CIEN:below:225": {
    "last_notify": null,
-   "last_px": 238.45,
+   "last_px": 233.76,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CLF:below:10.5": {
    "last_notify": null,
-   "last_px": 10.97,
+   "last_px": 10.69,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CLF:below:9.0": {
    "last_notify": null,
-   "last_px": 10.97,
+   "last_px": 10.69,
    "since": "2026-11-20",
    "state": "armed"
   },
   "CRCL:above:67.5": {
    "last_notify": null,
-   "last_px": 49.57,
+   "last_px": 48.15,
    "since": "2026-11-20",
    "state": "armed"
   },
@@ -116,217 +116,217 @@
   },
   "DRAM:above:42.4": {
    "last_notify": null,
-   "last_px": 35.225,
+   "last_px": 33.82,
    "since": "2026-11-20",
    "state": "armed"
   },
   "DRAM:below:30": {
    "last_notify": null,
-   "last_px": 35.225,
+   "last_px": 33.82,
    "since": "2026-11-20",
    "state": "armed"
   },
   "DRAM:below:33": {
    "last_notify": null,
-   "last_px": 35.225,
+   "last_px": 33.82,
    "since": "2026-11-20",
    "state": "armed"
   },
   "FCEL:above:10.1": {
    "last_notify": null,
-   "last_px": 6.871,
+   "last_px": 6.705,
    "since": "2026-11-20",
    "state": "armed"
   },
   "FCEL:below:5.71": {
    "last_notify": null,
-   "last_px": 6.871,
+   "last_px": 6.705,
    "since": "2026-11-20",
    "state": "armed"
   },
   "GDX:above:81": {
    "last_notify": null,
-   "last_px": 70.395,
+   "last_px": 68.62,
    "since": "2026-11-20",
    "state": "armed"
   },
   "GDX:below:68": {
    "last_notify": null,
-   "last_px": 70.395,
+   "last_px": 68.62,
    "since": "2026-11-20",
    "state": "armed"
   },
   "GEV:above:819": {
    "last_notify": null,
-   "last_px": 715.26,
+   "last_px": 703.955,
    "since": "2026-11-20",
    "state": "armed"
   },
   "GEV:below:700": {
    "last_notify": null,
-   "last_px": 715.26,
+   "last_px": 703.955,
    "since": "2026-11-20",
    "state": "armed"
   },
   "GLD:above:360": {
    "last_notify": null,
-   "last_px": 325.7,
+   "last_px": 322.82,
    "since": "2026-11-20",
    "state": "armed"
   },
   "GLD:below:315": {
    "last_notify": null,
-   "last_px": 325.7,
+   "last_px": 322.82,
    "since": "2026-11-20",
    "state": "armed"
   },
   "HIMS:above:22.8": {
    "last_notify": null,
-   "last_px": 15.35,
+   "last_px": 14.72,
    "since": "2026-11-20",
    "state": "armed"
   },
   "HIMS:below:13.74": {
    "last_notify": null,
-   "last_px": 15.35,
+   "last_px": 14.72,
    "since": "2026-11-20",
    "state": "armed"
   },
   "HNST:below:3.5": {
    "last_notify": null,
-   "last_px": 4.51,
+   "last_px": 4.445,
    "since": "2026-11-20",
    "state": "armed"
   },
   "HNST:below:4.0": {
    "last_notify": null,
-   "last_px": 4.51,
+   "last_px": 4.445,
    "since": "2026-11-20",
    "state": "armed"
   },
   "HNST:below:4.5": {
-   "last_notify": null,
-   "last_px": 4.51,
+   "last_notify": "2026-11-20",
+   "last_px": 4.445,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "INTC:above:65": {
    "last_notify": null,
-   "last_px": 53.797,
+   "last_px": 52.322,
    "since": "2026-11-20",
    "state": "armed"
   },
   "INTC:below:52": {
    "last_notify": null,
-   "last_px": 53.797,
+   "last_px": 52.322,
    "since": "2026-11-20",
    "state": "armed"
   },
   "IREN:above:20.7": {
    "last_notify": null,
-   "last_px": 12.805,
+   "last_px": 11.955,
    "since": "2026-11-20",
    "state": "armed"
   },
   "IREN:below:12.5": {
-   "last_notify": null,
-   "last_px": 12.805,
+   "last_notify": "2026-11-20",
+   "last_px": 11.955,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "KTOS:above:36.2": {
    "last_notify": null,
-   "last_px": 28.17,
+   "last_px": 27.06,
    "since": "2026-11-20",
    "state": "armed"
   },
   "KTOS:below:28": {
-   "last_notify": null,
-   "last_px": 28.17,
+   "last_notify": "2026-11-20",
+   "last_px": 27.06,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "MP:above:42.2": {
    "last_notify": null,
-   "last_px": 35.44,
+   "last_px": 34.02,
    "since": "2026-11-20",
    "state": "armed"
   },
   "MP:below:31.9": {
    "last_notify": null,
-   "last_px": 35.44,
+   "last_px": 34.02,
    "since": "2026-11-20",
    "state": "armed"
   },
   "NBIS:above:135": {
    "last_notify": null,
-   "last_px": 87.41,
+   "last_px": 82.62,
    "since": "2026-11-20",
    "state": "armed"
   },
   "NBIS:below:73.5": {
    "last_notify": null,
-   "last_px": 87.41,
+   "last_px": 82.62,
    "since": "2026-11-20",
    "state": "armed"
   },
   "NVO:above:41": {
    "last_notify": null,
-   "last_px": 38.905,
+   "last_px": 37.97,
    "since": "2026-11-20",
    "state": "armed"
   },
   "NVO:below:33": {
    "last_notify": null,
-   "last_px": 38.905,
+   "last_px": 37.97,
    "since": null,
    "state": "armed"
   },
   "NVO:below:36": {
    "last_notify": null,
-   "last_px": 38.905,
+   "last_px": 37.97,
    "since": "2026-11-20",
    "state": "armed"
   },
   "NVTS:above:8.55": {
    "last_notify": null,
-   "last_px": 6.37,
+   "last_px": 6.1,
    "since": "2026-11-20",
    "state": "armed"
   },
   "NVTS:below:6.0": {
    "last_notify": null,
-   "last_px": 6.37,
+   "last_px": 6.1,
    "since": "2026-11-20",
    "state": "armed"
   },
   "OKLO:above:24": {
    "last_notify": null,
-   "last_px": 20.67,
+   "last_px": 20.03,
    "since": "2026-11-20",
    "state": "armed"
   },
   "OKLO:below:18.5": {
    "last_notify": null,
-   "last_px": 20.67,
+   "last_px": 20.03,
    "since": "2026-11-20",
    "state": "armed"
   },
   "ON:above:70": {
    "last_notify": null,
-   "last_px": 62.515,
+   "last_px": 60.06,
    "since": "2026-11-20",
    "state": "armed"
   },
   "ON:below:60": {
    "last_notify": null,
-   "last_px": 62.515,
+   "last_px": 60.06,
    "since": "2026-11-20",
    "state": "armed"
   },
   "ONDS:above:5.45": {
    "last_notify": null,
-   "last_px": 3.91,
+   "last_px": 3.815,
    "since": "2026-11-20",
    "state": "armed"
   },
@@ -338,102 +338,102 @@
   },
   "RCAT:above:3.85": {
    "last_notify": null,
-   "last_px": 1.83,
+   "last_px": 1.815,
    "since": "2026-11-20",
    "state": "armed"
   },
   "RCAT:below:1.8": {
    "last_notify": null,
-   "last_px": 1.83,
+   "last_px": 1.815,
    "since": "2026-11-20",
    "state": "armed"
   },
   "SMR:above:4.92": {
    "last_notify": null,
-   "last_px": 3.5,
+   "last_px": 3.375,
    "since": "2026-11-20",
    "state": "armed"
   },
   "SMR:below:3.4": {
-   "last_notify": null,
-   "last_px": 3.5,
+   "last_notify": "2026-11-20",
+   "last_px": 3.375,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "TXN:above:299": {
    "last_notify": null,
-   "last_px": 273.45,
+   "last_px": 266.56,
    "since": "2026-11-20",
    "state": "armed"
   },
   "TXN:below:240": {
    "last_notify": null,
-   "last_px": 273.45,
+   "last_px": 266.56,
    "since": null,
    "state": "armed"
   },
   "TXN:below:250": {
    "last_notify": null,
-   "last_px": 273.45,
+   "last_px": 266.56,
    "since": "2026-11-20",
    "state": "armed"
   },
   "TXN:below:266": {
    "last_notify": null,
-   "last_px": 273.45,
+   "last_px": 266.56,
    "since": "2026-11-20",
    "state": "armed"
   },
   "USAR:above:8.3": {
    "last_notify": null,
-   "last_px": 6.67,
+   "last_px": 6.29,
    "since": "2026-11-20",
    "state": "armed"
   },
   "USAR:below:6.5": {
-   "last_notify": null,
-   "last_px": 6.67,
+   "last_notify": "2026-11-20",
+   "last_px": 6.29,
    "since": "2026-11-20",
-   "state": "armed"
+   "state": "fired"
   },
   "VRT:above:205": {
    "last_notify": null,
-   "last_px": 168.56,
+   "last_px": 166.205,
    "since": "2026-11-20",
    "state": "armed"
   },
   "VRT:below:148": {
    "last_notify": null,
-   "last_px": 168.56,
+   "last_px": 166.205,
    "since": "2026-11-20",
    "state": "armed"
   },
   "VST:above:132": {
    "last_notify": null,
-   "last_px": 118.925,
+   "last_px": 115.645,
    "since": "2026-11-20",
    "state": "armed"
   },
   "VST:below:110": {
    "last_notify": null,
-   "last_px": 118.925,
+   "last_px": 115.645,
    "since": "2026-11-20",
    "state": "armed"
   },
   "WOLF:above:23.7": {
    "last_notify": null,
-   "last_px": 19.71,
+   "last_px": 19.5,
    "since": "2026-11-20",
    "state": "armed"
   },
   "WOLF:below:13.48": {
    "last_notify": null,
-   "last_px": 19.71,
+   "last_px": 19.5,
    "since": "2026-11-20",
    "state": "armed"
   }
  },
  "meta": {
-  "updated": "2026-11-20T15:49:34+00:00"
+  "updated": "2026-11-20T20:50:06+00:00"
  }
 }
