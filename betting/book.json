@@ -1,5 +1,5 @@
 {
- "bankroll": 96.82,
+ "bankroll": 101.28,
  "bets": [
   {
    "event_id": "eb2553d10d63dc912b99f8fd0d675721",
@@ -1619,8 +1619,12 @@
    "entered": "2026-11-15",
    "closing_odds": 2.1,
    "closing_ts": "2026-11-21T15:00:13+00:00",
-   "result": null,
-   "pnl": null
+   "result": "win",
+   "pnl": 0.5,
+   "settled": "2026-11-22",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": -4.76
   },
   {
    "event_id": "ac6cf70520a83c0949b4003bde53c709",
@@ -1635,8 +1639,12 @@
    "entered": "2026-11-15",
    "closing_odds": 3.8,
    "closing_ts": "2026-11-21T15:00:13+00:00",
-   "result": null,
-   "pnl": null
+   "result": "win",
+   "pnl": 6.0,
+   "settled": "2026-11-22",
+   "home_score": 1,
+   "away_score": 4,
+   "clv": 5.26
   },
   {
    "event_id": "9f38413bdad666e2d2dfcc574dd12e66",
@@ -1651,8 +1659,12 @@
    "entered": "2026-11-15",
    "closing_odds": 2.55,
    "closing_ts": "2026-11-21T15:00:13+00:00",
-   "result": null,
-   "pnl": null
+   "result": "win",
+   "pnl": 0.73,
+   "settled": "2026-11-22",
+   "home_score": 3,
+   "away_score": 2,
+   "clv": -3.92
   },
   {
    "event_id": "e67ee3a6f93bb90b8aefcf3dd204477c",
@@ -1667,8 +1679,12 @@
    "entered": "2026-11-15",
    "closing_odds": 4.9,
    "closing_ts": "2026-11-21T15:00:13+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-11-22",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": -12.24
   },
   {
    "event_id": "e67ee3a6f93bb90b8aefcf3dd204477c",
@@ -1683,8 +1699,12 @@
    "entered": "2026-11-15",
    "closing_odds": 6.0,
    "closing_ts": "2026-11-21T15:00:13+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -1.77,
+   "settled": "2026-11-22",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": -3.33
   },
   {
    "event_id": "71bf9fe98c3e3be39cd1d059f8d71ae8",
@@ -1699,8 +1719,12 @@
    "entered": "2026-11-15",
    "closing_odds": 1.53,
    "closing_ts": "2026-11-21T15:00:13+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-11-22",
+   "home_score": 2,
+   "away_score": 2,
+   "clv": 0.65
   },
   {
    "event_id": "230a356290e1a358e9dd2f7fa23de3b9",
@@ -1713,8 +1737,8 @@
    "edge": 0.056,
    "stake": 0.5,
    "entered": "2026-11-15",
-   "closing_odds": 4.4,
-   "closing_ts": "2026-11-21T15:00:13+00:00",
+   "closing_odds": 3.3,
+   "closing_ts": "2026-11-22T15:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1729,8 +1753,8 @@
    "edge": 0.172,
    "stake": 0.5,
    "entered": "2026-11-16",
-   "closing_odds": 1.69,
-   "closing_ts": "2026-11-21T15:00:13+00:00",
+   "closing_odds": 1.74,
+   "closing_ts": "2026-11-22T15:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1745,8 +1769,8 @@
    "edge": 0.126,
    "stake": 0.5,
    "entered": "2026-11-21",
-   "closing_odds": null,
-   "closing_ts": null,
+   "closing_odds": 2.3,
+   "closing_ts": "2026-11-22T15:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1761,8 +1785,8 @@
    "edge": 0.081,
    "stake": 0.5,
    "entered": "2026-11-21",
-   "closing_odds": null,
-   "closing_ts": null,
+   "closing_odds": 2.4,
+   "closing_ts": "2026-11-22T15:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1777,8 +1801,8 @@
    "edge": 0.387,
    "stake": 2.0,
    "entered": "2026-11-21",
-   "closing_odds": null,
-   "closing_ts": null,
+   "closing_odds": 3.5,
+   "closing_ts": "2026-11-22T15:00:04+00:00",
    "result": null,
    "pnl": null
   },
@@ -1793,6 +1817,102 @@
    "edge": 0.05,
    "stake": 0.5,
    "entered": "2026-11-21",
+   "closing_odds": 1.48,
+   "closing_ts": "2026-11-22T15:00:04+00:00",
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "9d23f6ad21946dd258869ebc22236cf0",
+   "home": "Ipswich Town",
+   "away": "Aston Villa",
+   "commence": "2026-11-28T17:30:00Z",
+   "market": "h2h_away",
+   "odds": 2.0,
+   "model_prob": 0.628,
+   "edge": 0.159,
+   "stake": 0.5,
+   "entered": "2026-11-22",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "56ea91809ff11d3a67557a21b3371cb9",
+   "home": "Fulham",
+   "away": "Bournemouth",
+   "commence": "2026-11-29T14:05:00Z",
+   "market": "h2h_away",
+   "odds": 2.55,
+   "model_prob": 0.442,
+   "edge": 0.073,
+   "stake": 0.5,
+   "entered": "2026-11-22",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "e9c2b74ecaafd494e3b2d8521b52216a",
+   "home": "Brighton & Hove Albion",
+   "away": "Newcastle United",
+   "commence": "2026-11-29T14:05:00Z",
+   "market": "h2h_home",
+   "odds": 1.53,
+   "model_prob": 0.681,
+   "edge": 0.072,
+   "stake": 0.5,
+   "entered": "2026-11-22",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "e12585885a7f135127f276b7f1ecdf89",
+   "home": "Crystal Palace",
+   "away": "Hull City",
+   "commence": "2026-11-29T14:05:00Z",
+   "market": "h2h_draw",
+   "odds": 3.8,
+   "model_prob": 0.286,
+   "edge": 0.042,
+   "stake": 0.5,
+   "entered": "2026-11-22",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "e12585885a7f135127f276b7f1ecdf89",
+   "home": "Crystal Palace",
+   "away": "Hull City",
+   "commence": "2026-11-29T14:05:00Z",
+   "market": "h2h_away",
+   "odds": 4.0,
+   "model_prob": 0.512,
+   "edge": 0.28,
+   "stake": 2.0,
+   "entered": "2026-11-22",
+   "closing_odds": null,
+   "closing_ts": null,
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "09bb0ba9a9025d64fed410375c0c8f80",
+   "home": "Sunderland",
+   "away": "Tottenham Hotspur",
+   "commence": "2026-11-29T14:05:00Z",
+   "market": "h2h_draw",
+   "odds": 3.3,
+   "model_prob": 0.455,
+   "edge": 0.172,
+   "stake": 0.51,
+   "entered": "2026-11-22",
    "closing_odds": null,
    "closing_ts": null,
    "result": null,
