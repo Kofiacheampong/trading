@@ -4012,6 +4012,51 @@
     "near_52w_low",
     "early_reversal"
    ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-11-24",
+   "price": 28.21,
+   "score": 82.5,
+   "rsi": 29.8,
+   "relvol": 0.68,
+   "vs_200ma": -51.2,
+   "vs_52w_high": -78.4,
+   "flags": [
+    "oversold_quality(-51% vs 200ma)",
+    "rsi(30)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-24",
+   "price": 1.73,
+   "score": 82.5,
+   "rsi": 22.3,
+   "relvol": 1.17,
+   "vs_200ma": -82.0,
+   "vs_52w_high": -90.1,
+   "flags": [
+    "oversold_quality(-82% vs 200ma)",
+    "rsi(22)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "SMR",
+   "date": "2026-11-24",
+   "price": 3.31,
+   "score": 82.5,
+   "rsi": 26.2,
+   "relvol": 0.8,
+   "vs_200ma": -65.8,
+   "vs_52w_high": -85.5,
+   "flags": [
+    "oversold_quality(-66% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -4073,7 +4118,12 @@
    "resolved_date": "2026-08-14"
   }
  ],
- "mes": null,
+ "mes": {
+  "entry": 7211.25,
+  "entry_date": "2026-11-24",
+  "sl": 7186.25,
+  "tp": 7241.25
+ },
  "mes_trades": [
   {
    "entry": 7581.75,
@@ -5937,6 +5987,41 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 250.99,
    "s50": 241.73
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 107.57,
+   "s50": 101.78
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 108.48,
+   "s50": 103.79
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "ZTS",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 82.1,
+   "s50": 77.47
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 57.88,
+   "s50": 56.02
+  },
+  {
+   "date": "2026-11-24",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 250.04,
+   "s50": 242.05
   }
  ],
  "value_cache": {
@@ -6933,15 +7018,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-23T21:15:07+00:00",
-   "last_try": "2026-11-23T21:15:07+00:00",
+   "last_ok": "2026-11-24T21:15:07+00:00",
+   "last_try": "2026-11-24T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-02T21:15:12+00:00",
-     "ok": true,
-     "note": "195 bars for 2026-11-02"
-    },
     {
      "ts": "2026-11-03T21:15:06+00:00",
      "ok": true,
@@ -6996,19 +7076,19 @@
      "ts": "2026-11-23T21:15:07+00:00",
      "ok": true,
      "note": "195 bars for 2026-11-23"
+    },
+    {
+     "ts": "2026-11-24T21:15:07+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-11-24"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-23T21:15:07+00:00",
-   "last_try": "2026-11-23T21:15:07+00:00",
+   "last_ok": "2026-11-24T21:15:07+00:00",
+   "last_try": "2026-11-24T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-02T21:15:12+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-11-03T21:15:06+00:00",
      "ok": true,
@@ -7061,6 +7141,11 @@
     },
     {
      "ts": "2026-11-23T21:15:07+00:00",
+     "ok": true,
+     "note": "ok=5 fail=0"
+    },
+    {
+     "ts": "2026-11-24T21:15:07+00:00",
      "ok": true,
      "note": "ok=5 fail=0"
     }
