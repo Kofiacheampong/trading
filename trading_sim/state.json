@@ -1,5 +1,5 @@
 {
- "cash": 1273.4488703275993,
+ "cash": 1403.6271410277898,
  "positions": {
   "PAYC": {
    "shares": 0.5059,
@@ -7,13 +7,6 @@
    "entry_date": "2026-11-06",
    "notional": 120.0,
    "sma20": 257.05
-  },
-  "PYPL": {
-   "shares": 2.2518,
-   "entry": 53.290000915527344,
-   "entry_date": "2026-11-20",
-   "notional": 120.0,
-   "sma20": 57.87
   }
  },
  "closed": [
@@ -93,6 +86,17 @@
    "pnl_usd": 3.8,
    "hold_days": 15,
    "reason": "time"
+  },
+  {
+   "ticker": "PYPL",
+   "entry": 53.29,
+   "exit": 57.81,
+   "entry_date": "2026-11-20",
+   "exit_date": "2026-11-25",
+   "pnl_pct": 8.48,
+   "pnl_usd": 10.18,
+   "hold_days": 3,
+   "reason": "take-profit"
   }
  ],
  "puts": [
@@ -4057,6 +4061,52 @@
     "rsi(26)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-11-25",
+   "price": 28.95,
+   "score": 92.5,
+   "rsi": 32.7,
+   "relvol": 0.82,
+   "vs_200ma": -49.6,
+   "vs_52w_high": -77.9,
+   "flags": [
+    "oversold_quality(-50% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-25",
+   "price": 1.76,
+   "score": 82.5,
+   "rsi": 23.1,
+   "relvol": 0.77,
+   "vs_200ma": -81.5,
+   "vs_52w_high": -89.9,
+   "flags": [
+    "oversold_quality(-81% vs 200ma)",
+    "rsi(23)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "SMR",
+   "date": "2026-11-25",
+   "price": 3.26,
+   "score": 82.5,
+   "rsi": 25.9,
+   "relvol": 0.71,
+   "vs_200ma": -66.0,
+   "vs_52w_high": -85.7,
+   "flags": [
+    "oversold_quality(-66% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -4392,6 +4442,14 @@
    "side": "short",
    "entry": 7296.75,
    "exit": 7266.75,
+   "reason": "tp",
+   "pnl": 150.0
+  },
+  {
+   "date": "2026-11-25",
+   "side": "short",
+   "entry": 7070.75,
+   "exit": 7040.75,
    "reason": "tp",
    "pnl": 150.0
   }
@@ -6022,6 +6080,41 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 250.04,
    "s50": 242.05
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 107.68,
+   "s50": 102.01
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 108.54,
+   "s50": 104.02
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "ZTS",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 82.34,
+   "s50": 77.67
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 57.95,
+   "s50": 56.13
+  },
+  {
+   "date": "2026-11-25",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 249.27,
+   "s50": 242.45
   }
  ],
  "value_cache": {
@@ -7018,15 +7111,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-24T21:15:07+00:00",
-   "last_try": "2026-11-24T21:15:07+00:00",
+   "last_ok": "2026-11-25T21:15:07+00:00",
+   "last_try": "2026-11-25T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-03T21:15:06+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-11-03"
-    },
     {
      "ts": "2026-11-04T21:15:08+00:00",
      "ok": true,
@@ -7081,19 +7169,19 @@
      "ts": "2026-11-24T21:15:07+00:00",
      "ok": true,
      "note": "194 bars for 2026-11-24"
+    },
+    {
+     "ts": "2026-11-25T21:15:07+00:00",
+     "ok": true,
+     "note": "194 bars for 2026-11-25"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-24T21:15:07+00:00",
-   "last_try": "2026-11-24T21:15:07+00:00",
+   "last_ok": "2026-11-25T21:15:07+00:00",
+   "last_try": "2026-11-25T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-03T21:15:06+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-11-04T21:15:08+00:00",
      "ok": true,
@@ -7146,6 +7234,11 @@
     },
     {
      "ts": "2026-11-24T21:15:07+00:00",
+     "ok": true,
+     "note": "ok=5 fail=0"
+    },
+    {
+     "ts": "2026-11-25T21:15:07+00:00",
      "ok": true,
      "note": "ok=5 fail=0"
     }

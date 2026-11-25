@@ -1797,8 +1797,8 @@
    "edge": 0.081,
    "stake": 0.5,
    "entered": "2026-11-21",
-   "closing_odds": 2.7,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_odds": 2.75,
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1814,7 +1814,7 @@
    "stake": 2.0,
    "entered": "2026-11-21",
    "closing_odds": 3.1,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1829,8 +1829,8 @@
    "edge": 0.05,
    "stake": 0.5,
    "entered": "2026-11-21",
-   "closing_odds": 1.43,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_odds": 1.4,
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1846,7 +1846,7 @@
    "stake": 0.5,
    "entered": "2026-11-22",
    "closing_odds": 1.91,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1861,8 +1861,8 @@
    "edge": 0.073,
    "stake": 0.5,
    "entered": "2026-11-22",
-   "closing_odds": 2.55,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_odds": 2.5,
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1878,7 +1878,7 @@
    "stake": 0.5,
    "entered": "2026-11-22",
    "closing_odds": 1.5,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1893,8 +1893,8 @@
    "edge": 0.042,
    "stake": 0.5,
    "entered": "2026-11-22",
-   "closing_odds": 3.8,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_odds": 3.7,
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1909,8 +1909,8 @@
    "edge": 0.28,
    "stake": 2.0,
    "entered": "2026-11-22",
-   "closing_odds": 4.0,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_odds": 3.9,
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1926,7 +1926,7 @@
    "stake": 0.51,
    "entered": "2026-11-22",
    "closing_odds": 3.3,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_ts": "2026-11-25T15:00:03+00:00",
    "result": null,
    "pnl": null
   },
@@ -1941,8 +1941,24 @@
    "edge": 0.146,
    "stake": 0.5,
    "entered": "2026-11-23",
-   "closing_odds": 2.0,
-   "closing_ts": "2026-11-24T15:00:02+00:00",
+   "closing_odds": 1.95,
+   "closing_ts": "2026-11-25T15:00:03+00:00",
+   "result": null,
+   "pnl": null
+  },
+  {
+   "event_id": "c7aff6bfea3ca1c4b177694977831b85",
+   "home": "Coventry City",
+   "away": "Ipswich Town",
+   "commence": "2026-12-01T20:00:00Z",
+   "market": "h2h_home",
+   "odds": 2.25,
+   "model_prob": 0.479,
+   "edge": 0.063,
+   "stake": 0.5,
+   "entered": "2026-11-25",
+   "closing_odds": null,
+   "closing_ts": null,
    "result": null,
    "pnl": null
   }
