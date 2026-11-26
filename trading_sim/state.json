@@ -4107,6 +4107,52 @@
     "rsi(26)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "KTOS",
+   "date": "2026-11-26",
+   "price": 28.95,
+   "score": 92.5,
+   "rsi": 32.7,
+   "relvol": 0.83,
+   "vs_200ma": -49.6,
+   "vs_52w_high": -77.9,
+   "flags": [
+    "oversold_quality(-50% vs 200ma)",
+    "rsi(33)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-26",
+   "price": 1.76,
+   "score": 82.5,
+   "rsi": 23.1,
+   "relvol": 0.9,
+   "vs_200ma": -81.5,
+   "vs_52w_high": -89.9,
+   "flags": [
+    "oversold_quality(-81% vs 200ma)",
+    "rsi(23)",
+    "near_52w_low"
+   ]
+  },
+  {
+   "ticker": "SMR",
+   "date": "2026-11-26",
+   "price": 3.25,
+   "score": 82.5,
+   "rsi": 25.8,
+   "relvol": 0.75,
+   "vs_200ma": -66.1,
+   "vs_52w_high": -85.8,
+   "flags": [
+    "oversold_quality(-66% vs 200ma)",
+    "rsi(26)",
+    "near_52w_low"
+   ]
   }
  ],
  "lottery": {
@@ -6115,6 +6161,41 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 249.27,
    "s50": 242.45
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 107.68,
+   "s50": 102.01
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 108.54,
+   "s50": 104.02
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "ZTS",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 82.34,
+   "s50": 77.67
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 57.95,
+   "s50": 56.13
+  },
+  {
+   "date": "2026-11-26",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 249.27,
+   "s50": 242.45
   }
  ],
  "value_cache": {
@@ -7112,14 +7193,9 @@
  "fetch_health": {
   "es_5m": {
    "last_ok": "2026-11-25T21:15:07+00:00",
-   "last_try": "2026-11-25T21:15:07+00:00",
-   "streak_fail": 0,
+   "last_try": "2026-11-26T21:15:06+00:00",
+   "streak_fail": 1,
    "attempts": [
-    {
-     "ts": "2026-11-04T21:15:08+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-11-04"
-    },
     {
      "ts": "2026-11-05T21:15:07+00:00",
      "ok": true,
@@ -7174,19 +7250,19 @@
      "ts": "2026-11-25T21:15:07+00:00",
      "ok": true,
      "note": "194 bars for 2026-11-25"
+    },
+    {
+     "ts": "2026-11-26T21:15:06+00:00",
+     "ok": false,
+     "note": "0 bars for 2026-11-26"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-25T21:15:07+00:00",
-   "last_try": "2026-11-25T21:15:07+00:00",
+   "last_ok": "2026-11-26T21:15:06+00:00",
+   "last_try": "2026-11-26T21:15:06+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-04T21:15:08+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-11-05T21:15:07+00:00",
      "ok": true,
@@ -7239,6 +7315,11 @@
     },
     {
      "ts": "2026-11-25T21:15:07+00:00",
+     "ok": true,
+     "note": "ok=5 fail=0"
+    },
+    {
+     "ts": "2026-11-26T21:15:06+00:00",
      "ok": true,
      "note": "ok=5 fail=0"
     }

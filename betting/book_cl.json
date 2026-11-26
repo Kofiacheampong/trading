@@ -1,5 +1,5 @@
 {
- "bankroll": 80.96,
+ "bankroll": 78.4,
  "bets": [
   {
    "event_id": "9c28ce0ac169f83e873ae8caa7f9a597",
@@ -789,8 +789,12 @@
    "entered": "2026-11-24",
    "closing_odds": 10.5,
    "closing_ts": "2026-11-25T15:05:02+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -1.38,
+   "settled": "2026-11-26",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": 0.0
   },
   {
    "event_id": "e7e64568f6af00d395a3fdfc27de8ae3",
@@ -805,8 +809,12 @@
    "entered": "2026-11-24",
    "closing_odds": 5.5,
    "closing_ts": "2026-11-25T15:05:02+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.5,
+   "settled": "2026-11-26",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": 1.82
   },
   {
    "event_id": "e7e64568f6af00d395a3fdfc27de8ae3",
@@ -821,8 +829,12 @@
    "entered": "2026-11-24",
    "closing_odds": 6.5,
    "closing_ts": "2026-11-25T15:05:02+00:00",
-   "result": null,
-   "pnl": null
+   "result": "loss",
+   "pnl": -0.68,
+   "settled": "2026-11-26",
+   "home_score": 2,
+   "away_score": 0,
+   "clv": -7.69
   }
  ],
  "started": "2026-09-08",
