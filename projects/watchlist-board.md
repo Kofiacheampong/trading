@@ -1,48 +1,48 @@
 📊 MONITOR BOARD — 20:50 UTC
 
 — DC Power / Analog (entry plan)
-  TXN    $270.19     +4.5% · nearest below $266 (-1.6%) · below Best Zone $280-300
-  ADI    $333.11     +6.4% · nearest below $330 (-0.9%) · below All-In Zone $360-380
-  VRT    $173.37     -0.3% · nearest below $148 (-14.6%)
-  INTC   $54.47      -0.6% · nearest below $52 (-4.5%)
-  NVTS   $6.80       +4.5% · nearest below $6 (-11.8%)
-  ON     $62.48      +1.6% · nearest below $60 (-4.0%)
+  TXN    $281.85     +4.3% · nearest below $266 (-5.6%) · IN Best Zone $280-300
+  ADI    $346.00     +3.9% · nearest below $350 (+1.2%) · below All-In Zone $360-380
+  VRT    $178.71     +3.1% · nearest above $205 (+14.7%)
+  INTC   $57.40      +5.4% · nearest below $52 (-9.4%)
+  NVTS   $7.26       +6.8% · nearest below $6 (-17.4%)
+  ON     $66.24      +6.0% · nearest above $70 (+5.7%)
 
 — AI Power (quality + story tier)
-  CEG    $235.28     -3.9% · nearest below $228.63 (-2.8%)
-  VST    $121.32     +0.5% · nearest above $132 (+8.8%)
-  GEV    $715.00     -0.8% · nearest below $700 (-2.1%)
-  CCJ    $61.55      +2.9% · nearest below $59 (-4.1%)
-  BWXT   $113.55     +0.4% · nearest below $112 (-1.4%)
-  OKLO   $19.47      +1.4% · nearest below $18.5 (-5.0%)
-  SMR    $3.25       -1.5% · nearest below $3.4 (+4.6%)
-  FCEL   $7.44       +4.8% · nearest below $5.71 (-23.3%)
+  CEG    $238.10     +1.2% · nearest below $228.63 (-4.0%)
+  VST    $122.65     +1.1% · nearest above $132 (+7.6%)
+  GEV    $735.31     +2.8% · nearest below $700 (-4.8%)
+  CCJ    $63.97      +3.9% · nearest below $59 (-7.8%)
+  BWXT   $116.57     +2.7% · nearest below $112 (-3.9%)
+  OKLO   $20.85      +7.1% · nearest below $18.5 (-11.3%)
+  SMR    $3.48       +7.1% · nearest below $3.4 (-2.3%)
+  FCEL   $8.00       +7.5% · nearest above $10.1 (+26.2%)
 
 — Drone/UAS (thesis broken — reclaims only)
-  AVAV   $91.37      +2.2% · nearest below $92 (+0.7%)
-  KTOS   $28.95      +2.6% · nearest below $28 (-3.3%)
-  ONDS   $3.90       +0.3% · nearest below $3.9 (+0.0%)
-  RCAT   $1.76       +2.0% · nearest below $1.8 (+2.3%)
+  AVAV   $95.78      +4.8% · nearest below $92 (-3.9%)
+  KTOS   $30.39      +5.0% · nearest below $28 (-7.9%)
+  ONDS   $4.10       +5.1% · nearest below $3.9 (-4.9%)
+  RCAT   $1.88       +6.8% · nearest below $1.8 (-4.3%)
 
 — Turnarounds / Specials
-  HNST   $4.47       -1.1% · nearest below $4.5 (+0.7%) · IN Best/All-In Zone $4-5
-  NBIS   $84.99      -2.7% · nearest below $73.5 (-13.5%)
-  IREN   $12.85      -0.8% · nearest below $12.5 (-2.7%)
-  WOLF   $17.94      -1.4% · nearest below $13.48 (-24.9%)
-  USAR   $6.59       -1.3% · nearest below $6.5 (-1.4%)
-  CRCL   $48.27      +1.2% · nearest below $49.9 (+3.4%)
-  CLF    $11.27      +2.8% · nearest below $10.5 (-6.8%)
-  CIEN   $242.79     +1.5% · nearest below $225 (-7.3%)
-  NVO    $40.97      +1.6% · nearest above $41 (+0.1%)
-  HIMS   $14.65      -0.6% · nearest below $13.74 (-6.2%)
+  HNST   $4.71       +5.4% · nearest below $4.5 (-4.5%) · IN Best/All-In Zone $4-5
+  NBIS   $89.46      +5.3% · nearest below $73.5 (-17.8%)
+  IREN   $13.61      +5.9% · nearest below $12.5 (-8.2%)
+  WOLF   $18.63      +3.8% · nearest above $23.7 (+27.2%)
+  USAR   $6.71       +1.7% · nearest below $6.5 (-3.1%)
+  CRCL   $49.29      +2.1% · nearest below $49.9 (+1.2%)
+  CLF    $11.73      +4.1% · nearest below $10.5 (-10.5%)
+  CIEN   $256.58     +5.7% · nearest above $288 (+12.2%)
+  NVO    $41.07      +0.2% · nearest above $41 (-0.2%)
+  HIMS   $15.00      +2.4% · nearest below $13.74 (-8.4%)
 
 — Macro hedges
-  GLD    $327.45     +0.6% · nearest below $315 (-3.8%)
-  GDX    $73.89      +3.5% · nearest below $68 (-8.0%)
+  GLD    $334.40     +2.1% · nearest below $315 (-5.8%)
+  GDX    $79.18      +7.2% · nearest above $81 (+2.3%)
 
 — HOLDINGS
-  DRAM   $34.83      -3.0% · 15.5176 sh @ $64.35 → -458 usd (-45.9%) · ▼ $33 · ▼ $30 · ▲ $42.4
-  AMPG   $1.73       +2.4% · 1 sh @ $8.72 → -7 usd (-80.2%) · ▼ $1.64
-  MP     $35.30      -1.7% · 5.9683 sh @ $67.35 → -191 usd (-47.6%) · ▼ $31.9 · ▲ $42.2
-  INTC   $54.47      -0.6% · 1.6867 sh @ $104.34 → -84 usd (-47.8%) · ▼ $52 · ▲ $65
-  TOTAL unrealised: -740 usd
+  DRAM   $37.57      +7.9% · 15.5176 sh @ $64.35 → -416 usd (-41.6%) · ▼ $33 · ▼ $30 · ▲ $42.4
+  AMPG   $1.78       +3.2% · 1 sh @ $8.72 → -7 usd (-79.6%) · ▼ $1.64
+  MP     $35.81      +1.4% · 5.9683 sh @ $67.35 → -188 usd (-46.8%) · ▼ $31.9 · ▲ $42.2
+  INTC   $57.40      +5.4% · 1.6867 sh @ $104.34 → -79 usd (-45.0%) · ▼ $52 · ▲ $65
+  TOTAL unrealised: -690 usd

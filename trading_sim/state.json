@@ -1,14 +1,6 @@
 {
- "cash": 1403.6271410277898,
- "positions": {
-  "PAYC": {
-   "shares": 0.5059,
-   "entry": 237.19000244140625,
-   "entry_date": "2026-11-06",
-   "notional": 120.0,
-   "sma20": 257.05
-  }
- },
+ "cash": 1527.85666193051,
+ "positions": {},
  "closed": [
   {
    "ticker": "ZTS",
@@ -97,6 +89,17 @@
    "pnl_usd": 10.18,
    "hold_days": 3,
    "reason": "take-profit"
+  },
+  {
+   "ticker": "PAYC",
+   "entry": 237.19,
+   "exit": 245.55,
+   "entry_date": "2026-11-06",
+   "exit_date": "2026-11-27",
+   "pnl_pct": 3.52,
+   "pnl_usd": 4.23,
+   "hold_days": 15,
+   "reason": "time"
   }
  ],
  "puts": [
@@ -637,7 +640,8 @@
    "spot": 102.62,
    "expiry": "2026-11-27",
    "credit": 1.11,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 108.01
   },
   {
    "ticker": "KMB",
@@ -646,7 +650,8 @@
    "spot": 106.38,
    "expiry": "2026-11-27",
    "credit": 1.14,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 109.11
   },
   {
    "ticker": "PYPL",
@@ -655,7 +660,8 @@
    "spot": 53.29,
    "expiry": "2026-11-27",
    "credit": 0.57,
-   "outcome": null
+   "outcome": "win",
+   "expiry_close": 59.14
   },
   {
    "ticker": "ZTS",
@@ -4153,6 +4159,51 @@
     "rsi(26)",
     "near_52w_low"
    ]
+  },
+  {
+   "ticker": "SMR",
+   "date": "2026-11-27",
+   "price": 3.48,
+   "score": 92.5,
+   "rsi": 30.7,
+   "relvol": 0.36,
+   "vs_200ma": -63.5,
+   "vs_52w_high": -84.8,
+   "flags": [
+    "oversold_quality(-64% vs 200ma)",
+    "rsi(31)",
+    "near_52w_low",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "TE",
+   "date": "2026-11-27",
+   "price": 1.32,
+   "score": 82.5,
+   "rsi": 33.6,
+   "relvol": 0.44,
+   "vs_200ma": -75.9,
+   "vs_52w_high": -89.0,
+   "flags": [
+    "oversold_quality(-76% vs 200ma)",
+    "rsi(34)",
+    "early_reversal"
+   ]
+  },
+  {
+   "ticker": "RCAT",
+   "date": "2026-11-27",
+   "price": 1.88,
+   "score": 72.5,
+   "rsi": 25.7,
+   "relvol": 0.56,
+   "vs_200ma": -80.1,
+   "vs_52w_high": -89.2,
+   "flags": [
+    "oversold_quality(-80% vs 200ma)",
+    "rsi(26)"
+   ]
   }
  ],
  "lottery": {
@@ -4214,12 +4265,7 @@
    "resolved_date": "2026-08-14"
   }
  ],
- "mes": {
-  "entry": 7211.25,
-  "entry_date": "2026-11-24",
-  "sl": 7186.25,
-  "tp": 7241.25
- },
+ "mes": null,
  "mes_trades": [
   {
    "entry": 7581.75,
@@ -4238,6 +4284,15 @@
    "reason": "tp",
    "pnl": 161.25,
    "hold_days": 1
+  },
+  {
+   "entry": 7211.25,
+   "exit": 7308.25,
+   "entry_date": "2026-11-24",
+   "exit_date": "2026-11-27",
+   "reason": "tp",
+   "pnl": 485.0,
+   "hold_days": 2
   }
  ],
  "put_flags": [
@@ -4711,7 +4766,12 @@
    "yield_pct": 4.12,
    "s20": 41.82,
    "s50": 47.95,
-   "outcome": null
+   "outcome": "kept",
+   "settle": 35.81,
+   "pnl_usd": -212.0,
+   "ret_pct": -5.36,
+   "hold_pct": -9.48,
+   "resolved_date": "2026-11-27"
   },
   {
    "ticker": "DRAM",
@@ -4724,6 +4784,19 @@
    "yield_pct": 6.32,
    "s20": 43.54,
    "s50": 51.1,
+   "outcome": null
+  },
+  {
+   "ticker": "MP",
+   "date": "2026-11-27",
+   "spot": 35.81,
+   "strike": 39.0,
+   "expiry": "2026-12-24",
+   "dte": 27,
+   "premium": 1.4,
+   "yield_pct": 3.9,
+   "s20": 36.4,
+   "s50": 41.05,
    "outcome": null
   }
  ],
@@ -6196,6 +6269,41 @@
    "reason": "sma20>sma50 uptrend",
    "s20": 249.27,
    "s50": 242.45
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "LULU",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 107.59,
+   "s50": 102.18
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "KMB",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 108.49,
+   "s50": 104.23
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "ZTS",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 82.53,
+   "s50": 77.85
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "PYPL",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 58.06,
+   "s50": 56.25
+  },
+  {
+   "date": "2026-11-27",
+   "ticker": "PAYC",
+   "reason": "sma20>sma50 uptrend",
+   "s20": 248.52,
+   "s50": 242.84
   }
  ],
  "value_cache": {
@@ -7192,15 +7300,10 @@
  },
  "fetch_health": {
   "es_5m": {
-   "last_ok": "2026-11-25T21:15:07+00:00",
-   "last_try": "2026-11-26T21:15:06+00:00",
-   "streak_fail": 1,
+   "last_ok": "2026-11-27T21:15:07+00:00",
+   "last_try": "2026-11-27T21:15:07+00:00",
+   "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-05T21:15:07+00:00",
-     "ok": true,
-     "note": "194 bars for 2026-11-05"
-    },
     {
      "ts": "2026-11-06T21:15:07+00:00",
      "ok": true,
@@ -7255,19 +7358,19 @@
      "ts": "2026-11-26T21:15:06+00:00",
      "ok": false,
      "note": "0 bars for 2026-11-26"
+    },
+    {
+     "ts": "2026-11-27T21:15:07+00:00",
+     "ok": true,
+     "note": "43 bars for 2026-11-27"
     }
    ]
   },
   "yahoo": {
-   "last_ok": "2026-11-26T21:15:06+00:00",
-   "last_try": "2026-11-26T21:15:06+00:00",
+   "last_ok": "2026-11-27T21:15:07+00:00",
+   "last_try": "2026-11-27T21:15:07+00:00",
    "streak_fail": 0,
    "attempts": [
-    {
-     "ts": "2026-11-05T21:15:07+00:00",
-     "ok": true,
-     "note": "ok=2 fail=0"
-    },
     {
      "ts": "2026-11-06T21:15:07+00:00",
      "ok": true,
@@ -7322,6 +7425,11 @@
      "ts": "2026-11-26T21:15:06+00:00",
      "ok": true,
      "note": "ok=5 fail=0"
+    },
+    {
+     "ts": "2026-11-27T21:15:07+00:00",
+     "ok": true,
+     "note": "ok=11 fail=0"
     }
    ]
   }
